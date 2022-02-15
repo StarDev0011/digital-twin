@@ -6,8 +6,8 @@ import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
 import { ellipseAddress, getChainData } from '../lib/utilities'
 import {abi as AuctionHouseAbi} from '../node_modules/@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
-import {AuctionHouse} from '@zoralabs/auction-house/dist/typechain'
-const INFURA_ID = '460f40a260564ac4a4f4b3fffb032dad'
+// import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
+const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 import {weth,auctionHouse} from '../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
 
 
@@ -146,12 +146,24 @@ type nft = {
 export const BidPage = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const { provider, web3Provider, address, chainId ,balance,contract} = state
+  const [auctionData,setAuctionData] = useState(null)
+  
+  const [leastBidAmount,setLeastBidAmount] = useState('0')
+  const [bidAmount,setBidAmount] = useState(leastBidAmount)
+  const [loading,setLoading] = useState(false)
+  useEffect(()=>{
+      
+      auctionData ? 
+    setLeastBidAmount(((Number(ethers.utils.formatEther(auctionData.nft.auctionData.currentBid.amount))) * 1.05).toFixed(4)) :
+     {}
+  },[auctionData])
 
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
     // using web3Modal to connect. Can be MetaMask or WalletConnect.
+    
     const provider = await web3Modal.connect()
-
+    
     // We plug the initial `provider` into ethers.js and get back
     // a Web3Provider. This will add on methods from ethers.js and
     // event listeners such as `.on()` will be different.
@@ -162,10 +174,13 @@ export const BidPage = (): JSX.Element => {
 
     const network = await web3Provider.getNetwork()
 
-    const instance = new Contract(auctionHouse,AuctionHouseAbi,web3Provider)
+    // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
+
+    const instance = new Contract(auctionHouse,AuctionHouseAbi,signer)
     
     const balance = ethers.utils.formatEther(await web3Provider.getBalance(address))
-
+    // console.log(instance)
+    
     dispatch({
       type: 'SET_WEB3_PROVIDER',
       provider,
@@ -177,16 +192,24 @@ export const BidPage = (): JSX.Element => {
     })
   }, [])
 
-  const fetchAuction = async(id:string)=>{
-    const fetchAgent = new MediaFetchAgent(
-        NETWORK_ID as NetworkIDs
-      );
-      const data = await FetchStaticData.fetchZoraIndexerItem(fetchAgent, {
-        tokenId: '2',
-        collectionAddress: "0xD391646321ccf7938821a01d169DeA6922AEDBba",
-      });
+ 
+
+  const fetchAuction = async(refresh = false,tokenId = '1',collectionAddress = "0xD391646321ccf7938821a01d169DeA6922AEDBba")=>{
+      if (refresh || !auctionData) {
+        const fetchAgent = new MediaFetchAgent(
+            NETWORK_ID as NetworkIDs
+          );
+          const data = await FetchStaticData.fetchZoraIndexerItem(fetchAgent, {
+            tokenId,
+            collectionAddress,
+          });
+          setAuctionData(data)
+          console.log(data)
+      }
+    
+      
   }
-  fetchAuction('1936')
+  fetchAuction()
 
   const disconnect = useCallback(
     async function () {
@@ -216,7 +239,7 @@ export const BidPage = (): JSX.Element => {
       const handleAccountsChanged = async (accounts: string[]) => {
         // eslint-disable-next-line no-console
         console.log('accountsChanged', accounts)
-        provider.getBalance(accounts[0]).then((res)=>{
+        web3Provider.getBalance(accounts[0]).then((res)=>{
             let etherString = ethers.utils.formatEther(res)
             dispatch({
                 type: 'SET_ADDRESS',
@@ -255,7 +278,44 @@ export const BidPage = (): JSX.Element => {
 
   const chainData = getChainData(chainId)
   
+  const handleBid = async()=>{
+    try{
+      setLoading(true)
+      await contract.functions.createBid(Number(auctionData.nft.auctionData.id),ethers.utils.parseEther(bidAmount),{
+        value : ethers.utils.parseEther(bidAmount)
+      })
+      console.log("successfully bid placed!")
+      setLoading(false)
+    }catch(err){
+     
+      alert("Encountered some probblem while bidding or auction expired!")
+    }
+    
+  }
+  
+  const validBidCheck = ()=>{
+    if (bidAmount < leastBidAmount || bidAmount > balance){
+      return {
+        status: false,
+       
+      }
+    }
+    return {
+      status : true
+    }
+  }
 
+  const getAuctionDetails = async()=>{
+    try{
+      setLoading(true)
+      console.log(await contract.functions.auctions(1935))
+      console.log("successfully bid placed!")
+      setLoading(false)
+    }catch(err){
+      console.log(err)
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="container">
@@ -280,8 +340,7 @@ export const BidPage = (): JSX.Element => {
       </header>
 
       <main>
-        <h1 className="title">Web3Modal Example</h1>
-        {web3Provider  ? (
+      {web3Provider  ? (
             <>
             <h3>Your balance : {balance}</h3>
           <button className="button" type="button" onClick={disconnect}>
@@ -293,6 +352,36 @@ export const BidPage = (): JSX.Element => {
             Connect
           </button>
         )}
+        <h1 className="title">Place a bid</h1>
+        <label>
+            
+            <input type="text" name="amount"  placeholder={leastBidAmount} value={bidAmount} onChange={(event)=>{setBidAmount(event.target.value)}}/>
+            eth
+        </label>
+        <h2>You must bid at least {leastBidAmount ? leastBidAmount : "Fetching ..."} ETH</h2>
+        <h2>The next bid must be 5% more than the current bid.</h2>
+        <button 
+         onClick={()=>{
+           console.log(validBidCheck())
+           if (validBidCheck().status){
+            handleBid()
+           }else {
+             alert("You dont have enough balance to bid or your bid is too small!")
+           }
+           
+         }}>
+           Place Bid</button>
+           <button 
+         onClick={()=>{
+          //  getAuctionDetails()
+          fetchAuction(true)
+         }}>
+           Refresh</button>
+        {/* <h3>Reserve price : { auctionData ? `${ethers.utils.formatEther(auctionData.nft.auctionData.reservePrice)} eth`: "Fetching ..."}</h3> */}
+        {
+            contract ? console.log(contract) : null
+        }
+        
         
       </main>
 
