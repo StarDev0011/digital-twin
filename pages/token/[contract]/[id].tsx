@@ -9,22 +9,14 @@ import {
 import { GetServerSideProps } from "next";
 import { NETWORK_ID, APP_TITLE } from './../../../utils/env-vars'
 import { PageWrapper } from "../../../styles/components";
-import Head from "../../../components/head";
+
 import styled from 'styled-components';
 
 import React,{useState,useEffect} from "react";
 
 import {writeFileSync} from 'fs';
-import {BidPage} from '../../bidpage'
-// const providerOptions = {
-//   /* See Provider Options Section */
-// };
 
-// const web3Modal = new Web3Modal({
-//   network: "mainnet", // optional
-//   cacheProvider: true, // optional
-//   providerOptions // required
-// });
+
 
 
 
@@ -63,12 +55,7 @@ export default function Piece({
   return (
     <>
    
-      <Head
-        // title={`${name} | ${APP_TITLE}`}
-        title = "mith"
-        description={description}
-        ogImage={image}
-      />
+      
       <MediaConfiguration
         networkId={NETWORK_ID as NetworkIDs}
         style={styles}

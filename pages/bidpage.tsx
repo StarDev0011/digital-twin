@@ -9,7 +9,8 @@ import {abi as AuctionHouseAbi} from '../node_modules/@zoralabs/auction-house/di
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 import {weth,auctionHouse} from '../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
-
+const TOKEN_ID = '2'
+const TOKEN_ADDRESS = "0xD391646321ccf7938821a01d169DeA6922AEDBba"
 
 import { NETWORK_ID, APP_TITLE } from './../utils/env-vars'
 import {
@@ -17,6 +18,7 @@ import {
     NetworkIDs,
     FetchStaticData,
   } from "@zoralabs/nft-hooks";
+import { useRouter } from 'next/router'
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
@@ -148,9 +150,10 @@ export const BidPage = (): JSX.Element => {
   const { provider, web3Provider, address, chainId ,balance,contract} = state
   const [auctionData,setAuctionData] = useState(null)
   
-  const [leastBidAmount,setLeastBidAmount] = useState('0')
+  const [leastBidAmount,setLeastBidAmount] = useState('')
   const [bidAmount,setBidAmount] = useState(leastBidAmount)
   const [loading,setLoading] = useState(false)
+  const { push } = useRouter()
   useEffect(()=>{
       
       auctionData ? 
@@ -197,7 +200,7 @@ export const BidPage = (): JSX.Element => {
 
  
 
-  const fetchAuction = async(refresh = false,tokenId = '2',collectionAddress = "0xD391646321ccf7938821a01d169DeA6922AEDBba")=>{
+  const fetchAuction = async(refresh = false,tokenId = TOKEN_ID,collectionAddress = TOKEN_ADDRESS)=>{
       if (refresh || !auctionData) {
         const fetchAgent = new MediaFetchAgent(
             NETWORK_ID as NetworkIDs
@@ -210,13 +213,13 @@ export const BidPage = (): JSX.Element => {
           if (!data.nft.auctionData.expectedEndTimestamp){
             expired = false
           }else {
-            if (Date.now() > data.nft.auctionData.expectedEndTimestamp){
+            if ((web3Provider && (await web3Provider.getBlock(await web3Provider.getBlockNumber())).timestamp) > data.nft.auctionData.expectedEndTimestamp){
               expired = true
             }else {
               expired = false;
             }
           }
-          
+          console.log(expired)
           console.log(data)
           setAuctionData({...data,expired})
           
@@ -299,8 +302,11 @@ export const BidPage = (): JSX.Element => {
       await contract.functions.createBid(Number(auctionData.nft.auctionData.id),ethers.utils.parseEther(bidAmount),{
         value : ethers.utils.parseEther(bidAmount)
       })
-      console.log("successfully bid placed!")
+      alert("Successfully bid placed! It may take some seconds to reflect depending upon the block time.")
       setLoading(false)
+      push(
+        `./token/${TOKEN_ADDRESS}/${TOKEN_ID}`
+      )
     }catch(err){
      
       alert("Encountered some probblem while bidding or auction expired!")
