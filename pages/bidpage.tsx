@@ -154,7 +154,10 @@ export const BidPage = (): JSX.Element => {
   useEffect(()=>{
       
       auctionData ? 
-    setLeastBidAmount(((Number(ethers.utils.formatEther(auctionData.nft.auctionData.currentBid.amount))) * 1.05).toFixed(4)) :
+      auctionData.nft.auctionData.currentBid ? 
+      setLeastBidAmount(((Number(ethers.utils.formatEther(auctionData.nft.auctionData.currentBid.amount))) * 1.05).toFixed(4)) :
+      setLeastBidAmount(((Number(ethers.utils.formatEther(auctionData.nft.auctionData.reservePrice)))).toFixed(4))
+     :
      {}
   },[auctionData])
 
@@ -194,7 +197,7 @@ export const BidPage = (): JSX.Element => {
 
  
 
-  const fetchAuction = async(refresh = false,tokenId = '1',collectionAddress = "0xD391646321ccf7938821a01d169DeA6922AEDBba")=>{
+  const fetchAuction = async(refresh = false,tokenId = '2',collectionAddress = "0xD391646321ccf7938821a01d169DeA6922AEDBba")=>{
       if (refresh || !auctionData) {
         const fetchAgent = new MediaFetchAgent(
             NETWORK_ID as NetworkIDs
@@ -203,8 +206,20 @@ export const BidPage = (): JSX.Element => {
             tokenId,
             collectionAddress,
           });
-          setAuctionData(data)
+          let expired:boolean ;
+          if (!data.nft.auctionData.expectedEndTimestamp){
+            expired = false
+          }else {
+            if (Date.now() > data.nft.auctionData.expectedEndTimestamp){
+              expired = true
+            }else {
+              expired = false;
+            }
+          }
+          
           console.log(data)
+          setAuctionData({...data,expired})
+          
       }
     
       
@@ -294,7 +309,10 @@ export const BidPage = (): JSX.Element => {
   }
   
   const validBidCheck = ()=>{
-    if (bidAmount < leastBidAmount || bidAmount > balance){
+    console.log(typeof(bidAmount))
+    console.log(typeof(leastBidAmount))
+    console.log(typeof(balance))
+    if (Number(bidAmount) < Number(leastBidAmount) || Number(bidAmount) > Number(balance)){
       return {
         status: false,
        
@@ -335,24 +353,36 @@ export const BidPage = (): JSX.Element => {
               <p className="mb-1">Address:</p>
               <p>{ellipseAddress(address)}</p>
             </div>
+            <div>
+              <p className="mb-1">Balance:</p>
+              <p>{balance}</p>
+            </div>
           </div>
         )}
       </header>
 
       <main>
-      {web3Provider  ? (
+      {web3Provider ? (
             <>
-            <h3>Your balance : {balance}</h3>
+            
           <button className="button" type="button" onClick={disconnect}>
             Disconnect
           </button>
-          </>
-        ) : (
+            </>
+        ) : 
+        
+        (
           <button className="button" type="button" onClick={connect}>
             Connect
           </button>
-        )}
-        <h1 className="title">Place a bid</h1>
+        )
+      }
+
+      {
+        auctionData && !auctionData.expired ?
+        (
+          <>
+             <h1 className="title">Place a bid</h1>
         <label>
             
             <input type="text" name="amount"  placeholder={leastBidAmount} value={bidAmount} onChange={(event)=>{setBidAmount(event.target.value)}}/>
@@ -362,12 +392,18 @@ export const BidPage = (): JSX.Element => {
         <h2>The next bid must be 5% more than the current bid.</h2>
         <button 
          onClick={()=>{
-           console.log(validBidCheck())
-           if (validBidCheck().status){
-            handleBid()
-           }else {
-             alert("You dont have enough balance to bid or your bid is too small!")
+           if (web3Provider){
+            console.log(validBidCheck())
+           
+            if (validBidCheck().status){
+             handleBid()
+            }else {
+              alert("You dont have enough balance to bid or your bid is too small!")
+            }
+           }else{
+             alert("Connect your wallet to place the bid")
            }
+          
            
          }}>
            Place Bid</button>
@@ -377,10 +413,17 @@ export const BidPage = (): JSX.Element => {
           fetchAuction(true)
          }}>
            Refresh</button>
-        {/* <h3>Reserve price : { auctionData ? `${ethers.utils.formatEther(auctionData.nft.auctionData.reservePrice)} eth`: "Fetching ..."}</h3> */}
-        {
-            contract ? console.log(contract) : null
-        }
+       
+          
+          </>
+        ): !auctionData ?
+        (
+          <h1>Loading ...</h1>
+        ): (
+          <h1>Auction has expired!</h1>
+        )
+      }
+       
         
         
       </main>

@@ -81,13 +81,13 @@ export default function Piece({
             initialData={initialData}
           >
             <FullComponents.MediaFull />
-            <FullComponents.CollectionTag/>
-            <FullComponents.MediaInfo/>
-            <FullComponents.ProofAuthenticity/>
-            <FullComponents.AuctionInfo/>
+            {/* <FullComponents.CollectionTag/> */}
+            {/* <FullComponents.MediaInfo/> */}
+            {/* <FullComponents.ProofAuthenticity/> */}
+            {/* <FullComponents.AuctionInfo/> */}
            
             <FullComponents.BidHistory/>
-            <FullComponents.CreatorEquity/>
+            {/* <FullComponents.CreatorEquity/> */}
             </NFTFullPage>
             <Button
                 onClick={(evt) =>
