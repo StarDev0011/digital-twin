@@ -11,6 +11,7 @@ const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 import {weth,auctionHouse} from '../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
 const TOKEN_ID = '2'
 const TOKEN_ADDRESS = "0xD391646321ccf7938821a01d169DeA6922AEDBba"
+import Layout from '../components/Layout'
 
 import { NETWORK_ID, APP_TITLE } from './../utils/env-vars'
 import {
@@ -342,11 +343,9 @@ export const BidPage = (): JSX.Element => {
   }
 
   return (
+    <Layout>
     <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      
 
       <header>
         {address && (
@@ -359,43 +358,47 @@ export const BidPage = (): JSX.Element => {
               <p className="mb-1">Address:</p>
               <p>{ellipseAddress(address)}</p>
             </div>
-            <div>
-              <p className="mb-1">Balance:</p>
-              <p>{balance}</p>
-            </div>
           </div>
         )}
       </header>
 
       <main>
-      {web3Provider ? (
-            <>
-            
-          <button className="button" type="button" onClick={disconnect}>
-            Disconnect
-          </button>
-            </>
-        ) : 
+      <div className='title_balance'>
         
-        (
-          <button className="button" type="button" onClick={connect}>
-            Connect
-          </button>
-        )
-      }
+          {web3Provider ? (
+                <div className='balance_connect'>
+                <h3>Your balance : <span className='real_bal'>{balance}</span></h3>
+              
+              
+                
+              {/* <button className="button" type="button" onClick={disconnect}>
+                Disconnect
+              </button> */}
+              </div>
+                
+            ) : 
+            
+            (
+              <button className="button" type="button" onClick={connect}>
+                Connect
+              </button>
+            )
+          }
+        </div>
 
       {
         auctionData && !auctionData.expired ?
         (
           <>
              <h1 className="title">Place a bid</h1>
-        <label>
+        <label className='eth_input'>
             
             <input type="text" name="amount"  placeholder={leastBidAmount} value={bidAmount} onChange={(event)=>{setBidAmount(event.target.value)}}/>
-            eth
+            <span>eth</span>
         </label>
-        <h2>You must bid at least {leastBidAmount ? leastBidAmount : "Fetching ..."} ETH</h2>
-        <h2>The next bid must be 5% more than the current bid.</h2>
+        <h2 className='min_eth'>You must bid at least {leastBidAmount ? leastBidAmount : "Fetching ..."} ETH</h2>
+        <h2 className='min_percent'>The next bid must be 5% more than the current bid.</h2>
+        <div className='place_bid_btn'>
         <button 
          onClick={()=>{
            if (web3Provider){
@@ -413,6 +416,8 @@ export const BidPage = (): JSX.Element => {
            
          }}>
            Place Bid</button>
+           </div>
+           <p className='withdrawl'>You cannot Withdraw a bid once submitted.</p>
            <button 
          onClick={()=>{
           //  getAuctionDetails()
@@ -435,59 +440,157 @@ export const BidPage = (): JSX.Element => {
       </main>
 
       <style jsx>{`
-        main {
-          padding: 5rem 0;
-          text-align: center;
-        }
+          main {
+            padding: 50px;
+            width: 60%;
+            margin-left:auto;
+            margin-right: auto;
+            box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+          }
 
-        p {
-          margin-top: 0;
-        }
+          .title_balance {
+            display:flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+          }
 
-        .container {
-          padding: 2rem;
-          margin: 0 auto;
-          max-width: 1200px;
-        }
+          .title {
+            font-size: 24px;
+          }
 
-        .grid {
-          display: grid;
-          grid-template-columns: auto auto;
-          justify-content: space-between;
-        }
+          .balance_connect h3 {
+            font-size: 18px;
+            color: #969696;
+          }
 
-        .button {
-          padding: 1rem 1.5rem;
-          background: ${web3Provider ? 'red' : 'green'};
-          border: none;
-          border-radius: 0.5rem;
-          color: #fff;
-          font-size: 1.2rem;
-        }
+          .real_bal {
+            color: #000000;
+          }
 
-        .mb-0 {
-          margin-bottom: 0;
-        }
-        .mb-1 {
-          margin-bottom: 0.25rem;
-        }
-      `}</style>
+          .eth_input {
+            width: 100%;
+            position: relative;
+          }
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
+          .eth_input input {
+            width: 100%;
+            background: #E5E5E5;
+            border: 1px solid #000000;
+            border-radius: 500px;
+            box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+            padding: 20px;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 20px;
+          }
+          .eth_input span {
+            position: absolute;
+            right: 20px;
+            font-size: 18px;
+            color: #000000;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+          }
 
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+          .min_eth, .min_percent {
+            font-size: 18px;
+            color: #969696;
+            margin-bottom: 10px;
+          }
+
+          .place_bid_btn {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+          }
+
+          .place_bid_btn button {
+            background: #000000;
+            color: #ffffff;
+            width: 60%;
+            padding: 25px;
+            border-radius: 500px;
+            border: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+          }
+
+          .withdrawl {
+            font-size: 18px;
+            color: #000000;
+            font-weight: bold;
+          }
+
+          p {
+            margin-top: 0;
+          }
+
+          .container {
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 1200px;
+          }
+
+          .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+          }
+
+          .button {
+            padding: 1rem 1.5rem;
+            background: ${web3Provider ? 'red' : 'green'};
+            border: none;
+            border-radius: 0.5rem;
+            color: #fff;
+            font-size: 1.2rem;
+          }
+
+          .mb-0 {
+            margin-bottom: 0;
+          }
+          .mb-1 {
+            margin-bottom: 0.25rem;
+          }
+          @media screen and (max-width: 465px) {
+            main {
+              width: 98%;
+              padding: 15px;
+              margin: 30px auto;
+            }
+            .withdrawl, .balance_connect h3, .place_bid_btn button, .min_eth, .min_percent {
+              font-size: 16px;
+            }
+            .place_bid_btn button {
+              width: 80%;
+            }
+            .title {
+              font-size: 18px;
+            }
+          }
+        `}</style>
+
+        <style jsx global>{`
+          html,
+          body {
+            padding: 0;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+              Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+              sans-serif;
+          }
+
+          * {
+            box-sizing: border-box;
+          }
+        `}</style>
     </div>
+    </Layout>
   )
 }
 

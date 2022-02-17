@@ -1,0 +1,101 @@
+import styled from "styled-components";
+
+export const RoadmapData = styled.div`
+  margin-top: 9.2rem;
+`;
+export const RoadmapItem = styled.div`
+  list-style: none;
+  .processData {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+    @media (max-width: 480px) {
+        width: 96%;
+        padding: 2%;
+      }
+    h1 {
+        font-family: ${(props) => props.theme.fonts.headingFont};
+        font-size:45px;
+        width: 60px;
+        height: 60px;
+        background: black;
+        border-radius: 50%;
+        color: #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        text-align:center;
+        margin-top: -30px;
+        z-index: 2;
+    }
+    h3 {
+      font-size: 24px;
+      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      padding: 0 50px;
+      @media (max-width: 480px) {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 20px;
+      @media (max-width: 465px) {
+        font-size: 16px;
+      }
+      line-height: 1.8;
+      margin-top: 1rem;
+      letter-spacing: 0.5px;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom: 25px;
+    }
+  }
+  &:first-child .processData::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border: dotted;
+    border-right: none;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    animation: fadein 2s;
+  }
+  &:nth-child(2) .processData::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left:50%;
+    width: 50%;
+    height: 100%;
+    border: dotted;
+    border-left: none;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    animation: fadein 2s;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  &:nth-child(3) .processData::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    border: dotted;
+    border-right: none;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    animation: fadein 2s;
+  }
+`;
