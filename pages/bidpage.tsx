@@ -9,7 +9,7 @@ import {abi as AuctionHouseAbi} from '../node_modules/@zoralabs/auction-house/di
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 import {weth,auctionHouse} from '../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
-const TOKEN_ID = '2'
+const TOKEN_ID = '1'
 const TOKEN_ADDRESS = "0xD391646321ccf7938821a01d169DeA6922AEDBba"
 import Layout from '../components/Layout'
 
@@ -347,7 +347,7 @@ export const BidPage = (): JSX.Element => {
     <div className="container">
       
 
-      <header>
+      {/* <header>
         {address && (
           <div className="grid">
             <div>
@@ -360,7 +360,7 @@ export const BidPage = (): JSX.Element => {
             </div>
           </div>
         )}
-      </header>
+      </header> */}
 
       <main>
       <div className='title_balance'>
@@ -387,7 +387,7 @@ export const BidPage = (): JSX.Element => {
         </div>
 
       {
-        auctionData && !auctionData.expired ?
+        auctionData  ?
         (
           <>
              <h1 className="title">Place a bid</h1>
