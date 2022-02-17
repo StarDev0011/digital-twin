@@ -163,10 +163,10 @@ export default function Piece({
                 </div>
                 <div className="auction_right">
                   <div className="price_date_btn">
-                    {/* <div className="reserve_price">
+                    <div className="reserve_price">
                       <p>RESERVE PRICE</p>
-                      <h2>1.5 ETH</h2>
-                    </div> */}
+                      <h2>~5,200 USD</h2>
+                    </div>
                     <div className="start_date">
                       <p>AUCTIONS START ON</p>
                       <h2>March 1, 2022</h2>

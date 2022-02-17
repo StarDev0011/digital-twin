@@ -26,6 +26,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@ensdomains/ensjs": "^2.1.0",
+    "@u-wave/react-youtube": "^0.7.2",
     "@walletconnect/web3-provider": "^1.6.6",
     "@zoralabs/auction-house": "^1.1.3",
     "@zoralabs/nft-components": "^0.3.2",

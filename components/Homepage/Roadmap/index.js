@@ -14,8 +14,10 @@ const Roadmap = () => {
                         <RoadmapItem key={item.id}>
                         <div className="processData">
                             <h1>{item.id}</h1>
-                            <h3>{item.title}</h3>
-                            <p>{item.paragraph}</p>
+                            <div className="roadmap_item">
+                                <h3>{item.title}</h3>
+                                <p>{item.paragraph}</p>
+                            </div>
                         </div>
                         </RoadmapItem>
                     ))}

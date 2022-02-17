@@ -63,6 +63,23 @@ const GlobalStyles = createGlobalStyle`
     z-index: -1;
     width: 100vw;
   }
+  @keyframes floating {
+    0% { transform: translate(200px,  0px); }
+    100%   { transform: translate(0, 0px); }   
+  }
+  @keyframes floating1 {
+    0% { transform: translate(-200px,  0px); }
+    100%   { transform: translate(0, 0px); }   
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
   @media screen and (max-width: 465px){
     video#video_bg {
       width: auto;
