@@ -50,9 +50,11 @@ export const HeroContent2 = styled.div`
   height: 100%;
   grid-column-gap: 2rem;
   .content_data {
-    text-align:center;
     padding-top: 50px;
     padding-bottom: 20px;
+    .how_btn {
+      margin-left: 0px;
+    }
   }
   @media (max-width: 465px) {
     display:block;

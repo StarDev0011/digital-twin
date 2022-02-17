@@ -23,15 +23,11 @@ export const roadmap_data = [
     },
     {
       id: 3,
-      title: "10% of Proceeds Go to The Global Fund For Widows",
+      title: (<>10% of Proceeds Go to <a href="https://www.globalfundforwidows.org/" target="_blank">The Global Fund for Widows.</a></>),
       paragraph: (
         <p>
           {
-            "In observance of International Women's Day this March, we will be donating 10% of auction proceeds to "
-          }
-          <a href="https://www.globalfundforwidows.org/" target="_blank">The Global Fund for Widows.</a>
-          {
-            " A nonprofit dedicated to empowering widows and female heads of households to overcome poverty."
+            "In observance of International Women's Day this March, we will be donating 10% of auction proceeds to The Global Fund for Widows. A nonprofit dedicated to empowering widows and female heads of households to overcome poverty."
           }
         </p>
       )

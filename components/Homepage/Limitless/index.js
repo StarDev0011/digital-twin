@@ -12,23 +12,22 @@ import {
 
 const Limitless = () => {
     return (
-        <div>
+        <div id = "limitless">
             <SiteContainer>
                 <LimitlessWrapper>
                     <LimitlessContainer>
                         <LimitlessData>
                             <h2>{"Limitless Earings"}</h2>
-                            <p>{"The Limitless earrings are a unique,"}</p>
+                            <p>{"Introducing fine jewelry"}</p>
+                            <p>{"in its digi-physical form:"}</p>
+                            <p>{"The Limitless earrings are"}</p>
+                            <p>{"18K gold diamond,"}</p>
                             <p>{"one-of-a-kind design."}</p>
-                            <p>{"Comfortable and Elegant,"}</p>
-                            <p>{"Bold Yet"}</p>
-                            <p>{"Feminine."}</p>
-                            <p>{"Introducing fine jewelery"}</p>
-                            <p>{"in its digi-physical form."}</p>
-                            <p>{"The first 1/1 NFT by L’Dezen x Payal Shah"}</p>
+                            <p>{"Comfortable and elegant,"}</p>
+                            <p>{"Bold, yet feminine."}</p>
                             <div className="limitless_icon_txt">
                                 <img src = "/images/founder.png" />
-                                <p>L’Dezen x Payal Shah</p>
+                                <p>L'Dezen x Payal Shah</p>
                             </div>
                         </LimitlessData>
                     </LimitlessContainer>

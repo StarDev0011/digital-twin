@@ -27,7 +27,8 @@ export const SiteImageWrapper = styled.div`
 export const LDezenData = styled.div`
   grid-column: 7/-1;
   p {
-    font-size: 20px;
+    font-size: 22px;
+    font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
       font-size: 16px;
     }

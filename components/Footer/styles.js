@@ -40,6 +40,7 @@ export const FooterRow = styled.div`
 export const FooterCol = styled.div`
   .siteInfo {
     font-size: 1.6rem;
+    font-family: ${(props) => props.theme.fonts.headingFont};
   }
   h3 {
     font-family: ${(props) => props.theme.fonts.headingFont};
@@ -47,6 +48,7 @@ export const FooterCol = styled.div`
   }
   .newsletterInfo {
     font-size: 1.6rem;
+    font-family: ${(props) => props.theme.fonts.headingFont};
     margin-top: 2.8rem;
     line-height: 1.6;
     margin-bottom: 2rem;

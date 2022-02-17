@@ -24,7 +24,8 @@ export const AboutSectionColLeft = styled.div`
     letter-spacing: 0.5px;
   }
   p {
-    font-size: 20px;
+    font-size: 22px;
+    font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
       font-size: 16px;
     }
