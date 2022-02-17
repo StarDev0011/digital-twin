@@ -24,8 +24,9 @@ export const process = [
     paragraph: (
       <p>
         {
-          "The owner of the L'Dezen NFT has immediate access to digital utility by trading on the secondary marketplace. If you are an owner of any Profile Picture (PFP) NFTs, we also offer a digital rendering of your earrings to be included on your NFT of choice. Check out what your new avatar could look like here. "
+          "The owner of the L'Dezen NFT has immediate access to digital utility by trading on the secondary marketplace. If you are an owner of any Profile Picture (PFP) NFTs, we also offer a digital rendering of your earrings to be included on your NFT of choice. Check out what your new avatar could look like "
         }
+        <a href = "/images/women.gif" target = "_blank">here.</a>
       </p>
     ),
     icon: <RiHomeSmileLine />
