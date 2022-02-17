@@ -37,7 +37,7 @@ const Limitless = () => {
                     </SiteImageWrapper>
                 </LimitlessWrapper>
                 <LimitlessButtonContainer>
-                    <a className="auction_btn" href = "/auctions">Enter Auction</a>
+                    <a className="auction_btn" href = "token/0xD391646321ccf7938821a01d169DeA6922AEDBba/2">Enter Auction</a>
                 </LimitlessButtonContainer>
             </SiteContainer>
         </div>
