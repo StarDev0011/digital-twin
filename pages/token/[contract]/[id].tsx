@@ -171,13 +171,13 @@ export default function Piece({
                       <p>AUCTIONS START ON</p>
                       <h2>March 1, 2022</h2>
                     </div>
-                    <div className="bid_btn">
+                    {/* <div className="bid_btn">
                       <Button onClick={(evt) =>
                           push(
                             `../../bidpage`
                           )
                         }>PLACE BID</Button>
-                    </div>
+                    </div> */}
                   </div>
                   <div >
                     {/* <p>HISTORY</p>
