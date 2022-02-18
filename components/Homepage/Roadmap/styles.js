@@ -69,7 +69,7 @@ export const RoadmapItem = styled.div`
     border-bottom-left-radius: 100px;
     z-index: -1;
   }
-  &:first-child .roadmap_item {
+  &:first-child .true_roadmap_item {
     animation-name: floating;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
@@ -88,7 +88,7 @@ export const RoadmapItem = styled.div`
     border-bottom-right-radius: 100px;
     z-index: -1;
   }
-  &:nth-child(2) .roadmap_item {
+  &:nth-child(2) .true_roadmap_item {
     animation-name: floating1;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
@@ -107,12 +107,12 @@ export const RoadmapItem = styled.div`
     border-bottom-left-radius: 100px;
     z-index: -1;
   }
-  &:nth-child(3) .roadmap_item {
+  &:nth-child(3) .true_roadmap_item {
     animation-name: floating;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
   }
-  &:nth-child(4) .roadmap_item {
+  &:nth-child(4) .true_roadmap_item {
     animation-name: floating1;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
