@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
-        {loading && <Splash loading={loading} />}
+        {/* {loading && <Splash loading={loading} />} */}
 
         <Component {...pageProps} />
       </ThemeProvider>
