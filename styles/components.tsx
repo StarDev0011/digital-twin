@@ -9,6 +9,7 @@ export const PageWrapper = styled.section`
     var(--space-sm)
     var(--space-sm)
     var(--space-lg);
+  padding-bottom: 100px;
   .auction_body {
     display:flex;
     width:100%;
