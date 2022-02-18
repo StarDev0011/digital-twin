@@ -9,7 +9,7 @@ import {
 import { GetServerSideProps } from "next";
 import { NETWORK_ID, APP_TITLE } from './../../../utils/env-vars'
 import { PageWrapper } from "../../../styles/components";
-import Head from "../../../components/head";
+
 import styled from 'styled-components';
 
 import React,{useState,useEffect} from "react";
@@ -71,7 +71,7 @@ export default function Piece({
   return (
     <SiteContainer>
       <Header />
-        <Head title = "mith" description={description} ogImage={image} />
+        
         <MediaConfiguration networkId={NETWORK_ID as NetworkIDs} style={styles}>
           <PageWrapper>
             <NFTFullPage useBetaIndexer={true} contract={query.contract as string} id={query.id as string} initialData={initialData}>
