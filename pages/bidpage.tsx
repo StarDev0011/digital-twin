@@ -367,11 +367,7 @@ export const BidPage = (): JSX.Element => {
         
           {web3Provider ? (
                 <div className='balance_connect'>
-<<<<<<< HEAD
                   <button className="connect_button" type="button" onClick={disconnect}>
-=======
-                  {/* <button className="disconnect_button" type="button" onClick={disconnect}>
->>>>>>> 0171140777612d66989b44479f923f2487c9e3e0
                     Disconnect
                   </button>
                   <div className='bid_balance'>

@@ -78,10 +78,11 @@ export default function Piece({
               <FullComponents.MediaFull />
               <div className="auction_body">
                 <div className="auction_left" >
-                  <div className="limitless_icon_txt">
+                  {/* <div className="limitless_icon_txt">
                       <img src = "/images/dt_logo.png" />
                       <p>Digital Twin</p>
-                  </div>
+                  </div> */}
+                  <FullComponents.CollectionTag/>
                   <div className="auction_desc">
                     <h2>{initialData.nft.tokenData.metadata.json.name}</h2>
                     {/* <p>Introducing fine jewelery</p>
@@ -183,11 +184,14 @@ export default function Piece({
                       <h2>March 1, 2022</h2>
                     </div>
                     <div className="bid_btn">
-                      <Button onClick={(evt) =>
-                          push(
-                            `../../bidpage`
-                          )
-                        }>PLACE BID</Button>
+                      <Button 
+                      // onClick={(evt) =>
+                          // push(
+                          //   `../../bidpage`
+                          // )
+                          
+                        // }
+                        >Coming Soon</Button>
                     </div>
                   </div>
                   <div >
