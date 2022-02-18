@@ -6,20 +6,20 @@ import { RoadmapData, RoadmapItem } from "./styles";
 import { useInView } from 'react-intersection-observer';
 
 const Roadmap = () => {
-    const [ref, inView] = useInView({
+    const {ref, inView} = useInView({
         threshold: 0,
         initialInView: true
       })
     return (
         <div>
-            <SiteContainer>
+            <SiteContainer ref={ref}>
                 <SiteTitle>L'Dezen x Digital Twin Roadmap</SiteTitle>
-                <RoadmapData className = {inView}>
+                <RoadmapData>
                     {roadmap_data.map((item) => (
-                        <RoadmapItem key={item.id} ref={ref}>
+                        <RoadmapItem key={item.id}>
                         <div className="processData">
                             <h1>{item.id}</h1>
-                            <div className="roadmap_item">
+                            <div className={inView + "_roadmap_item"}>
                                 <h3>{item.title}</h3>
                                 <p>{item.paragraph}</p>
                             </div>
