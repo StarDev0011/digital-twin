@@ -596,6 +596,11 @@ export const BidPage = (): JSX.Element => {
             .title {
               font-size: 18px;
             }
+            .connect_button {
+              position: relative;
+              top: auto;
+              right: auto;
+            }
           }
         `}</style>
 

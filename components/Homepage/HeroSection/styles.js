@@ -58,6 +58,10 @@ export const HeroContent2 = styled.div`
   }
   @media (max-width: 465px) {
     display:block;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
   }
 `;
 
@@ -101,6 +105,9 @@ export const HeroTitle2 = styled.h2`
 export const HeroButtonsWrapper = styled.div`
   margin: 4.6rem 0;
   display: flex;
+  .how_btn {
+    width: 100%;
+  }
   div {
     &:last-child {
       margin-left: 2rem;
