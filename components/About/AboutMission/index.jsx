@@ -6,8 +6,6 @@ import {
 } from "./styles";
 
 import React from "react";
-import { SiteContainer } from "../../../atoms/SiteContainer";
-import { SiteTitle } from "../../../atoms/SiteTitle";
 
 const AboutMission = () => {
   return (

@@ -13,7 +13,7 @@ const Roadmap = () => {
     return (
         <div>
             <SiteContainer ref={ref}>
-                <SiteTitle>L'Dezen x Digital Twin Roadmap</SiteTitle>
+                <SiteTitle>{"L'Dezen x Digital Twin Roadmap"}</SiteTitle>
                 <RoadmapData>
                     {roadmap_data.map((item) => (
                         <RoadmapItem key={item.id}>

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { SplashWrapper } from "./styles";
-const Splash = ({ loading }) => {
+const Splash = () => {
   return (
     <SplashWrapper>
       <Image

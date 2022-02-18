@@ -1,19 +1,17 @@
 import WalletConnectProvider from '@walletconnect/web3-provider'
-import { providers,Contract, ethers,BigNumber } from 'ethers'
-import Head from 'next/head'
+import { providers,Contract, ethers } from 'ethers'
 import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
-import { ellipseAddress, getChainData } from '../lib/utilities'
-import {abi as AuctionHouseAbi} from './../node_modules/@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
+import {abi as AuctionHouseAbi} from '@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-import {weth,auctionHouse} from './../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
+import {auctionHouse} from '@zoralabs/auction-house/dist/addresses/4.json'
 const TOKEN_ID = '1'
 const TOKEN_ADDRESS = "0xD391646321ccf7938821a01d169DeA6922AEDBba"
 import Layout from '../components/Layout'
 
-import { NETWORK_ID, APP_TITLE } from './../utils/env-vars'
+import { NETWORK_ID } from '../utils/env-vars'
 import {
     MediaFetchAgent,
     NetworkIDs,
@@ -141,14 +139,9 @@ function reducer(state: StateType, action: ActionType): StateType {
   }
 }
 
-type nft = {
-    tokenData : any,
-    auctionData : any
-}
-
 export const BidPage = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const { provider, web3Provider, address, chainId ,balance,contract} = state
+  const { provider, web3Provider ,balance,contract} = state
   const [auctionData,setAuctionData] = useState(null)
   
   const [leastBidAmount,setLeastBidAmount] = useState('')
@@ -220,8 +213,6 @@ export const BidPage = (): JSX.Element => {
               expired = false;
             }
           }
-          console.log(expired)
-          console.log(data)
           setAuctionData({...data,expired})
           
       }
@@ -259,7 +250,7 @@ export const BidPage = (): JSX.Element => {
         // eslint-disable-next-line no-console
         console.log('accountsChanged', accounts)
         web3Provider.getBalance(accounts[0]).then((res)=>{
-            let etherString = ethers.utils.formatEther(res)
+            const etherString = ethers.utils.formatEther(res)
             dispatch({
                 type: 'SET_ADDRESS',
                 address: accounts[0],
@@ -295,7 +286,8 @@ export const BidPage = (): JSX.Element => {
     }
   }, [provider, disconnect])
 
-  const chainData = getChainData(chainId)
+  // const chainData = getChainData(chainId)
+  // console.log(chainData)
   
   const handleBid = async()=>{
     try{
@@ -316,9 +308,6 @@ export const BidPage = (): JSX.Element => {
   }
   
   const validBidCheck = ()=>{
-    console.log(typeof(bidAmount))
-    console.log(typeof(leastBidAmount))
-    console.log(typeof(balance))
     if (Number(bidAmount) < Number(leastBidAmount) || Number(bidAmount) > Number(balance)){
       return {
         status: false,
@@ -330,17 +319,17 @@ export const BidPage = (): JSX.Element => {
     }
   }
 
-  const getAuctionDetails = async()=>{
-    try{
-      setLoading(true)
-      console.log(await contract.functions.auctions(1935))
-      console.log("successfully bid placed!")
-      setLoading(false)
-    }catch(err){
-      console.log(err)
-      setLoading(false)
-    }
-  }
+  // const getAuctionDetails = async()=>{
+  //   try{
+  //     setLoading(true)
+  //     console.log(await contract.functions.auctions(1935))
+  //     console.log("successfully bid placed!")
+  //     setLoading(false)
+  //   }catch(err){
+  //     console.log(err)
+  //     setLoading(false)
+  //   }
+  // }
 
   return (
     <Layout title="Bidpage">
@@ -399,7 +388,7 @@ export const BidPage = (): JSX.Element => {
         <button 
          onClick={()=>{
            if (web3Provider){
-            console.log(validBidCheck())
+            // console.log(validBidCheck())
            
             if (validBidCheck().status){
              handleBid()
@@ -416,8 +405,7 @@ export const BidPage = (): JSX.Element => {
            </div>
            <p className='withdrawl'>You cannot Withdraw a bid once submitted.</p>
            <div className='refresh_btn' onClick={()=>{ fetchAuction(true)}}><img src='/images/refresh.png' /><p>Refresh Bid</p></div>
-       
-          
+           <p>{loading}</p>
           </>
         ): !auctionData ?
         (

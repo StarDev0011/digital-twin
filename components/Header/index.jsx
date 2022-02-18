@@ -8,14 +8,11 @@ import {
 } from "./styles";
 
 import Link from "next/link";
-import { SiteButton } from "../../atoms/SiteButton";
 import { MenuContainer } from "../../atoms/SiteContainer";
 import { menuData } from "../../data/menu";
 import { socialData } from "../../data/social";
-import {useRouter} from 'next/router';
 
 const Header = () => {
-  const router = useRouter()
   return (
     <MenuContainer>
       <HeaderWrapper>

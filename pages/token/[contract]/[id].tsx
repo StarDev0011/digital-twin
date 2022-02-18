@@ -7,19 +7,16 @@ import {
 } from "@zoralabs/nft-hooks";
 
 import { GetServerSideProps } from "next";
-import { NETWORK_ID, APP_TITLE } from './../../../utils/env-vars'
+import { NETWORK_ID } from './../../../utils/env-vars'
 import { PageWrapper } from "../../../styles/components";
-import Head from "../../../components/head";
+
 import styled from 'styled-components';
 
-import React,{useState,useEffect} from "react";
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import {writeFileSync} from 'fs';
-import {BidPage} from '../../bidpage'
 import { SiteContainer } from "../../../atoms/SiteContainer";
 import Header from "../../../components/Header/index"
-import ENS, { getEnsAddress } from '@ensdomains/ensjs'
 // const providerOptions = {
 //   /* See Provider Options Section */
 // };
@@ -59,19 +56,16 @@ type PieceProps = {
 };
 
 export default function Piece({
-  name,
-  description,
-  image,
   initialData,
 }: PieceProps) {
-  const { query,push } = useRouter();
+  const { query } = useRouter();
 //   const router = useRouter();
   
 
   return (
     <SiteContainer>
       <Header />
-        <Head title = "mith" description={description} ogImage={image} />
+        
         <MediaConfiguration networkId={NETWORK_ID as NetworkIDs} style={styles}>
           <PageWrapper>
             <NFTFullPage useBetaIndexer={true} contract={query.contract as string} id={query.id as string} initialData={initialData}>
@@ -238,7 +232,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data);
   // console.log(tokenInfo)
-  console.log(data)
+  
   writeFileSync('tokeninfo.json',JSON.stringify(data))
   // console.log(data.nft.tokenData.tokenContract)
   // const result = await fetchAgent.fetch

@@ -5,10 +5,6 @@ import {
   VisionWrapper
 } from "./styles";
 
-import Image from "next/image";
-import React from "react";
-import { SiteContainer } from "../../../atoms/SiteContainer";
-import { SiteTitle } from "../../../atoms/SiteTitle";
 
 const AboutVision = () => {
   return (

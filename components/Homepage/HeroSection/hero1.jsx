@@ -1,5 +1,4 @@
 import {
-  HeroButton,
   HeroButtonsWrapper,
   HeroContent,
   HeroData,
