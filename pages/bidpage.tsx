@@ -5,10 +5,10 @@ import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
 import { ellipseAddress, getChainData } from '../lib/utilities'
-import {abi as AuctionHouseAbi} from '../../node_modules/@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
+import {abi as AuctionHouseAbi} from './../node_modules/@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-import {weth,auctionHouse} from '../../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
+import {weth,auctionHouse} from './../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
 const TOKEN_ID = '1'
 const TOKEN_ADDRESS = "0xD391646321ccf7938821a01d169DeA6922AEDBba"
 import Layout from '../components/Layout'
@@ -367,9 +367,9 @@ export const BidPage = (): JSX.Element => {
         
           {web3Provider ? (
                 <div className='balance_connect'>
-                  {/* <button className="disconnect_button" type="button" onClick={disconnect}>
+                  <button className="connect_button" type="button" onClick={disconnect}>
                     Disconnect
-                  </button> */}
+                  </button>
                   <div className='bid_balance'>
                     <h1 className="title">Place a bid</h1>
                     <h3>Your balance : <span className='real_bal'>{balance}</span></h3>
