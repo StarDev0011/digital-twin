@@ -343,7 +343,7 @@ export const BidPage = (): JSX.Element => {
   }
 
   return (
-    <Layout>
+    <Layout title="Bidpage">
     <div className="container">
       
 
