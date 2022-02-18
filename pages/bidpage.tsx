@@ -367,7 +367,7 @@ export const BidPage = (): JSX.Element => {
         
           {web3Provider ? (
                 <div className='balance_connect'>
-                  {/* <button className="connect_button" type="button" onClick={disconnect}>
+                  {/* <button className="disconnect_button" type="button" onClick={disconnect}>
                     Disconnect
                   </button> */}
                   <div className='bid_balance'>
@@ -378,7 +378,7 @@ export const BidPage = (): JSX.Element => {
             ) :             
             (
               <button className="connect_button" type="button" onClick={connect}>
-                Connect
+                Connect Wallet
               </button>
             )
           }
@@ -451,6 +451,9 @@ export const BidPage = (): JSX.Element => {
             border-radius: 500px;
             font-weight: 700;
             cursor: pointer;
+            position:absolute;
+            top:30px;
+            right: 10%;
           }
 
           .bid_balance {
