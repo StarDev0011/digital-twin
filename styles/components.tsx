@@ -35,7 +35,7 @@ export const PageWrapper = styled.section`
     .auction_desc p {
       font-size: 1.6em;
       line-height: 2;
-      font-family: ${(props) => props.theme.fonts.bodyFont};
+      font-family: ${(props) => props.theme.fonts.headingFont};
     }
     .limitless_icon_txt {
       border: solid 1px rgba(0, 0, 0, 0.25);
@@ -50,12 +50,14 @@ export const PageWrapper = styled.section`
           margin-right:100px;
           margin-top: auto;
           margin-bottom: auto;
+          font-family: ${(props) => props.theme.fonts.bodyFont}
       }
     }
     .minter p {
       font-size: 12px;
       color: #969696;
       margin-top: 80px;
+      font-family: ${(props) => props.theme.fonts.bodyFont}
     }
     .minter .minter_detail {
       width: fit-content;
@@ -65,6 +67,7 @@ export const PageWrapper = styled.section`
       margin-top: 15px;
       p {
           font-size: 1.8rem;
+          font-family: ${(props) => props.theme.fonts.bodyFont}
           font-weight: 400;
           margin-left: 10px;
           margin-right:100px;
@@ -83,6 +86,7 @@ export const PageWrapper = styled.section`
         font-size: 12px;
         color: #969696;
         margin-bottom: 30px;
+        font-family: ${(props) => props.theme.fonts.bodyFont}
       }
       .detail_item {
         display:flex;
@@ -90,6 +94,7 @@ export const PageWrapper = styled.section`
         margin-top: 20px;
         .net_left p {
           font-size: 12px;
+          font-family: ${(props) => props.theme.fonts.bodyFont}
           color: #000000;
           font-weight: 600;
           line-height: 16px;
@@ -102,6 +107,7 @@ export const PageWrapper = styled.section`
           }
           p {
             font-size: 12px;
+            font-family: ${(props) => props.theme.fonts.bodyFont}
           }
         }
       }
@@ -113,11 +119,13 @@ export const PageWrapper = styled.section`
         padding-top: 30px;
         .refresh_meta {
           font-size: 12px;
+          font-family: ${(props) => props.theme.fonts.bodyFont}
           color: #000000;
           font-weight: 700;
         }
         .updated_mins {
           font-size: 12px;
+          font-family: ${(props) => props.theme.fonts.bodyFont}
           font-weight: 400;
           color: #969696;
         }
@@ -139,25 +147,30 @@ export const PageWrapper = styled.section`
       border-radius: 5px;
       margin-bottom: 80px;
       .reserve_price p {
+        font-family: ${(props) => props.theme.fonts.bodyFont}
         font-size: 12px;
         color: #969696;
         margin-bottom: 10px;
       }
       .reserve_price h2 {
         font-size: 24px;
+        font-family: ${(props) => props.theme.fonts.bodyFont}
         margin-bottom: 50px;
       }
       .start_date p {
         font-size: 12px;
+        font-family: ${(props) => props.theme.fonts.bodyFont}
         color: #969696;
         margin-bottom: 10px;
       }
       .start_date h2 {
         font-size: 18px;
+        font-family: ${(props) => props.theme.fonts.bodyFont}
         margin-bottom: 30px;
       }
       .bid_btn {
         text-align:center;
+        font-family: ${(props) => props.theme.fonts.bodyFont}
       }
     }
     .history {
@@ -167,6 +180,7 @@ export const PageWrapper = styled.section`
       padding: 20px;
       p {
         font-size: 12px;
+        font-family: ${(props) => props.theme.fonts.bodyFont}
         color: #969696;
         margin-bottom: 20px;
       }
@@ -179,6 +193,7 @@ export const PageWrapper = styled.section`
         margin-top: 15px;
         p {
             font-size: 12px;
+            font-family: ${(props) => props.theme.fonts.bodyFont}
             font-weight: 400;
             margin-left: 10px;
             margin-top: auto;
@@ -192,11 +207,13 @@ export const PageWrapper = styled.section`
           text-align:right;
           .eth {
             font-size: 12px;
+            font-family: ${(props) => props.theme.fonts.bodyFont}
             color: #000000;
             line-height: 1.4;
           }
           .usd {
             font-size: 10px;
+            font-family: ${(props) => props.theme.fonts.bodyFont}
             color: $969696;
             line-height: 1.4;
           }

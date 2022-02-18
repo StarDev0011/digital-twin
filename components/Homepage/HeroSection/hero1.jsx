@@ -44,10 +44,10 @@ const HeroSection1 = () => {
             </HeroTitle>
             <HeroButtonsWrapper>
               <SiteButton buttonTheme="light" buttonBorder={true}>
-                <Link href="#">View Release</Link>
+                <Link href="/#limitless">View Release</Link>
               </SiteButton>
               <SiteButton buttonTheme="light" buttonBorder={true}>
-                <Link href="#">How it Works</Link>
+                <Link href="/#how_it_works">How it Works</Link>
               </SiteButton>
             </HeroButtonsWrapper>
             <HeroSubtitle>Genesis NFT Drop coming this March</HeroSubtitle>

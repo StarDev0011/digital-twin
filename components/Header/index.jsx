@@ -43,11 +43,11 @@ const Header = () => {
               </MenuItems>
             </HeaderCenter>
           </div>
-          {router.pathname == "/bidpage"?<div className="connect_wallet">
+          {/* {router.pathname == "/bidpage"?<div className="connect_wallet">
             <SiteButton>
               <Link href="/">Connect wallet</Link>
             </SiteButton>
-          </div>:<></>}
+          </div>:<></>} */}
         </HeaderTop>
       </HeaderWrapper>
     </MenuContainer>

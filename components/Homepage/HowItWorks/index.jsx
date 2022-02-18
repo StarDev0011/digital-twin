@@ -7,7 +7,7 @@ import { process } from "../../../data/process";
 
 const HowItWorks = () => {
   return (
-    <HowItWorksWrapper>
+    <HowItWorksWrapper id = "how_it_works">
       <SiteContainer>
         <SiteTitle>How it works</SiteTitle>
         <HowItWorksData>

@@ -26,7 +26,7 @@ const AboutSection = () => {
             <SiteTitle align="left">PAYAL SHAH</SiteTitle>
             <p>
               {
-                "Inspiration is everywhere. I’m inspired by learning, by experiencing, and by conversations. I’m inspired by my travels; whether it is the afternoon sunset against the Hong Kong skyline, the Turkish dusk with its soft light blue shades or rich Indian architecture—I’m captured by life’s beauties all around! I also take inspiration from business people that are successful in both their field but also in the people game: the way they develop, sustain and enrich their relationship to achieve business success and creativity."
+                "Inspiration is everywhere. I’m inspired by learning, by experiencing, and by conversations. I’m inspired by my travels; whether it is the afternoon sunset gleaming against the Hong Kong skyline, the Turkish dusk with its paisley patterns in soft light blue shades or rich Indian architecture from centuries—I’m captured by life’s beauties all around! I also take inspiration from business people that are successful in both their field but also in the people game: the way they develop, sustain, enrich and most importantly share their relationship of business success and creativity."
               }
             </p>
           </AboutSectionColLeft>

@@ -37,8 +37,9 @@ export const LimitlessData = styled.div`
       }
   }
   p {
-    font-size: 16px;
+    font-size: 24px;
     line-height: 2;
+    font-family: ${(props) => props.theme.fonts.headingFont};
   }
   .limitless_icon_txt {
     border: solid 1px rgba(0, 0, 0, 0.25);

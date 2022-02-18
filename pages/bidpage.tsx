@@ -5,10 +5,10 @@ import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
 import { ellipseAddress, getChainData } from '../lib/utilities'
-import {abi as AuctionHouseAbi} from '../node_modules/@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
+import {abi as AuctionHouseAbi} from './../node_modules/@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-import {weth,auctionHouse} from '../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
+import {weth,auctionHouse} from './../node_modules/@zoralabs/auction-house/dist/addresses/4.json'
 const TOKEN_ID = '1'
 const TOKEN_ADDRESS = "0xD391646321ccf7938821a01d169DeA6922AEDBba"
 import Layout from '../components/Layout'
@@ -367,19 +367,17 @@ export const BidPage = (): JSX.Element => {
         
           {web3Provider ? (
                 <div className='balance_connect'>
-                <h3>Your balance : <span className='real_bal'>{balance}</span></h3>
-              
-              
-                
-              {/* <button className="button" type="button" onClick={disconnect}>
-                Disconnect
-              </button> */}
-              </div>
-                
-            ) : 
-            
+                  <button className="connect_button" type="button" onClick={disconnect}>
+                    Disconnect
+                  </button>
+                  <div className='bid_balance'>
+                    <h1 className="title">Place a bid</h1>
+                    <h3>Your balance : <span className='real_bal'>{balance}</span></h3>
+                  </div>                  
+                </div>                
+            ) :             
             (
-              <button className="button" type="button" onClick={connect}>
+              <button className="connect_button" type="button" onClick={connect}>
                 Connect
               </button>
             )
@@ -390,7 +388,6 @@ export const BidPage = (): JSX.Element => {
         auctionData  ?
         (
           <>
-             <h1 className="title">Place a bid</h1>
         <label className='eth_input'>
             
             <input type="text" name="amount"  placeholder={leastBidAmount} value={bidAmount} onChange={(event)=>{setBidAmount(event.target.value)}}/>
@@ -418,12 +415,7 @@ export const BidPage = (): JSX.Element => {
            Place Bid</button>
            </div>
            <p className='withdrawl'>You cannot Withdraw a bid once submitted.</p>
-           <button 
-         onClick={()=>{
-          //  getAuctionDetails()
-          fetchAuction(true)
-         }}>
-           Refresh</button>
+           <div className='refresh_btn' onClick={()=>{ fetchAuction(true)}}><img src='/images/refresh.png' /><p>Refresh Bid</p></div>
        
           
           </>
@@ -450,10 +442,25 @@ export const BidPage = (): JSX.Element => {
             border-radius: 5px;
           }
 
-          .title_balance {
+          .connect_button {
+            font-size: 16px;
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 20px 75px;
+            border-radius: 500px;
+            font-weight: 700;
+            cursor: pointer;
+          }
+
+          .bid_balance {
             display:flex;
             justify-content: space-between;
+          }
+
+          .title_balance {
             margin-bottom: 60px;
+            text-align: center;
           }
 
           .title {
@@ -524,6 +531,20 @@ export const BidPage = (): JSX.Element => {
             font-size: 18px;
             color: #000000;
             font-weight: bold;
+          }
+
+          .refresh_btn {
+            width: fit-content;
+            display: flex;
+            cursor: pointer;
+          }
+
+          .refresh_btn p {
+            font-size: 12px;
+            color: #000000;
+            font-weight: 700;
+            margin-top: auto;
+            margin-bottom: auto;
           }
 
           p {

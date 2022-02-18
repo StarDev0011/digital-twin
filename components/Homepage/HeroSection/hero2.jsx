@@ -29,8 +29,8 @@ import {
               </HeroTitle2>
               <HeroSubtitle2>Luxury. Transformed.</HeroSubtitle2>
               <HeroButtonsWrapper>
-                <SiteButton buttonTheme="light">
-                  <Link href="#">How it Works</Link>
+                <SiteButton buttonTheme="light" className = "how_btn">
+                  <Link href="/#how_it_works">How it Works</Link>
                 </SiteButton>
               </HeroButtonsWrapper>
               <HeroSubtitle2>Genesis NFT Drop coming this March</HeroSubtitle2>
