@@ -51,7 +51,7 @@ export const AboutParagraph = styled.p`
   margin-right: auto;
   line-height: 1.8;
   @media (max-width: 465px) {
-    font-size:18px;
+    font-size:16px;
     width: 100%;
   }
 `;

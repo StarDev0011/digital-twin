@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
-  padding: 4.2rem 0;
+  padding: 4.2rem 1rem;
 `;
 export const FooterLogoWrapper = styled.div`
   display: flex;

@@ -17,8 +17,9 @@ const AboutMission = () => {
       </SiteImageWrapper>
       <AboutMissionContainer>
         <AboutMissionData>
-          <SiteTitle align="left">Mission</SiteTitle>
-          <p>Curate fine-jewelery from artists around the world</p>
+          <h4>Mission</h4>
+          <h3>Discovery. Redefined.</h3>
+          <p>Curate jewelery from artists around the world</p>
             <br />
           <p>Onboard the next wave of NFT collectors</p>
             <br />
