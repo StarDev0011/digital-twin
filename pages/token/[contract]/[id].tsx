@@ -13,6 +13,7 @@ import Head from "../../../components/head";
 import styled from 'styled-components';
 
 import React,{useState,useEffect} from "react";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 import {writeFileSync} from 'fs';
 import {BidPage} from '../../bidpage'
@@ -38,7 +39,7 @@ const styles = {
   },
 };
 const Button = styled.button`
-   background-color: black;
+  background-color: black;
   color: white;
   font-size: 20px;
   padding: 20px 100px;
@@ -46,6 +47,9 @@ const Button = styled.button`
   border:none;
   margin: 10px auto;
   cursor: pointer;
+  @media (max-width: 465px) {
+    padding: 20px 60px; 
+  }
 `;
 type PieceProps = {
   name: string;
@@ -113,7 +117,9 @@ export default function Piece({
                       <div className="net_right">
                         <p>{initialData.nft.tokenData.address}</p>
                         {/* <img src="/images/arrow.png" /> */}
-                        <img src = "/images/gradient.png" />
+                        <CopyToClipboard text = {initialData.nft.tokenData.address}>
+                          <img src = "/images/gradient.png" />
+                        </CopyToClipboard>
                       </div>
                     </div>
                     <div className="detail_item">
@@ -122,7 +128,9 @@ export default function Piece({
                       </div>
                       <div className="net_right">
                         <p>{initialData.nft.tokenData.tokenId}</p>
-                        <img src = "/images/gradient.png" />
+                        <CopyToClipboard text = {initialData.nft.tokenData.tokenId}>
+                          <img src = "/images/gradient.png" />
+                        </CopyToClipboard>
                       </div>
                     </div>
                     <div className="detail_item">

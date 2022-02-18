@@ -16,6 +16,7 @@ export const AboutInfoTitle = styled.h2`
   margin-bottom:100px;
   @media (max-width: 465px) {
     font-size: 28px;
+    margin-bottom: 50px;
   }
 `;
 export const AboutInfoItems = styled.div`

@@ -25,13 +25,31 @@ export const SiteImageWrapper = styled.div`
 `;
 export const VisionData = styled.div`
   grid-column: 1/7;
-
   p {
     font-size: 24px;
     line-height: 2;
     margin-top: 1.5rem;
+    font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
       font-size: 16px;
+    }
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #000000;
+    font-family: ${(props) => props.theme.fonts.headingFont};
+    @media (max-width: 465px) {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 48px;
+    line-height: 1.6;
+    color: #000000;
+    font-family: ${(props) => props.theme.fonts.headingFont};
+    @media (max-width: 465px) {
+      font-size: 32px;
     }
   }
 `;

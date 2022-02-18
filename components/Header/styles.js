@@ -50,15 +50,19 @@ export const MenuItems = styled.div`
   margin-top: 2.5rem;
   li {
     &:not(:last-child) {
-      margin-right: 6rem;
+      margin-right: 3rem;
     }
     a {
       color: ${(props) => props.theme.colors.blackColor};
       font-family: ${(props) => props.theme.fonts.headingFont};
       letter-spacing: 0.5px;
-      font-size: 1.4rem;
+      font-size: 18px;
+      font-weight: bold;
       text-align: center;
       text-transform: capitalize;
+      @media (max-width: 465px) {
+        font-size: 14px;
+      }
     }
   }
 `;

@@ -43,7 +43,7 @@ export const NewsletterTitle = styled.div`
 `;
 export const NewsletterButton = styled(SiteButton)`
   margin: 10rem 0 0 0;
-
+  width: 100%;
   text-align: center;
   a {
     font-weight: bold;

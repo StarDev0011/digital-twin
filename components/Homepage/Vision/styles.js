@@ -8,6 +8,7 @@ export const VisionWrapper = styled.div`
   @media (max-width: 465px) {
     padding: 2%;
     display:block;
+    margin-top: 50px;
   }
 `;
 export const SiteImageWrapper = styled.div`

@@ -27,11 +27,30 @@ export const AboutMissionData = styled.div`
   grid-column: 6/-1;
   p {
     font-size: 24px;
+    font-family: ${(props) => props.theme.fonts.headingFont};
     line-height: 2;
     margin-top: 1.5rem;
     letter-spacing: 0.03em;
     @media (max-width: 465px) {
       font-size: 16px;
+    }
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #000000;
+    font-family: ${(props) => props.theme.fonts.headingFont};
+    @media (max-width: 465px) {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 48px;
+    line-height: 1.6;
+    color: #000000;
+    font-family: ${(props) => props.theme.fonts.headingFont};
+    @media (max-width: 465px) {
+      font-size: 32px;
     }
   }
 `;

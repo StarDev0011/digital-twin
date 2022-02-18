@@ -15,11 +15,12 @@ const AboutVision = () => {
     <VisionWrapper>      
       <VisionContainer>
         <VisionData>
-          <SiteTitle align="left">Vision</SiteTitle>
-          <p>Collect jewelry in the form of asset backed NFTs</p>
-          <br />
+          <h4>Vision</h4>
+          <h3>Luxury. Transformed.</h3>
           <p>Cross the line between digital & physical worlds</p>
           <br />
+          <p>Collect jewelry in the form of asset backed NFTs</p>
+          <br />          
           <p>Empower creative culture</p>
         </VisionData>
       </VisionContainer>
