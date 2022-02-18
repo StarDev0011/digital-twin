@@ -17,7 +17,7 @@ import React,{useState,useEffect} from "react";
 import {writeFileSync} from 'fs';
 import {BidPage} from '../../bidpage'
 import { SiteContainer } from "../../../atoms/SiteContainer";
-import Layout from "../../../components/Layout";
+import Header from "../../../components/Header/index"
 import ENS, { getEnsAddress } from '@ensdomains/ensjs'
 // const providerOptions = {
 //   /* See Provider Options Section */
@@ -66,7 +66,7 @@ export default function Piece({
 
   return (
     <SiteContainer>
-      <Layout>
+      <Header />
         <Head title = "mith" description={description} ogImage={image} />
         <MediaConfiguration networkId={NETWORK_ID as NetworkIDs} style={styles}>
           <PageWrapper>
@@ -165,10 +165,11 @@ export default function Piece({
                   <div className="price_date_btn">
                     <div className="reserve_price">
                       <p>RESERVE PRICE</p>
-                      <h2>~5,200 USD</h2>
+                      <h2>~1.75 ETH</h2>
+                      <p>~5,200 USD</p>
                     </div>
                     <div className="start_date">
-                      <p>AUCTIONS START ON</p>
+                      <p>AUCTION STARTS ON</p>
                       <h2>March 1, 2022</h2>
                     </div>
                     <div className="bid_btn">
@@ -198,7 +199,6 @@ export default function Piece({
             </NFTFullPage>
           </PageWrapper>
         </MediaConfiguration>
-      </Layout>
     </SiteContainer>
   );
 }
