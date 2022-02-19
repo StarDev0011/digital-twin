@@ -233,7 +233,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data);
   // console.log(tokenInfo)
   
-  writeFileSync('tokeninfo.json',JSON.stringify(data))
+ // writeFileSync('tokeninfo.json',JSON.stringify(data))
   // console.log(data.nft.tokenData.tokenContract)
   // const result = await fetchAgent.fetch
   // console.log(await fetchAgent.loadNFTData(tokenInfo.tokenContract,tokenInfo.tokenId))
