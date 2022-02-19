@@ -14,7 +14,7 @@ import styled from 'styled-components';
 
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-import {writeFileSync} from 'fs';
+// import {writeFileSync} from 'fs';
 import { SiteContainer } from "../../../atoms/SiteContainer";
 import Header from "../../../components/Header/index"
 // const providerOptions = {
