@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SplashWrapper = styled.div`
   width: 100vw;
@@ -12,4 +12,4 @@ export const SplashWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: ${(props) => props.theme.colors.blackColor};
-`;
+`

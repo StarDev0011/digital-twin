@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeroSectionWrapper = styled.section`
   min-height: calc(100vh - 125px);
   height: calc(100vh - 125px);
 
   width: 100%;
-  background-image: url("/images/herobg.png");
+  background-image: url('/images/herobg.png');
   background-color: #e3e3e4;
   background-size: cover;
   object-fit: cover;
@@ -13,7 +13,7 @@ export const HeroSectionWrapper = styled.section`
     min-height: 100vh;
     height: 100%;
   }
-`;
+`
 
 export const HeroSectionWrapper2 = styled.section`
   min-height: calc(100vh - 125px);
@@ -27,7 +27,7 @@ export const HeroSectionWrapper2 = styled.section`
     min-height: 100vh;
     height: 100%;
   }
-`;
+`
 
 export const HeroContent = styled.div`
   display: grid;
@@ -38,9 +38,9 @@ export const HeroContent = styled.div`
   height: 100%;
   grid-column-gap: 2rem;
   @media (max-width: 465px) {
-    display:block;
+    display: block;
   }
-`;
+`
 export const HeroContent2 = styled.div`
   display: grid;
   grid-template-columns: 6fr 4fr;
@@ -57,15 +57,15 @@ export const HeroContent2 = styled.div`
     }
   }
   @media (max-width: 465px) {
-    display:block;
+    display: block;
     width: 100%;
     padding-left: 2%;
     padding-right: 2%;
     text-align: center;
   }
-`;
+`
 
-export const HeroImage = styled.div``;
+export const HeroImage = styled.div``
 export const HeroData = styled.div`
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ export const HeroData = styled.div`
     padding-right: 2%;
     text-align: center;
   }
-`;
+`
 export const HeroTitle = styled.h2`
   font-size: 54px;
   font-family: ${(props) => props.theme.fonts.headingFont};
@@ -87,7 +87,7 @@ export const HeroTitle = styled.h2`
   @media (max-width: 465px) {
     font-size: 36px;
   }
-`;
+`
 
 export const HeroTitle2 = styled.h2`
   font-size: 54px;
@@ -100,7 +100,7 @@ export const HeroTitle2 = styled.h2`
   @media (max-width: 465px) {
     font-size: 36px;
   }
-`;
+`
 
 export const HeroButtonsWrapper = styled.div`
   margin: 4.6rem 0;
@@ -114,9 +114,9 @@ export const HeroButtonsWrapper = styled.div`
     }
   }
   @media (max-width: 465px) {
-    width:100%
+    width: 100%;
   }
-`;
+`
 
 export const HeroSubtitle = styled.p`
   font-size: 30px;
@@ -127,7 +127,7 @@ export const HeroSubtitle = styled.p`
   @media (max-width: 465px) {
     font-size: 20px;
   }
-`;
+`
 
 export const HeroSubtitle2 = styled.p`
   font-size: 30px;
@@ -139,4 +139,4 @@ export const HeroSubtitle2 = styled.p`
   @media (max-width: 465px) {
     font-size: 20px;
   }
-`;
+`

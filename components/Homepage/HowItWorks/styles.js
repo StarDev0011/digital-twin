@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HowItWorksWrapper = styled.section`
   padding: 12rem 0;
   @media (max-width: 465px) {
     padding: 10% 2%;
   }
-`;
+`
 export const HowItWorksData = styled.ul`
   list-style: none;
   display: grid;
@@ -15,7 +15,7 @@ export const HowItWorksData = styled.ul`
   @media (max-width: 465px) {
     display: block;
   }
-`;
+`
 export const HowItWorksItem = styled.li`
   width: 100%;
   display: flex;
@@ -80,4 +80,4 @@ export const HowItWorksItem = styled.li`
       }
     }
   }
-`;
+`

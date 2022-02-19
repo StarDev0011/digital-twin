@@ -1,24 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
   padding: 4.2rem 1rem;
-`;
+`
 export const FooterLogoWrapper = styled.div`
   display: flex;
   position: relative;
   width: 100%;
   margin-bottom: 2.4rem;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 0;
-    width: calc(1400px + (100vw - 1400px)/2 - 1rem);;
+    width: calc(1400px + (100vw - 1400px) / 2 - 1rem);
     height: 1px;
     background: ${(props) => props.theme.colors.blackColor};
     z-index: 3;
   }
-`;
+`
 
 export const FooterLogo = styled.h2`
   font-size: 2.8rem;
@@ -29,13 +29,13 @@ export const FooterLogo = styled.h2`
   line-height: 1;
   z-index: 5;
   padding-right: 2.4rem;
-`;
+`
 
 export const FooterRow = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.4rem;
-`;
+`
 export const FooterCol = styled.div`
   .siteInfo {
     font-size: 1.6rem;
@@ -52,7 +52,7 @@ export const FooterCol = styled.div`
     line-height: 1.6;
     margin-bottom: 2rem;
   }
-`;
+`
 export const MenuItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ export const MenuItems = styled.div`
       text-transform: capitalize;
     }
   }
-`;
+`
 export const SocialItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@ export const SocialItems = styled.div`
       color: ${(props) => props.theme.colors.blackColor};
     }
   }
-`;
+`
 
 export const CopyrightWrapper = styled.div`
   padding: 3.2rem;
@@ -98,4 +98,4 @@ export const CopyrightWrapper = styled.div`
     text-align: center;
     font-family: ${(props) => props.theme.fonts.headingFont};
   }
-`;
+`

@@ -2,11 +2,11 @@ import {
   LDezenContainer,
   LDezenData,
   LDezenWrapper,
-  SiteImageWrapper
-} from "./styles";
+  SiteImageWrapper,
+} from './styles'
 
-import React from "react";
-import { SiteTitle } from "../../../atoms/SiteTitle";
+import React from 'react'
+import { SiteTitle } from '../../../atoms/SiteTitle'
 
 const LDezen = () => {
   return (
@@ -25,7 +25,7 @@ const LDezen = () => {
         </LDezenData>
       </LDezenContainer>
     </LDezenWrapper>
-  );
-};
+  )
+}
 
-export default LDezen;
+export default LDezen

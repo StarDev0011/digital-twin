@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
-import { normalize } from "styled-normalize";
-import theme from "./theme";
+import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'styled-normalize'
+import theme from './theme'
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
@@ -87,6 +87,6 @@ const GlobalStyles = createGlobalStyle`
       height: 100vh;
     }    
   }
-`;
+`
 
-export default GlobalStyles;
+export default GlobalStyles

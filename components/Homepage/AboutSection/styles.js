@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AboutSectionWrapper = styled.div`
   padding: 9.6rem 0;
   margin-top: 50px;
-`;
+`
 export const AboutSectionRow = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   @media (max-width: 465px) {
-    display:block;
+    display: block;
   }
-`;
+`
 export const AboutSectionColLeft = styled.div`
   grid-column: 1/7;
   span {
@@ -35,17 +35,17 @@ export const AboutSectionColLeft = styled.div`
     letter-spacing: 0.5px;
   }
   @media (max-width: 465px) {
-    width:96%;
-    padding-left:2%;
-    text-align:center;
+    width: 96%;
+    padding-left: 2%;
+    text-align: center;
     margin-bottom: 30px;
   }
-`;
+`
 export const AboutSectionColRight = styled.div`
   grid-column: 7/-1;
   text-align: right;
   @media (max-width: 465px) {
-    width:96%;
-    padding-left:2%;
+    width: 96%;
+    padding-left: 2%;
   }
-`;
+`

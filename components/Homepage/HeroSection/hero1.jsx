@@ -5,14 +5,14 @@ import {
   HeroImage,
   HeroSectionWrapper,
   HeroSubtitle,
-  HeroTitle
-} from "./styles";
+  HeroTitle,
+} from './styles'
 
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { SiteButton } from "../../../atoms/SiteButton";
-import { SiteContainer } from "../../../atoms/SiteContainer";
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react'
+import { SiteButton } from '../../../atoms/SiteButton'
+import { SiteContainer } from '../../../atoms/SiteContainer'
 
 const HeroSection1 = () => {
   return (
@@ -29,17 +29,11 @@ const HeroSection1 = () => {
           </HeroImage>
           <HeroData>
             <HeroTitle>
-              {
-                "L'Dezen x Digital Twin"
-              }
+              {"L'Dezen x Digital Twin"}
               <br />
-              {
-                "Limited Edition"
-              }
+              {'Limited Edition'}
               <br />
-              {
-                "Digi-Physical Earrings"
-              }
+              {'Digi-Physical Earrings'}
             </HeroTitle>
             <HeroButtonsWrapper>
               <SiteButton buttonTheme="light" buttonBorder={true}>
@@ -54,7 +48,7 @@ const HeroSection1 = () => {
         </HeroContent>
       </SiteContainer>
     </HeroSectionWrapper>
-  );
-};
+  )
+}
 
-export default HeroSection1;
+export default HeroSection1

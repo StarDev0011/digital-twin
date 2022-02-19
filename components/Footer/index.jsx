@@ -5,15 +5,15 @@ import {
   FooterRow,
   FooterWrapper,
   MenuItems,
-  SocialItems
-} from "./styles";
+  SocialItems,
+} from './styles'
 
-import Copyright from "./copyright";
-import Link from "next/link";
-import { SiteButton } from "../../atoms/SiteButton";
-import { MenuContainer } from "../../atoms/SiteContainer";
-import { footermenuData } from "../../data/footer_menu";
-import { socialData } from "../../data/social";
+import Copyright from './copyright'
+import Link from 'next/link'
+import { SiteButton } from '../../atoms/SiteButton'
+import { MenuContainer } from '../../atoms/SiteContainer'
+import { footermenuData } from '../../data/footer_menu'
+import { socialData } from '../../data/social'
 
 const Footer = () => {
   return (
@@ -69,7 +69,7 @@ const Footer = () => {
       </FooterWrapper>
       <Copyright />
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

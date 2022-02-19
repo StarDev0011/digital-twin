@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import { SplashWrapper } from "./styles";
+import Image from 'next/image'
+import React from 'react'
+import { SplashWrapper } from './styles'
 const Splash = () => {
   return (
     <SplashWrapper>
@@ -11,7 +11,7 @@ const Splash = () => {
         alt="digitaltwin"
       />
     </SplashWrapper>
-  );
-};
+  )
+}
 
-export default Splash;
+export default Splash

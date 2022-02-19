@@ -43,7 +43,7 @@ export const media = {
     @media (hover: none) {
       ${css(...args)}
     }
-  `
+  `,
 }
 
 export const absoluteCentered = css`
@@ -52,7 +52,7 @@ export const absoluteCentered = css`
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto!important;
+  margin: auto !important;
 `
 
 export const absoluteFullCentered = css`
@@ -62,10 +62,10 @@ export const absoluteFullCentered = css`
 `
 
 export const buttonInit = css`
-  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-appearance: none;
   border: 0;
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255, 255, 255, 0);
   text-decoration: none;
   cursor: pointer;
 `

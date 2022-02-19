@@ -1,6 +1,6 @@
-import Footer from "../Footer/index";
-import Head from "next/head";
-import Header from "../Header/index";
+import Footer from '../Footer/index'
+import Head from 'next/head'
+import Header from '../Header/index'
 const Layout = ({ children, title }) => {
   return (
     <>
@@ -13,7 +13,7 @@ const Layout = ({ children, title }) => {
       <main>{children}</main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout
