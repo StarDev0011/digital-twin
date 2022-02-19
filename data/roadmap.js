@@ -23,7 +23,7 @@ export const roadmap_data = [
     },
     {
       id: 3,
-      title: (<>10% of Proceeds Go to <a href="https://www.globalfundforwidows.org/" target="_blank">The Global Fund for Widows.</a></>),
+      title: (<>10% of Proceeds Go to <a href="https://www.globalfundforwidows.org/" target="_blank" rel="noreferrer">The Global Fund for Widows.</a></>),
       paragraph: (
         <p>
           {

@@ -1,6 +1,6 @@
 
 
-import { BsZoomOut } from "react-icons/bs";
+// import { BsZoomOut } from "react-icons/bs";
 import authentication from "../img/authentication.png"
 import counterfeit from "../img/counterfeit.png"
 import tradeability from "../img/tradeability.png"
