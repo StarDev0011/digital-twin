@@ -20,6 +20,7 @@ export const SiteImageWrapper = styled.div`
   }
   img {
     width: 100%;
+    height: 100%;
   }
   /* div {
     transform: rotate(-69deg);
@@ -55,7 +56,7 @@ export const LimitlessData = styled.div`
         font-size: 18px;
         font-weight: 600;
         margin-left: 10px;
-        margin-right:100px;
+        margin-right:30px;
         margin-top: auto;
         margin-bottom: auto;
     }
@@ -82,6 +83,7 @@ export const LimitlessButtonContainer = styled.div`
   }
   .auction_btn {
       background: black;
+      font-family: ${(props) => props.theme.fonts.headingFont};
       color: white;
       font-size: 1.6rem;
       padding: 20px 100px;

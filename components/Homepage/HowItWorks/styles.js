@@ -74,6 +74,10 @@ export const HowItWorksItem = styled.li`
       line-height: 1.8;
       margin-top: 1rem;
       letter-spacing: 0.5px;
+      a {
+        color: #000000;
+        text-decoration: underline;
+      }
     }
   }
 `;

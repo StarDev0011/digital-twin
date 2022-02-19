@@ -13,8 +13,7 @@ export const FooterLogoWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
-    width: 100%;
+    width: calc(1400px + (100vw - 1400px)/2 - 1rem);;
     height: 1px;
     background: ${(props) => props.theme.colors.blackColor};
     z-index: 3;

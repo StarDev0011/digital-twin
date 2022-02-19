@@ -57,7 +57,7 @@ export const AboutParagraph = styled.p`
 `;
 export const AboutVideoWrapper = styled.div`
   margin-top: 150px;
-  margin-bottom: 250px;
+  margin-bottom: 50px;
   width: 100%;
   height: 550px;
   @media (max-width: 465px) {

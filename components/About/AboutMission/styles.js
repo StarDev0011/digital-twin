@@ -21,6 +21,7 @@ export const SiteImageWrapper = styled.div`
   }
   img {
     width: 100%;
+    height: 100%;
   }
 `;
 export const AboutMissionData = styled.div`

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const HeroSectionWrapper = styled.section`
-  min-height: calc(100vh - 155px);
-  height: calc(100vh - 155px);
+  min-height: calc(100vh - 125px);
+  height: calc(100vh - 125px);
 
   width: 100%;
   background-image: url("/images/herobg.png");
@@ -16,8 +16,8 @@ export const HeroSectionWrapper = styled.section`
 `;
 
 export const HeroSectionWrapper2 = styled.section`
-  min-height: calc(100vh - 155px);
-  height: calc(100vh - 155px);
+  min-height: calc(100vh - 125px);
+  height: calc(100vh - 125px);
 
   width: 100%;
   background: transparent;

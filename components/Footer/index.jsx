@@ -51,8 +51,8 @@ const Footer = () => {
             <FooterCol>
               <h3>Newsletter</h3>
               <p className="newsletterInfo">
-                Join our mailing list to stay in the loop on your upcoming NFT
-                drops,weekly news and more.
+                Join our mailing list to stay in the loop on our upcoming NFT
+                drops,weekly news, and more.
               </p>
               <SiteButton>
                 <a

@@ -19,6 +19,7 @@ export const SiteImageWrapper = styled.div`
   }
   img {
     width: 100%;
+    height: 100%;
   }
   /* div {
     transform: rotate(-69deg);
@@ -42,8 +43,8 @@ export const LDezenContainer = styled.div`
   width:50%;
   margin-top: auto;
   margin-bottom: auto;
-  padding-right: 5%;
-  padding-left: 5%;
+  padding-right: 4.5%;
+  padding-left: 4.5%;
   @media (max-width: 465px) {
     display:block;
     width:100%;

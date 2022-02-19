@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AboutInfoWrapper = styled.section`
   padding: 10rem 0;
+  margin-top: 50px;
   @media (max-width: 465px) {
     padding:2%;
   }
@@ -32,9 +33,12 @@ export const AboutInfoItems = styled.div`
         font-size:28px;
       }
     }
-    .icon_text{
+    .true_icon_text{
       margin-bottom:0;
         display:flex;
+        animation-name: floating;
+        animation-duration: 4s;
+        animation-timing-function: ease-in-out;
         .problem_txt {
           font-size: 24px;
           width: 90%;

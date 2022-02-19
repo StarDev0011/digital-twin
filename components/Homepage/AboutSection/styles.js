@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const AboutSectionWrapper = styled.div`
   padding: 9.6rem 0;
+  margin-top: 50px;
 `;
 export const AboutSectionRow = styled.div`
   display: grid;
