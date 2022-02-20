@@ -17,7 +17,7 @@ const Limitless = () => {
                 <LimitlessWrapper>
                     <LimitlessContainer>
                         <LimitlessData>
-                            <h2>{"Limitless Earings"}</h2>
+                            <h2>{"Limitless Earrings"}</h2>
                             <p>{"Introducing fine jewelry"}</p>
                             <p>{"in its digi-physical form:"}</p>
                             <p>{"The Limitless earrings are"}</p>

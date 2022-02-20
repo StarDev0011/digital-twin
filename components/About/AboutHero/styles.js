@@ -45,6 +45,7 @@ export const AboutSubtitle = styled.h4`
 export const AboutParagraph = styled.p`
   font-size: 24px;
   text-align: left;
+  font-family: ${(props) => props.theme.fonts.headingFont};
   margin-top: 2.4rem;
   width: 80%;
   margin-left: auto;

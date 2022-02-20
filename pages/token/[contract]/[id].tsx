@@ -188,7 +188,7 @@ export default function Piece({
                         >Coming Soon</Button>
                     </div>
                   </div>
-                  <div >
+                  <div className="history">
                     {/* <p>HISTORY</p>
                     <div className="history_detail">
                       <div className="img_with_txt">

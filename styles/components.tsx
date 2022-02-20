@@ -179,47 +179,6 @@ export const PageWrapper = styled.section`
       box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
       border-radius: 5px;
       padding: 20px;
-      p {
-        font-size: 12px;
-        font-family: ${(props) => props.theme.fonts.bodyFont}
-        color: #969696;
-        margin-bottom: 20px;
-      }
-      .history_detail {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 5px;
-        border-radius: 500px;
-        margin-top: 15px;
-        p {
-            font-size: 12px;
-            font-family: ${(props) => props.theme.fonts.bodyFont}
-            font-weight: 400;
-            margin-left: 10px;
-            margin-top: auto;
-            margin-bottom: auto;
-            color: #000000;
-        }
-        .img_with_txt {
-          display:flex;
-        }
-        .eth_usd {
-          text-align:right;
-          .eth {
-            font-size: 12px;
-            font-family: ${(props) => props.theme.fonts.bodyFont}
-            color: #000000;
-            line-height: 1.4;
-          }
-          .usd {
-            font-size: 10px;
-            font-family: ${(props) => props.theme.fonts.bodyFont}
-            color: $969696;
-            line-height: 1.4;
-          }
-        }
-      }
     }   
   }
 `

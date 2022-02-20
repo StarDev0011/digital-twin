@@ -37,7 +37,7 @@ const Header = () => {
                     <Link href={item.link}>{item.name}</Link>
                   </li>
                 ))}
-                <li><a href="https://firebasestorage.googleapis.com/v0/b/bondex-61a7f.appspot.com/o/litepaper.pdf?alt=media&token=61751e5f-eaa0-4957-9b04-0077c30f286d" target="_blank" rel="noreferrer">Press Release</a></li>
+                <li><a href="images/press_release.pdf" target="_blank" rel="noreferrer">Press Release</a></li>
               </MenuItems>
             </HeaderCenter>
           </div>

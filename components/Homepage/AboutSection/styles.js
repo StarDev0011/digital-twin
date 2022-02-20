@@ -15,7 +15,7 @@ export const AboutSectionRow = styled.div`
 export const AboutSectionColLeft = styled.div`
   grid-column: 1/7;
   span {
-    left: -2rem;
+    left: -2.5rem;
   }
   h4 {
     font-size: 1.8rem;

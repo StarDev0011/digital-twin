@@ -16,12 +16,7 @@ const AboutSection = () => {
       <SiteContainer>
         <AboutSectionRow>
           <AboutSectionColLeft>
-            <Image
-              src="/images/ldezen-logo.png"
-              alt="l'dezen logo"
-              height={97}
-              width={341}
-            />
+            <Image src="/images/ldezen-logo.png" alt="l'dezen logo" height={97} width={341} />
             <h4>FOUNDER</h4>
             <SiteTitle align="left">PAYAL SHAH</SiteTitle>
             <p>
