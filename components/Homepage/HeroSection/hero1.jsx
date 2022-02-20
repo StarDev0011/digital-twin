@@ -3,7 +3,7 @@ import {
   HeroContent,
   HeroData,
   HeroImage,
-  HeroSectionWrapper,
+  HeroSectionWrapper2,
   HeroSubtitle,
   HeroTitle
 } from "./styles";
@@ -16,16 +16,16 @@ import { SiteContainer } from "../../../atoms/SiteContainer";
 
 const HeroSection1 = () => {
   return (
-    <HeroSectionWrapper>
+    <HeroSectionWrapper2>
+      <video autoPlay loop muted id = "video_bg">         
+          <source src="/images/landing1.mp4" type="video/mp4"/>       
+      </video>
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
-            <Image
-              src="/images/earrings.png"
-              alt="L'Dezen x Digital Twin Limited Edition Digi-Physical Earrings"
-              width="526"
-              height="534"
-            />
+            <video autoPlay loop muted id = "video_bg1">
+              <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
+            </video>
           </HeroImage>
           <HeroData>
             <HeroTitle>
@@ -53,7 +53,7 @@ const HeroSection1 = () => {
           </HeroData>
         </HeroContent>
       </SiteContainer>
-    </HeroSectionWrapper>
+    </HeroSectionWrapper2>
   );
 };
 

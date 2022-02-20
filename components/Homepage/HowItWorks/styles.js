@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HowItWorksWrapper = styled.section`
   padding: 12rem 0;
   @media (max-width: 465px) {
-    padding: 10% 2%;
+    padding: 10% 5%;
   }
 `;
 export const HowItWorksData = styled.ul`
@@ -22,7 +22,8 @@ export const HowItWorksItem = styled.li`
   align-items: flex-start;
   justify-content: flex-start;
   @media (max-width: 465px) {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    display: block;
   }
   &:first-child {
     grid-column: 1/9;
@@ -60,16 +61,20 @@ export const HowItWorksItem = styled.li`
     display: flex;
     flex-direction: column;
     h3 {
-      font-size: 2.4rem;
+      font-size: 24px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       font-weight: bold;
       letter-spacing: 0.5px;
+      line-height: 1.8;
+      @media (max-width: 465px) {
+        margin-top: 30px;
+      }
     }
     p {
       font-size: 22px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       @media (max-width: 465px) {
-        font-size: 16px;
+        font-size: 18px;
       }
       line-height: 1.8;
       margin-top: 1rem;

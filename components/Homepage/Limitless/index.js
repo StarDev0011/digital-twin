@@ -33,6 +33,10 @@ const Limitless = () => {
                     </LimitlessContainer>
                     <SiteImageWrapper>
                         <Image src={limitlessimg} alt = "" />
+                        <div className="limitless_icon_txt">
+                            <img src = "/images/founder.png" />
+                            <p>{"L'Dezen x Payal Shah"}</p>
+                        </div>
                     </SiteImageWrapper>
                 </LimitlessWrapper>
                 <LimitlessButtonContainer>

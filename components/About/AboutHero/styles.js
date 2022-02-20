@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AboutHeroWrapper = styled.section`
   padding: 10rem 0;
   @media (max-width: 465px) {
-    padding:2%
+    padding:5%
   }
 `;
 
@@ -27,7 +27,7 @@ export const AboutTitle = styled.h2`
   font-family: ${(props) => props.theme.fonts.headingFont};
   font-weight: bold;
   @media (max-width: 465px) {
-    font-size: 36px;
+    font-size: 30px;
   }
 `;
 export const AboutSubtitle = styled.h4`
@@ -40,6 +40,8 @@ export const AboutSubtitle = styled.h4`
   font-weight: bold;
   @media (max-width: 465px) {
     width: 100%;
+    font-size: 24px;
+    line-height: 2;
   }
 `;
 export const AboutParagraph = styled.p`

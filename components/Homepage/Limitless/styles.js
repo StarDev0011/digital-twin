@@ -7,8 +7,9 @@ export const LimitlessWrapper = styled.div`
   overflow: hidden;
   display:flex;
   @media (max-width: 465px) {
-    padding: 2%;
-    display:block;
+    padding: 4%;
+    display:flex;
+    flex-wrap: wrap;
   }
 `;
 export const SiteImageWrapper = styled.div`
@@ -17,10 +18,35 @@ export const SiteImageWrapper = styled.div`
     position: relative;
     width:auto;
     height:auto;
+    order: 1;
   }
   img {
     width: 100%;
     height: 100%;
+  }
+  .limitless_icon_txt {
+    display: none;
+    @media (max-width: 465px) {
+      border: solid 1px rgba(0, 0, 0, 0.25);
+      width: fit-content;
+      display: flex;
+      padding: 5px;
+      border-radius: 500px;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      p {
+          font-size: 18px;
+          font-weight: 600;
+          margin-left: 10px;
+          margin-right:30px;
+          margin-top: auto;
+          margin-bottom: auto;
+      }
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
   }
   /* div {
     transform: rotate(-69deg);
@@ -42,7 +68,7 @@ export const LimitlessData = styled.div`
     line-height: 2;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
   .limitless_icon_txt {
@@ -52,6 +78,9 @@ export const LimitlessData = styled.div`
     padding: 5px;
     border-radius: 500px;
     margin-top: 30px;
+    @media (max-width: 465px) {
+      display: none;
+    }
     p {
         font-size: 18px;
         font-weight: 600;
@@ -72,6 +101,7 @@ export const LimitlessContainer = styled.div`
     display:block;
     width:100%;
     padding-right: 0%;
+    order: 2;
   }
 `;
 

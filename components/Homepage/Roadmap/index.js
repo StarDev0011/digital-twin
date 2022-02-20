@@ -13,12 +13,12 @@ const Roadmap = () => {
     return (
         <div>
             <SiteContainer ref={ref}>
-                <SiteTitle>{"L'Dezen x Digital Twin Roadmap"}</SiteTitle>
+                <SiteTitle className = "roadmap_title">{"L'Dezen x Digital Twin Roadmap"}</SiteTitle>
                 <RoadmapData>
                     {roadmap_data.map((item) => (
                         <RoadmapItem key={item.id}>
                         <div className="processData">
-                            <h1>{item.id}</h1>
+                            <div className="number"><h1>{item.id}</h1></div>
                             <div className={inView + "_roadmap_item"}>
                                 <h3>{item.title}</h3>
                                 <p>{item.paragraph}</p>

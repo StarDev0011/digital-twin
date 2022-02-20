@@ -382,8 +382,10 @@ export const BidPage = (): JSX.Element => {
             <input type="text" name="amount"  placeholder={leastBidAmount} value={bidAmount} onChange={(event)=>{setBidAmount(event.target.value)}}/>
             <span>eth</span>
         </label>
-        <h2 className='min_eth'>You must bid at least {leastBidAmount ? leastBidAmount : "Fetching ..."} ETH</h2>
-        <h2 className='min_percent'>The next bid must be 5% more than the current bid.</h2>
+        <div className='bid_warn'>
+          <h2 className='min_eth'>You must bid at least {leastBidAmount ? leastBidAmount : "Fetching ..."} ETH</h2>
+          <h2 className='min_percent'>The next bid must be 5% more than the current bid.</h2>
+        </div>
         <div className='place_bid_btn'>
         <button 
          onClick={()=>{
@@ -403,8 +405,10 @@ export const BidPage = (): JSX.Element => {
          }}>
            Place Bid</button>
            </div>
-           <p className='withdrawl'>You cannot Withdraw a bid once submitted.</p>
-           <div className='refresh_btn' onClick={()=>{ fetchAuction(true)}}><img src='/images/refresh.png' /><p>Refresh Bid</p></div>
+           <div className='bid_refresh'>
+            <p className='withdrawl'>You cannot Withdraw a bid once submitted.</p>
+            <div className='refresh_btn' onClick={()=>{ fetchAuction(true)}}><img src='/images/refresh.png' /><p>Refresh Bid</p></div>
+           </div>
            <p>{loading}</p>
           </>
         ): !auctionData ?
@@ -574,6 +578,8 @@ export const BidPage = (): JSX.Element => {
               width: 98%;
               padding: 15px;
               margin: 30px auto;
+              box-shadow: none;
+              border: none;
             }
             .withdrawl, .balance_connect h3, .place_bid_btn button, .min_eth, .min_percent {
               font-size: 16px;
@@ -588,6 +594,60 @@ export const BidPage = (): JSX.Element => {
               position: relative;
               top: auto;
               right: auto;
+              background: #ffffff;
+              color: #000000;
+              border: solid 1px;
+              padding: 10px 20px;
+            }
+            .title_balance {
+              position: relative;
+            }
+            .title_balance::before {
+              content: "";
+              top: 20px;
+              position: absolute;
+              width: calc(100% + 2 * (2rem + 15px));
+              height: 1px;
+              background: #000;
+              left: calc(0% - 2rem - 15px);
+            }
+            .eth_input input {
+              width: 100%;
+              background: #ffffff;
+              border: none;
+              border-bottom: 1px solid #000000;
+              border-radius: 0px;
+              box-shadow: none;
+              padding: 10px;
+            }
+            .eth_input span {
+              margin-top: 10px;
+              right: 10px;
+            }
+            .bid_warn, .bid_refresh {
+              display: flex;
+            }
+            .min_eth {
+              width: 40%;
+              font-size: 12px;
+              padding-right: 25px;
+            }
+            .min_percent {
+              width: 60%;
+              font-size: 12px;
+              padding-left: 25px;
+            }
+            .refresh_btn {
+              width: 40%;
+            }
+            .withdrawl {
+              width: 60%;
+              font-size: 12px;
+              margin-top: auto;
+              margin-bottom: auto;
+            }
+            .place_bid_btn {
+              margin-bottom: 20px;
             }
           }
         `}</style>

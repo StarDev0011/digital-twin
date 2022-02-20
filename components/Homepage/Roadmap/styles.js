@@ -13,8 +13,9 @@ export const RoadmapItem = styled.div`
     margin-right: auto;
     position:relative;
     @media (max-width: 480px) {
-        width: 96%;
-        padding: 2%;
+        width: 100%;
+        padding: 5%;
+        margin-bottom: 30px;
       }
       
     h1 {
@@ -31,6 +32,9 @@ export const RoadmapItem = styled.div`
         text-align:center;
         margin-top: -30px;
         z-index: 2;
+        @media (max-width: 465px) {
+          margin-left:0;
+        }
     }
     h3 {
       font-size: 24px;
@@ -39,14 +43,20 @@ export const RoadmapItem = styled.div`
       letter-spacing: 0.5px;
       padding: 0 50px;      
       @media (max-width: 480px) {
-        font-size: 18px;
+        font-size: 24px;
+        padding: 0px;
+      }
+      a {
+        color: #000000;
+        text-decoration: underline;
       }
     }
     p {
       font-size: 22px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       @media (max-width: 465px) {
-        font-size: 16px;
+        font-size: 18px;
+        padding: 0px;
       }
       line-height: 1.8;
       margin-top: 1rem;
@@ -68,11 +78,18 @@ export const RoadmapItem = styled.div`
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     z-index: -1;
+    @media (max-width: 465px) {
+      position:relative;
+      display: none;
+    }
   }
   &:first-child .true_roadmap_item {
     animation-name: floating;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
+    @media (max-width: 465px) {
+      animation-name: none;
+    }
   }
   &:nth-child(2) .processData::before {
     position: absolute;
@@ -87,12 +104,20 @@ export const RoadmapItem = styled.div`
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     z-index: -1;
+    @media (max-width: 465px) {
+      position:relative;
+      display: none;
+    }
   }
   &:nth-child(2) .true_roadmap_item {
     animation-name: floating1;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     text-align:right;
+    @media (max-width: 465px) {
+      text-align:left;
+      animation-name: none;
+    }
   }
   &:nth-child(3) .processData::before {
     position: absolute;
@@ -106,16 +131,27 @@ export const RoadmapItem = styled.div`
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     z-index: -1;
+    @media (max-width: 465px) {
+      position:relative;
+      display: none;
+    }
   }
   &:nth-child(3) .true_roadmap_item {
     animation-name: floating;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
+    @media (max-width: 465px) {
+      animation-name: none;
+    }
   }
   &:nth-child(4) .true_roadmap_item {
     animation-name: floating1;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
     text-align: right;
+    @media (max-width: 465px) {
+      text-align:left;
+      animation-name: none;
+    }
   }
 `;

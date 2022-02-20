@@ -20,7 +20,7 @@ export const SiteButton = styled.div.attrs((props) => ({
     justify-content: center;
     padding: 1.4rem 3.2rem;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 16px;
     border-radius: 50rem;
     text-transform: capitalize;
     letter-spacing: 0.5px;
@@ -42,9 +42,7 @@ export const SiteButton = styled.div.attrs((props) => ({
     @media (max-width: 465px) {
       margin-left:auto;
       margin-right:auto;
+      padding: 3rem 10rem;
     }
-  }
-  @media (max-width: 465px) {
-    width:50%;
   }
 `;

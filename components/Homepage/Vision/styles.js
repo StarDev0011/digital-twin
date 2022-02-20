@@ -6,14 +6,16 @@ export const VisionWrapper = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: 465px) {
-    padding: 2%;
-    display:block;
+    padding: 0%;
+    display:flex;
+    flex-wrap: wrap;
     margin-top: 50px;
   }
 `;
 export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
+    order: 1;
     position:relative;
     width:auto;
     height:auto;
@@ -46,7 +48,7 @@ padding-right: 5%;
 @media (max-width: 465px) {
   display:block;
   width:100%;
-  padding-left: 0%;
-  padding-right: 0%;
+  padding: 5%;
+  order: 2;
 }
 `;

@@ -52,12 +52,17 @@ export const HeroContent2 = styled.div`
   .content_data {
     padding-top: 50px;
     padding-bottom: 20px;
+    @media (max-width: 465px) {
+      width: 100%;
+      order: 2;
+    }
     .how_btn {
       margin-left: 0px;
     }
   }
   @media (max-width: 465px) {
-    display:block;
+    display:flex;
+    flex-wrap: wrap;
     width: 100%;
     padding-left: 2%;
     padding-right: 2%;
@@ -65,7 +70,17 @@ export const HeroContent2 = styled.div`
   }
 `;
 
-export const HeroImage = styled.div``;
+export const HeroImage = styled.div`
+width: 500px;
+@media (max-width: 465px) {
+  width: 90%;
+  margin: auto;
+  padding-top: 5%;
+}
+#video_bg1 {
+  width: 100%;
+}
+`;
 export const HeroData = styled.div`
   display: flex;
   flex-direction: column;
@@ -76,10 +91,12 @@ export const HeroData = styled.div`
     padding-left: 2%;
     padding-right: 2%;
     text-align: center;
+    display: block;
   }
 `;
 export const HeroTitle = styled.h2`
   font-size: 54px;
+  color: #ffffff;
   font-family: ${(props) => props.theme.fonts.headingFont};
   line-height: 1.4;
   letter-spacing: 0px;
@@ -111,15 +128,21 @@ export const HeroButtonsWrapper = styled.div`
   div {
     &:last-child {
       margin-left: 2rem;
+      @media (max-width: 465px) {
+        margin-left: 0px;
+        margin-top: 2rem;
+      }
     }
   }
   @media (max-width: 465px) {
-    width:100%
+    width:100%;
+    display: block;
   }
 `;
 
 export const HeroSubtitle = styled.p`
   font-size: 30px;
+  color: #ffffff;
   font-family: ${(props) => props.theme.fonts.headingFont};
   line-height: 1.6;
   letter-spacing: 0.5px;
