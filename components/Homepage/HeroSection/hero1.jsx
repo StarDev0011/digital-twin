@@ -8,7 +8,6 @@ import {
   HeroTitle
 } from "./styles";
 
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SiteButton } from "../../../atoms/SiteButton";
