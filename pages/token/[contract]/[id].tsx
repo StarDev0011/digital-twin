@@ -192,7 +192,7 @@ export default function Piece({ initialData }: PieceProps) {
                     </Button>
                   </div>
                 </div>
-                <div>
+                <div className="history_detail">
                   {/* <p>HISTORY</p>
                     <div className="history_detail">
                       <div className="img_with_txt">

@@ -171,11 +171,13 @@ export const PageWrapper = styled.section`
         font-family: ${(props) => props.theme.fonts.bodyFont};
       }
     }
-    .history {
+    .history_detail {
       border: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
+      box-shadow: rgb(0 0 0 / 5%) -2px 2px 6px;
       border-radius: 5px;
-      padding: 20px;
+      div {
+        border: none!important;
+      }
     }
   }
 `
