@@ -3,7 +3,7 @@ import {
   HeroContent,
   HeroData,
   HeroImage,
-  HeroSectionWrapper2,
+  HeroSectionWrapper,
   HeroSubtitle,
   HeroTitle
 } from "./styles";
@@ -15,7 +15,7 @@ import { SiteContainer } from "../../../atoms/SiteContainer";
 
 const HeroSection1 = () => {
   return (
-    <HeroSectionWrapper2>
+    <HeroSectionWrapper>
       <video autoPlay loop muted id = "video_bg">         
           <source src="/images/landing1.mp4" type="video/mp4"/>       
       </video>
@@ -52,7 +52,7 @@ const HeroSection1 = () => {
           </HeroData>
         </HeroContent>
       </SiteContainer>
-    </HeroSectionWrapper2>
+    </HeroSectionWrapper>
   );
 };
 

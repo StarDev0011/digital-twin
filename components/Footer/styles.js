@@ -84,10 +84,12 @@ export const FooterCol = styled.div`
     }
   }
   .join_us {
-    background: #ffffff;
-    color: #000000;
-    padding: 15px 40px;
-    margin-left: 0;
+    @media (max-width: 465px){
+      background: #ffffff;
+      color: #000000;
+      padding: 15px 40px;
+      margin-left: 0;
+    }
   }
 `;
 export const MenuItems = styled.div`

@@ -22,6 +22,42 @@ export const AboutInfoTitle = styled.h2`
   }
 `;
 export const AboutInfoItems = styled.div`
+div {
+  .true_icon_text{
+    margin-bottom:0;
+    display:flex;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    .problem_txt {
+      font-size: 24px;
+      width: 90%;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-family: ${(props) => props.theme.fonts.headingFont};
+      line-height: 1.8;
+      @media (max-width: 465px) {
+        width:85%;
+        padding-left:5%;
+        font-size:18px;
+      }
+    }
+    .problem_icon {
+      width: 10%;
+      @media (max-width: 465px) {
+        width:15%;
+      }
+    }
+  }
+
+  &:nth-child(2) .true_icon_text{
+    animation-duration: 4s;
+  }
+
+  &:nth-child(3) .true_icon_text{
+    animation-duration: 5s;
+  }
+}
   .single_problem_mob {
     display:none;
     @media (max-width: 465px) {
@@ -66,32 +102,5 @@ export const AboutInfoItems = styled.div`
         font-size:28px;
       }
     }
-    .true_icon_text{
-      margin-bottom:0;
-        display:flex;
-        animation-name: floating;
-        animation-duration: 4s;
-        animation-timing-function: ease-in-out;
-        .problem_txt {
-          font-size: 24px;
-          width: 90%;
-          margin-top: auto;
-          margin-bottom: auto;
-          font-family: ${(props) => props.theme.fonts.headingFont};
-          line-height: 1.8;
-          @media (max-width: 465px) {
-            width:85%;
-            padding-left:5%;
-            font-size:18px;
-          }
-        }
-        .problem_icon {
-          width: 10%;
-          @media (max-width: 465px) {
-            width:15%;
-          }
-        }
-    }
   }
-
 `;

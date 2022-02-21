@@ -53,10 +53,12 @@ const GlobalStyles = createGlobalStyle`
   }
   .slick-prev {
     left: 10px;
+    top: 52%;
     z-index: 9;
   }
   .slick-next {
     right: 25px;
+    top: 52%;
     z-index: 9;
   }
   video#video_bg {

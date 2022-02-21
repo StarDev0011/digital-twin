@@ -4,14 +4,19 @@ export const HeroSectionWrapper = styled.section`
   min-height: calc(100vh - 125px);
   height: calc(100vh - 125px);
 
-  width: 100%;
-  background-image: url("/images/herobg.png");
-  background-color: #e3e3e4;
+  width: 100%;  
+  background: transparent;
   background-size: cover;
   object-fit: cover;
+  #video_bg {
+    @media (max-width: 465px) {
+      display: none;
+    }
+  }
   @media (max-width: 465px) {
     min-height: 100vh;
     height: 100%;
+    background-image: url("/images/landing1_mob.png");
   }
 `;
 
@@ -23,9 +28,15 @@ export const HeroSectionWrapper2 = styled.section`
   background: transparent;
   background-size: cover;
   object-fit: cover;
+  #video_bg {
+    @media (max-width: 465px) {
+      display: none;
+    }
+  }
   @media (max-width: 465px) {
     min-height: 100vh;
     height: 100%;
+    background-image: url("/images/landing_mob.png");
   }
 `;
 
@@ -79,6 +90,10 @@ width: 500px;
 }
 #video_bg1 {
   width: 100%;
+  background: #6b6aa5;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0px 0px 24px 13px #6b6aa5;
 }
 `;
 export const HeroData = styled.div`
@@ -103,6 +118,8 @@ export const HeroTitle = styled.h2`
   font-weight: bold;
   @media (max-width: 465px) {
     font-size: 36px;
+    margin-bottom: 50px;
+    margin-top: 10px;
   }
 `;
 
@@ -126,17 +143,23 @@ export const HeroButtonsWrapper = styled.div`
     width: 100%;
   }
   div {
+    @media (max-width: 465px) {
+      width:50%;
+    }
+    a {
+      padding: 2rem 4rem;
+    }
     &:last-child {
       margin-left: 2rem;
       @media (max-width: 465px) {
         margin-left: 0px;
-        margin-top: 2rem;
+        margin-top: 0px;
       }
     }
   }
   @media (max-width: 465px) {
     width:100%;
-    display: block;
+    display: flex;
   }
 `;
 
@@ -148,7 +171,10 @@ export const HeroSubtitle = styled.p`
   letter-spacing: 0.5px;
   font-weight: bold;
   @media (max-width: 465px) {
-    font-size: 20px;
+    font-size: 18px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -160,6 +186,9 @@ export const HeroSubtitle2 = styled.p`
   font-weight: bold;
   color: #ffffff;
   @media (max-width: 465px) {
-    font-size: 20px;
+    font-size: 18px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
