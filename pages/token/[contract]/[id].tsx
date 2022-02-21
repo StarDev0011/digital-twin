@@ -268,10 +268,10 @@ export default function Piece({ initialData }: PieceProps) {
                       />
                     </div>
                   </div>
-                  {/* <div className="refresh">
+                  <div className="refresh">
                       <p className="refresh_meta">Refresh Metadata</p>
                       <p className="updated_mins">Updated 2 minutes ago</p>
-                    </div> */}
+                    </div>
                 </div>
               </div>
               <div className="auction_right">
