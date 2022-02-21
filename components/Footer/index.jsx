@@ -55,12 +55,12 @@ const Footer = () => {
                 drops,weekly news, and more.
               </p>
               <SiteButton>
-                <a
+                <a className = "join_us"
                   target="_blank"
                   rel="noreferrer"
                   href="https://digitaltwin.beehiiv.com/subscribe"
                 >
-                  Join
+                  Join Us
                 </a>
               </SiteButton>
             </FooterCol>

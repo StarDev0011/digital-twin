@@ -19,10 +19,19 @@ const AboutInfo = () => {
         </AboutInfoTitle>
         <AboutInfoItems>
           {problemData.map((item) => (
-            <div className="single_problem" key={item.id}>
-              <h3>{item.title}</h3>
-              <div className={inView + '_icon_text'}>
-                <div className="problem_icon">{item.icon}</div>
+            <div key={item.id}>
+              <div className="single_problem">
+                <h3>{item.title}</h3>
+                <div className= {inView + "_icon_text"}>
+                  <div className="problem_icon">{item.icon}</div>
+                  <p className="problem_txt">{item.paragraph}</p>
+                </div>
+              </div>
+              <div className="single_problem_mob">              
+                <div className= "mob_icon_text">
+                  <div className="problem_icon">{item.icon}</div>
+                  <h3>{item.title}</h3>
+                </div>
                 <p className="problem_txt">{item.paragraph}</p>
               </div>
             </div>

@@ -9,5 +9,6 @@ export const SiteTitle = styled.h2.attrs((props) => ({
   font-weight: bold;
   @media (max-width: 465px) {
     font-size: 36px;
+    line-height: 1.6;
   }
 `

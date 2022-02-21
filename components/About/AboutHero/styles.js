@@ -3,7 +3,11 @@ import styled from 'styled-components'
 export const AboutHeroWrapper = styled.section`
   padding: 10rem 0;
   @media (max-width: 465px) {
+<<<<<<< HEAD
     padding: 2%;
+=======
+    padding:5%
+>>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
   }
 `
 
@@ -27,7 +31,7 @@ export const AboutTitle = styled.h2`
   font-family: ${(props) => props.theme.fonts.headingFont};
   font-weight: bold;
   @media (max-width: 465px) {
-    font-size: 36px;
+    font-size: 30px;
   }
 `
 export const AboutSubtitle = styled.h4`
@@ -40,11 +44,14 @@ export const AboutSubtitle = styled.h4`
   font-weight: bold;
   @media (max-width: 465px) {
     width: 100%;
+    font-size: 24px;
+    line-height: 2;
   }
 `
 export const AboutParagraph = styled.p`
   font-size: 24px;
   text-align: left;
+  font-family: ${(props) => props.theme.fonts.headingFont};
   margin-top: 2.4rem;
   width: 80%;
   margin-left: auto;

@@ -39,6 +39,9 @@ export const NewsletterTitle = styled.div`
     position: relative;
     font-size: 2.4rem;
     font-family: ${(props) => props.theme.fonts.headingFont};
+    @media (max-width: 465px) {
+      font-size: 24px;
+    }
   }
 `
 export const NewsletterButton = styled(SiteButton)`

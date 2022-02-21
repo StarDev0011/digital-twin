@@ -6,8 +6,8 @@ export const LDezenWrapper = styled.div`
   overflow: hidden;
   display: flex;
   @media (max-width: 465px) {
-    padding: 2%;
-    display: block;
+    padding: 0%;
+    display:block;
   }
 `
 export const SiteImageWrapper = styled.div`
@@ -31,7 +31,7 @@ export const LDezenData = styled.div`
     font-size: 22px;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
-      font-size: 16px;
+      font-size: 18px;
     }
     line-height: 1.8;
     margin-top: 1.5rem;
@@ -46,9 +46,8 @@ export const LDezenContainer = styled.div`
   padding-right: 4.5%;
   padding-left: 4.5%;
   @media (max-width: 465px) {
-    display: block;
-    width: 100%;
-    padding-right: 0%;
-    padding-left: 0%;
+    display:block;
+    width:100%;
+    padding: 5%;
   }
 `

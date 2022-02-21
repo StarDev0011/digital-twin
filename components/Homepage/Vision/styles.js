@@ -6,17 +6,19 @@ export const VisionWrapper = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: 465px) {
-    padding: 2%;
-    display: block;
+    padding: 0%;
+    display:flex;
+    flex-wrap: wrap;
     margin-top: 50px;
   }
 `
 export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
-    position: relative;
-    width: auto;
-    height: auto;
+    order: 1;
+    position:relative;
+    width:auto;
+    height:auto;
   }
   img {
     width: 100%;
@@ -37,16 +39,16 @@ export const VisionData = styled.div`
 `
 
 export const VisionContainer = styled.div`
-  display: block;
-  width: 50%;
-  margin-top: auto;
-  margin-bottom: auto;
-  padding-left: 5%;
-  padding-right: 5%;
-  @media (max-width: 465px) {
-    display: block;
-    width: 100%;
-    padding-left: 0%;
-    padding-right: 0%;
-  }
-`
+display: block;
+width:50%;
+margin-top: auto;
+margin-bottom: auto;
+padding-left: 5%;
+padding-right: 5%;
+@media (max-width: 465px) {
+  display:block;
+  width:100%;
+  padding: 5%;
+  order: 2;
+}
+`;

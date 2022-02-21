@@ -7,8 +7,14 @@ export const VisionWrapper = styled.div`
   overflow: hidden;
   margin-top: 0rem;
   @media (max-width: 465px) {
+<<<<<<< HEAD
     padding: 2%;
     display: block;
+=======
+    padding:5%;
+    display:flex;
+    flex-wrap: wrap;
+>>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
     margin-top: 50px;
   }
 `
@@ -31,7 +37,8 @@ export const VisionData = styled.div`
     margin-top: 1.5rem;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
-      font-size: 16px;
+      font-size: 18px;
+      margin-top: 0;
     }
   }
   h4 {
@@ -40,7 +47,7 @@ export const VisionData = styled.div`
     color: #000000;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
-      font-size: 20px;
+      font-size: 24px;
     }
   }
   h3 {
@@ -66,5 +73,7 @@ export const VisionContainer = styled.div`
     width: 100%;
     padding-left: 0%;
     padding-right: 0%;
+    order: 2;
+    margin-top: 40px;
   }
 `

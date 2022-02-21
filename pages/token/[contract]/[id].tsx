@@ -49,7 +49,7 @@ type PieceProps = {
 }
 
 export default function Piece({ initialData }: PieceProps) {
-  const { query } = useRouter()
+  const { query, push } = useRouter()
   //   const router = useRouter();
 
   return (
@@ -187,14 +187,7 @@ export default function Piece({ initialData }: PieceProps) {
                     <h2>March 1, 2022</h2>
                   </div>
                   <div className="bid_btn">
-                    <Button
-                    // onClick={(evt) =>
-                    // push(
-                    //   `../../bidpage`
-                    // )
-
-                    // }
-                    >
+                    <Button onClick={() => push(`../../bidpage`)}>
                       Coming Soon
                     </Button>
                   </div>
