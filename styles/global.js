@@ -53,12 +53,12 @@ const GlobalStyles = createGlobalStyle`
   }
   .slick-prev {
     left: 10px;
-    top: 56%;
+    top: 52%;
     z-index: 9;
   }
   .slick-next {
     right: 25px;
-    top: 56%;
+    top: 52%;
     z-index: 9;
   }
   video#video_bg {
@@ -88,7 +88,7 @@ const GlobalStyles = createGlobalStyle`
       width: auto;
       height: 100vh;
     }
-    .roadmap_section {
+    .roadmap_section, .slick-prev, .slick-next {
       display:none;
     }
   }
