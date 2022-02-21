@@ -11,7 +11,7 @@ const Roadmap = () => {
     initialInView: true,
   })
   return (
-    <div>
+    <div className='roadmap_section'>
       <SiteContainer ref={ref}>
         <SiteTitle className="roadmap_title">
           {"L'Dezen x Digital Twin Roadmap"}
