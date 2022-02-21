@@ -50,15 +50,9 @@ export const AboutSectionColLeft = styled.div`
     }
   }
   @media (max-width: 465px) {
-<<<<<<< HEAD
-    width: 96%;
-    padding-left: 2%;
-    text-align: center;
-=======
     width:100%;
     padding-left:5%;
     padding-right: 5%;
->>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
     margin-bottom: 30px;
   }
 `
@@ -66,13 +60,8 @@ export const AboutSectionColRight = styled.div`
   grid-column: 7/-1;
   text-align: right;
   @media (max-width: 465px) {
-<<<<<<< HEAD
-    width: 96%;
-    padding-left: 2%;
-=======
     width:96%;
     padding-left:2%;
     display: none;
->>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
   }
 `

@@ -278,8 +278,8 @@ export default function Piece({ initialData }: PieceProps) {
                 <div className="price_date_btn">
                   <div className="reserve_price">
                     <p>RESERVE PRICE</p>
-                    <h2>~1.75 ETH</h2>
-                    <p>~5,200 USD</p>
+                    <h2>~2.00 ETH</h2>
+                    <p>$5,200 USD</p>
                   </div>
                   <div className="start_date">
                     <p>AUCTION STARTS ON</p>

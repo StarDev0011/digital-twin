@@ -89,7 +89,7 @@ const GlobalStyles = createGlobalStyle`
       height: 100vh;
     }
     .roadmap_section, .slick-prev, .slick-next {
-      display:none;
+      display:none!important;
     }
   }
 `
