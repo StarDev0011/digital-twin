@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const AboutHeroWrapper = styled.section`
   padding: 10rem 0;
   @media (max-width: 465px) {
-    padding:5%
+    padding: 5%;
   }
 `
 

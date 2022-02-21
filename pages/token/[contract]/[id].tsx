@@ -3,7 +3,7 @@ import {
   MediaConfiguration,
   FullComponents,
 } from '@zoralabs/nft-components'
-import router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import {
   MediaFetchAgent,
   NetworkIDs,
@@ -47,10 +47,77 @@ type PieceProps = {
   image: string
   initialData: any
 }
+const jsx_runtime_1 = require('react/jsx-runtime')
+const react_1 = require('react')
+const css_1 = require('@emotion/css')
+const useMediaContext_1 = require('@zoralabs/nft-components/dist/context/useMediaContext')
+const NFTDataContext_1 = require('@zoralabs/nft-components/dist/context/NFTDataContext')
+const CollectionTag = () => {
+  const {
+    nft: { data },
+  } = react_1.useContext(NFTDataContext_1.NFTDataContext)
+  const { getStyles } = useMediaContext_1.useMediaContext()
+  const getContent = () => {
+    return jsx_runtime_1.jsxs(
+      'a',
+      Object.assign(
+        {},
+        getStyles('colectionTagWrapper'),
+        {
+          href: `https://zora.co/collections/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9`,
+          target: '_blank',
+          rel: 'noreferrer',
+        },
+        {
+          children: [
+            jsx_runtime_1.jsx(
+              'div',
+              Object.assign({}, getStyles('collectionTagIcon'), {
+                children: jsx_runtime_1.jsx(
+                  'img',
+                  {
+                    src: 'https://gateway.pinata.cloud/ipfs/QmR1ntsfMTfNTJuA3Ho27HHMxz1dfK4hHmPNeiXqrLTK2v',
+                    alt: 'Digital Twin',
+                  },
+                  void 0
+                ),
+              }),
+              void 0
+            ),
+            jsx_runtime_1.jsx(
+              'span',
+              {
+                children:
+                  data && 'openseaInfo' in data
+                    ? `${data.openseaInfo.asset_contract.name}`
+                    : 'Digital Twin',
+              },
+              void 0
+            ),
+          ],
+        }
+      ),
+      void 0
+    )
+  }
+  return jsx_runtime_1.jsx(
+    'div',
+    Object.assign(
+      {
+        className: css_1.css`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  `,
+      },
+      { children: getContent() }
+    ),
+    void 0
+  )
+}
 
 export default function Piece({ initialData }: PieceProps) {
   const { query, push } = useRouter()
-  //   const router = useRouter();
 
   return (
     <SiteContainer>
@@ -71,27 +138,40 @@ export default function Piece({ initialData }: PieceProps) {
                       <img src = "/images/dt_logo.png" />
                       <p>Digital Twin</p>
                   </div> */}
-                <FullComponents.CollectionTag />
+                <CollectionTag />
                 <div className="auction_desc">
                   <h2>{initialData.nft.tokenData.metadata.json.name}</h2>
-                  {/* <p>Introducing fine jewelery</p>
-                    <p>in its digi-physical form.</p>
-                    <p>The first 1/1 NFT by L’Dezen x Payal Shah</p>
-                    <br />
-                    <p>The Limitless earrings are a unique,</p>
-                    <p>one-of-a-kind design.</p>
-                    <p>Luxurious, lightweight designs.</p>
-                    <p>Comfortable and Elegant,</p>
-                    <p>Bold Yet</p>
-                    <p>Feminine.</p>
-                    <br />
-                    <p>Available to Redeem & Ship in Physical Form:</p>
-                    <p>On International Women’s Day - March 8th, 2022</p> */}
-                  <p>{initialData.nft.tokenData.metadata.json.description}</p>
+                  <p>Introducing fine jewelery</p>
+                  <p>in its digi-physical form.</p>
+                  <p>The Limitless earrings are 18K gold diamond,</p>
+                  <p>one-of-a-kind design.</p>
+                  <p>Comfortable and elegant,</p>
+                  <p>Bold, yet feminine.</p>
+                  <br />
+                  <p>The enamel in Pantone’s Very Peri color of 2022</p>
+                  <p>embodies our spirit.</p>
+                  <p>A dynamic periwinkle blue</p>
+                  <p>with a vibrant, violet-red undertone</p>
+                  <p>designed to evoke the glowing touchscreens</p>
+                  <p>of the digital world</p>
+                  <p>and the creative possibilities</p>
+                  <p>of the future.</p>
+                  <br />
+                  <p>The Limitless Earrings enable</p>
+                  <p>seamless movement between</p>
+                  <p>the digital and physical.</p>
+                  <p>Representing a time when</p>
+                  <p>our real and online lives</p>
+                  <p>are intertwined.</p>
+                  <br />
+                  <p>
+                    Your Digital Twin awaits with L’Dezen Limitless Earrings.
+                  </p>
+                  {/* <p>{initialData.nft.tokenData.metadata.json.description}</p> */}
                   {/* <FullComponents.AuctionInfo/> */}
                   {/* <FullComponents.MediaInfo/> */}
                 </div>
-                <div className="minter">
+                {/* <div className="minter">
                   <p>MINTER</p>
                   <div className="minter_detail">
                     <img src="/images/founder.png" />
@@ -99,7 +179,8 @@ export default function Piece({ initialData }: PieceProps) {
                       <b>ldezenbypayalshah.eth</b> minted this NFT
                     </p>
                   </div>
-                </div>
+                </div> */}
+
                 <div className="net_details">
                   <p className="net_title">NFT DETAILS</p>
                   <div className="detail_item">
@@ -141,8 +222,12 @@ export default function Piece({ initialData }: PieceProps) {
                       <img
                         src="/images/arrow.png"
                         onClick={() => {
-                          router.replace(
-                            initialData.nft.tokenData.metadata.json.image_url
+                          // replace(
+                          //   initialData.nft.tokenData.metadata.json.image_url
+                          // )
+                          window.open(
+                            'https://zora-prod.mypinata.cloud/ipfs/QmU2T8shz1KgHwSw5C3fiEkRHSeJLZv4wy78CsEmmctSxd',
+                            '_blank'
                           )
                         }}
                       />
@@ -156,7 +241,10 @@ export default function Piece({ initialData }: PieceProps) {
                       <img
                         src="/images/arrow.png"
                         onClick={() => {
-                          router.replace(initialData.nft.tokenData.tokenURI)
+                          window.open(
+                            'https://zora-prod.mypinata.cloud/ipfs/Qme4kgC54GUmuPtwKiSVVQEnisiZUaGrR1iQwaGNbwUMfk',
+                            '_blank'
+                          )
                         }}
                       />
                     </div>
@@ -166,7 +254,15 @@ export default function Piece({ initialData }: PieceProps) {
                       <p>Etherscan Transaction</p>
                     </div>
                     <div className="net_right">
-                      <img src="/images/arrow.png" />
+                      <img
+                        src="/images/arrow.png"
+                        onClick={() => {
+                          window.open(
+                            'https://etherscan.io/token/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9?a=1',
+                            '_blank'
+                          )
+                        }}
+                      />
                     </div>
                   </div>
                   {/* <div className="refresh">
@@ -231,7 +327,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     tokenId: id,
     collectionAddress: contract,
   })
-
+  // console.log(data)
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data)
   // console.log(tokenInfo)
 

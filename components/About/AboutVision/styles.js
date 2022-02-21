@@ -7,8 +7,8 @@ export const VisionWrapper = styled.div`
   overflow: hidden;
   margin-top: 0rem;
   @media (max-width: 465px) {
-    padding:5%;
-    display:flex;
+    padding: 5%;
+    display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
   }

@@ -8,7 +8,7 @@ export const AboutMissionWrapper = styled.div`
   margin-top: 0;
   @media (max-width: 465px) {
     padding: 5%;
-    display:block;
+    display: block;
     margin-top: 50px;
   }
 `
@@ -65,10 +65,10 @@ export const AboutMissionContainer = styled.div`
   margin-top: auto;
   margin-bottom: auto;
   @media (max-width: 465px) {
-    display:block;
-    width:100%;
-    padding-right:0%;
-    padding-left:0%;
+    display: block;
+    width: 100%;
+    padding-right: 0%;
+    padding-left: 0%;
     margin-top: 40px;
   }
 `

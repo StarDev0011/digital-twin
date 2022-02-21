@@ -16,8 +16,8 @@ import { SiteContainer } from '../../../atoms/SiteContainer'
 const HeroSection1 = () => {
   return (
     <HeroSectionWrapper>
-      <video autoPlay loop muted id = "video_bg">         
-          <source src="/images/landing1.mp4" type="video/mp4"/>       
+      <video autoPlay loop muted id="video_bg">
+        <source src="/images/landing1.mp4" type="video/mp4" />
       </video>
       <SiteContainer size="normal">
         <HeroContent>
@@ -47,7 +47,7 @@ const HeroSection1 = () => {
         </HeroContent>
       </SiteContainer>
     </HeroSectionWrapper>
-  );
-};
+  )
+}
 
 export default HeroSection1
