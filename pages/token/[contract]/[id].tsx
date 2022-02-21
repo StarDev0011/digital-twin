@@ -188,7 +188,10 @@ export default function Piece({ initialData }: PieceProps) {
                       <p>Contract Address</p>
                     </div>
                     <div className="net_right">
-                      <p>{initialData.nft.tokenData.address}</p>
+                      <p>
+                        {initialData.nft.tokenData.address.slice(0, 5)}...
+                        {initialData.nft.tokenData.address.slice(29)}
+                      </p>
                       {/* <img src="/images/arrow.png" /> */}
                       <CopyToClipboard text={initialData.nft.tokenData.address}>
                         <img src="/images/gradient.png" />
