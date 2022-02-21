@@ -84,7 +84,7 @@ export const FooterCol = styled.div`
     }
   }
   .join_us {
-    @media (max-width: 465px){
+    @media (max-width: 465px) {
       background: #ffffff;
       color: #000000;
       padding: 15px 40px;

@@ -176,7 +176,7 @@ export const PageWrapper = styled.section`
       box-shadow: rgb(0 0 0 / 5%) -2px 2px 6px;
       border-radius: 5px;
       div {
-        border: none!important;
+        border: none !important;
       }
     }
   }

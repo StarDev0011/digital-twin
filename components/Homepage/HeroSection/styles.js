@@ -4,7 +4,7 @@ export const HeroSectionWrapper = styled.section`
   min-height: calc(100vh - 125px);
   height: calc(100vh - 125px);
 
-  width: 100%;  
+  width: 100%;
   background: transparent;
   background-size: cover;
   object-fit: cover;
@@ -16,7 +16,7 @@ export const HeroSectionWrapper = styled.section`
   @media (max-width: 465px) {
     min-height: 100vh;
     height: 100%;
-    background-image: url("/images/landing1_mob.png");
+    background-image: url('/images/landing1_mob.png');
   }
 `
 
@@ -36,7 +36,7 @@ export const HeroSectionWrapper2 = styled.section`
   @media (max-width: 465px) {
     min-height: 100vh;
     height: 100%;
-    background-image: url("/images/landing_mob.png");
+    background-image: url('/images/landing_mob.png');
   }
 `
 
@@ -82,19 +82,19 @@ export const HeroContent2 = styled.div`
 `
 
 export const HeroImage = styled.div`
-width: 500px;
-@media (max-width: 465px) {
-  width: 90%;
-  margin: auto;
-  padding-top: 5%;
-}
-#video_bg1 {
-  width: 100%;
-  background: #6b6aa5;
-  border-radius: 8px;
-  box-shadow: 0px 0px 24px 13px #6b6aa5;
-}
-`;
+  width: 500px;
+  @media (max-width: 465px) {
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  #video_bg1 {
+    width: 100%;
+    background: #6b6aa5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 24px 13px #6b6aa5;
+  }
+`
 export const HeroData = styled.div`
   display: flex;
   flex-direction: column;
@@ -143,7 +143,7 @@ export const HeroButtonsWrapper = styled.div`
   }
   div {
     @media (max-width: 465px) {
-      width:50%;
+      width: 50%;
     }
     a {
       padding: 2rem 4rem;
@@ -157,7 +157,7 @@ export const HeroButtonsWrapper = styled.div`
     }
   }
   @media (max-width: 465px) {
-    width:100%;
+    width: 100%;
     display: flex;
   }
 `

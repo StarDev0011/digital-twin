@@ -4,7 +4,7 @@ export const AboutInfoWrapper = styled.section`
   padding: 10rem 0;
   margin-top: 50px;
   @media (max-width: 465px) {
-    padding:5%;
+    padding: 5%;
   }
 `
 
@@ -22,50 +22,50 @@ export const AboutInfoTitle = styled.h2`
   }
 `
 export const AboutInfoItems = styled.div`
-div {
-  .true_icon_text{
-    margin-bottom:0;
-    display:flex;
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    .problem_txt {
-      font-size: 24px;
-      width: 90%;
-      margin-top: auto;
-      margin-bottom: auto;
-      font-family: ${(props) => props.theme.fonts.headingFont};
-      line-height: 1.8;
-      @media (max-width: 465px) {
-        width:85%;
-        padding-left:5%;
-        font-size:18px;
+  div {
+    .true_icon_text {
+      margin-bottom: 0;
+      display: flex;
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      .problem_txt {
+        font-size: 24px;
+        width: 90%;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: ${(props) => props.theme.fonts.headingFont};
+        line-height: 1.8;
+        @media (max-width: 465px) {
+          width: 85%;
+          padding-left: 5%;
+          font-size: 18px;
+        }
+      }
+      .problem_icon {
+        width: 10%;
+        @media (max-width: 465px) {
+          width: 15%;
+        }
       }
     }
-    .problem_icon {
-      width: 10%;
-      @media (max-width: 465px) {
-        width:15%;
-      }
+
+    &:nth-child(2) .true_icon_text {
+      animation-duration: 4s;
+    }
+
+    &:nth-child(3) .true_icon_text {
+      animation-duration: 5s;
     }
   }
-
-  &:nth-child(2) .true_icon_text{
-    animation-duration: 4s;
-  }
-
-  &:nth-child(3) .true_icon_text{
-    animation-duration: 5s;
-  }
-}
   .single_problem_mob {
-    display:none;
+    display: none;
     @media (max-width: 465px) {
-      display:block;
+      display: block;
       margin-top: 30px;
     }
     h3 {
-      font-size:24px;
+      font-size: 24px;
       font-weight: 400;
       margin-bottom: auto;
       margin-top: auto;
@@ -77,7 +77,7 @@ div {
       width: 15%;
     }
     .mob_icon_text {
-      display:flex;
+      display: flex;
     }
     .problem_txt {
       font-size: 18px;
@@ -88,9 +88,9 @@ div {
   }
 
   .single_problem {
-    margin-top:30px;
+    margin-top: 30px;
     @media (max-width: 465px) {
-      display:none;
+      display: none;
     }
     h3 {
       font-size: 35px;
@@ -103,4 +103,4 @@ div {
       }
     }
   }
-`;
+`
