@@ -11,7 +11,8 @@ export const PageWrapper = styled.section`
     display: flex;
     width: 100%;
     @media (max-width: 465px) {
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
       padding: 3%;
     }
   }
@@ -22,6 +23,7 @@ export const PageWrapper = styled.section`
       width: 98%;
       margin-left: 1%;
       margin-right: 1%;
+      order: 2;
     }
     .auction_desc h2 {
       font-size: 5.4em;
@@ -144,6 +146,9 @@ export const PageWrapper = styled.section`
       box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
       border-radius: 5px;
       margin-bottom: 80px;
+      .reserve_price {
+        margin-bottom: 40px;
+      }
       .reserve_price p {
         font-family: ${(props) => props.theme.fonts.bodyFont};
         font-size: 12px;
@@ -153,7 +158,6 @@ export const PageWrapper = styled.section`
       .reserve_price h2 {
         font-size: 24px;
         font-family: ${(props) => props.theme.fonts.bodyFont};
-        margin-bottom: 50px;
       }
       .start_date p {
         font-size: 12px;
