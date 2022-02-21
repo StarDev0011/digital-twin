@@ -31,11 +31,12 @@ export const PageWrapper = styled.section`
         justify-content: center;
       }
       span {
+        font-size: 24px;
+        color: #000000;
+        font-family: ${(props) => props.theme.fonts.headingFont};
+        font-weight: 700;
         @media (max-width: 465px){
-          font-size: 18px;
-          color: #000000;
-          font-family: ${(props) => props.theme.fonts.headingFont};
-          font-weight: 700;
+          font-size: 18px;          
         }
       }
     }
