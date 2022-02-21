@@ -92,7 +92,6 @@ width: 500px;
   width: 100%;
   background: #6b6aa5;
   border-radius: 8px;
-  padding: 8px;
   box-shadow: 0px 0px 24px 13px #6b6aa5;
 }
 `;
