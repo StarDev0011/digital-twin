@@ -7,8 +7,10 @@ import { abi as AuctionHouseAbi } from '@zoralabs/auction-house/dist/artifacts/A
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 import { auctionHouse } from '@zoralabs/auction-house/dist/addresses/4.json'
+// const TOKEN_ID = '1'
+// const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
+const TOKEN_ADDRESS = `0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9`
 const TOKEN_ID = '1'
-const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
 import Layout from '../components/Layout'
 
 import { NETWORK_ID } from '../utils/env-vars'
@@ -407,7 +409,7 @@ export const BidPage = (): JSX.Element => {
                 />
                 <span>eth</span>
               </label>
-              <div className='bid_warn'>
+              <div className="bid_warn">
                 <h2 className="min_eth">
                   You must bid at least{' '}
                   {leastBidAmount ? leastBidAmount : 'Fetching ...'} ETH
@@ -437,11 +439,16 @@ export const BidPage = (): JSX.Element => {
                   Place Bid
                 </button>
               </div>
-              <div className='bid_refresh'>
+              <div className="bid_refresh">
                 <p className="withdrawl">
                   You cannot Withdraw a bid once submitted.
                 </p>
-                <div className="refresh_btn" onClick={() => {fetchAuction(true)}}>
+                <div
+                  className="refresh_btn"
+                  onClick={() => {
+                    fetchAuction(true)
+                  }}
+                >
                   <img src="/images/refresh.png" />
                   <p>Refresh Bid</p>
                 </div>
