@@ -6,6 +6,9 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 2rem 0;
+  @media (max-width: 465px) {
+    display: none;
+  }
 `
 export const HeaderTop = styled.div`
   align-items: center;
