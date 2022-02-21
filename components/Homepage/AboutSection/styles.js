@@ -17,7 +17,8 @@ export const AboutSectionColLeft = styled.div`
   div {
     left: -2.5rem;
     @media (max-width: 465px) {
-      left: -28px;
+      left: -0;
+      width: 100%
     }
   }
   h4 {
@@ -29,6 +30,7 @@ export const AboutSectionColLeft = styled.div`
     @media (max-width: 465px) {
       font-size: 16px;
       margin-top: 0;
+      text-align: center
     }
   }
   p {
