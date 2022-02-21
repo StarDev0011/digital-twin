@@ -407,13 +407,15 @@ export const BidPage = (): JSX.Element => {
                 />
                 <span>eth</span>
               </label>
-              <h2 className="min_eth">
-                You must bid at least{' '}
-                {leastBidAmount ? leastBidAmount : 'Fetching ...'} ETH
-              </h2>
-              <h2 className="min_percent">
-                The next bid must be 5% more than the current bid.
-              </h2>
+              <div className='bid_warn'>
+                <h2 className="min_eth">
+                  You must bid at least{' '}
+                  {leastBidAmount ? leastBidAmount : 'Fetching ...'} ETH
+                </h2>
+                <h2 className="min_percent">
+                  The next bid must be 5% more than the current bid.
+                </h2>
+              </div>
               <div className="place_bid_btn">
                 <button
                   onClick={() => {
@@ -435,17 +437,14 @@ export const BidPage = (): JSX.Element => {
                   Place Bid
                 </button>
               </div>
-              <p className="withdrawl">
-                You cannot Withdraw a bid once submitted.
-              </p>
-              <div
-                className="refresh_btn"
-                onClick={() => {
-                  fetchAuction(true)
-                }}
-              >
-                <img src="/images/refresh.png" />
-                <p>Refresh Bid</p>
+              <div className='bid_refresh'>
+                <p className="withdrawl">
+                  You cannot Withdraw a bid once submitted.
+                </p>
+                <div className="refresh_btn" onClick={() => {fetchAuction(true)}}>
+                  <img src="/images/refresh.png" />
+                  <p>Refresh Bid</p>
+                </div>
               </div>
               <p>{loading}</p>
             </>
