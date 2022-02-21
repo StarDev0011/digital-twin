@@ -24,6 +24,7 @@ export const PageWrapper = styled.section`
       margin-left: 1%;
       margin-right: 1%;
       order: 2;
+      margin-top: 50px;
     }
     .auction_desc h2 {
       font-size: 5.4em;
@@ -33,7 +34,7 @@ export const PageWrapper = styled.section`
       margin: 30px 0;
     }
     .auction_desc p {
-      font-size: 1.6em;
+      font-size: 16px;
       line-height: 2;
       font-family: ${(props) => props.theme.fonts.headingFont};
     }
@@ -146,6 +147,11 @@ export const PageWrapper = styled.section`
       box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
       border-radius: 5px;
       margin-bottom: 80px;
+      @media (max-width: 465px) {
+        border: none;
+        box-shadow: none;
+        text-align: center;
+      }
       .reserve_price {
         margin-bottom: 40px;
       }
@@ -154,10 +160,14 @@ export const PageWrapper = styled.section`
         font-size: 12px;
         color: #969696;
         margin-bottom: 10px;
+        margin-top: 10px;
       }
       .reserve_price h2 {
         font-size: 24px;
         font-family: ${(props) => props.theme.fonts.bodyFont};
+        @media (max-width: 465px) {
+          font-size: 28px;
+        }
       }
       .start_date p {
         font-size: 12px;
@@ -169,6 +179,9 @@ export const PageWrapper = styled.section`
         font-size: 18px;
         font-family: ${(props) => props.theme.fonts.bodyFont};
         margin-bottom: 30px;
+        @media (max-width: 465px) {
+          font-size: 28px;
+        }
       }
       .bid_btn {
         text-align: center;
