@@ -14,10 +14,10 @@ export const AboutSectionRow = styled.div`
 `
 export const AboutSectionColLeft = styled.div`
   grid-column: 1/7;
-  span {
+  div {
     left: -2.5rem;
     @media (max-width: 465px) {
-      left: -3.5rem;
+      left: -28px;
     }
   }
   h4 {
