@@ -171,7 +171,7 @@ export default function Piece({ initialData }: PieceProps) {
                   {/* <FullComponents.AuctionInfo/> */}
                   {/* <FullComponents.MediaInfo/> */}
                 </div>
-                {/* <div className="minter">
+                <div className="minter">
                   <p>MINTER</p>
                   <div className="minter_detail">
                     <img src="/images/founder.png" />
@@ -179,7 +179,7 @@ export default function Piece({ initialData }: PieceProps) {
                       <b>ldezenbypayalshah.eth</b> minted this NFT
                     </p>
                   </div>
-                </div> */}
+                </div>
 
                 <div className="net_details">
                   <p className="net_title">NFT DETAILS</p>
