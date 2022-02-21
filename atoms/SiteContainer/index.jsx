@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SiteContainer = styled.div.attrs((props) => ({
-  size: props.size || "normal"
+  size: props.size || 'normal',
 }))`
   width: 100%;
-  max-width:1200px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
   .roadmap_title {
@@ -14,13 +14,13 @@ export const SiteContainer = styled.div.attrs((props) => ({
       line-height: 1;
     }
   }
-`;
+`
 
 export const MenuContainer = styled.div.attrs((props) => ({
-  size: props.size || "normal"
+  size: props.size || 'normal',
 }))`
   width: 100%;
-  max-width:1400px;
+  max-width: 1400px;
   margin: 0 auto;
   height: 100%;
-`;
+`

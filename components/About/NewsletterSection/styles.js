@@ -1,5 +1,5 @@
-import { SiteButton } from "../../../atoms/SiteButton";
-import styled from "styled-components";
+import { SiteButton } from '../../../atoms/SiteButton'
+import styled from 'styled-components'
 
 export const NewsletterSectionWrapper = styled.section`
   position: relative;
@@ -16,11 +16,11 @@ export const NewsletterSectionWrapper = styled.section`
       margin-bottom: 3.6rem;
     }
   }
-`;
+`
 export const NewsletterTitle = styled.div`
   position: relative;
   &::before {
-    content: "";
+    content: '';
     top: 50%;
     position: absolute;
     width: 100%;
@@ -43,7 +43,7 @@ export const NewsletterTitle = styled.div`
       font-size: 24px;
     }
   }
-`;
+`
 export const NewsletterButton = styled(SiteButton)`
   margin: 10rem 0 0 0;
   width: 100%;
@@ -55,4 +55,4 @@ export const NewsletterButton = styled(SiteButton)`
     margin: 0 auto;
     padding: 1.4rem 4rem;
   }
-`;
+`

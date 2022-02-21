@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const VisionWrapper = styled.div`
   padding: 0;
-  display:flex;
+  display: flex;
   position: relative;
   overflow: hidden;
   margin-top: 0rem;
@@ -12,18 +12,18 @@ export const VisionWrapper = styled.div`
     flex-wrap: wrap;
     margin-top: 50px;
   }
-`;
+`
 export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
     position: relative;
-    width:auto;
-    height:auto;
+    width: auto;
+    height: auto;
   }
   img {
     width: 100%;
   }
-`;
+`
 export const VisionData = styled.div`
   grid-column: 1/7;
   p {
@@ -54,21 +54,21 @@ export const VisionData = styled.div`
       font-size: 32px;
     }
   }
-`;
+`
 
 export const VisionContainer = styled.div`
   display: block;
-  width:50%;
+  width: 50%;
   margin-top: auto;
   margin-bottom: auto;
   padding-left: 5%;
   padding-right: 5%;
   @media (max-width: 465px) {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
     padding-left: 0%;
     padding-right: 0%;
     order: 2;
     margin-top: 40px;
   }
-`;
+`

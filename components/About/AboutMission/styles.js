@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AboutMissionWrapper = styled.div`
   padding: 0;
-  display:flex;
+  display: flex;
   position: relative;
   overflow: hidden;
   margin-top: 0;
@@ -11,19 +11,19 @@ export const AboutMissionWrapper = styled.div`
     display:block;
     margin-top: 50px;
   }
-`;
+`
 export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
     position: relative;
-    width:auto;
-    height:auto;
+    width: auto;
+    height: auto;
   }
   img {
     width: 100%;
     height: 100%;
   }
-`;
+`
 export const AboutMissionData = styled.div`
   grid-column: 6/-1;
   p {
@@ -34,7 +34,7 @@ export const AboutMissionData = styled.div`
     letter-spacing: 0.03em;
     @media (max-width: 465px) {
       font-size: 18px;
-      margin-top:0;
+      margin-top: 0;
     }
   }
   h4 {
@@ -55,13 +55,13 @@ export const AboutMissionData = styled.div`
       font-size: 32px;
     }
   }
-`;
+`
 
 export const AboutMissionContainer = styled.div`
   display: block;
-  width:50%;
-  padding-right:5%;
-  padding-left:5%;
+  width: 50%;
+  padding-right: 5%;
+  padding-left: 5%;
   margin-top: auto;
   margin-bottom: auto;
   @media (max-width: 465px) {
@@ -71,4 +71,4 @@ export const AboutMissionContainer = styled.div`
     padding-left:0%;
     margin-top: 40px;
   }
-`;
+`

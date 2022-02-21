@@ -1,13 +1,13 @@
-import { HowItWorksData, HowItWorksItem, HowItWorksWrapper } from "./styles";
+import { HowItWorksData, HowItWorksItem, HowItWorksWrapper } from './styles'
 
-import React from "react";
-import { SiteContainer } from "../../../atoms/SiteContainer";
-import { SiteTitle } from "../../../atoms/SiteTitle";
-import { process } from "../../../data/process";
+import React from 'react'
+import { SiteContainer } from '../../../atoms/SiteContainer'
+import { SiteTitle } from '../../../atoms/SiteTitle'
+import { process } from '../../../data/process'
 
 const HowItWorks = () => {
   return (
-    <HowItWorksWrapper id = "how_it_works">
+    <HowItWorksWrapper id="how_it_works">
       <SiteContainer>
         <SiteTitle>How it works</SiteTitle>
         <HowItWorksData>
@@ -25,7 +25,7 @@ const HowItWorks = () => {
         </HowItWorksData>
       </SiteContainer>
     </HowItWorksWrapper>
-  );
-};
+  )
+}
 
-export default HowItWorks;
+export default HowItWorks

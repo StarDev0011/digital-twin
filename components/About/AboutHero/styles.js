@@ -1,25 +1,25 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AboutHeroWrapper = styled.section`
   padding: 10rem 0;
   @media (max-width: 465px) {
     padding:5%
   }
-`;
+`
 
 export const AboutImageWrapper = styled.div`
-width:100%;
-text-align:center;
-margin-top: 50px;
-margin-bottom: 100px;
-@media (max-width: 465px) {
-  margin-top: 25px;
-  margin-bottom: 50px;
-}
-img {
   width: 100%;
-}
-`;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  @media (max-width: 465px) {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  img {
+    width: 100%;
+  }
+`
 
 export const AboutTitle = styled.h2`
   text-align: center;
@@ -29,7 +29,7 @@ export const AboutTitle = styled.h2`
   @media (max-width: 465px) {
     font-size: 30px;
   }
-`;
+`
 export const AboutSubtitle = styled.h4`
   text-align: left;
   font-size: 4rem;
@@ -43,7 +43,7 @@ export const AboutSubtitle = styled.h4`
     font-size: 24px;
     line-height: 2;
   }
-`;
+`
 export const AboutParagraph = styled.p`
   font-size: 24px;
   text-align: left;
@@ -54,10 +54,10 @@ export const AboutParagraph = styled.p`
   margin-right: auto;
   line-height: 1.8;
   @media (max-width: 465px) {
-    font-size:16px;
+    font-size: 16px;
     width: 100%;
   }
-`;
+`
 export const AboutVideoWrapper = styled.div`
   margin-top: 150px;
   margin-bottom: 50px;
@@ -67,4 +67,4 @@ export const AboutVideoWrapper = styled.div`
     margin-top: 50px;
     margin-bottom: 50px;
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeroSectionWrapper = styled.section`
   min-height: calc(100vh - 125px);
@@ -18,7 +18,7 @@ export const HeroSectionWrapper = styled.section`
     height: 100%;
     background-image: url("/images/landing1_mob.png");
   }
-`;
+`
 
 export const HeroSectionWrapper2 = styled.section`
   min-height: calc(100vh - 125px);
@@ -38,7 +38,7 @@ export const HeroSectionWrapper2 = styled.section`
     height: 100%;
     background-image: url("/images/landing_mob.png");
   }
-`;
+`
 
 export const HeroContent = styled.div`
   display: grid;
@@ -49,9 +49,9 @@ export const HeroContent = styled.div`
   height: 100%;
   grid-column-gap: 2rem;
   @media (max-width: 465px) {
-    display:block;
+    display: block;
   }
-`;
+`
 export const HeroContent2 = styled.div`
   display: grid;
   grid-template-columns: 6fr 4fr;
@@ -72,14 +72,14 @@ export const HeroContent2 = styled.div`
     }
   }
   @media (max-width: 465px) {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding-left: 2%;
     padding-right: 2%;
     text-align: center;
   }
-`;
+`
 
 export const HeroImage = styled.div`
 width: 500px;
@@ -107,7 +107,7 @@ export const HeroData = styled.div`
     text-align: center;
     display: block;
   }
-`;
+`
 export const HeroTitle = styled.h2`
   font-size: 54px;
   color: #ffffff;
@@ -120,7 +120,7 @@ export const HeroTitle = styled.h2`
     margin-bottom: 50px;
     margin-top: 10px;
   }
-`;
+`
 
 export const HeroTitle2 = styled.h2`
   font-size: 54px;
@@ -133,7 +133,7 @@ export const HeroTitle2 = styled.h2`
   @media (max-width: 465px) {
     font-size: 36px;
   }
-`;
+`
 
 export const HeroButtonsWrapper = styled.div`
   margin: 4.6rem 0;
@@ -160,7 +160,7 @@ export const HeroButtonsWrapper = styled.div`
     width:100%;
     display: flex;
   }
-`;
+`
 
 export const HeroSubtitle = styled.p`
   font-size: 30px;
@@ -175,7 +175,7 @@ export const HeroSubtitle = styled.p`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`
 
 export const HeroSubtitle2 = styled.p`
   font-size: 30px;
@@ -190,4 +190,4 @@ export const HeroSubtitle2 = styled.p`
     margin-left: auto;
     margin-right: auto;
   }
-`;
+`

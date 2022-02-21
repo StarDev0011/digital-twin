@@ -1,21 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const LDezenWrapper = styled.div`
   padding: 0;
   position: relative;
   overflow: hidden;
-  display:flex;
+  display: flex;
   @media (max-width: 465px) {
     padding: 0%;
-    display:block;
+    display: block;
   }
-`;
+`
 export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
     position: relative;
-    width:auto;
-    height:auto;
+    width: auto;
+    height: auto;
   }
   img {
     width: 100%;
@@ -24,7 +24,7 @@ export const SiteImageWrapper = styled.div`
   /* div {
     transform: rotate(-69deg);
   } */
-`;
+`
 export const LDezenData = styled.div`
   grid-column: 7/-1;
   p {
@@ -36,18 +36,18 @@ export const LDezenData = styled.div`
     line-height: 1.8;
     margin-top: 1.5rem;
   }
-`;
+`
 
 export const LDezenContainer = styled.div`
   display: block;
-  width:50%;
+  width: 50%;
   margin-top: auto;
   margin-bottom: auto;
   padding-right: 4.5%;
   padding-left: 4.5%;
   @media (max-width: 465px) {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
     padding: 5%;
   }
-`;
+`

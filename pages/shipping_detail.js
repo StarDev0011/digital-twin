@@ -1,12 +1,12 @@
-import Layout from "../components/Layout"
-import Shipping from "../components/Shipping/indes";
+import Layout from '../components/Layout'
+import Shipping from '../components/Shipping/indes'
 
 const ShippingDetail = () => {
-    return (
-        <Layout>
-            <Shipping />
-        </Layout>
-    )
+  return (
+    <Layout>
+      <Shipping />
+    </Layout>
+  )
 }
 
-export default ShippingDetail;
+export default ShippingDetail

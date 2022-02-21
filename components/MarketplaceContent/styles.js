@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const MarketplaceContentWrapper = styled.section`
   min-height: calc(100vh - 155px);
@@ -17,7 +17,7 @@ export const MarketplaceContentWrapper = styled.section`
     font-family: ${(props) => props.theme.fonts.headingFont};
     margin-top: 4rem;
   }
-`;
+`
 
 export const MarketPlaceData = styled.div`
   height: 100%;
@@ -25,4 +25,4 @@ export const MarketPlaceData = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-`;
+`

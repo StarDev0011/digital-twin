@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AboutInfoWrapper = styled.section`
   padding: 10rem 0;
@@ -6,7 +6,7 @@ export const AboutInfoWrapper = styled.section`
   @media (max-width: 465px) {
     padding:5%;
   }
-`;
+`
 
 export const AboutInfoTitle = styled.h2`
   text-align: center;
@@ -14,13 +14,13 @@ export const AboutInfoTitle = styled.h2`
   letter-spacing: 0.03em;
   font-family: ${(props) => props.theme.fonts.headingFont};
   line-height: 1.6;
-  margin-bottom:100px;
+  margin-bottom: 100px;
   @media (max-width: 465px) {
     font-size: 24px;
     margin-bottom: 50px;
     text-align: left;
   }
-`;
+`
 export const AboutInfoItems = styled.div`
 div {
   .true_icon_text{
@@ -93,13 +93,13 @@ div {
       display:none;
     }
     h3 {
-      font-size:35px;
+      font-size: 35px;
       font-weight: 400;
       margin-bottom: 20px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       font-style: italic;
       @media (max-width: 465px) {
-        font-size:28px;
+        font-size: 28px;
       }
     }
   }

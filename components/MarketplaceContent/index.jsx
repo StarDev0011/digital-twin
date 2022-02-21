@@ -1,7 +1,7 @@
-import { MarketPlaceData, MarketplaceContentWrapper } from "./styles";
+import { MarketPlaceData, MarketplaceContentWrapper } from './styles'
 
-import React from "react";
-import { SiteContainer } from "../../atoms/SiteContainer";
+import React from 'react'
+import { SiteContainer } from '../../atoms/SiteContainer'
 
 const MarketplaceContent = () => {
   return (
@@ -13,7 +13,7 @@ const MarketplaceContent = () => {
         </MarketPlaceData>
       </SiteContainer>
     </MarketplaceContentWrapper>
-  );
-};
+  )
+}
 
-export default MarketplaceContent;
+export default MarketplaceContent

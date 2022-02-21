@@ -1,16 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SiteButton = styled.div.attrs((props) => ({
-  buttonTheme: props.buttonTheme || "dark",
-  buttonBorder: props.buttonBorder || false
+  buttonTheme: props.buttonTheme || 'dark',
+  buttonBorder: props.buttonBorder || false,
 }))`
   a {
     background: ${(props) =>
-      props.buttonTheme === "light"
+      props.buttonTheme === 'light'
         ? props.theme.colors.whiteColor
         : props.theme.colors.blackColor};
     color: ${(props) =>
-      props.buttonTheme === "light"
+      props.buttonTheme === 'light'
         ? props.theme.colors.blackColor
         : props.theme.colors.whiteColor};
 
@@ -40,9 +40,9 @@ export const SiteButton = styled.div.attrs((props) => ({
       color: ${(props) => props.theme.colors.whiteColor};
     }
     @media (max-width: 465px) {
-      margin-left:auto;
-      margin-right:auto;
+      margin-left: auto;
+      margin-right: auto;
       padding: 3rem 10rem;
     }
   }
-`;
+`

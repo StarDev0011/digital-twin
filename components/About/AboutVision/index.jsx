@@ -2,13 +2,12 @@ import {
   SiteImageWrapper,
   VisionContainer,
   VisionData,
-  VisionWrapper
-} from "./styles";
-
+  VisionWrapper,
+} from './styles'
 
 const AboutVision = () => {
   return (
-    <VisionWrapper>      
+    <VisionWrapper>
       <VisionContainer>
         <VisionData>
           <h4>Vision</h4>
@@ -16,7 +15,7 @@ const AboutVision = () => {
           <p>Cross the line between digital & physical worlds</p>
           <br />
           <p>Collect jewelry in the form of asset backed NFTs</p>
-          <br />          
+          <br />
           <p>Empower creative culture</p>
         </VisionData>
       </VisionContainer>
@@ -24,7 +23,7 @@ const AboutVision = () => {
         <img alt="vision image" src="/images/vision-about1.png" />
       </SiteImageWrapper>
     </VisionWrapper>
-  );
-};
+  )
+}
 
-export default AboutVision;
+export default AboutVision

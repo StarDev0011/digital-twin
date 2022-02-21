@@ -5,13 +5,13 @@ import {
   HeroImage,
   HeroSectionWrapper,
   HeroSubtitle,
-  HeroTitle
-} from "./styles";
+  HeroTitle,
+} from './styles'
 
-import Link from "next/link";
-import React from "react";
-import { SiteButton } from "../../../atoms/SiteButton";
-import { SiteContainer } from "../../../atoms/SiteContainer";
+import Link from 'next/link'
+import React from 'react'
+import { SiteButton } from '../../../atoms/SiteButton'
+import { SiteContainer } from '../../../atoms/SiteContainer'
 
 const HeroSection1 = () => {
   return (
@@ -22,23 +22,17 @@ const HeroSection1 = () => {
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
-            <video autoPlay loop muted id = "video_bg1">
+            <video autoPlay loop muted id="video_bg1">
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
           </HeroImage>
           <HeroData>
             <HeroTitle>
-              {
-                "L'Dezen x Digital Twin"
-              }
+              {"L'Dezen x Digital Twin"}
               <br />
-              {
-                "Limited Edition"
-              }
+              {'Limited Edition'}
               <br />
-              {
-                "Digi-Physical Earrings"
-              }
+              {'Digi-Physical Earrings'}
             </HeroTitle>
             <HeroButtonsWrapper>
               <SiteButton buttonTheme="light" buttonBorder={true}>
@@ -56,4 +50,4 @@ const HeroSection1 = () => {
   );
 };
 
-export default HeroSection1;
+export default HeroSection1

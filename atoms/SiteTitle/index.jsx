@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SiteTitle = styled.h2.attrs((props) => ({
-  align: props.align || "center"
+  align: props.align || 'center',
 }))`
   font-size: 54px;
   font-family: ${(props) => props.theme.fonts.headingFont};
@@ -11,4 +11,4 @@ export const SiteTitle = styled.h2.attrs((props) => ({
     font-size: 36px;
     line-height: 1.6;
   }
-`;
+`

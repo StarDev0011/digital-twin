@@ -2,13 +2,13 @@ import {
   RiAuctionLine,
   RiHomeSmileLine,
   RiMoneyDollarCircleLine,
-  RiTruckLine
-} from "react-icons/ri";
+  RiTruckLine,
+} from 'react-icons/ri'
 
 export const process = [
   {
     id: 1,
-    title: "Auction",
+    title: 'Auction',
     paragraph: (
       <p>
         {
@@ -16,24 +16,26 @@ export const process = [
         }
       </p>
     ),
-    icon: <RiAuctionLine />
+    icon: <RiAuctionLine />,
   },
   {
     id: 2,
-    title: "Digital Ownership",
+    title: 'Digital Ownership',
     paragraph: (
       <p>
         {
           "The owner of the L'Dezen NFT has immediate access to digital utility by trading on the secondary marketplace. If you are an owner of any Profile Picture (PFP) NFTs, we also offer a digital rendering of your earrings to be included on your NFT of choice. Check out what your new avatar could look like "
         }
-        <a href = "/images/women.gif" target = "_blank">here.</a>
+        <a href="/images/women.gif" target="_blank">
+          here.
+        </a>
       </p>
     ),
-    icon: <RiHomeSmileLine />
+    icon: <RiHomeSmileLine />,
   },
   {
     id: 3,
-    title: "Distribution",
+    title: 'Distribution',
     paragraph: (
       <p>
         {
@@ -41,11 +43,11 @@ export const process = [
         }
       </p>
     ),
-    icon: <RiTruckLine />
+    icon: <RiTruckLine />,
   },
   {
     id: 4,
-    title: "Physical Ownership",
+    title: 'Physical Ownership',
     paragraph: (
       <p>
         {
@@ -53,6 +55,6 @@ export const process = [
         }
       </p>
     ),
-    icon: <RiMoneyDollarCircleLine />
-  }
-];
+    icon: <RiMoneyDollarCircleLine />,
+  },
+]

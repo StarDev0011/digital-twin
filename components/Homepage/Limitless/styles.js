@@ -1,23 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const LimitlessWrapper = styled.div`
   padding-top: 5rem;
   padding-bottom: 10rem;
   position: relative;
   overflow: hidden;
-  display:flex;
+  display: flex;
   @media (max-width: 465px) {
     padding: 4%;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
   }
-`;
+`
 export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
     position: relative;
-    width:auto;
-    height:auto;
+    width: auto;
+    height: auto;
     order: 1;
   }
   img {
@@ -35,12 +35,12 @@ export const SiteImageWrapper = styled.div`
       margin-top: 50px;
       margin-bottom: 30px;
       p {
-          font-size: 18px;
-          font-weight: 600;
-          margin-left: 10px;
-          margin-right:30px;
-          margin-top: auto;
-          margin-bottom: auto;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
       }
       img {
         width: auto;
@@ -51,17 +51,17 @@ export const SiteImageWrapper = styled.div`
   /* div {
     transform: rotate(-69deg);
   } */
-`;
+`
 export const LimitlessData = styled.div`
   h2 {
-      font-size:54px;
-      font-weight: 400;
-      font-family: ${(props) => props.theme.fonts.headingFont};
-      line-height:1.25;
-      margin-bottom: 30px;
-      @media (max-width: 465px) {
-        font-size: 36px;
-      }
+    font-size: 54px;
+    font-weight: 400;
+    font-family: ${(props) => props.theme.fonts.headingFont};
+    line-height: 1.25;
+    margin-bottom: 30px;
+    @media (max-width: 465px) {
+      font-size: 36px;
+    }
   }
   p {
     font-size: 24px;
@@ -82,45 +82,41 @@ export const LimitlessData = styled.div`
       display: none;
     }
     p {
-        font-size: 18px;
-        font-weight: 600;
-        margin-left: 10px;
-        margin-right:30px;
-        margin-top: auto;
-        margin-bottom: auto;
+      font-size: 18px;
+      font-weight: 600;
+      margin-left: 10px;
+      margin-right: 30px;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
-`;
+`
 
 export const LimitlessContainer = styled.div`
   display: block;
-  width:50%;
+  width: 50%;
   margin-top: auto;
   margin-bottom: auto;
   @media (max-width: 465px) {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
     padding-right: 0%;
     order: 2;
   }
-`;
+`
 
 export const LimitlessButtonContainer = styled.div`
   width: 100%;
-  text-align:center;
+  text-align: center;
   @media (max-width: 465px) {
     margin-top: 20%;
   }
   .auction_btn {
-      background: black;
-      font-family: ${(props) => props.theme.fonts.headingFont};
-      color: white;
-      font-size: 1.6rem;
-      padding: 20px 100px;
-      border-radius: 500px;
+    background: black;
+    font-family: ${(props) => props.theme.fonts.headingFont};
+    color: white;
+    font-size: 1.6rem;
+    padding: 20px 100px;
+    border-radius: 500px;
   }
-`;
-
-
-
-
+`

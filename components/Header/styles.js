@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderWrapper = styled.div`
   display: flex;
@@ -6,12 +6,12 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   width: 100%;
   padding: 2rem 0;
-`;
+`
 export const HeaderTop = styled.div`
   align-items: center;
   width: 100%;
   .social_items {
-    position:absolute;
+    position: absolute;
     left: 10%;
     @media (max-width: 465px) {
       left: 5%;
@@ -27,23 +27,23 @@ export const HeaderTop = styled.div`
     top: 30px;
     right: 5%;
     @media (max-width: 465px) {
-      display:none
+      display: none;
     }
-}
-`;
+  }
+`
 export const HeaderCenter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-`;
+`
 export const Logo = styled.div`
   color: ${(props) => props.theme.colors.blackColor};
   font-family: ${(props) => props.theme.fonts.headingFont};
   letter-spacing: 0.5px;
   font-size: 2.8rem;
   font-weight: bold;
-`;
+`
 export const MenuItems = styled.div`
   display: flex;
   list-style: none;
@@ -65,7 +65,7 @@ export const MenuItems = styled.div`
       }
     }
   }
-`;
+`
 export const SocialItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -81,4 +81,4 @@ export const SocialItems = styled.div`
       color: ${(props) => props.theme.colors.blackColor};
     }
   }
-`;
+`

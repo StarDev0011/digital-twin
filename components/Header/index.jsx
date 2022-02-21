@@ -4,13 +4,13 @@ import {
   HeaderWrapper,
   Logo,
   MenuItems,
-  SocialItems
-} from "./styles";
+  SocialItems,
+} from './styles'
 
-import Link from "next/link";
-import { MenuContainer } from "../../atoms/SiteContainer";
-import { menuData } from "../../data/menu";
-import { socialData } from "../../data/social";
+import Link from 'next/link'
+import { MenuContainer } from '../../atoms/SiteContainer'
+import { menuData } from '../../data/menu'
+import { socialData } from '../../data/social'
 
 const Header = () => {
   return (
@@ -37,7 +37,15 @@ const Header = () => {
                     <Link href={item.link}>{item.name}</Link>
                   </li>
                 ))}
-                <li><a href="images/press_release.pdf" target="_blank" rel="noreferrer">Press Release</a></li>
+                <li>
+                  <a
+                    href="images/press_release.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Press Release
+                  </a>
+                </li>
               </MenuItems>
             </HeaderCenter>
           </div>
@@ -49,7 +57,7 @@ const Header = () => {
         </HeaderTop>
       </HeaderWrapper>
     </MenuContainer>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

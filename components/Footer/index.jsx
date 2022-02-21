@@ -5,15 +5,15 @@ import {
   FooterRow,
   FooterWrapper,
   MenuItems,
-  SocialItems
-} from "./styles";
+  SocialItems,
+} from './styles'
 
-import Copyright from "./copyright";
-import Link from "next/link";
-import { SiteButton } from "../../atoms/SiteButton";
-import { MenuContainer } from "../../atoms/SiteContainer";
-import { footermenuData } from "../../data/footer_menu";
-import { socialData } from "../../data/social";
+import Copyright from './copyright'
+import Link from 'next/link'
+import { SiteButton } from '../../atoms/SiteButton'
+import { MenuContainer } from '../../atoms/SiteContainer'
+import { footermenuData } from '../../data/footer_menu'
+import { socialData } from '../../data/social'
 
 const Footer = () => {
   return (
@@ -55,7 +55,8 @@ const Footer = () => {
                 drops,weekly news, and more.
               </p>
               <SiteButton>
-                <a className = "join_us"
+                <a
+                  className="join_us"
                   target="_blank"
                   rel="noreferrer"
                   href="https://digitaltwin.beehiiv.com/subscribe"
@@ -69,7 +70,7 @@ const Footer = () => {
       </FooterWrapper>
       <Copyright />
     </>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

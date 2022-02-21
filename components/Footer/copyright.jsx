@@ -1,6 +1,6 @@
-import { CopyrightWrapper } from "./styles";
-import React from "react";
-import { SiteContainer } from "../../atoms/SiteContainer";
+import { CopyrightWrapper } from './styles'
+import React from 'react'
+import { SiteContainer } from '../../atoms/SiteContainer'
 
 const Copyright = () => {
   return (
@@ -9,7 +9,7 @@ const Copyright = () => {
         <p>© 2022 Digital Twin Labs LLC.</p>
       </SiteContainer>
     </CopyrightWrapper>
-  );
-};
+  )
+}
 
-export default Copyright;
+export default Copyright
