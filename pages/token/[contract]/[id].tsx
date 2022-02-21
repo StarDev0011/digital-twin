@@ -192,7 +192,7 @@ export default function Piece({ initialData }: PieceProps) {
                         {initialData.nft.tokenData.address.slice(0, 5)}...
                         {initialData.nft.tokenData.address.slice(29)}
                       </p>
-                      {/* <img src="/images/arrow.png" /> */}
+                      {/* <img src="/images/arrow1.png" /> */}
                       <CopyToClipboard text={initialData.nft.tokenData.address}>
                         <img src="/images/gradient.png" />
                       </CopyToClipboard>
@@ -223,7 +223,7 @@ export default function Piece({ initialData }: PieceProps) {
                     </div>
                     <div className="net_right">
                       <img
-                        src="/images/arrow.png"
+                        src="/images/arrow1.png"
                         onClick={() => {
                           // replace(
                           //   initialData.nft.tokenData.metadata.json.image_url
@@ -242,7 +242,7 @@ export default function Piece({ initialData }: PieceProps) {
                     </div>
                     <div className="net_right">
                       <img
-                        src="/images/arrow.png"
+                        src="/images/arrow1.png"
                         onClick={() => {
                           window.open(
                             'https://zora-prod.mypinata.cloud/ipfs/Qme4kgC54GUmuPtwKiSVVQEnisiZUaGrR1iQwaGNbwUMfk',
@@ -258,7 +258,7 @@ export default function Piece({ initialData }: PieceProps) {
                     </div>
                     <div className="net_right">
                       <img
-                        src="/images/arrow.png"
+                        src="/images/arrow1.png"
                         onClick={() => {
                           window.open(
                             'https://etherscan.io/token/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9?a=1',
