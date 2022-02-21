@@ -27,7 +27,7 @@ const Limitless = () => {
               <p>{'Bold, yet feminine.'}</p>
               <div className="limitless_icon_txt">
                 <img src="/images/founder.png" />
-                <p>{"L'Dezen x Payal Shah"}</p>
+                <p>{"L'Dezen by Payal Shah"}</p>
               </div>
             </LimitlessData>
           </LimitlessContainer>
@@ -35,7 +35,7 @@ const Limitless = () => {
             <Image src={limitlessimg} alt="" />
             <div className="limitless_icon_txt">
               <img src="/images/founder.png" />
-              <p>{"L'Dezen x Payal Shah"}</p>
+              <p>{"L'Dezen by Payal Shah"}</p>
             </div>
           </SiteImageWrapper>
         </LimitlessWrapper>
