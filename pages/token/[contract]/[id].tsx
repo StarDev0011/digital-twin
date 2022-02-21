@@ -117,7 +117,7 @@ const CollectionTag = () => {
 }
 
 export default function Piece({ initialData }: PieceProps) {
-  const { query, push } = useRouter()
+  const { query } = useRouter()
 
   return (
     <SiteContainer>
