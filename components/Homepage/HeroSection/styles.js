@@ -17,6 +17,7 @@ export const HeroSectionWrapper = styled.section`
     min-height: 100vh;
     height: 100%;
     background-image: url("/images/landing1_mob.png");
+    background-position: center;
   }
 `
 
