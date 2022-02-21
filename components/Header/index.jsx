@@ -72,7 +72,7 @@ const Header = () => {
         </div>
         {modal?(<div className='mobile_modal'>
           <div className='close_icon'>
-            <img src='images/close.png' onClick={hide} />
+            <img src='/images/close.png' onClick={hide} />
           </div>
           
           <div className='nav_links'>
