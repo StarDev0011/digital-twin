@@ -118,6 +118,7 @@ export const PageWrapper = styled.section`
           img {
             height: fit-content;
             margin-left: 10px;
+            cursor: pointer;
           }
           p {
             font-size: 12px;

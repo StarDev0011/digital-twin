@@ -280,7 +280,7 @@ export default function Piece({ initialData }: PieceProps) {
                   </div>
                   <div className="start_date">
                     <p>AUCTION STARTS ON</p>
-                    <h2>March 1, 2022</h2>
+                    <h2>March 10, 2022</h2>
                   </div>
                   <div className="bid_btn">
                     <Button onClick={() => push(`../../bidpage`)}>
