@@ -4,11 +4,7 @@ export const AboutInfoWrapper = styled.section`
   padding: 10rem 0;
   margin-top: 50px;
   @media (max-width: 465px) {
-<<<<<<< HEAD
-    padding: 2%;
-=======
     padding:5%;
->>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
   }
 `
 
@@ -56,14 +52,10 @@ export const AboutInfoItems = styled.div`
   }
 
   .single_problem {
-<<<<<<< HEAD
-    margin-top: 30px;
-=======
     margin-top:30px;
     @media (max-width: 465px) {
       display:none;
     }
->>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
     h3 {
       font-size: 35px;
       font-weight: 400;

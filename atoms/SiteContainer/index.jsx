@@ -14,7 +14,7 @@ export const SiteContainer = styled.div.attrs((props) => ({
       line-height: 1;
     }
   }
-`;
+`
 
 export const MenuContainer = styled.div.attrs((props) => ({
   size: props.size || 'normal',

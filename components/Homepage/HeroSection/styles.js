@@ -61,7 +61,7 @@ export const HeroContent2 = styled.div`
     }
   }
   @media (max-width: 465px) {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
     padding-left: 2%;
@@ -71,16 +71,16 @@ export const HeroContent2 = styled.div`
 `
 
 export const HeroImage = styled.div`
-width: 500px;
-@media (max-width: 465px) {
-  width: 90%;
-  margin: auto;
-  padding-top: 5%;
-}
-#video_bg1 {
-  width: 100%;
-}
-`;
+  width: 500px;
+  @media (max-width: 465px) {
+    width: 90%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  #video_bg1 {
+    width: 100%;
+  }
+`
 export const HeroData = styled.div`
   display: flex;
   flex-direction: column;
@@ -135,7 +135,7 @@ export const HeroButtonsWrapper = styled.div`
     }
   }
   @media (max-width: 465px) {
-    width:100%;
+    width: 100%;
     display: block;
   }
 `

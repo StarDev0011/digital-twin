@@ -7,14 +7,9 @@ export const VisionWrapper = styled.div`
   overflow: hidden;
   margin-top: 0rem;
   @media (max-width: 465px) {
-<<<<<<< HEAD
-    padding: 2%;
-    display: block;
-=======
     padding:5%;
     display:flex;
     flex-wrap: wrap;
->>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
     margin-top: 50px;
   }
 `

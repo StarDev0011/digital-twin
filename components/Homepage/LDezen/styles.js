@@ -7,7 +7,7 @@ export const LDezenWrapper = styled.div`
   display: flex;
   @media (max-width: 465px) {
     padding: 0%;
-    display:block;
+    display: block;
   }
 `
 export const SiteImageWrapper = styled.div`
@@ -46,8 +46,8 @@ export const LDezenContainer = styled.div`
   padding-right: 4.5%;
   padding-left: 4.5%;
   @media (max-width: 465px) {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
     padding: 5%;
   }
 `

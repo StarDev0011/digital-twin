@@ -40,9 +40,9 @@ export const SiteButton = styled.div.attrs((props) => ({
       color: ${(props) => props.theme.colors.whiteColor};
     }
     @media (max-width: 465px) {
-      margin-left:auto;
-      margin-right:auto;
+      margin-left: auto;
+      margin-right: auto;
       padding: 3rem 10rem;
     }
   }
-`;
+`

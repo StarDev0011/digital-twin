@@ -4,9 +4,9 @@ export const FooterWrapper = styled.footer`
   padding: 4.2rem 1rem;
   @media (max-width: 465px) {
     background: #000000;
-    padding: 5rem ;
+    padding: 5rem;
   }
-`;
+`
 export const FooterLogoWrapper = styled.div`
   display: flex;
   position: relative;
@@ -17,7 +17,7 @@ export const FooterLogoWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 0;
-    width: calc(1400px + (100vw - 1400px)/2 - 1rem);
+    width: calc(1400px + (100vw - 1400px) / 2 - 1rem);
     @media (max-width: 1400px) {
       width: 100%;
     }
@@ -41,20 +41,20 @@ export const FooterLogo = styled.h2`
     background: #000000;
     font-size: 28px;
   }
-`;
+`
 
 export const FooterRow = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.4rem;
   @media (max-width: 465px) {
-    display: block
+    display: block;
   }
-`;
+`
 export const FooterCol = styled.div`
-@media (max-width: 465px) {
-  margin-top: 30px;
-}
+  @media (max-width: 465px) {
+    margin-top: 30px;
+  }
   .siteInfo {
     font-size: 16px;
     font-family: ${(props) => props.theme.fonts.headingFont};

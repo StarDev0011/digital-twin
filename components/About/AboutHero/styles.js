@@ -3,11 +3,7 @@ import styled from 'styled-components'
 export const AboutHeroWrapper = styled.section`
   padding: 10rem 0;
   @media (max-width: 465px) {
-<<<<<<< HEAD
-    padding: 2%;
-=======
     padding:5%
->>>>>>> 48073718ed8d7ef88d7c2a8349421d4492a6676c
   }
 `
 

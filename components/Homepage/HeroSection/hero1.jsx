@@ -8,21 +8,21 @@ import {
   HeroTitle,
 } from './styles'
 
-import Link from "next/link";
-import React from "react";
-import { SiteButton } from "../../../atoms/SiteButton";
-import { SiteContainer } from "../../../atoms/SiteContainer";
+import Link from 'next/link'
+import React from 'react'
+import { SiteButton } from '../../../atoms/SiteButton'
+import { SiteContainer } from '../../../atoms/SiteContainer'
 
 const HeroSection1 = () => {
   return (
     <HeroSectionWrapper2>
-      <video autoPlay loop muted id = "video_bg">         
-          <source src="/images/landing1.mp4" type="video/mp4"/>       
+      <video autoPlay loop muted id="video_bg">
+        <source src="/images/landing1.mp4" type="video/mp4" />
       </video>
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
-            <video autoPlay loop muted id = "video_bg1">
+            <video autoPlay loop muted id="video_bg1">
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
           </HeroImage>
@@ -47,7 +47,7 @@ const HeroSection1 = () => {
         </HeroContent>
       </SiteContainer>
     </HeroSectionWrapper2>
-  );
-};
+  )
+}
 
 export default HeroSection1

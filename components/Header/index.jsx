@@ -37,7 +37,15 @@ const Header = () => {
                     <Link href={item.link}>{item.name}</Link>
                   </li>
                 ))}
-                <li><a href="images/press_release.pdf" target="_blank" rel="noreferrer">Press Release</a></li>
+                <li>
+                  <a
+                    href="images/press_release.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Press Release
+                  </a>
+                </li>
               </MenuItems>
             </HeaderCenter>
           </div>

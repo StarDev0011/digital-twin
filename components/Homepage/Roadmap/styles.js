@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const RoadmapData = styled.div`
   margin-top: 9.2rem;
-`;
+`
 export const RoadmapItem = styled.div`
   list-style: none;
   .processData {
@@ -11,37 +11,37 @@ export const RoadmapItem = styled.div`
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    position:relative;
+    position: relative;
     @media (max-width: 480px) {
-        width: 100%;
-        padding: 5%;
-        margin-bottom: 30px;
-      }
-      
+      width: 100%;
+      padding: 5%;
+      margin-bottom: 30px;
+    }
+
     h1 {
-        font-family: ${(props) => props.theme.fonts.headingFont};
-        font-size:45px;
-        width: 60px;
-        height: 60px;
-        background: black;
-        border-radius: 50%;
-        color: #ffffff;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        text-align:center;
-        margin-top: -30px;
-        z-index: 2;
-        @media (max-width: 465px) {
-          margin-left:0;
-        }
+      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-size: 45px;
+      width: 60px;
+      height: 60px;
+      background: black;
+      border-radius: 50%;
+      color: #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      text-align: center;
+      margin-top: -30px;
+      z-index: 2;
+      @media (max-width: 465px) {
+        margin-left: 0;
+      }
     }
     h3 {
       font-size: 24px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       font-weight: bold;
       letter-spacing: 0.5px;
-      padding: 0 50px;      
+      padding: 0 50px;
       @media (max-width: 480px) {
         font-size: 24px;
         padding: 0px;
@@ -79,7 +79,7 @@ export const RoadmapItem = styled.div`
     border-bottom-left-radius: 100px;
     z-index: -1;
     @media (max-width: 465px) {
-      position:relative;
+      position: relative;
       display: none;
     }
   }
@@ -96,7 +96,7 @@ export const RoadmapItem = styled.div`
     content: '';
     display: block;
     top: 0;
-    left:50%;
+    left: 50%;
     width: 50%;
     height: 100%;
     border: dotted;
@@ -105,7 +105,7 @@ export const RoadmapItem = styled.div`
     border-bottom-right-radius: 100px;
     z-index: -1;
     @media (max-width: 465px) {
-      position:relative;
+      position: relative;
       display: none;
     }
   }
@@ -113,9 +113,9 @@ export const RoadmapItem = styled.div`
     animation-name: floating1;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
-    text-align:right;
+    text-align: right;
     @media (max-width: 465px) {
-      text-align:left;
+      text-align: left;
       animation-name: none;
     }
   }
@@ -132,7 +132,7 @@ export const RoadmapItem = styled.div`
     border-bottom-left-radius: 100px;
     z-index: -1;
     @media (max-width: 465px) {
-      position:relative;
+      position: relative;
       display: none;
     }
   }
@@ -150,8 +150,8 @@ export const RoadmapItem = styled.div`
     animation-timing-function: ease-in-out;
     text-align: right;
     @media (max-width: 465px) {
-      text-align:left;
+      text-align: left;
       animation-name: none;
     }
   }
-`;
+`
