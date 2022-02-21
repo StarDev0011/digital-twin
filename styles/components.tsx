@@ -26,6 +26,19 @@ export const PageWrapper = styled.section`
       order: 2;
       margin-top: 50px;
     }
+    div {
+      @media (max-width: 465px){
+        justify-content: center;
+      }
+      span {
+        @media (max-width: 465px){
+          font-size: 18px;
+          color: #000000;
+          font-family: ${(props) => props.theme.fonts.headingFont};
+          font-weight: 700;
+        }
+      }
+    }
     .auction_desc h2 {
       font-size: 5.4em;
       font-family: ${(props) => props.theme.fonts.headingFont};
@@ -194,6 +207,15 @@ export const PageWrapper = styled.section`
       border-radius: 5px;
       div {
         border: none !important;
+      }
+      .zora-fullPageHistoryItemDescription {
+        font-size: 16px;
+        color: #000000;
+        font-family: ${(props) => props.theme.fonts.bodyFont};
+      }
+      time {
+        font-size: 16px;
+        color: #969696;
       }
     }
   }
