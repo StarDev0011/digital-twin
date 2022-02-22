@@ -3,6 +3,9 @@ import styled from 'styled-components'
 export const AboutSectionWrapper = styled.div`
   padding: 9.6rem 0;
   margin-top: 50px;
+  @media (max-width: 465px) {
+    margin-top: 0px;
+  }
 `
 export const AboutSectionRow = styled.div`
   display: grid;
@@ -33,6 +36,11 @@ export const AboutSectionColLeft = styled.div`
       text-align: center;
     }
   }
+  h2 {
+    @media (max-width: 465px) {
+      text-align: center;
+    }
+  }
   p {
     font-size: 22px;
     font-family: ${(props) => props.theme.fonts.headingFont};
@@ -49,6 +57,7 @@ export const AboutSectionColLeft = styled.div`
     @media (max-width: 465px) {
       display: block;
       width: 100%;
+      margin-top: 50px;
     }
   }
   @media (max-width: 465px) {
