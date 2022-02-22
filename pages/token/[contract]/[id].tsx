@@ -21,6 +21,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 // import {writeFileSync} from 'fs';
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import Header from '../../../components/Header/index'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const styles = {
   theme: {
@@ -46,6 +48,7 @@ type PieceProps = {
   description: string
   image: string
   initialData: any
+  marketEth: any
 }
 const jsx_runtime_1 = require('react/jsx-runtime')
 const react_1 = require('react')
@@ -118,7 +121,16 @@ const CollectionTag = () => {
 
 export default function Piece({ initialData }: PieceProps) {
   const { query } = useRouter()
-
+  const [marketPriceEth, setMarketPriceEth] = useState(2500)
+  // console.log('market eth is',marketEth)
+  const getMarketPrice = () => {
+    fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
+      .then((response) => response.json())
+      .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
+  }
+  useEffect(() => {
+    getMarketPrice()
+  }, [])
   return (
     <SiteContainer>
       <Header />
@@ -278,7 +290,7 @@ export default function Piece({ initialData }: PieceProps) {
                 <div className="price_date_btn">
                   <div className="reserve_price">
                     <p>RESERVE PRICE</p>
-                    <h2>~2.00 ETH</h2>
+                    <h2>~{(5200 / marketPriceEth).toFixed(3)} ETH</h2>
                     <p>$5,200 USD</p>
                   </div>
                   <div className="start_date">
@@ -328,6 +340,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     tokenId: id,
     collectionAddress: contract,
   })
+
   // console.log(data)
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data)
   // console.log(tokenInfo)
