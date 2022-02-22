@@ -10,23 +10,17 @@ import SimpleSlider from '../components/Homepage/Slider'
 import Splash from '../components/Splash'
 
 const Home = () => {
- 
   return (
     <Layout title="Homepage">
-      
-        <Splash />
-      
-          <SimpleSlider />
+      <Splash />
+
+      <SimpleSlider />
       <Limitless />
       <AboutSection />
       <LDezen />
       <Vision />
       <HowItWorks />
       <Roadmap />
-       
-      
-      
-      
     </Layout>
   )
 }

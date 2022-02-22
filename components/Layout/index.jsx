@@ -6,7 +6,10 @@ const Layout = ({ children, title }) => {
     <>
       <Head>
         <title>{title} | Digitalxtwin</title>
-        <meta name="Digital Twin" content="Digital Twin is a curated marketplace for fine jewelry.L'Dezen and Digital Twin Limitless Earrings NFT drop." />
+        <meta
+          name="Digital Twin"
+          content="Digital Twin is a curated marketplace for fine jewelry.L'Dezen and Digital Twin Limitless Earrings NFT drop."
+        />
         <link rel="icon" href="/images/logo.png" />
       </Head>
       <Header />

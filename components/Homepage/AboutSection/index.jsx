@@ -23,7 +23,7 @@ const AboutSection = () => {
               width={341}
             />
             <h4>FOUNDER</h4>
-            <SiteTitle >PAYAL SHAH</SiteTitle>
+            <SiteTitle>PAYAL SHAH</SiteTitle>
             <img
               className="mobile_img"
               src="/images/payal1.png"
