@@ -22,7 +22,7 @@ const HeroSection1 = () => {
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
-            <video autoPlay loop muted id="video_bg1">
+            <video controls="true" autoPlay="autoplay" loop="true" muted defaultmuted playsinline id="video_bg1">
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
           </HeroImage>
