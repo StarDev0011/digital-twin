@@ -20,7 +20,7 @@ export const FooterLogoWrapper = styled.div`
     width: calc(1400px + (100vw - 1400px) / 2 - 1rem);
     @media (max-width: 1400px) {
       width: 100%;
-      display:none;
+      display: none;
     }
     height: 1px;
     background: ${(props) => props.theme.colors.blackColor};

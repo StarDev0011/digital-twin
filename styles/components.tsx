@@ -27,7 +27,7 @@ export const PageWrapper = styled.section`
       margin-top: 50px;
     }
     div {
-      @media (max-width: 465px){
+      @media (max-width: 465px) {
         justify-content: center;
       }
       span {
@@ -35,8 +35,8 @@ export const PageWrapper = styled.section`
         color: #000000;
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 700;
-        @media (max-width: 465px){
-          font-size: 18px;          
+        @media (max-width: 465px) {
+          font-size: 18px;
         }
       }
     }

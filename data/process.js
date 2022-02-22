@@ -39,7 +39,7 @@ export const process = [
     paragraph: (
       <p>
         {
-          "The L’Dezen Limitless NFT is asset backed. Digital Twin has the item securely stored and insured. You can redeem your physical earrings on our website by connecting your wallet to prove ownership of the NFT. The NFT will then be redeemed for the physical asset and shipped to your home address. "
+          'The L’Dezen Limitless NFT is asset backed. Digital Twin has the item securely stored and insured. You can redeem your physical earrings on our website by connecting your wallet to prove ownership of the NFT. The NFT will then be redeemed for the physical asset and shipped to your home address. '
         }
       </p>
     ),

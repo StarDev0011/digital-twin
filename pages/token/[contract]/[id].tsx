@@ -21,6 +21,8 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 // import {writeFileSync} from 'fs';
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import Header from '../../../components/Header/index'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const styles = {
   theme: {
@@ -46,6 +48,7 @@ type PieceProps = {
   description: string
   image: string
   initialData: any
+  marketEth: any
 }
 const jsx_runtime_1 = require('react/jsx-runtime')
 const react_1 = require('react')
@@ -118,7 +121,16 @@ const CollectionTag = () => {
 
 export default function Piece({ initialData }: PieceProps) {
   const { query } = useRouter()
-
+  const [marketPriceEth, setMarketPriceEth] = useState(2500)
+  // console.log('market eth is',marketEth)
+  const getMarketPrice = () => {
+    fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
+      .then((response) => response.json())
+      .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
+  }
+  useEffect(() => {
+    getMarketPrice()
+  }, [])
   return (
     <SiteContainer>
       <Header />
@@ -269,16 +281,16 @@ export default function Piece({ initialData }: PieceProps) {
                     </div>
                   </div>
                   <div className="refresh">
-                      <p className="refresh_meta">Refresh Metadata</p>
-                      <p className="updated_mins">Updated 2 minutes ago</p>
-                    </div>
+                    <p className="refresh_meta">Refresh Metadata</p>
+                    <p className="updated_mins">Updated 2 minutes ago</p>
+                  </div>
                 </div>
               </div>
               <div className="auction_right">
                 <div className="price_date_btn">
                   <div className="reserve_price">
                     <p>RESERVE PRICE</p>
-                    <h2>~2.00 ETH</h2>
+                    <h2>~{(5200 / marketPriceEth).toFixed(3)} ETH</h2>
                     <p>$5,200 USD</p>
                   </div>
                   <div className="start_date">
@@ -286,9 +298,7 @@ export default function Piece({ initialData }: PieceProps) {
                     <h2>March 10, 2022</h2>
                   </div>
                   <div className="bid_btn">
-                    <Button >
-                      Coming Soon
-                    </Button>
+                    <Button>Coming Soon</Button>
                   </div>
                 </div>
                 <div className="history_detail">
@@ -330,6 +340,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     tokenId: id,
     collectionAddress: contract,
   })
+
   // console.log(data)
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data)
   // console.log(tokenInfo)

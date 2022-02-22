@@ -24,7 +24,7 @@ export const MenuContainer = styled.div.attrs((props) => ({
   margin: 0 auto;
   height: 100%;
   .mobile_nav {
-    display:none;
+    display: none;
     @media (max-width: 465px) {
       display: block;
     }
@@ -64,7 +64,7 @@ export const MenuContainer = styled.div.attrs((props) => ({
         a {
           color: #ffffff;
         }
-        li {          
+        li {
           margin-top: 10px;
         }
       }
