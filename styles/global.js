@@ -87,7 +87,10 @@ const GlobalStyles = createGlobalStyle`
     video#video_bg {
       width: auto;
       height: 100vh;
-    }    
+    }
+    .roadmap_section, .slick-prev, .slick-next {
+      display:none!important;
+    }
   }
 `
 

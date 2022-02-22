@@ -117,7 +117,7 @@ const CollectionTag = () => {
 }
 
 export default function Piece({ initialData }: PieceProps) {
-  const { query, push } = useRouter()
+  const { query } = useRouter()
 
   return (
     <SiteContainer>
@@ -171,7 +171,7 @@ export default function Piece({ initialData }: PieceProps) {
                   {/* <FullComponents.AuctionInfo/> */}
                   {/* <FullComponents.MediaInfo/> */}
                 </div>
-                {/* <div className="minter">
+                <div className="minter">
                   <p>MINTER</p>
                   <div className="minter_detail">
                     <img src="/images/founder.png" />
@@ -179,7 +179,7 @@ export default function Piece({ initialData }: PieceProps) {
                       <b>ldezenbypayalshah.eth</b> minted this NFT
                     </p>
                   </div>
-                </div> */}
+                </div>
 
                 <div className="net_details">
                   <p className="net_title">NFT DETAILS</p>
@@ -268,27 +268,25 @@ export default function Piece({ initialData }: PieceProps) {
                       />
                     </div>
                   </div>
-                  {/* <div className="refresh">
-                      <p className="refresh_meta">Refresh Metadata</p>
-                      <p className="updated_mins">Updated 2 minutes ago</p>
-                    </div> */}
+                  <div className="refresh">
+                    <p className="refresh_meta">Refresh Metadata</p>
+                    <p className="updated_mins">Updated 2 minutes ago</p>
+                  </div>
                 </div>
               </div>
               <div className="auction_right">
                 <div className="price_date_btn">
                   <div className="reserve_price">
                     <p>RESERVE PRICE</p>
-                    <h2>~1.75 ETH</h2>
-                    <p>~5,200 USD</p>
+                    <h2>~2.00 ETH</h2>
+                    <p>$5,200 USD</p>
                   </div>
                   <div className="start_date">
                     <p>AUCTION STARTS ON</p>
-                    <h2>March 1, 2022</h2>
+                    <h2>March 10, 2022</h2>
                   </div>
                   <div className="bid_btn">
-                    <Button onClick={() => push(`../../bidpage`)}>
-                      Coming Soon
-                    </Button>
+                    <Button>Coming Soon</Button>
                   </div>
                 </div>
                 <div className="history_detail">

@@ -27,15 +27,16 @@ export const PageWrapper = styled.section`
       margin-top: 50px;
     }
     div {
-      @media (max-width: 465px){
+      @media (max-width: 465px) {
         justify-content: center;
       }
       span {
-        @media (max-width: 465px){
+        font-size: 24px;
+        color: #000000;
+        font-family: ${(props) => props.theme.fonts.headingFont};
+        font-weight: 700;
+        @media (max-width: 465px) {
           font-size: 18px;
-          color: #000000;
-          font-family: ${(props) => props.theme.fonts.headingFont};
-          font-weight: 700;
         }
       }
     }
@@ -118,6 +119,7 @@ export const PageWrapper = styled.section`
           img {
             height: fit-content;
             margin-left: 10px;
+            cursor: pointer;
           }
           p {
             font-size: 12px;

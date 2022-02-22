@@ -115,7 +115,7 @@ export const LimitlessButtonContainer = styled.div`
     background: black;
     font-family: ${(props) => props.theme.fonts.headingFont};
     color: white;
-    font-size: 1.6rem;
+    font-size: 16px;
     padding: 20px 100px;
     border-radius: 500px;
   }
