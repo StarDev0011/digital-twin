@@ -33,7 +33,7 @@ export const FooterLogo = styled.h2`
   font-family: ${(props) => props.theme.fonts.headingFont};
   font-weight: bold;
   color: ${(props) => props.theme.colors.blackColor};
-  background: ${(props) => props.theme.colors.whiteColor};
+  /* background: ${(props) => props.theme.colors.whiteColor}; */
   line-height: 1;
   z-index: 5;
   padding-right: 2.4rem;

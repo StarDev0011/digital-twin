@@ -29,6 +29,23 @@ const Limitless = () => {
                 <img src="/images/founder.png" />
                 <p>{"L'Dezen by Payal Shah"}</p>
               </div>
+              <br/>
+              <div className = "external_links">
+                <p><b>View us on:</b></p>
+                <a href="https://etherscan.io/nft/0x8add76a5c38da958dfff9a58dde51798d03c5ef9/1" target="_blank" rel="noreferrer">
+                  <img src="/images/etherscan-logo.jpeg" height="60px" width="60px" style={{padding:"10px"}}  />
+                </a>
+                <a href="https://zora.co/collections/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9" target="_blank" rel="noreferrer">
+                  <img src="/images/zora-plain.png" height="60px" width="60px" style={{padding:"10px"}}/>
+                </a>
+                <a href="https://opensea.io/assets/0x8add76a5c38da958dfff9a58dde51798d03c5ef9/1" target="_blank" rel="noreferrer">
+                  <img src="/images/opensea-logo.png" height="60px" width="60px" style={{padding:"10px"}}/>
+                </a>
+                
+                
+                
+              </div>
+              
             </LimitlessData>
           </LimitlessContainer>
           <SiteImageWrapper>
@@ -46,6 +63,7 @@ const Limitless = () => {
           >
             Enter Auction
           </a>
+         
         </LimitlessButtonContainer>
       </SiteContainer>
     </div>

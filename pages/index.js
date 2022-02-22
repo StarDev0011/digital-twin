@@ -7,17 +7,26 @@ import Vision from '../components/Homepage/Vision'
 import Roadmap from '../components/Homepage/Roadmap'
 import Limitless from '../components/Homepage/Limitless'
 import SimpleSlider from '../components/Homepage/Slider'
+import Splash from '../components/Splash'
 
 const Home = () => {
+ 
   return (
     <Layout title="Homepage">
-      <SimpleSlider />
+      
+        <Splash />
+      
+          <SimpleSlider />
       <Limitless />
       <AboutSection />
       <LDezen />
       <Vision />
       <HowItWorks />
       <Roadmap />
+       
+      
+      
+      
     </Layout>
   )
 }

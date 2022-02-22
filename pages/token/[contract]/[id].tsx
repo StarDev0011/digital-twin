@@ -9,7 +9,7 @@ import {
   NetworkIDs,
   FetchStaticData,
 } from '@zoralabs/nft-hooks'
-
+import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { NETWORK_ID } from './../../../utils/env-vars'
 import { PageWrapper } from '../../../styles/components'
@@ -133,6 +133,14 @@ export default function Piece({ initialData }: PieceProps) {
   }, [])
   return (
     <SiteContainer>
+      <Head>
+        <title>Auction Page | Digitalxtwin</title>
+        <meta
+          name="Digital Twin"
+          content="Digital Twin is a curated marketplace for fine jewelry.L'Dezen and Digital Twin Limitless Earrings NFT drop."
+        />
+        <link rel="icon" href="/images/logo.png" />
+      </Head>
       <Header />
 
       <MediaConfiguration networkId={NETWORK_ID as NetworkIDs} style={styles}>

@@ -85,7 +85,7 @@ export const PageWrapper = styled.section`
         font-family: ${(props) => props.theme.fonts.bodyFont};
         font-weight: 400;
         margin-left: 10px;
-        margin-right: 100px;
+        margin-right: 20px;
         margin-top: auto;
         margin-bottom: auto;
         color: #000000;

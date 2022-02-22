@@ -23,7 +23,7 @@ const HeroSection1 = () => {
         <HeroContent>
           <HeroImage>
             <video
-              controls="true"
+              // controls="true"
               autoPlay="autoplay"
               loop="true"
               muted

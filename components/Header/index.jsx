@@ -6,7 +6,7 @@ import {
   MenuItems,
   SocialItems,
 } from './styles'
-
+import Head from 'next/head'
 import Link from 'next/link'
 import { MenuContainer } from '../../atoms/SiteContainer'
 import { menuData } from '../../data/menu'
@@ -19,7 +19,9 @@ const Header = () => {
   const show = () => setModal(true)
   const hide = () => setModal(false)
   return (
-    <MenuContainer>
+    <>
+      
+         <MenuContainer>
       <HeaderWrapper>
         <HeaderTop>
           <div className="social_items">
@@ -105,6 +107,8 @@ const Header = () => {
         )}
       </div>
     </MenuContainer>
+    </>
+   
   )
 }
 
