@@ -12,4 +12,7 @@ export const SplashWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background: ${(props) => props.theme.colors.blackColor};
+  img {
+    animation: fadeIn 3s;
+  }
 `
