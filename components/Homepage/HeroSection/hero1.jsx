@@ -22,7 +22,7 @@ const HeroSection1 = () => {
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
-            <video controls="true" autoPlay="autoplay" loop="true" muted defaultmuted playsinline id="video_bg1">
+            <video autoPlay="autoplay" loop="loop" muted defaultMuted playsinline onContextMenu="return false;"  preload="auto" id="video_bg1">
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
           </HeroImage>
