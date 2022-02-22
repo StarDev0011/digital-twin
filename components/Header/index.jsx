@@ -6,7 +6,7 @@ import {
   MenuItems,
   SocialItems,
 } from './styles'
-import Head from 'next/head'
+
 import Link from 'next/link'
 import { MenuContainer } from '../../atoms/SiteContainer'
 import { menuData } from '../../data/menu'
