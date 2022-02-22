@@ -16,7 +16,7 @@ const AboutSection = () => {
       <SiteContainer>
         <AboutSectionRow>
           <AboutSectionColLeft>
-            <Image 
+            <Image
               src="/images/ldezen-logo.png"
               alt="l'dezen logo"
               height={97}

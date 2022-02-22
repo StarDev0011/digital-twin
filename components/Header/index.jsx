@@ -14,14 +14,10 @@ import { socialData } from '../../data/social'
 import { useState } from 'react'
 
 const Header = () => {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(false)
 
-  const show = () => (
-    setModal(true)
-  )
-  const hide = () => (
-    setModal(false)
-  )
+  const show = () => setModal(true)
+  const hide = () => setModal(false)
   return (
     <MenuContainer>
       <HeaderWrapper>
@@ -65,35 +61,48 @@ const Header = () => {
           </div>:<></>} */}
         </HeaderTop>
       </HeaderWrapper>
-      <div className='mobile_nav'>
-        <div className='mobile_nav_header'>
+      <div className="mobile_nav">
+        <div className="mobile_nav_header">
           <h1>Digital Twin</h1>
-          <img src='/images/open.png' onClick={show} />
+          <img src="/images/open.png" onClick={show} />
         </div>
-        {modal?(<div className='mobile_modal'>
-          <div className='close_icon'>
-            <img src='/images/close.png' onClick={hide} />
+        {modal ? (
+          <div className="mobile_modal">
+            <div className="close_icon">
+              <img src="/images/close.png" onClick={hide} />
+            </div>
+
+            <div className="nav_links">
+              <p>
+                <a href="/">Drop</a>
+              </p>
+              <p>
+                <a href="/aboutus">About Us</a>
+              </p>
+              <p>
+                <a href="/marketplace">Marketplace</a>
+              </p>
+              <p>
+                <a href="/images/press_release.pdf" target="_blank">
+                  Press Release
+                </a>
+              </p>
+            </div>
+            <div className="social_links">
+              <SocialItems>
+                {socialData.map((item) => (
+                  <li key={item.id}>
+                    <a href={item.link} target="_blank" rel="noreferrer">
+                      {item.icon}
+                    </a>
+                  </li>
+                ))}
+              </SocialItems>
+            </div>
           </div>
-          
-          <div className='nav_links'>
-            <p><a href='/'>Drop</a></p>
-            <p><a href='/aboutus'>About Us</a></p>
-            <p><a href='/marketplace'>Marketplace</a></p>
-            <p><a href="/images/press_release.pdf" target="_blank">Press Release</a></p>
-          </div>
-          <div className='social_links'>
-            <SocialItems>
-              {socialData.map((item) => (
-                <li key={item.id}>
-                  <a href={item.link} target="_blank" rel="noreferrer">
-                    {item.icon}
-                  </a>
-                </li>
-              ))}
-            </SocialItems>
-          </div>
-        </div>):(<></>)}
-        
+        ) : (
+          <></>
+        )}
       </div>
     </MenuContainer>
   )

@@ -18,7 +18,7 @@ export const AboutSectionColLeft = styled.div`
     left: -2.5rem;
     @media (max-width: 465px) {
       left: -0;
-      width: 100%
+      width: 100%;
     }
   }
   h4 {
@@ -30,7 +30,7 @@ export const AboutSectionColLeft = styled.div`
     @media (max-width: 465px) {
       font-size: 16px;
       margin-top: 0;
-      text-align: center
+      text-align: center;
     }
   }
   p {
@@ -45,15 +45,15 @@ export const AboutSectionColLeft = styled.div`
     letter-spacing: 0.5px;
   }
   .mobile_img {
-    display:none;
+    display: none;
     @media (max-width: 465px) {
       display: block;
       width: 100%;
     }
   }
   @media (max-width: 465px) {
-    width:100%;
-    padding-left:5%;
+    width: 100%;
+    padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 30px;
   }
@@ -62,8 +62,8 @@ export const AboutSectionColRight = styled.div`
   grid-column: 7/-1;
   text-align: right;
   @media (max-width: 465px) {
-    width:96%;
-    padding-left:2%;
+    width: 96%;
+    padding-left: 2%;
     display: none;
   }
 `
