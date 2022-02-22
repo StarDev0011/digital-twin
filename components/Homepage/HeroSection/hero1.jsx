@@ -24,11 +24,11 @@ const HeroSection1 = () => {
           <HeroImage>
             <video
               // controls="true"
-              autoPlay="autoplay"
-              loop="true"
+              autoPlay
+              loop
+              
               muted
-              defaultmuted
-              playsinline
+              playsInline
               id="video_bg1"
             >
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
