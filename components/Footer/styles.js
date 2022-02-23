@@ -24,7 +24,7 @@ export const FooterLogoWrapper = styled.div`
     }
     height: 1px;
     background: ${(props) => props.theme.colors.blackColor};
-    z-index: 3;
+    z-index: 1;
   }
 `
 
@@ -35,7 +35,7 @@ export const FooterLogo = styled.h2`
   color: ${(props) => props.theme.colors.blackColor};
   background: ${(props) => props.theme.colors.whiteColor};
   line-height: 1;
-  z-index: 5;
+  z-index: 2;
   padding-right: 2.4rem;
   @media (max-width: 465px) {
     color: #ffffff;
