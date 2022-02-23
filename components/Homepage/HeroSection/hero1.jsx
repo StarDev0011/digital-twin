@@ -26,7 +26,6 @@ const HeroSection1 = () => {
               // controls="true"
               autoPlay
               loop
-              
               muted
               playsInline
               id="video_bg1"
