@@ -54,8 +54,33 @@ class CreateAuctionHouseDocument extends Document {
               type="text/css"
               href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
             />
+
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
+              type="text/css"
+            />
+
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
+              type="text/css"
+            />
+
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"
+              type="text/css"
+            />
+
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"
+              type="text/css"
+            />
           </Head>
           <body>
+            <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
             <Main />
             <NextScript />
           </body>

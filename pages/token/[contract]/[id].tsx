@@ -120,7 +120,7 @@ const CollectionTag = () => {
 }
 
 export default function Piece({ initialData }: PieceProps) {
-  const { query } = useRouter()
+  const { query, push } = useRouter()
   const [marketPriceEth, setMarketPriceEth] = useState(2500)
   // console.log('market eth is',marketEth)
   const [currentTime, setCurrentTime] = useState(moment.now())
@@ -329,11 +329,28 @@ export default function Piece({ initialData }: PieceProps) {
                     <p>$5,200 USD</p>
                   </div>
                   <div className="start_date">
-                    <p>AUCTION STARTS ON</p>
-                    <h2>March 10, 2022</h2>
+                    {/* {
+                      initialData.nft.auctionData && initialData.nft.auctionData.expectedEndTimestamp ?
+                      <>
+                        <p>AUCTION ENDS ON</p>
+                        <h2>{moment(initialData.nft.auctionData.expectedEndTimestamp).toNow(true)}</h2>
+                      </>
+                      :
+                      <>
+                        <p>AUCTION STARTS ON</p>
+                        <h2>March 10, 2022</h2>
+                      </>
+                    } */}
+                    <FullComponents.AuctionInfo />
                   </div>
                   <div className="bid_btn">
-                    <Button>Coming Soon</Button>
+                    <Button
+                      onClick={() => {
+                        push('./../../bidpage')
+                      }}
+                    >
+                      Place Bid
+                    </Button>
                   </div>
                 </div>
                 <div className="history_detail">

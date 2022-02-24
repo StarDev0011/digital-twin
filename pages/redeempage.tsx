@@ -3,25 +3,22 @@ import { providers, Contract, ethers } from 'ethers'
 import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
-import { abi as AuctionHouseAbi } from '@zoralabs/auction-house/dist/artifacts/AuctionHouse.sol/AuctionHouse.json'
-
+import { abi as DigitalTwinAbi } from '../DigitalTwin.json'
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-import { auctionHouse } from '@zoralabs/auction-house/dist/addresses/4.json'
-
-const TOKEN_ID = '6'
-const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
+// import { auctionHouse } from '@zoralabs/auction-house/dist/addresses/4.json'
+// const TOKEN_ID = '1'
+// const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
 // const TOKEN_ADDRESS = `0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9`
 // const TOKEN_ID = '1'
+
+// const CONTRACT_ADDRESS_MAINNET = ""
+const CONTRACT_ADDRESS_TESTNET = '0xd391646321ccf7938821a01d169dea6922aedbba'
 import Layout from '../components/Layout'
 
-import { NETWORK_ID } from '../utils/env-vars'
-import {
-  MediaFetchAgent,
-  NetworkIDs,
-  FetchStaticData,
-} from '@zoralabs/nft-hooks'
-import { useRouter } from 'next/router'
+// import { NETWORK_ID } from '../utils/env-vars'
+
+// import { useRouter } from 'next/router'
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
@@ -142,38 +139,14 @@ function reducer(state: StateType, action: ActionType): StateType {
   }
 }
 
-export const BidPage = (): JSX.Element => {
+export const RedeemPage = (): JSX.Element => {
   const [state, dispatch] = useReducer(reducer, initialState)
-  const { provider, web3Provider, balance, contract } = state
-  const [auctionData, setAuctionData] = useState(null)
+  const { provider, web3Provider, balance, contract, address, chainId } = state
 
-  const [leastBidAmount, setLeastBidAmount] = useState('')
-  const [bidAmount, setBidAmount] = useState(leastBidAmount)
-  const [loading, setLoading] = useState(false)
-  const { push } = useRouter()
-  useEffect(() => {
-    // console.log("from bid effect")
+  const [isNftHolder, setIsNftHolder] = useState(false)
+  // const [loading,setLoading] = useState(false)
 
-    auctionData
-      ? auctionData.nft.auctionData.currentBid
-        ? setLeastBidAmount(
-            (
-              Number(
-                ethers.utils.formatEther(
-                  auctionData.nft.auctionData.currentBid.amount
-                )
-              ) *
-                1.05 +
-              0.01
-            ).toFixed(2)
-          )
-        : setLeastBidAmount(
-            Number(
-              ethers.utils.formatEther(auctionData.nft.auctionData.reservePrice)
-            ).toFixed(4)
-          )
-      : {}
-  }, [auctionData])
+  // const { push } = useRouter()
 
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
@@ -193,7 +166,11 @@ export const BidPage = (): JSX.Element => {
 
     // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
-    const instance = new Contract(auctionHouse, AuctionHouseAbi, signer)
+    const instance = new Contract(
+      CONTRACT_ADDRESS_TESTNET,
+      DigitalTwinAbi,
+      signer
+    )
 
     const balance = ethers.utils.formatEther(
       await web3Provider.getBalance(address)
@@ -210,37 +187,6 @@ export const BidPage = (): JSX.Element => {
       balance,
     })
   }, [])
-
-  const fetchAuction = async (
-    refresh = false,
-    tokenId = TOKEN_ID,
-    collectionAddress = TOKEN_ADDRESS
-  ) => {
-    if (refresh || !auctionData) {
-      const fetchAgent = new MediaFetchAgent(NETWORK_ID as NetworkIDs)
-      const data = await FetchStaticData.fetchZoraIndexerItem(fetchAgent, {
-        tokenId,
-        collectionAddress,
-      })
-      let expired: boolean
-      if (!data.nft.auctionData.expectedEndTimestamp) {
-        expired = false
-      } else {
-        if (
-          (web3Provider &&
-            (await web3Provider.getBlock(await web3Provider.getBlockNumber()))
-              .timestamp) > data.nft.auctionData.expectedEndTimestamp
-        ) {
-          expired = true
-        } else {
-          expired = false
-        }
-      }
-      // console.log(data)
-      setAuctionData({ ...data, expired })
-    }
-  }
-  fetchAuction()
 
   const disconnect = useCallback(
     async function () {
@@ -306,75 +252,59 @@ export const BidPage = (): JSX.Element => {
     }
   }, [provider, disconnect])
 
-  // const chainData = getChainData(chainId)
-  // console.log(chainData)
-
-  const handleBid = async () => {
-    try {
-      setLoading(true)
-      await contract.functions.createBid(
-        Number(auctionData.nft.auctionData.id),
-        ethers.utils.parseEther(bidAmount),
-        {
-          value: ethers.utils.parseEther(bidAmount),
-        }
-      )
-      setLoading(false)
-      alert(
-        'Successful bid placed. It may take some seconds to reflect depending upon the block time.'
-      )
-
-      push(`./token/${TOKEN_ADDRESS}/${TOKEN_ID}`)
-    } catch (err) {
-      setLoading(false)
-      alert('Encountered some problem while bidding or auction expired.')
-    }
-  }
-
-  const validBidCheck = () => {
-    if (
-      Number(bidAmount) < Number(leastBidAmount) ||
-      Number(bidAmount) > Number(balance)
-    ) {
-      return {
-        status: false,
+  const validateOwner = async () => {
+    if (contract && web3Provider && 4 == chainId) {
+      // console.log(contract)
+      const ownerAddress = await contract.functions.ownerOf(6)
+      //  console.log("address is",address)
+      if (ownerAddress == ethers.utils.getAddress(address)) {
+        setIsNftHolder(true)
+        // console.log("the connected address is the token owner")
+      } else {
+        // console.log("hey I am called")
+        setIsNftHolder(false)
       }
     }
-    return {
-      status: true,
+  }
+
+  const redeemNFT = async () => {
+    if (isNftHolder) {
+      // setLoading(true)
+
+      if (
+        ethers.utils.getAddress(address) ==
+        '0xc6367B688453b894bE0688E329259C42b1F040e6'
+      ) {
+        alert('Minter and token holder are same')
+        // setLoading(false)
+        return
+      } else {
+        //Always remember, caused a lot of trouble
+        //syntax to call the overloaded function in ethers
+        await contract['safeTransferFrom(address,address,uint256)'](
+          ethers.utils.getAddress(address),
+          '0xc6367B688453b894bE0688E329259C42b1F040e6',
+          6
+        )
+
+        alert('Token successfully redeemed!')
+        setLoading(false)
+      }
     }
   }
 
-  // const getAuctionDetails = async()=>{
-  //   try{
-  //     setLoading(true)
-  //     console.log(await contract.functions.auctions(1935))
-  //     console.log("successfully bid placed!")
-  //     setLoading(false)
-  //   }catch(err){
-  //     console.log(err)
-  //     setLoading(false)
-  //   }
+  // const uploadUserData = async()=>{
+  //   //sending the user data to the
   // }
 
-  return (
-    <Layout title="Bidpage">
-      <div className="container">
-        {/* <header>
-        {address && (
-          <div className="grid">
-            <div>
-              <p className="mb-1">Network:</p>
-              <p>{chainData?.name}</p>
-            </div>
-            <div>
-              <p className="mb-1">Address:</p>
-              <p>{ellipseAddress(address)}</p>
-            </div>
-          </div>
-        )}
-      </header> */}
+  useEffect(() => {
+    //   console.log("I am called from validate")
+    validateOwner()
+  }, [address, balance])
 
+  return (
+    <Layout title="Redeem page">
+      <div className="container">
         <main>
           <div className="title_balance">
             {web3Provider ? (
@@ -387,7 +317,7 @@ export const BidPage = (): JSX.Element => {
                   Disconnect
                 </button>
                 <div className="bid_balance">
-                  <h1 className="title">Place a bid</h1>
+                  <h1 className="title">Reedem NFT</h1>
                   <h3>
                     Your balance : <span className="real_bal">{balance}</span>
                   </h3>
@@ -403,71 +333,17 @@ export const BidPage = (): JSX.Element => {
               </button>
             )}
           </div>
-
-          {auctionData ? (
-            <>
-              <label className="eth_input">
-                <input
-                  type="text"
-                  name="amount"
-                  placeholder={leastBidAmount}
-                  value={bidAmount}
-                  onChange={(event) => {
-                    setBidAmount(event.target.value)
-                  }}
-                />
-                <span>eth</span>
-              </label>
-              <div className="bid_warn">
-                <h2 className="min_eth">
-                  You must bid at least{' '}
-                  {leastBidAmount ? leastBidAmount : 'Fetching ...'} ETH
-                </h2>
-                <h2 className="min_percent">
-                  The next bid must be 5% more than the current bid.
-                </h2>
-              </div>
-              <div className="place_bid_btn">
-                <button
-                  onClick={() => {
-                    if (web3Provider) {
-                      // console.log(validBidCheck())
-
-                      if (validBidCheck().status) {
-                        handleBid()
-                      } else {
-                        alert(
-                          'You dont have enough balance to bid or your bid is too small.'
-                        )
-                      }
-                    } else {
-                      alert('Connect your wallet to place the bid')
-                    }
-                  }}
-                >
-                  Place Bid
-                </button>
-              </div>
-              <div className="bid_refresh">
-                <p className="withdrawl">
-                  You cannot Withdraw a bid once submitted.
-                </p>
-                <div
-                  className="refresh_btn"
-                  onClick={() => {
-                    fetchAuction(true)
-                  }}
-                >
-                  <img src="/images/refresh.png" />
-                  <p>Refresh Bid</p>
-                </div>
-              </div>
-              <p>{loading}</p>
-            </>
-          ) : !auctionData ? (
-            <h1>Loading ...</h1>
+          {isNftHolder ? (
+            <button
+              className="place_bid_btn"
+              onClick={() => {
+                redeemNFT(6)
+              }}
+            >
+              Redeem
+            </button>
           ) : (
-            <h1>Auction has expired!</h1>
+            <>Sorry, you dont have an NFT to redeem</>
           )}
         </main>
 
@@ -725,4 +601,4 @@ export const BidPage = (): JSX.Element => {
   )
 }
 
-export default BidPage
+export default RedeemPage
