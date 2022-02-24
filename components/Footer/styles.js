@@ -17,8 +17,8 @@ export const FooterLogoWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 0;
-    width: calc(1400px + (100vw - 1400px) / 2 - 1rem);
-    @media (max-width: 1400px) {
+    width: calc(1200px + (100vw - 1200px) / 2 - 1rem);
+    @media (max-width: 1200px) {
       width: 100%;
       display: none;
     }
