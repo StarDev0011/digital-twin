@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import limitlessimg from '../../../public/images/limitless.png'
 import ImageSlider from '../ImageSlider'
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import React from 'react'

@@ -4,12 +4,10 @@ import {
   AboutParagraph,
   AboutSubtitle,
   AboutTitle,
-  AboutVideoWrapper,
 } from './styles'
 
 import React from 'react'
 import { SiteContainer } from '../../../atoms/SiteContainer'
-import Youtube from '@u-wave/react-youtube'
 
 const AboutHero = () => {
   return (
