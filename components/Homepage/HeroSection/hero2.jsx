@@ -33,7 +33,7 @@ const HeroSection2 = () => {
           </div>
           <HeroImage>
             <Image
-              src="/images/logo2.png"
+              src="/images/splashlogo.png"
               alt="L'Dezen x Digital Twin Limited Edition Digi-Physical Earrings"
               width="526"
               height="534"
