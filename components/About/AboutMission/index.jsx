@@ -17,7 +17,7 @@ const AboutMission = () => {
   return (
     <AboutMissionWrapper>
       <SiteImageWrapper>
-        <img alt="L'Dezen image" src="/images/mission-img1.png" />
+        <img alt="L'Dezen image" src="/images/mission-img1.jpg" />
       </SiteImageWrapper>
       <AboutMissionContainer ref={ref}>
         <AboutMissionData>
