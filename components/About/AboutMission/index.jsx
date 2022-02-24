@@ -7,6 +7,7 @@ import {
 
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
+import { SiteContainer } from '../../../atoms/SiteContainer'
 
 const AboutMission = () => {
   const { ref, inView } = useInView({
@@ -15,22 +16,24 @@ const AboutMission = () => {
   })
 
   return (
-    <AboutMissionWrapper>
-      <SiteImageWrapper>
-        <img alt="L'Dezen image" src="/images/mission-img1.jpg" />
-      </SiteImageWrapper>
-      <AboutMissionContainer ref={ref}>
-        <AboutMissionData>
-          <h4>Mission</h4>
-          <h3 className={inView + '_discover'}>Discovery. Redefined.</h3>
-          <p>Curate jewelery from artists around the world</p>
-          <br />
-          <p>Onboard the next wave of NFT collectors</p>
-          <br />
-          <p>Transform the traditional shopping experience</p>
-        </AboutMissionData>
-      </AboutMissionContainer>
-    </AboutMissionWrapper>
+    <SiteContainer>
+      <AboutMissionWrapper>
+        <SiteImageWrapper>
+          <img alt="L'Dezen image" src="/images/mission-img1.jpg" />
+        </SiteImageWrapper>
+        <AboutMissionContainer ref={ref}>
+          <AboutMissionData>
+            <h4>Mission</h4>
+            <h3 className={inView + '_discover'}>Discovery. Redefined.</h3>
+            <p>Curate jewelery from artists around the world</p>
+            <br />
+            <p>Onboard the next wave of NFT collectors</p>
+            <br />
+            <p>Transform the traditional shopping experience</p>
+          </AboutMissionData>
+        </AboutMissionContainer>
+      </AboutMissionWrapper>
+    </SiteContainer>
   )
 }
 
