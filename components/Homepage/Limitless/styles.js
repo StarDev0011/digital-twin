@@ -55,7 +55,7 @@ export const SiteImageWrapper = styled.div`
 export const LimitlessData = styled.div`
   h2 {
     font-size: 54px;
-    font-weight: 400;
+    font-weight: 700;
     font-family: ${(props) => props.theme.fonts.headingFont};
     line-height: 1.25;
     margin-bottom: 30px;
@@ -66,7 +66,7 @@ export const LimitlessData = styled.div`
   p {
     font-size: 24px;
     line-height: 2;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
       font-size: 18px;
     }
@@ -83,7 +83,6 @@ export const LimitlessData = styled.div`
     }
     p {
       font-size: 18px;
-      font-weight: 600;
       margin-left: 10px;
       margin-right: 30px;
       margin-top: auto;

@@ -29,7 +29,7 @@ export const VisionData = styled.div`
 
   p {
     font-size: 22px;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
       font-size: 16px;
     }

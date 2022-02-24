@@ -63,7 +63,6 @@ export const AboutMissionData = styled.div`
 export const AboutMissionContainer = styled.div`
   display: block;
   width: 50%;
-  padding-right: 5%;
   padding-left: 5%;
   margin-top: auto;
   margin-bottom: auto;
@@ -73,5 +72,6 @@ export const AboutMissionContainer = styled.div`
     padding-right: 0%;
     padding-left: 0%;
     margin-top: 40px;
+    text-align: center;
   }
 `

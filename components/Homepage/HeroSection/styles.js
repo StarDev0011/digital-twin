@@ -121,10 +121,10 @@ export const HeroData = styled.div`
   }
 `
 export const HeroTitle = styled.h2`
-  font-size: 54px;
+  font-size: 40px;
   color: #ffffff;
   font-family: ${(props) => props.theme.fonts.headingFont};
-  line-height: 1.4;
+  line-height: 1.2;
   letter-spacing: 0px;
   font-weight: bold;
   @media (max-width: 465px) {
@@ -175,12 +175,12 @@ export const HeroButtonsWrapper = styled.div`
 `
 
 export const HeroSubtitle = styled.p`
-  font-size: 30px;
+  font-size: 22px;
   color: #ffffff;
-  font-family: ${(props) => props.theme.fonts.headingFont};
-  line-height: 1.6;
+  font-family: ${(props) => props.theme.fonts.bodyFont};
+  line-height: 1.4;
   letter-spacing: 0.5px;
-  font-weight: bold;
+  font-weight: 600;
   @media (max-width: 465px) {
     font-size: 18px;
     width: 60%;
@@ -191,7 +191,7 @@ export const HeroSubtitle = styled.p`
 
 export const HeroSubtitle2 = styled.p`
   font-size: 30px;
-  font-family: ${(props) => props.theme.fonts.headingFont};
+  font-family: ${(props) => props.theme.fonts.bodyFont};
   line-height: 1.6;
   letter-spacing: 0.5px;
   font-weight: bold;

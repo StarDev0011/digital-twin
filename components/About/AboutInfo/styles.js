@@ -3,8 +3,10 @@ import styled from 'styled-components'
 export const AboutInfoWrapper = styled.section`
   padding: 10rem 0;
   margin-top: 50px;
+  background: #000000;
   @media (max-width: 465px) {
     padding: 5%;
+    text-align: center;
   }
 `
 
@@ -14,15 +16,17 @@ export const AboutInfoTitle = styled.h2`
   letter-spacing: 0.03em;
   font-family: ${(props) => props.theme.fonts.headingFont};
   line-height: 1.6;
+  color: #ffffff;
   margin-bottom: 100px;
   @media (max-width: 465px) {
     font-size: 24px;
     margin-bottom: 50px;
-    text-align: left;
+    text-align: center;
   }
 `
 export const AboutInfoItems = styled.div`
   div {
+    color: #ffffff;
     .true_icon_text {
       margin-bottom: 0;
       display: flex;
@@ -69,15 +73,16 @@ export const AboutInfoItems = styled.div`
       font-weight: 400;
       margin-bottom: auto;
       margin-top: auto;
-      margin-left: 20px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       font-style: italic;
     }
     .problem_icon {
       width: 15%;
+      margin-left: auto;
+      margin-right: auto;
     }
     .mob_icon_text {
-      display: flex;
+      display: block;
     }
     .problem_txt {
       font-size: 18px;

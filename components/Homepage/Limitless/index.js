@@ -17,10 +17,8 @@ const Limitless = () => {
           <LimitlessContainer>
             <LimitlessData>
               <h2>{'Limitless Earrings'}</h2>
-              <p>{'Introducing fine jewelry'}</p>
-              <p>{'in its digi-physical form:'}</p>
-              <p>{'The Limitless earrings are'}</p>
-              <p>{'18K gold diamond,'}</p>
+              <p>{'Introducing fine jewelry in its digi-physical form.'}</p>
+              <p>{'The Limitless earrings are 18K gold diamond,'}</p>
               <p>{'one-of-a-kind design.'}</p>
               <p>{'Comfortable and elegant,'}</p>
               <p>{'Bold, yet feminine.'}</p>

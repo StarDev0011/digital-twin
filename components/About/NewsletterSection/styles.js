@@ -53,6 +53,6 @@ export const NewsletterButton = styled(SiteButton)`
     font-size: 2.4rem;
     text-align: center;
     margin: 0 auto;
-    padding: 1.4rem 4rem;
+    padding: 1.4rem 8rem;
   }
 `

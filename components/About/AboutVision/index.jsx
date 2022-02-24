@@ -27,7 +27,7 @@ const AboutVision = () => {
           </VisionData>
         </VisionContainer>
         <SiteImageWrapper>
-          <img alt="vision image" src="/images/vision-about1.png" />
+          <img alt="vision image" src="/images/vision-about1.jpg" />
         </SiteImageWrapper>
       </VisionWrapper>
     </SiteContainer>

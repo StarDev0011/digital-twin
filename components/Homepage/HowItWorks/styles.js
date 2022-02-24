@@ -22,6 +22,7 @@ export const HowItWorksData = styled.ul`
   grid-row-gap: 6rem;
   @media (max-width: 465px) {
     display: block;
+    text-align:center;
   }
 `
 export const HowItWorksItem = styled.li`
@@ -59,6 +60,11 @@ export const HowItWorksItem = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 465px) {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
     svg {
       color: ${(props) => props.theme.colors.whiteColor};
@@ -75,7 +81,7 @@ export const HowItWorksItem = styled.li`
       letter-spacing: 0.5px;
       line-height: 1.8;
       @media (max-width: 465px) {
-        margin-top: 30px;
+        margin-top: 10px;
       }
     }
     p {
