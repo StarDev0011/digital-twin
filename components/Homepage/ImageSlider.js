@@ -1,7 +1,5 @@
 import React from 'react'
 import Slider from 'react-slick'
-import HeroSection1 from './HeroSection/hero1'
-import HeroSection2 from './HeroSection/hero2'
 
 export default function ImageSlider() {
   var settings = {
