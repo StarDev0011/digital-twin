@@ -288,7 +288,7 @@ export const RedeemPage = (): JSX.Element => {
         )
 
         alert('Token successfully redeemed!')
-        setLoading(false)
+        // setLoading(false)
       }
     }
   }
@@ -337,7 +337,7 @@ export const RedeemPage = (): JSX.Element => {
             <button
               className="place_bid_btn"
               onClick={() => {
-                redeemNFT(6)
+                redeemNFT()
               }}
             >
               Redeem
