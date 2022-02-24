@@ -11,7 +11,7 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
   }
   return (
-    <Slider {...settings}>
+    <Slider className = "home_slider" {...settings}>
       <div>
         <HeroSection1 />
       </div>

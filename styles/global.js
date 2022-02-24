@@ -51,14 +51,22 @@ const GlobalStyles = createGlobalStyle`
   .slick-dots {
     bottom: 25px;
   }
-  .slick-prev {
+  .home_slider .slick-prev {
     left: 10px;
     top: 52%;
     z-index: 9;
   }
-  .slick-next {
+  .home_slider .slick-next {
     right: 25px;
     top: 52%;
+    z-index: 9;
+  }
+  .limitless_slider .slick-prev {
+    left: 10px;
+    z-index: 9;
+  }
+  .limitless_slider .slick-next {
+    right: 25px;
     z-index: 9;
   }
   video#video_bg {
@@ -93,7 +101,7 @@ const GlobalStyles = createGlobalStyle`
       width: auto;
       height: 100vh;
     }
-    .roadmap_section, .slick-prev, .slick-next {
+    .roadmap_section, .home_slider .slick-prev, .home_slider .slick-next {
       display:none!important;
     }
   }

@@ -12,8 +12,13 @@ import Link from 'next/link'
 import React from 'react'
 import { SiteButton } from '../../../atoms/SiteButton'
 import { SiteContainer } from '../../../atoms/SiteContainer'
+import { useInView } from 'react-intersection-observer'
 
 const HeroSection1 = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    initialInView: true,
+  })
   return (
     <HeroSectionWrapper>
       <video autoPlay loop muted id="video_bg">
@@ -22,6 +27,7 @@ const HeroSection1 = () => {
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
+            <a href='token/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9/1'>
             <video
               // controls="true"
               autoPlay
@@ -32,8 +38,9 @@ const HeroSection1 = () => {
             >
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
+            </a>
           </HeroImage>
-          <HeroData>
+          <HeroData ref={ref}>
             <HeroTitle>
               {"L'Dezen x Digital Twin"}
               <br />
@@ -49,7 +56,7 @@ const HeroSection1 = () => {
                 <Link href="/#how_it_works">How it Works</Link>
               </SiteButton>
             </HeroButtonsWrapper>
-            <HeroSubtitle>Genesis NFT Drop coming this March</HeroSubtitle>
+            <HeroSubtitle className={inView + '_sub'}>Genesis NFT Drop coming this March</HeroSubtitle>
           </HeroData>
         </HeroContent>
       </SiteContainer>
