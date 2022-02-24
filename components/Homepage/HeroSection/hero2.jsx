@@ -16,9 +16,9 @@ import { SiteContainer } from '../../../atoms/SiteContainer'
 const HeroSection2 = () => {
   return (
     <HeroSectionWrapper2>
-      <video autoPlay loop muted id="video_bg">
+      {/* <video autoPlay loop muted id="video_bg">
         <source src="/images/landing.mp4" type="video/mp4" />
-      </video>
+      </video> */}
       <SiteContainer size="normal">
         <HeroContent2>
           <div className="content_data">

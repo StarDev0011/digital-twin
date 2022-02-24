@@ -26,7 +26,7 @@ export const HeroSectionWrapper2 = styled.section`
   height: calc(100vh - 125px);
 
   width: 100%;
-  background: transparent;
+  background: black;
   background-size: cover;
   object-fit: cover;
   #video_bg {
