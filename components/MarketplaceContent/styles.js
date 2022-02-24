@@ -6,7 +6,7 @@ export const MarketplaceContentWrapper = styled.section`
   background: ${(props) => props.theme.colors.blackColor};
   width: 100%;
   h2 {
-    font-size: 5.4rem;
+    font-size: 40px;
     font-weight: bold;
     color: ${(props) => props.theme.colors.whiteColor};
     font-family: ${(props) => props.theme.fonts.headingFont};

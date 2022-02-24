@@ -75,7 +75,7 @@ export const HowItWorksItem = styled.li`
     display: flex;
     flex-direction: column;
     h3 {
-      font-size: 24px;
+      font-size: 20px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       font-weight: bold;
       letter-spacing: 0.5px;
@@ -85,11 +85,8 @@ export const HowItWorksItem = styled.li`
       }
     }
     p {
-      font-size: 22px;
-      font-family: ${(props) => props.theme.fonts.headingFont};
-      @media (max-width: 465px) {
-        font-size: 18px;
-      }
+      font-size: 16px;
+      font-family: ${(props) => props.theme.fonts.bodyFont};
       line-height: 1.8;
       margin-top: 1rem;
       letter-spacing: 0.5px;

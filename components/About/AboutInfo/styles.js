@@ -18,6 +18,11 @@ export const AboutInfoTitle = styled.h2`
   line-height: 1.6;
   color: #ffffff;
   margin-bottom: 100px;
+  .problem_sub {
+    font-family: ${(props) => props.theme.fonts.bodyFont};
+    font-size: 18px;
+    font-weight: 300;
+  }
   @media (max-width: 465px) {
     font-size: 24px;
     margin-bottom: 50px;
@@ -34,12 +39,13 @@ export const AboutInfoItems = styled.div`
       animation-duration: 3s;
       animation-timing-function: ease-in-out;
       .problem_txt {
-        font-size: 24px;
+        font-size: 18px;
         width: 90%;
         margin-top: auto;
         margin-bottom: auto;
-        font-family: ${(props) => props.theme.fonts.headingFont};
+        font-family: ${(props) => props.theme.fonts.bodyFont};
         line-height: 1.8;
+        letter-spacing: 0.03em;
         @media (max-width: 465px) {
           width: 85%;
           padding-left: 5%;
@@ -69,12 +75,11 @@ export const AboutInfoItems = styled.div`
       margin-top: 30px;
     }
     h3 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
       margin-bottom: auto;
       margin-top: auto;
       font-family: ${(props) => props.theme.fonts.headingFont};
-      font-style: italic;
     }
     .problem_icon {
       width: 15%;
@@ -86,9 +91,10 @@ export const AboutInfoItems = styled.div`
     }
     .problem_txt {
       font-size: 18px;
-      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-family: ${(props) => props.theme.fonts.bodyFont};
       margin-top: 10px;
       line-height: 2;
+      letter-spacing: 0.03em;
     }
   }
 
@@ -98,13 +104,12 @@ export const AboutInfoItems = styled.div`
       display: none;
     }
     h3 {
-      font-size: 35px;
+      font-size: 20px;
       font-weight: 400;
       margin-bottom: 20px;
       font-family: ${(props) => props.theme.fonts.headingFont};
-      font-style: italic;
       @media (max-width: 465px) {
-        font-size: 28px;
+        font-size: 16px;
       }
     }
   }

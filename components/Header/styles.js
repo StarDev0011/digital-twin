@@ -11,13 +11,16 @@ export const HeaderWrapper = styled.div`
   }
 `
 export const HeaderTop = styled.div`
-  align-items: center;
+  display:flex;
+  justify-content: space-between;
   width: 100%;
-  .social_items {
-    position: absolute;
-    left: 10%;
-    @media (max-width: 465px) {
-      left: 5%;
+  .logo {
+    display: flex;
+    img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: auto;
+      margin-top: auto;
     }
   }
   .header_center {
@@ -44,25 +47,27 @@ export const Logo = styled.div`
   color: ${(props) => props.theme.colors.blackColor};
   font-family: ${(props) => props.theme.fonts.headingFont};
   letter-spacing: 0.5px;
-  font-size: 2.8rem;
+  font-size: 30px;
   font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: auto;
+  margin-top: auto;
 `
 export const MenuItems = styled.div`
   display: flex;
   list-style: none;
-  margin-top: 2.5rem;
   li {
     &:not(:last-child) {
       margin-right: 3rem;
     }
     a {
       color: ${(props) => props.theme.colors.blackColor};
-      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-family: ${(props) => props.theme.fonts.bodyFont};
+      font-weight: 400;
       letter-spacing: 0.5px;
       font-size: 18px;
-      font-weight: bold;
       text-align: center;
-      text-transform: capitalize;
+      text-transform: uppercase;
       @media (max-width: 465px) {
         font-size: 14px;
       }

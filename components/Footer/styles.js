@@ -60,10 +60,10 @@ export const FooterCol = styled.div`
   .siteInfo {
     font-size: 16px;
     color: #ffffff;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
   }
   h3 {
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     font-size: 2rem;
     color: #ffffff;
     @media (max-width: 465px) {      
@@ -73,7 +73,7 @@ export const FooterCol = styled.div`
   }
   .newsletterInfo {
     font-size: 1.6rem;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     margin-top: 2.8rem;
     line-height: 1.6;
     margin-bottom: 2rem;
@@ -101,7 +101,7 @@ export const MenuItems = styled.div`
     }
     a {
       color: ${(props) => props.theme.colors.whiteColor};
-      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-family: ${(props) => props.theme.fonts.bodyFont};
       letter-spacing: 0.5px;
       font-size: 1.4rem;
       text-align: center;
@@ -142,7 +142,7 @@ export const CopyrightWrapper = styled.div`
   p {
     font-size: 16px;
     text-align: center;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     color: #ffffff;
   }
 `

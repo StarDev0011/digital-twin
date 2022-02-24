@@ -44,10 +44,10 @@ export const AboutSectionColLeft = styled.div`
     }
   }
   p {
-    font-size: 22px;
+    font-size: 16px;
     font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 40px;
     }
     line-height: 1.8;

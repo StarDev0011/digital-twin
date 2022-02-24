@@ -8,8 +8,8 @@ export const NewsletterSectionWrapper = styled.section`
     padding: 10em 0;
   }
   p {
-    font-family: ${(props) => props.theme.fonts.headingFont};
-    font-size: 2.4rem;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
+    font-size: 18px;
     margin-top: 3.6rem;
     margin-bottom: 10rem;
     @media (max-width: 465px) {

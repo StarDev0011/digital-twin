@@ -37,7 +37,7 @@ export const RoadmapItem = styled.div`
       }
     }
     h3 {
-      font-size: 24px;
+      font-size: 20px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       font-weight: bold;
       letter-spacing: 0.5px;
@@ -52,8 +52,8 @@ export const RoadmapItem = styled.div`
       }
     }
     p {
-      font-size: 22px;
-      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-size: 18px;
+      font-family: ${(props) => props.theme.fonts.bodyFont};
       @media (max-width: 465px) {
         font-size: 18px;
         padding: 0px;

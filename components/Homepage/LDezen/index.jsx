@@ -18,7 +18,7 @@ const LDezen = () => {
         </SiteImageWrapper>
         <LDezenContainer>
           <LDezenData>
-            <SiteTitle align="left">{"L'Dezen"}</SiteTitle>
+            <SiteTitle>{"L'Dezen"}</SiteTitle>
             <p>
               {
                 "L' Dezen was founded in 2011 by Payal Shah with the idea of creating head turning but functional fine jewelry. Everything that L’ Dezen creates, from 18-K hand-made rose-cut diamond earrings to statement flower ‘Violetta’ rings, is thoughtfully designed and grounded with the idea of one-of-a-kind as well as light weight designs - simply wearable luxury. Elegant, sculptural pieces can be worn on their own or mixed together: bold bracelets all hand-crafted in their factories located in China, Hong Kong and India. The newest L’Dezen ‘Enamelled by Me’ plays with accents of bold bright coloured enamel coated over 18k gold and encrusted with diamonds for a modern twist giving a fine line between glamour and playfulness with a timeless formula."

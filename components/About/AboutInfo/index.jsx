@@ -15,8 +15,11 @@ const AboutInfo = () => {
       <SiteContainer ref={ref}>
         <AboutInfoTitle>
           The Problem <br />
-          Collecting {'&'} trading fine jewlery was hard. Until now.
+          <p className='problem_sub'>
+            Collecting {'&'} trading fine jewlery was hard. Until now.
+          </p>
         </AboutInfoTitle>
+                
         <AboutInfoItems>
           {problemData.map((item) => (
             <div key={item.id}>

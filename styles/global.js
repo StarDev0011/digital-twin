@@ -18,6 +18,14 @@ const GlobalStyles = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   }
 
+  @font-face {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Assistant-Regular.otf");
+  }
+
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -42,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.whiteColor};
     box-sizing: border-box;
     overscroll-behavior: none;
-    font-family: ${theme.fonts.bodyFont};
+    font-family: 'Assistant';
     
   }
   .slick-next:before, .slick-prev:before {

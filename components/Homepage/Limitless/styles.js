@@ -54,7 +54,7 @@ export const SiteImageWrapper = styled.div`
 `
 export const LimitlessData = styled.div`
   h2 {
-    font-size: 54px;
+    font-size: 40px;
     font-weight: 700;
     font-family: ${(props) => props.theme.fonts.headingFont};
     line-height: 1.25;
@@ -64,7 +64,7 @@ export const LimitlessData = styled.div`
     }
   }
   p {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 2;
     font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
@@ -114,7 +114,7 @@ export const LimitlessButtonContainer = styled.div`
     background: black;
     font-family: ${(props) => props.theme.fonts.headingFont};
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     padding: 20px 100px;
     border-radius: 500px;
   }

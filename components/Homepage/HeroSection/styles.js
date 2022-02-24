@@ -135,7 +135,7 @@ export const HeroTitle = styled.h2`
 `
 
 export const HeroTitle2 = styled.h2`
-  font-size: 54px;
+  font-size: 40px;
   font-family: ${(props) => props.theme.fonts.headingFont};
   line-height: 1.4;
   letter-spacing: 0px;
@@ -175,7 +175,7 @@ export const HeroButtonsWrapper = styled.div`
 `
 
 export const HeroSubtitle = styled.p`
-  font-size: 22px;
+  font-size: 30px;
   color: #ffffff;
   font-family: ${(props) => props.theme.fonts.bodyFont};
   line-height: 1.4;

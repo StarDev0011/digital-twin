@@ -27,8 +27,8 @@ export const SiteImageWrapper = styled.div`
 export const AboutMissionData = styled.div`
   grid-column: 6/-1;
   p {
-    font-size: 24px;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-size: 18px;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     line-height: 2;
     margin-top: 1.5rem;
     letter-spacing: 0.03em;
@@ -38,18 +38,19 @@ export const AboutMissionData = styled.div`
     }
   }
   h4 {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.6;
     color: #000000;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
-      font-size: 24px;
+      font-size: 16px;
     }
   }
   h3 {
-    font-size: 48px;
+    font-size: 30px;
     line-height: 1.6;
     color: #000000;
+    text-transform: uppercase;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
       font-size: 32px;

@@ -26,9 +26,13 @@ export const SiteImageWrapper = styled.div`
 `
 export const VisionData = styled.div`
   grid-column: 1/6;
-
+  h2 {
+    @media (max-width: 465px) {
+      text-align: center;
+    }
+  }
   p {
-    font-size: 22px;
+    font-size: 16px;
     font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
       font-size: 16px;
@@ -49,5 +53,6 @@ export const VisionContainer = styled.div`
     width: 100%;
     padding: 5%;
     order: 2;
+    text-align: center;
   }
 `
