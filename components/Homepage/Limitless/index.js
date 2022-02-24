@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import limitlessimg from '../../../public/images/limitless.png'
+import ImageSlider from '../ImageSlider'
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import React from 'react'
 import {
@@ -74,7 +75,7 @@ const Limitless = () => {
             </LimitlessData>
           </LimitlessContainer>
           <SiteImageWrapper>
-            <Image src={limitlessimg} alt="" />
+            <ImageSlider />
             <div className="limitless_icon_txt">
               <img src="/images/founder.png" />
               <p>{"L'Dezen by Payal Shah"}</p>

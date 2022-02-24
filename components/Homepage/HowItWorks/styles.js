@@ -2,8 +2,16 @@ import styled from 'styled-components'
 
 export const HowItWorksWrapper = styled.section`
   padding: 12rem 0;
+  margin: 12rem 0;
+  background: #000000;
+  color: #ffffff;
+  h2 {
+    text-align: center;
+    color: #ffffff;
+  }
   @media (max-width: 465px) {
     padding: 10% 5%;
+    margin-bottom: 0;
   }
 `
 export const HowItWorksData = styled.ul`
@@ -80,7 +88,7 @@ export const HowItWorksItem = styled.li`
       margin-top: 1rem;
       letter-spacing: 0.5px;
       a {
-        color: #000000;
+        color: #ffffff;
         text-decoration: underline;
       }
     }

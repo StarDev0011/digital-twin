@@ -43,8 +43,7 @@ export const VisionContainer = styled.div`
   width: 50%;
   margin-top: auto;
   margin-bottom: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 4.5%;
   @media (max-width: 465px) {
     display: block;
     width: 100%;

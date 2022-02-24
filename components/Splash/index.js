@@ -16,7 +16,7 @@ const Splash = () => {
           <Image
             width={138}
             height={134}
-            src="/images/logo2.png"
+            src="/images/splashlogo.png"
             alt="DigitalTwin Logo"
           />
         </SplashWrapper>

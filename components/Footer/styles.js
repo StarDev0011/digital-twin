@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
   padding: 4.2rem 1rem;
-  @media (max-width: 465px) {
-    background: #000000;
+  background: #000000;
+  @media (max-width: 465px) {    
     padding: 5rem;
   }
 `
@@ -23,8 +23,8 @@ export const FooterLogoWrapper = styled.div`
       display: none;
     }
     height: 1px;
-    background: ${(props) => props.theme.colors.blackColor};
-    z-index: 3;
+    background: #ffffff;
+    z-index: 1;
   }
 `
 
@@ -32,10 +32,10 @@ export const FooterLogo = styled.h2`
   font-size: 2.8rem;
   font-family: ${(props) => props.theme.fonts.headingFont};
   font-weight: bold;
-  color: ${(props) => props.theme.colors.blackColor};
-  background: ${(props) => props.theme.colors.whiteColor};
+  color: ${(props) => props.theme.colors.whiteColor};
+  background: ${(props) => props.theme.colors.blackColor};
   line-height: 1;
-  z-index: 5;
+  z-index: 2;
   padding-right: 2.4rem;
   @media (max-width: 465px) {
     color: #ffffff;
@@ -59,16 +59,14 @@ export const FooterCol = styled.div`
   }
   .siteInfo {
     font-size: 16px;
+    color: #ffffff;
     font-family: ${(props) => props.theme.fonts.headingFont};
-    @media (max-width: 465px) {
-      color: #ffffff;
-    }
   }
   h3 {
     font-family: ${(props) => props.theme.fonts.headingFont};
     font-size: 2rem;
-    @media (max-width: 465px) {
-      color: #ffffff;
+    color: #ffffff;
+    @media (max-width: 465px) {      
       font-size: 20px;
       margin-bottom: 30px;
     }
@@ -79,19 +77,17 @@ export const FooterCol = styled.div`
     margin-top: 2.8rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    @media (max-width: 465px) {
-      color: #ffffff;
+    color: #ffffff;
+    @media (max-width: 465px) {      
       font-size: 16px;
       margin-bottom: 30px;
     }
   }
   .join_us {
-    @media (max-width: 465px) {
-      background: #ffffff;
-      color: #000000;
-      padding: 15px 40px;
-      margin-left: 0;
-    }
+    background: #ffffff;
+    color: #000000;
+    padding: 15px 40px;
+    margin-left: 0;
   }
 `
 export const MenuItems = styled.div`
@@ -104,14 +100,13 @@ export const MenuItems = styled.div`
       margin-bottom: 2rem;
     }
     a {
-      color: ${(props) => props.theme.colors.blackColor};
+      color: ${(props) => props.theme.colors.whiteColor};
       font-family: ${(props) => props.theme.fonts.headingFont};
       letter-spacing: 0.5px;
       font-size: 1.4rem;
       text-align: center;
       text-transform: capitalize;
       @media (max-width: 465px) {
-        color: #ffffff;
         font-size: 16px;
       }
     }
@@ -119,43 +114,35 @@ export const MenuItems = styled.div`
 `
 export const SocialItems = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   list-style: none;
-  margin-top: 4rem;
+  margin-top: 12rem;
   @media (max-width: 465px) {
-    flex-direction: row;
+    margin-top: 4rem;
   }
 
   li {
-    @media (max-width: 465px) {
       margin-right: 10px;
-    }
+  }
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
     a {
       font-size: 3rem;
-      color: ${(props) => props.theme.colors.blackColor};
-      @media (max-width: 465px) {
-        color: #ffffff;
-      }
+      color: ${(props) => props.theme.colors.whiteColor};
     }
   }
 `
 
 export const CopyrightWrapper = styled.div`
   padding: 3.2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.blackColor};
-  @media (max-width: 465px) {
-    background: #000000;
-  }
+  border-top: 1px solid ${(props) => props.theme.colors.blackColor};  
+  background: #000000;  
   p {
     font-size: 16px;
     text-align: center;
     font-family: ${(props) => props.theme.fonts.headingFont};
-    @media (max-width: 465px) {
-      color: #ffffff;
-    }
+    color: #ffffff;
   }
 `

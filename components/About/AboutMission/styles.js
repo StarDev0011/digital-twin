@@ -55,6 +55,9 @@ export const AboutMissionData = styled.div`
       font-size: 32px;
     }
   }
+  .true_discover {
+    animation: fadeIn 2s;
+  }
 `
 
 export const AboutMissionContainer = styled.div`

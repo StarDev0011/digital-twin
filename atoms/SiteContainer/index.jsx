@@ -8,6 +8,7 @@ export const SiteContainer = styled.div.attrs((props) => ({
   margin: 0 auto;
   height: 100%;
   .roadmap_title {
+    text-align: center;
     @media (max-width: 465px) {
       text-align: left;
       padding: 0 5%;

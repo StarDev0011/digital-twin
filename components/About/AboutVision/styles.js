@@ -54,6 +54,9 @@ export const VisionData = styled.div`
       font-size: 32px;
     }
   }
+  .true_luxury {
+    animation: fadeIn 2s;
+  }
 `
 
 export const VisionContainer = styled.div`

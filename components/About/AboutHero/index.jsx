@@ -28,20 +28,11 @@ const AboutHero = () => {
             'Our mission is to converge the emerging digital fashion industry with brands that are centered around rare, one of a kind art. Our niche is fine jewelry - one of the most collectable forms of art. At Digital Twin, we transform fine jewelry through curation, story telling and discovery of fine jewelry in its digi-physical form. We are changing the way you can buy, sell, trade, and wear jewelry forever. Join us, and become a part of history, as we transform the meaning of luxury in the digital and physical worlds.'
           }
         </AboutParagraph>
-        <AboutVideoWrapper>
-          <Youtube
-            video="ilXxlTpZ_Uo"
-            width="100%"
-            height="100%"
-            controls={false}
-            allowFullscreen={false}
-            annotations={false}
-            modestBranding={false}
-            showRelatedVideos={false}
-            playsInline={true}
-            showInfo={false}
-          />
-        </AboutVideoWrapper>
+        <AboutParagraph>
+          {
+            'When purchasing with Digital Twin, you will aquire a digi-physical experience, meaning the buyer acquires the digital NFT which represents its physical counterpart.'
+          }
+        </AboutParagraph>
       </SiteContainer>
     </AboutHeroWrapper>
   )

@@ -16,7 +16,7 @@ export const SiteImageWrapper = styled.div`
   width: 50%;
   @media (max-width: 465px) {
     position: relative;
-    width: auto;
+    width: 100%;
     height: auto;
     order: 1;
   }
@@ -119,4 +119,8 @@ export const LimitlessButtonContainer = styled.div`
     padding: 20px 100px;
     border-radius: 500px;
   }
+  .auction_btn:hover {
+    box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
+    transition: box-shadow .5s;
+}
 `

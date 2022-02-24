@@ -43,7 +43,6 @@ export const LDezenContainer = styled.div`
   width: 50%;
   margin-top: auto;
   margin-bottom: auto;
-  padding-right: 4.5%;
   padding-left: 4.5%;
   @media (max-width: 465px) {
     display: block;

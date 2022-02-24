@@ -26,7 +26,7 @@ export const HeroSectionWrapper2 = styled.section`
   height: calc(100vh - 125px);
 
   width: 100%;
-  background: transparent;
+  background: black;
   background-size: cover;
   object-fit: cover;
   #video_bg {
@@ -63,10 +63,14 @@ export const HeroContent2 = styled.div`
   grid-column-gap: 2rem;
   .content_data {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;    
     @media (max-width: 465px) {
       width: 100%;
       order: 2;
+    }
+    .true_sub2 {
+      animation: fadeIn 3s;
+      animation-delay: 0.3s;
     }
     .how_btn {
       margin-left: 0px;
@@ -95,12 +99,19 @@ export const HeroImage = styled.div`
     border-radius: 8px;
     box-shadow: 0px 0px 24px 13px #6b6aa5;
   }
+  #video_bg1: hover {
+    transform: scale(1.1);
+  }
 `
 export const HeroData = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  .true_sub {
+    animation: fadeIn 3s;
+    animation-delay: 0.3s;
+  }
   @media (max-width: 465px) {
     width: 100%;
     padding-left: 2%;

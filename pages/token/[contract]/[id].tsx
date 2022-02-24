@@ -13,7 +13,7 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 import { NETWORK_ID } from './../../../utils/env-vars'
 import { PageWrapper } from '../../../styles/components'
-
+import moment from 'moment'
 import styled from 'styled-components'
 
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -123,14 +123,27 @@ export default function Piece({ initialData }: PieceProps) {
   const { query } = useRouter()
   const [marketPriceEth, setMarketPriceEth] = useState(2500)
   // console.log('market eth is',marketEth)
+  const [currentTime, setCurrentTime] = useState(moment.now())
+  const [timeDifference, setTimeDifference] = useState('a few seconds')
   const getMarketPrice = () => {
     fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
       .then((response) => response.json())
       .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
   }
+
   useEffect(() => {
+    // console.log("from first useeffect")
     getMarketPrice()
   }, [])
+
+  useEffect(() => {
+    // console.log("first second use effect")
+    const interval = setInterval(() => {
+      setTimeDifference(moment(currentTime).fromNow(true))
+    }, 10000)
+    return () => clearInterval(interval)
+  }, [currentTime])
+
   return (
     <SiteContainer>
       <Head>
@@ -139,7 +152,7 @@ export default function Piece({ initialData }: PieceProps) {
           name="Digital Twin"
           content="Digital Twin is a curated marketplace for fine jewelry.L'Dezen and Digital Twin Limitless Earrings NFT drop."
         />
-        <link rel="icon" href="/images/logo.png" />
+        <link rel="icon" href="/images/logo2.png" />
       </Head>
       <Header />
 
@@ -152,6 +165,7 @@ export default function Piece({ initialData }: PieceProps) {
             initialData={initialData}
           >
             <FullComponents.MediaFull />
+
             <div className="auction_body">
               <div className="auction_left">
                 {/* <div className="limitless_icon_txt">
@@ -289,8 +303,21 @@ export default function Piece({ initialData }: PieceProps) {
                     </div>
                   </div>
                   <div className="refresh">
-                    <p className="refresh_meta">Refresh Metadata</p>
-                    <p className="updated_mins">Updated 2 minutes ago</p>
+                    <button
+                      style={{
+                        background: 'white',
+                        border: '0',
+                        cursor: 'pointer',
+                      }}
+                      onClick={() => {
+                        setCurrentTime(moment.now())
+                      }}
+                    >
+                      <p className="refresh_meta">Refresh Metadata</p>
+                    </button>
+                    <p className="updated_mins" id="chnage">
+                      Updated {timeDifference} ago
+                    </p>
                   </div>
                 </div>
               </div>
