@@ -172,7 +172,7 @@ export default function Piece({ initialData }: PieceProps) {
                       <img src = "/images/dt_logo.png" />
                       <p>Digital Twin</p>
                   </div> */}
-                <p className='curator'>curator</p>
+                <p className="curator">curator</p>
                 <CollectionTag />
                 <div className="auction_desc">
                   <h2>{initialData.nft.tokenData.metadata.json.name}</h2>

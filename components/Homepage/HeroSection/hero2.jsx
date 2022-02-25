@@ -28,13 +28,17 @@ const HeroSection2 = () => {
         <HeroContent2>
           <div className="content_data" ref={ref}>
             <HeroTitle2>{'Digital Twin'}</HeroTitle2>
-            <HeroSubtitle2 className={inView + '_sub2'}>Luxury. Transformed.</HeroSubtitle2>
+            <HeroSubtitle2 className={inView + '_sub2'}>
+              Luxury. Transformed.
+            </HeroSubtitle2>
             <HeroButtonsWrapper>
               <SiteButton buttonTheme="light" className="how_btn">
                 <Link href="/#how_it_works">How it Works</Link>
               </SiteButton>
             </HeroButtonsWrapper>
-            <HeroSubtitle2 className={inView + '_sub2'}>Genesis NFT Drop coming this March</HeroSubtitle2>
+            <HeroSubtitle2 className={inView + '_sub2'}>
+              Genesis NFT Drop coming this March
+            </HeroSubtitle2>
           </div>
           <HeroImage>
             <Image

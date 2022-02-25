@@ -12,7 +12,7 @@ import { SiteContainer } from '../../../atoms/SiteContainer'
 const LDezen = () => {
   return (
     <SiteContainer>
-      <LDezenWrapper>      
+      <LDezenWrapper>
         <SiteImageWrapper>
           <img alt="L'Dezen image" src="/images/ldezen-img1.jpg" />
         </SiteImageWrapper>

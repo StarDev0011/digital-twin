@@ -1,7 +1,4 @@
-import {
-  NewsletterButton,
-  NewsletterSectionWrapper,
-} from './styles'
+import { NewsletterButton, NewsletterSectionWrapper } from './styles'
 
 import React from 'react'
 import { SiteContainer } from '../../../atoms/SiteContainer'
@@ -16,7 +13,9 @@ const NewsletterSection = () => {
     <NewsletterSectionWrapper>
       <SiteContainer>
         <NewsletterButton ref={ref}>
-          <a href="#" className={inView + '_nevermiss'}>Join Us</a>
+          <a href="#" className={inView + '_nevermiss'}>
+            Join Us
+          </a>
         </NewsletterButton>
         <p>Subscribe for the latest news, drops, {'&'} collectibles.</p>
       </SiteContainer>

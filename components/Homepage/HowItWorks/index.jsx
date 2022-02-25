@@ -15,9 +15,7 @@ const HowItWorks = () => {
             <HowItWorksItem key={item.id}>
               <div className="iconWrapper">{item.icon}</div>
               <div className="processData">
-                <h3>
-                  {item.title}
-                </h3>
+                <h3>{item.title}</h3>
                 <p>{item.paragraph}</p>
               </div>
             </HowItWorksItem>

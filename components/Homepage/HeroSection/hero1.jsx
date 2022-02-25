@@ -27,17 +27,17 @@ const HeroSection1 = () => {
       <SiteContainer size="normal">
         <HeroContent>
           <HeroImage>
-            <a href='token/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9/1'>
-            <video
-              // controls="true"
-              autoPlay
-              loop
-              muted
-              playsInline
-              id="video_bg1"
-            >
-              <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
-            </video>
+            <a href="token/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9/1">
+              <video
+                // controls="true"
+                autoPlay
+                loop
+                muted
+                playsInline
+                id="video_bg1"
+              >
+                <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
+              </video>
             </a>
           </HeroImage>
           <HeroData ref={ref}>
@@ -56,7 +56,9 @@ const HeroSection1 = () => {
                 <Link href="/#how_it_works">How it Works</Link>
               </SiteButton>
             </HeroButtonsWrapper>
-            <HeroSubtitle className={inView + '_sub'}>Genesis NFT Drop coming this March</HeroSubtitle>
+            <HeroSubtitle className={inView + '_sub'}>
+              Genesis NFT Drop coming this March
+            </HeroSubtitle>
           </HeroData>
         </HeroContent>
       </SiteContainer>
