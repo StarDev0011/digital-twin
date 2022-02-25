@@ -16,6 +16,7 @@ export const SiteImageWrapper = styled.div`
     position: relative;
     width: auto;
     height: auto;
+    padding: 5%;
   }
   img {
     width: 100%;

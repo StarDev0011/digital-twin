@@ -34,8 +34,8 @@ export const PageWrapper = styled.section`
       margin-bottom: 16px;
     }
     div {
-      @media (max-width: 465px) {
-        justify-content: center;
+      a {
+        border: none;
       }
       span {
         font-size: 16px;
@@ -43,7 +43,7 @@ export const PageWrapper = styled.section`
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 700;
         @media (max-width: 465px) {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
