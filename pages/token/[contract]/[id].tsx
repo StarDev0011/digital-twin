@@ -121,20 +121,20 @@ const CollectionTag = () => {
 
 export default function Piece({ initialData }: PieceProps) {
   const { query } = useRouter()
-  const [marketPriceEth, setMarketPriceEth] = useState(2500)
+  // const [marketPriceEth, setMarketPriceEth] = useState(2500)
   // console.log('market eth is',marketEth)
   const [currentTime, setCurrentTime] = useState(moment.now())
   const [timeDifference, setTimeDifference] = useState('a few seconds')
-  const getMarketPrice = () => {
-    fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
-      .then((response) => response.json())
-      .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
-  }
+  // const getMarketPrice = () => {
+  //   fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
+  //     .then((response) => response.json())
+  //     .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
+  // }
 
-  useEffect(() => {
-    // console.log("from first useeffect")
-    getMarketPrice()
-  }, [])
+  // useEffect(() => {
+  //   // console.log("from first useeffect")
+  //   getMarketPrice()
+  // }, [])
 
   useEffect(() => {
     // console.log("first second use effect")
