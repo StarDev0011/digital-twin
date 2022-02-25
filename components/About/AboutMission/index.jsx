@@ -27,9 +27,9 @@ const AboutMission = () => {
             <h3 className={inView + '_discover'}>Discovery. Redefined.</h3>
             <p>Curate jewelery from artists around the world</p>
             <br />
-            <p>Onboard the next wave of NFT collectors</p>
+            <p>Onboard the next wave of digi-physical NFT collectors</p>
             <br />
-            <p>Transform the traditional shopping experience</p>
+            <p>Transform the shopping experience from Web 2.0 to Web 3.0</p>
           </AboutMissionData>
         </AboutMissionContainer>
       </AboutMissionWrapper>

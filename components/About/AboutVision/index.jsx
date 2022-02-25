@@ -19,7 +19,7 @@ const AboutVision = () => {
           <VisionData>
             <h4>Vision</h4>
             <h3 className={inView + '_luxury'}>Luxury. Transformed.</h3>
-            <p>Cross the line between digital & physical worlds</p>
+            <p>Bridge the digital & physical worlds</p>
             <br />
             <p>Collect jewelry in the form of asset backed NFTs</p>
             <br />
