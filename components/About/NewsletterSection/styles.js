@@ -8,8 +8,8 @@ export const NewsletterSectionWrapper = styled.section`
     padding: 10em 0;
   }
   p {
-    font-family: ${(props) => props.theme.fonts.headingFont};
-    font-size: 2.4rem;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
+    font-size: 18px;
     margin-top: 3.6rem;
     margin-bottom: 10rem;
     @media (max-width: 465px) {
@@ -50,9 +50,16 @@ export const NewsletterButton = styled(SiteButton)`
   text-align: center;
   a {
     font-weight: bold;
-    font-size: 2.4rem;
+    font-size: 18px;
     text-align: center;
     margin: 0 auto;
-    padding: 1.4rem 4rem;
+    padding: 1.4rem 8rem;
+  }
+  a:hover {
+    box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
+    transition: box-shadow .5s;
+  }
+  .true_nevermiss {
+    animation: fadeIn 3s;
   }
 `

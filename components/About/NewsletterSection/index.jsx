@@ -1,22 +1,22 @@
 import {
   NewsletterButton,
   NewsletterSectionWrapper,
-  NewsletterTitle,
 } from './styles'
 
 import React from 'react'
 import { SiteContainer } from '../../../atoms/SiteContainer'
+import { useInView } from 'react-intersection-observer'
 
 const NewsletterSection = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    initialInView: true,
+  })
   return (
     <NewsletterSectionWrapper>
-      <NewsletterTitle>
-        <h3>Never miss a drop.</h3>
-      </NewsletterTitle>
-
       <SiteContainer>
-        <NewsletterButton>
-          <a href="#">Join Us</a>
+        <NewsletterButton ref={ref}>
+          <a href="#" className={inView + '_nevermiss'}>Join Us</a>
         </NewsletterButton>
         <p>Subscribe for the latest news, drops, {'&'} collectibles.</p>
       </SiteContainer>

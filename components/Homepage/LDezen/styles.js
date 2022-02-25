@@ -19,7 +19,7 @@ export const SiteImageWrapper = styled.div`
   }
   img {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   /* div {
     transform: rotate(-69deg);
@@ -27,11 +27,16 @@ export const SiteImageWrapper = styled.div`
 `
 export const LDezenData = styled.div`
   grid-column: 7/-1;
-  p {
-    font-size: 22px;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+  h2 {
     @media (max-width: 465px) {
-      font-size: 18px;
+      text-align: center;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
+    @media (max-width: 465px) {
+      font-size: 16px;
     }
     line-height: 1.8;
     margin-top: 1.5rem;
@@ -43,11 +48,12 @@ export const LDezenContainer = styled.div`
   width: 50%;
   margin-top: auto;
   margin-bottom: auto;
-  padding-right: 4.5%;
-  padding-left: 4.5%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
   @media (max-width: 465px) {
     display: block;
     width: 100%;
     padding: 5%;
+    text-align: center;
   }
 `

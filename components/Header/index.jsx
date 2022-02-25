@@ -23,20 +23,12 @@ const Header = () => {
       <MenuContainer>
         <HeaderWrapper>
           <HeaderTop>
-            <div className="social_items">
-              <SocialItems>
-                {socialData.map((item) => (
-                  <li key={item.id}>
-                    <a href={item.link} target="_blank" rel="noreferrer">
-                      {item.icon}
-                    </a>
-                  </li>
-                ))}
-              </SocialItems>
+            <div className="logo">
+              <img src='/images/logo2.png' />
+              <Logo href="/">Digital Twin</Logo>              
             </div>
             <div className="header_center">
-              <HeaderCenter>
-                <Logo href="/">Digital Twin</Logo>
+              <HeaderCenter>                
                 <MenuItems>
                   {menuData.map((item) => (
                     <li key={item.id}>

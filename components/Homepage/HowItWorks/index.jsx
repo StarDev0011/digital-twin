@@ -16,7 +16,7 @@ const HowItWorks = () => {
               <div className="iconWrapper">{item.icon}</div>
               <div className="processData">
                 <h3>
-                  {item.id}. {item.title}:
+                  {item.title}
                 </h3>
                 <p>{item.paragraph}</p>
               </div>

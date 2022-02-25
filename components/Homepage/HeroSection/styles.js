@@ -63,10 +63,14 @@ export const HeroContent2 = styled.div`
   grid-column-gap: 2rem;
   .content_data {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;    
     @media (max-width: 465px) {
       width: 100%;
       order: 2;
+    }
+    .true_sub2 {
+      animation: fadeIn 3s;
+      animation-delay: 0.3s;
     }
     .how_btn {
       margin-left: 0px;
@@ -95,12 +99,19 @@ export const HeroImage = styled.div`
     border-radius: 8px;
     box-shadow: 0px 0px 24px 13px #6b6aa5;
   }
+  #video_bg1: hover {
+    transform: scale(1.1);
+  }
 `
 export const HeroData = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  .true_sub {
+    animation: fadeIn 3s;
+    animation-delay: 0.3s;
+  }
   @media (max-width: 465px) {
     width: 100%;
     padding-left: 2%;
@@ -110,10 +121,10 @@ export const HeroData = styled.div`
   }
 `
 export const HeroTitle = styled.h2`
-  font-size: 54px;
+  font-size: 40px;
   color: #ffffff;
   font-family: ${(props) => props.theme.fonts.headingFont};
-  line-height: 1.4;
+  line-height: 1.2;
   letter-spacing: 0px;
   font-weight: bold;
   @media (max-width: 465px) {
@@ -124,7 +135,7 @@ export const HeroTitle = styled.h2`
 `
 
 export const HeroTitle2 = styled.h2`
-  font-size: 54px;
+  font-size: 40px;
   font-family: ${(props) => props.theme.fonts.headingFont};
   line-height: 1.4;
   letter-spacing: 0px;
@@ -147,7 +158,7 @@ export const HeroButtonsWrapper = styled.div`
       width: 50%;
     }
     a {
-      padding: 2rem 4rem;
+      padding: 1rem 4rem;
     }
     &:last-child {
       margin-left: 2rem;
@@ -166,10 +177,10 @@ export const HeroButtonsWrapper = styled.div`
 export const HeroSubtitle = styled.p`
   font-size: 30px;
   color: #ffffff;
-  font-family: ${(props) => props.theme.fonts.headingFont};
-  line-height: 1.6;
+  font-family: ${(props) => props.theme.fonts.bodyFont};
+  line-height: 1.4;
   letter-spacing: 0.5px;
-  font-weight: bold;
+  font-weight: 600;
   @media (max-width: 465px) {
     font-size: 18px;
     width: 60%;
@@ -180,7 +191,7 @@ export const HeroSubtitle = styled.p`
 
 export const HeroSubtitle2 = styled.p`
   font-size: 30px;
-  font-family: ${(props) => props.theme.fonts.headingFont};
+  font-family: ${(props) => props.theme.fonts.bodyFont};
   line-height: 1.6;
   letter-spacing: 0.5px;
   font-weight: bold;

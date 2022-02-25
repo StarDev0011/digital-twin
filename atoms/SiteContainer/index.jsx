@@ -8,6 +8,7 @@ export const SiteContainer = styled.div.attrs((props) => ({
   margin: 0 auto;
   height: 100%;
   .roadmap_title {
+    text-align: center;
     @media (max-width: 465px) {
       text-align: left;
       padding: 0 5%;
@@ -20,7 +21,7 @@ export const MenuContainer = styled.div.attrs((props) => ({
   size: props.size || 'normal',
 }))`
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
   .mobile_nav {

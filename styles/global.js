@@ -18,6 +18,14 @@ const GlobalStyles = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   }
 
+  @font-face {
+    font-family: 'Assistant';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Assistant-Regular.otf");
+  }
+
   html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -42,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.whiteColor};
     box-sizing: border-box;
     overscroll-behavior: none;
-    font-family: ${theme.fonts.bodyFont};
+    font-family: 'Assistant';
     
   }
   .slick-next:before, .slick-prev:before {
@@ -51,20 +59,31 @@ const GlobalStyles = createGlobalStyle`
   .slick-dots {
     bottom: 25px;
   }
-  .slick-prev {
+  .home_slider .slick-prev {
     left: 10px;
     top: 52%;
     z-index: 9;
   }
-  .slick-next {
+  .home_slider .slick-next {
     right: 25px;
     top: 52%;
+    z-index: 9;
+  }
+  .limitless_slider .slick-prev {
+    left: 10px;
+    z-index: 9;
+  }
+  .limitless_slider .slick-next {
+    right: 25px;
     z-index: 9;
   }
   video#video_bg {
     position: fixed;
     z-index: -1;
     width: 100vw;
+  }
+  .limitless_slider .slick-next:before, .limitless_slider .slick-prev:before {
+    color: #000;
   }
   @keyframes floating {
     0% { transform: translate(200px,  0px); }
@@ -93,7 +112,7 @@ const GlobalStyles = createGlobalStyle`
       width: auto;
       height: 100vh;
     }
-    .roadmap_section, .slick-prev, .slick-next {
+    .roadmap_section, .home_slider .slick-prev, .home_slider .slick-next {
       display:none!important;
     }
   }

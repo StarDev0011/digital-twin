@@ -26,10 +26,14 @@ export const SiteImageWrapper = styled.div`
 `
 export const VisionData = styled.div`
   grid-column: 1/6;
-
+  h2 {
+    @media (max-width: 465px) {
+      text-align: center;
+    }
+  }
   p {
-    font-size: 22px;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-size: 16px;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
       font-size: 16px;
     }
@@ -43,12 +47,13 @@ export const VisionContainer = styled.div`
   width: 50%;
   margin-top: auto;
   margin-bottom: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 7.5%;
+  padding-left: 7.5%;
   @media (max-width: 465px) {
     display: block;
     width: 100%;
     padding: 5%;
     order: 2;
+    text-align: center;
   }
 `

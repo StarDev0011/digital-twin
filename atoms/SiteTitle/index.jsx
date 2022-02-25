@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SiteTitle = styled.h2.attrs((props) => ({
   align: 'left',
 }))`
-  font-size: 54px;
+  font-size: 40px;
   font-family: ${(props) => props.theme.fonts.headingFont};
   text-align: ${(props) => props.align};
   font-weight: bold;

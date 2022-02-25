@@ -26,26 +26,28 @@ export const AboutSectionColLeft = styled.div`
   }
   h4 {
     font-size: 1.8rem;
-    font-family: ${(props) => props.theme.fonts.headingFont};
-    font-weight: bold;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     margin-top: 2.4rem;
+    margin-bottom: 20px;
     letter-spacing: 0.5px;
     @media (max-width: 465px) {
       font-size: 16px;
       margin-top: 0;
+      margin-bottom: 0;
       text-align: center;
     }
   }
   h2 {
+    font-size: 30px;
     @media (max-width: 465px) {
       text-align: center;
     }
   }
   p {
-    font-size: 22px;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-size: 16px;
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 40px;
     }
     line-height: 1.8;

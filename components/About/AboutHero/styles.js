@@ -23,7 +23,7 @@ export const AboutImageWrapper = styled.div`
 
 export const AboutTitle = styled.h2`
   text-align: center;
-  font-size: 54px;
+  font-size: 80px;
   font-family: ${(props) => props.theme.fonts.headingFont};
   font-weight: bold;
   @media (max-width: 465px) {
@@ -40,14 +40,15 @@ export const AboutSubtitle = styled.h4`
   font-weight: bold;
   @media (max-width: 465px) {
     width: 100%;
-    font-size: 24px;
+    font-size: 18px;
+    text-align: center;
     line-height: 2;
   }
 `
 export const AboutParagraph = styled.p`
-  font-size: 24px;
+  font-size: 18px;
   text-align: left;
-  font-family: ${(props) => props.theme.fonts.headingFont};
+  font-family: ${(props) => props.theme.fonts.bodyFont};
   margin-top: 2.4rem;
   width: 80%;
   margin-left: auto;
@@ -56,6 +57,23 @@ export const AboutParagraph = styled.p`
   @media (max-width: 465px) {
     font-size: 16px;
     width: 100%;
+    text-align: center;
+  }
+`
+export const AboutParagraph2 = styled.p`
+  font-size: 18px;
+  text-align: left;
+  font-family: ${(props) => props.theme.fonts.bodyFont};
+  margin-top: 2.4rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  font-weight: 700;
+  @media (max-width: 465px) {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
   }
 `
 export const AboutVideoWrapper = styled.div`

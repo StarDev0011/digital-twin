@@ -1,9 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
-import HeroSection1 from './HeroSection/hero1'
-import HeroSection2 from './HeroSection/hero2'
 
-export default function SimpleSlider() {
+export default function ImageSlider() {
   var settings = {
     infinite: true,
     speed: 500,
@@ -11,12 +9,12 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
   }
   return (
-    <Slider className = "home_slider" {...settings}>
+    <Slider className = "limitless_slider" {...settings}>
       <div>
-        <HeroSection1 />
+        <img src = "/images/limitless.png" />
       </div>
       <div>
-        <HeroSection2 />
+        <img src = "/images/limitless.gif" />
       </div>
     </Slider>
   )

@@ -13,10 +13,10 @@ export const LimitlessWrapper = styled.div`
   }
 `
 export const SiteImageWrapper = styled.div`
-  width: 50%;
+  width: 45%;
   @media (max-width: 465px) {
     position: relative;
-    width: auto;
+    width: 100%;
     height: auto;
     order: 1;
   }
@@ -54,8 +54,8 @@ export const SiteImageWrapper = styled.div`
 `
 export const LimitlessData = styled.div`
   h2 {
-    font-size: 54px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 700;
     font-family: ${(props) => props.theme.fonts.headingFont};
     line-height: 1.25;
     margin-bottom: 30px;
@@ -64,9 +64,9 @@ export const LimitlessData = styled.div`
     }
   }
   p {
-    font-size: 24px;
+    font-size: 16px;
     line-height: 2;
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
       font-size: 18px;
     }
@@ -77,24 +77,29 @@ export const LimitlessData = styled.div`
     display: flex;
     padding: 5px;
     border-radius: 500px;
-    margin-top: 30px;
+    margin-top: 60px;
     @media (max-width: 465px) {
       display: none;
     }
     p {
       font-size: 18px;
-      font-weight: 600;
       margin-left: 10px;
       margin-right: 30px;
       margin-top: auto;
       margin-bottom: auto;
     }
   }
+  .external_links {
+    margin-top:  90px;
+    p {
+      padding-left: 3px;
+    }
+  }
 `
 
 export const LimitlessContainer = styled.div`
   display: block;
-  width: 50%;
+  width: 55%;
   margin-top: auto;
   margin-bottom: auto;
   @media (max-width: 465px) {
@@ -115,8 +120,12 @@ export const LimitlessButtonContainer = styled.div`
     background: black;
     font-family: ${(props) => props.theme.fonts.headingFont};
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     padding: 20px 100px;
     border-radius: 500px;
+  }
+  .auction_btn:hover {
+    box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
+    transition: box-shadow .5s;
   }
 `

@@ -6,8 +6,8 @@ const theme = {
     highlightColor: '#811B6E',
   },
   fonts: {
-    headingFont: "'Merriweather', serif",
-    bodyFont: "'Open Sans', sans-serif",
+    headingFont: "'Mirador'",
+    bodyFont: "'Assistant'",
   },
 }
 export default theme

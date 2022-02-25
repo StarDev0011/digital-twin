@@ -11,7 +11,7 @@ export const problemData = [
     paragraph: (
       <p>
         {
-          'NFTs are limited and unique, well poised to eliminate the likelihood of counterfeit products.'
+          'NFTs are limited and unique, well poised to eliminate the likelihood of counterfeit products. NFTs are perfect for Digital Twin, because they capture everything about the product, forever, when the information is part of a blockchain'
         }
       </p>
     ),
@@ -35,7 +35,7 @@ export const problemData = [
     paragraph: (
       <p>
         {
-          'Collectors can easily trade their NFTs at any time. Brands can also earn in perpetuity with royalties off secondary sales.'
+          'Ownership of a NFT represents an "IOU" of the jewelry item, which can be traded freely online. Brands can also earn in perpetuity with royalties off secondary sales.'
         }
       </p>
     ),
