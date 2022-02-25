@@ -140,7 +140,7 @@ function reducer(state, action) {
   }
 }
 
-export const RedeemPage = ()=> {
+export const RedeemPage = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const { provider, web3Provider, balance, contract, address, chainId } = state
 
@@ -270,7 +270,7 @@ export const RedeemPage = ()=> {
     if (contract && web3Provider && 4 == chainId) {
       // console.log(contract)
       const ownerAddress = await contract.functions.ownerOf(TOKEN_ID)
-      console.log("Owner of the NFT is",ownerAddress)
+      console.log('Owner of the NFT is', ownerAddress)
       //  console.log("address is",address)
       if (ownerAddress == ethers.utils.getAddress(address)) {
         setIsNftHolder(true)
@@ -296,17 +296,13 @@ export const RedeemPage = ()=> {
       } else {
         //Always remember, caused a lot of trouble
         //syntax to call the overloaded function in ethers
-        try{
+        try {
           await contract['safeTransferFrom(address,address,uint256)'](
             ethers.utils.getAddress(address),
             '0xc6367B688453b894bE0688E329259C42b1F040e6',
             TOKEN_ID
           )
-
-        }catch(err){
-
-        }
-        
+        } catch (err) {}
 
         alert('Token successfully redeemed!')
         // setLoading(false)
@@ -356,47 +352,48 @@ export const RedeemPage = ()=> {
           </div>
           {isNftHolder ? (
             <>
-            <h1>Accessorize the PFP</h1>
-            <form action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d" method="POST" enctype="multipart/form-data">
-                
-                <input type="text" name="name"/>
-                <input type="email" name="email"/>
-                <input type="text" name="message"/>
-                <input type="file" name="media"/>
+              <h1>Accessorize the PFP</h1>
+              <form
+                action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <input type="text" name="name" />
+                <input type="email" name="email" />
+                <input type="text" name="message" />
+                <input type="file" name="media" />
                 {/* <input type="checkbox" name="subscribe" value="yes" checked/>
                 <input type="hidden" name="subscribe" value="no"/> */}
-                
+
                 {/* <input type="radio" name="gender" value="male" checked/>
                 <input type="radio" name="gender" value="female"/>
                 <input type="radio" name="gender" value="other"/> */}
-                
+
                 {/* <select name="work-experience">
                     <option value="one-year">0-1 years</option>
                     <option value="one-five-years">1-5 years</option>
                     <option value="five-plus-years">5+ years</option>
                 </select> */}
                 <button type="submit">Send</button>
-            </form>
-            <br/>
-            <br/>
-            <hr/>
-            <br/>
-            <br/>
-            <h1>Redeem your NFT for physical earrings</h1>
-            <button
-              className="place_bid_btn"
-              onClick={() => {
-                redeemNFT()
-              }}
-            >
-              Redeem
-            </button>
+              </form>
+              <br />
+              <br />
+              <hr />
+              <br />
+              <br />
+              <h1>Redeem your NFT for physical earrings</h1>
+              <button
+                className="place_bid_btn"
+                onClick={() => {
+                  redeemNFT()
+                }}
+              >
+                Redeem
+              </button>
             </>
           ) : (
             <>Sorry, you dont have an NFT to redeem</>
           )}
-
-
         </main>
 
         <style jsx>{`
