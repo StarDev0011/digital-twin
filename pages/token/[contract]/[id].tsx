@@ -176,28 +176,34 @@ export default function Piece({ initialData }: PieceProps) {
                 <CollectionTag />
                 <div className="auction_desc">
                   <h2>{initialData.nft.tokenData.metadata.json.name}</h2>
-                  <p>Introducing fine jewelery</p>
-                  <p>in its digi-physical form.</p>
+                  <p>Introducing fine jewelery in its digi-physical form.</p>
+                  {/* <p></p> */}
                   <p>The Limitless earrings are 18K gold diamond,</p>
-                  <p>one-of-a-kind design.</p>
+                  <p>A one-of-a-kind design.</p>
                   <p>Comfortable and elegant,</p>
                   <p>Bold, yet feminine.</p>
                   <br />
-                  <p>The enamel in Pantone’s Very Peri color of 2022</p>
-                  <p>embodies our spirit.</p>
+                  <p>
+                    The enamel in Pantone’s Very Peri color of 2022 embodies our
+                    spirit.
+                  </p>
+                  {/* <p></p> */}
                   <p>A dynamic periwinkle blue</p>
                   <p>with a vibrant, violet-red undertone</p>
-                  <p>designed to evoke the glowing touchscreens</p>
-                  <p>of the digital world</p>
+                  <p>
+                    Designed to evoke the glowing touchscreens of the digital
+                    world
+                  </p>
+                  {/* <p></p> */}
                   <p>and the creative possibilities</p>
                   <p>of the future.</p>
                   <br />
-                  <p>The Limitless Earrings enable</p>
-                  <p>seamless movement between</p>
-                  <p>the digital and physical.</p>
+                  <p>The Limitless Earrings enable seamless movement </p>
+                  {/* <p></p> */}
+                  <p>between the digital and physical.</p>
                   <p>Representing a time when</p>
-                  <p>our real and online lives</p>
-                  <p>are intertwined.</p>
+                  <p>our real and online lives are intertwined.</p>
+                  {/* <p></p> */}
                   <br />
                   <p>
                     Your Digital Twin awaits with L’Dezen Limitless Earrings.

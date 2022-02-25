@@ -37,7 +37,7 @@ const Header = () => {
                   ))}
                   <li>
                     <a
-                      href="images/press_release.pdf"
+                      href="/images/press_release.pdf"
                       target="_blank"
                       rel="noreferrer"
                     >
