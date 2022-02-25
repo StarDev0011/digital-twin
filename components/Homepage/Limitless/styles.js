@@ -90,7 +90,7 @@ export const LimitlessData = styled.div`
     }
   }
   .external_links {
-    margin-top:  90px;
+    margin-top: 90px;
     p {
       padding-left: 3px;
     }
@@ -126,6 +126,6 @@ export const LimitlessButtonContainer = styled.div`
   }
   .auction_btn:hover {
     box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
-    transition: box-shadow .5s;
+    transition: box-shadow 0.5s;
   }
 `

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FooterWrapper = styled.footer`
   padding: 4.2rem 1rem;
   background: #000000;
-  @media (max-width: 465px) {    
+  @media (max-width: 465px) {
     padding: 5rem;
   }
 `
@@ -78,7 +78,7 @@ export const FooterCol = styled.div`
     line-height: 1.6;
     margin-bottom: 2rem;
     color: #ffffff;
-    @media (max-width: 465px) {      
+    @media (max-width: 465px) {
       font-size: 16px;
       margin-bottom: 30px;
     }
@@ -137,8 +137,8 @@ export const SocialItems = styled.div`
 
 export const CopyrightWrapper = styled.div`
   padding: 3.2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.blackColor};  
-  background: #000000;  
+  border-top: 1px solid ${(props) => props.theme.colors.blackColor};
+  background: #000000;
   p {
     font-size: 16px;
     text-align: center;

@@ -63,7 +63,7 @@ export const HeroContent2 = styled.div`
   grid-column-gap: 2rem;
   .content_data {
     padding-top: 50px;
-    padding-bottom: 20px;    
+    padding-bottom: 20px;
     @media (max-width: 465px) {
       width: 100%;
       order: 2;

@@ -24,11 +24,11 @@ const Header = () => {
         <HeaderWrapper>
           <HeaderTop>
             <div className="logo">
-              <img src='/images/logo2.png' />
-              <Logo href="/">Digital Twin</Logo>              
+              <img src="/images/logo2.png" />
+              <Logo href="/">Digital Twin</Logo>
             </div>
             <div className="header_center">
-              <HeaderCenter>                
+              <HeaderCenter>
                 <MenuItems>
                   {menuData.map((item) => (
                     <li key={item.id}>

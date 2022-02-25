@@ -9,12 +9,12 @@ export default function ImageSlider() {
     slidesToScroll: 1,
   }
   return (
-    <Slider className = "limitless_slider" {...settings}>
+    <Slider className="limitless_slider" {...settings}>
       <div>
-        <img src = "/images/limitless.png" />
+        <img src="/images/limitless.png" />
       </div>
       <div>
-        <img src = "/images/limitless.gif" />
+        <img src="/images/limitless.gif" />
       </div>
     </Slider>
   )

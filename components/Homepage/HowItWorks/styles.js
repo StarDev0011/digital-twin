@@ -22,7 +22,7 @@ export const HowItWorksData = styled.ul`
   grid-row-gap: 10rem;
   @media (max-width: 465px) {
     display: block;
-    text-align:center;
+    text-align: center;
   }
 `
 export const HowItWorksItem = styled.li`
@@ -60,7 +60,6 @@ export const HowItWorksItem = styled.li`
       width: 100%;
       height: 100%;
     }
-
   }
   .processData {
     display: flex;

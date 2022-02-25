@@ -11,7 +11,7 @@ export const HeaderWrapper = styled.div`
   }
 `
 export const HeaderTop = styled.div`
-  display:flex;
+  display: flex;
   justify-content: space-between;
   width: 100%;
   .logo {

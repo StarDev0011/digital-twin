@@ -13,6 +13,7 @@ const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 // const TOKEN_ID = '1'
 
 // const CONTRACT_ADDRESS_MAINNET = ""
+const TOKEN_ID = 4
 const CONTRACT_ADDRESS_TESTNET = '0xd391646321ccf7938821a01d169dea6922aedbba'
 import Layout from '../components/Layout'
 
@@ -59,43 +60,43 @@ if (typeof window !== 'undefined') {
   })
 }
 
-type StateType = {
-  provider?: any
-  web3Provider?: any
-  address?: string
-  chainId?: number
-  contract?: any
-  balance?: string
-}
+// type StateType = {
+//   provider?: any
+//   web3Provider?: any
+//   address?: string
+//   chainId?: number
+//   contract?: any
+//   balance?: string
+// }
 
-type ActionType =
-  | {
-      type: 'SET_WEB3_PROVIDER'
-      provider?: StateType['provider']
-      web3Provider?: StateType['web3Provider']
-      address?: StateType['address']
-      chainId?: StateType['chainId']
-      contract?: StateType['contract']
-      balance?: StateType['balance']
-    }
-  | {
-      type: 'SET_ADDRESS'
-      address?: StateType['address']
-      balance?: StateType['balance']
-    }
-  | {
-      type: 'SET_CHAIN_ID'
-      chainId?: StateType['chainId']
-    }
-  | {
-      type: 'RESET_WEB3_PROVIDER'
-    }
-  | {
-      type: 'SET_CONTRACT_INSTANCE'
-      contract?: StateType['contract']
-    }
+// type ActionType =
+//   | {
+//       type: 'SET_WEB3_PROVIDER'
+//       provider?: StateType['provider']
+//       web3Provider?: StateType['web3Provider']
+//       address?: StateType['address']
+//       chainId?: StateType['chainId']
+//       contract?: StateType['contract']
+//       balance?: StateType['balance']
+//     }
+//   | {
+//       type: 'SET_ADDRESS'
+//       address?: StateType['address']
+//       balance?: StateType['balance']
+//     }
+//   | {
+//       type: 'SET_CHAIN_ID'
+//       chainId?: StateType['chainId']
+//     }
+//   | {
+//       type: 'RESET_WEB3_PROVIDER'
+//     }
+//   | {
+//       type: 'SET_CONTRACT_INSTANCE'
+//       contract?: StateType['contract']
+//     }
 
-const initialState: StateType = {
+const initialState = {
   provider: null,
   web3Provider: null,
   address: null,
@@ -104,7 +105,7 @@ const initialState: StateType = {
   balance: '0',
 }
 
-function reducer(state: StateType, action: ActionType): StateType {
+function reducer(state, action) {
   switch (action.type) {
     case 'SET_WEB3_PROVIDER':
       return {
@@ -139,7 +140,7 @@ function reducer(state: StateType, action: ActionType): StateType {
   }
 }
 
-export const RedeemPage = (): JSX.Element => {
+export const RedeemPage = ()=> {
   const [state, dispatch] = useReducer(reducer, initialState)
   const { provider, web3Provider, balance, contract, address, chainId } = state
 
@@ -147,6 +148,19 @@ export const RedeemPage = (): JSX.Element => {
   // const [loading,setLoading] = useState(false)
 
   // const { push } = useRouter()
+
+  // const formState = {
+  //   email : "xyz@google.com",
+  //   first_name : "john",
+  //   last_name : "doe",
+  //   address : "Adelaide,Australia",
+  //   apartment : "12th criss cross road",
+  //   city : "Adelaide",
+  //   country :"Australia",
+  //   state : "South Australia",
+  //   zip : "1345",
+  //   phone : "9847382948"
+  // }
 
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
@@ -213,7 +227,7 @@ export const RedeemPage = (): JSX.Element => {
   // local React state with that new information.
   useEffect(() => {
     if (provider?.on) {
-      const handleAccountsChanged = async (accounts: string[]) => {
+      const handleAccountsChanged = async (accounts) => {
         // eslint-disable-next-line no-console
         console.log('accountsChanged', accounts)
         web3Provider.getBalance(accounts[0]).then((res) => {
@@ -227,11 +241,11 @@ export const RedeemPage = (): JSX.Element => {
       }
 
       // https://docs.ethers.io/v5/concepts/best-practices/#best-practices--network-changes
-      const handleChainChanged = (_hexChainId: string) => {
+      const handleChainChanged = (_hexChainId) => {
         window.location.reload()
       }
 
-      const handleDisconnect = (error: { code: number; message: string }) => {
+      const handleDisconnect = (error) => {
         // eslint-disable-next-line no-console
         console.log('disconnect', error)
         disconnect()
@@ -255,7 +269,8 @@ export const RedeemPage = (): JSX.Element => {
   const validateOwner = async () => {
     if (contract && web3Provider && 4 == chainId) {
       // console.log(contract)
-      const ownerAddress = await contract.functions.ownerOf(6)
+      const ownerAddress = await contract.functions.ownerOf(TOKEN_ID)
+      console.log("Owner of the NFT is",ownerAddress)
       //  console.log("address is",address)
       if (ownerAddress == ethers.utils.getAddress(address)) {
         setIsNftHolder(true)
@@ -281,11 +296,17 @@ export const RedeemPage = (): JSX.Element => {
       } else {
         //Always remember, caused a lot of trouble
         //syntax to call the overloaded function in ethers
-        await contract['safeTransferFrom(address,address,uint256)'](
-          ethers.utils.getAddress(address),
-          '0xc6367B688453b894bE0688E329259C42b1F040e6',
-          6
-        )
+        try{
+          await contract['safeTransferFrom(address,address,uint256)'](
+            ethers.utils.getAddress(address),
+            '0xc6367B688453b894bE0688E329259C42b1F040e6',
+            TOKEN_ID
+          )
+
+        }catch(err){
+
+        }
+        
 
         alert('Token successfully redeemed!')
         // setLoading(false)
@@ -334,6 +355,34 @@ export const RedeemPage = (): JSX.Element => {
             )}
           </div>
           {isNftHolder ? (
+            <>
+            <h1>Accessorize the PFP</h1>
+            <form action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d" method="POST" enctype="multipart/form-data">
+                
+                <input type="text" name="name"/>
+                <input type="email" name="email"/>
+                <input type="text" name="message"/>
+                <input type="file" name="media"/>
+                {/* <input type="checkbox" name="subscribe" value="yes" checked/>
+                <input type="hidden" name="subscribe" value="no"/> */}
+                
+                {/* <input type="radio" name="gender" value="male" checked/>
+                <input type="radio" name="gender" value="female"/>
+                <input type="radio" name="gender" value="other"/> */}
+                
+                {/* <select name="work-experience">
+                    <option value="one-year">0-1 years</option>
+                    <option value="one-five-years">1-5 years</option>
+                    <option value="five-plus-years">5+ years</option>
+                </select> */}
+                <button type="submit">Send</button>
+            </form>
+            <br/>
+            <br/>
+            <hr/>
+            <br/>
+            <br/>
+            <h1>Redeem your NFT for physical earrings</h1>
             <button
               className="place_bid_btn"
               onClick={() => {
@@ -342,9 +391,12 @@ export const RedeemPage = (): JSX.Element => {
             >
               Redeem
             </button>
+            </>
           ) : (
             <>Sorry, you dont have an NFT to redeem</>
           )}
+
+
         </main>
 
         <style jsx>{`

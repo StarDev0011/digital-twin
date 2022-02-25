@@ -6,7 +6,8 @@ const pinata = pinataSDK(
   '7aec58df8140ec00c355',
   'd458ce746f81f57d6b0e35442a39b427da61af47a0f1c3f753c78db650ff0e04'
 )
-
+import redis from '../../lib/redis'
+import { v4 as uuidv4 } from 'uuid'
 async function uploadJsonToDecentralizedStorage(data) {
   // function that uploads buffer to decentralized storage
   // and returns url of uploaded file from a gateway.
@@ -30,8 +31,14 @@ async function uploadJsonToDecentralizedStorage(data) {
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const url = await uploadJsonToDecentralizedStorage(req.body)
+    const id = uuidv4()
+    await redis.hset('shipping', id, JSON.stringify(req.body))
+    res.status(200).json({
+      body: 'success',
+      url,
+    })
 
-    res.status(200).json({ url })
+    // res.status(200).json({ url })
   } catch (err) {
     res.status(404).json({ err })
   }

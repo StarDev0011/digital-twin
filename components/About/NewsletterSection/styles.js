@@ -57,7 +57,7 @@ export const NewsletterButton = styled(SiteButton)`
   }
   a:hover {
     box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
-    transition: box-shadow .5s;
+    transition: box-shadow 0.5s;
   }
   .true_nevermiss {
     animation: fadeIn 3s;
