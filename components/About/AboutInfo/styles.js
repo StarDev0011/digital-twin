@@ -40,9 +40,10 @@ export const AboutInfoItems = styled.div`
       animation-timing-function: ease-in-out;
       .problem_txt {
         font-size: 18px;
-        width: 90%;
+        width: 93 %;
         margin-top: auto;
         margin-bottom: auto;
+        margin-left: 2%;
         font-family: ${(props) => props.theme.fonts.bodyFont};
         line-height: 1.8;
         letter-spacing: 0.03em;
@@ -53,7 +54,7 @@ export const AboutInfoItems = styled.div`
         }
       }
       .problem_icon {
-        width: 10%;
+        width: 5%;
         @media (max-width: 465px) {
           width: 15%;
         }
@@ -76,7 +77,7 @@ export const AboutInfoItems = styled.div`
     }
     h3 {
       font-size: 20px;
-      font-weight: 400;
+      font-weight: 700;
       margin-bottom: auto;
       margin-top: auto;
       font-family: ${(props) => props.theme.fonts.headingFont};
@@ -105,8 +106,8 @@ export const AboutInfoItems = styled.div`
     }
     h3 {
       font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       @media (max-width: 465px) {
         font-size: 16px;

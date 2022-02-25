@@ -24,6 +24,8 @@ export const HeaderTop = styled.div`
     }
   }
   .header_center {
+    margin-bottom: auto;
+    margin-top: auto;
     @media (max-width: 465px) {
       margin-left: 0px;
     }

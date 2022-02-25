@@ -14,7 +14,7 @@ export const MarketplaceContentWrapper = styled.section`
   p {
     font-size: 2.4rem;
     color: ${(props) => props.theme.colors.whiteColor};
-    font-family: ${(props) => props.theme.fonts.headingFont};
+    font-family: ${(props) => props.theme.fonts.bodyFont};
     margin-top: 4rem;
   }
 `

@@ -26,12 +26,19 @@ export const PageWrapper = styled.section`
       order: 2;
       margin-top: 50px;
     }
+    .curator {
+      color: #969696;
+      font-family: ${(props) => props.theme.fonts.bodyFont};
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
     div {
       @media (max-width: 465px) {
         justify-content: center;
       }
       span {
-        font-size: 24px;
+        font-size: 16px;
         color: #000000;
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 700;
@@ -41,7 +48,7 @@ export const PageWrapper = styled.section`
       }
     }
     .auction_desc h2 {
-      font-size: 5.4em;
+      font-size: 34px;
       font-family: ${(props) => props.theme.fonts.headingFont};
       line-height: 1.25;
       font-weight: 400;
@@ -50,7 +57,7 @@ export const PageWrapper = styled.section`
     .auction_desc p {
       font-size: 16px;
       line-height: 2;
-      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-family: ${(props) => props.theme.fonts.bodyFont};
     }
     .limitless_icon_txt {
       border: solid 1px rgba(0, 0, 0, 0.25);

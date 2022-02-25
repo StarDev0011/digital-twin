@@ -1,10 +1,3 @@
-import {
-  RiAuctionLine,
-  RiHomeSmileLine,
-  RiMoneyDollarCircleLine,
-  RiTruckLine,
-} from 'react-icons/ri'
-
 export const process = [
   {
     id: 1,
@@ -16,7 +9,7 @@ export const process = [
         }
       </p>
     ),
-    icon: <RiAuctionLine />,
+    icon: <img src="/images/how_it_work1.png" />,
   },
   {
     id: 2,
@@ -31,7 +24,7 @@ export const process = [
         </a>
       </p>
     ),
-    icon: <RiHomeSmileLine />,
+    icon: <img src="/images/how_it_work2.png" />,
   },
   {
     id: 3,
@@ -43,7 +36,7 @@ export const process = [
         }
       </p>
     ),
-    icon: <RiTruckLine />,
+    icon: <img src="/images/how_it_work3.png" />,
   },
   {
     id: 4,
@@ -55,6 +48,6 @@ export const process = [
         }
       </p>
     ),
-    icon: <RiMoneyDollarCircleLine />,
+    icon: <img src="/images/how_it_work4.png" />,
   },
 ]

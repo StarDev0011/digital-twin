@@ -13,7 +13,7 @@ export const LimitlessWrapper = styled.div`
   }
 `
 export const SiteImageWrapper = styled.div`
-  width: 50%;
+  width: 45%;
   @media (max-width: 465px) {
     position: relative;
     width: 100%;
@@ -77,7 +77,7 @@ export const LimitlessData = styled.div`
     display: flex;
     padding: 5px;
     border-radius: 500px;
-    margin-top: 30px;
+    margin-top: 60px;
     @media (max-width: 465px) {
       display: none;
     }
@@ -89,11 +89,17 @@ export const LimitlessData = styled.div`
       margin-bottom: auto;
     }
   }
+  .external_links {
+    margin-top:  90px;
+    p {
+      padding-left: 3px;
+    }
+  }
 `
 
 export const LimitlessContainer = styled.div`
   display: block;
-  width: 50%;
+  width: 55%;
   margin-top: auto;
   margin-bottom: auto;
   @media (max-width: 465px) {
@@ -121,5 +127,5 @@ export const LimitlessButtonContainer = styled.div`
   .auction_btn:hover {
     box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
     transition: box-shadow .5s;
-}
+  }
 `

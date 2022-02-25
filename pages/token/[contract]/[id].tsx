@@ -172,6 +172,7 @@ export default function Piece({ initialData }: PieceProps) {
                       <img src = "/images/dt_logo.png" />
                       <p>Digital Twin</p>
                   </div> */}
+                <p className='curator'>curator</p>
                 <CollectionTag />
                 <div className="auction_desc">
                   <h2>{initialData.nft.tokenData.metadata.json.name}</h2>
@@ -325,8 +326,8 @@ export default function Piece({ initialData }: PieceProps) {
                 <div className="price_date_btn">
                   <div className="reserve_price">
                     <p>RESERVE PRICE</p>
-                    <h2>~{(5200 / marketPriceEth).toFixed(3)} ETH</h2>
-                    <p>$5,200 USD</p>
+                    <h2>3.10 ETH</h2>
+                    {/* <p>$5,200 USD</p> */}
                   </div>
                   <div className="start_date">
                     <p>AUCTION STARTS ON</p>

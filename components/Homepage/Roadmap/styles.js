@@ -8,7 +8,7 @@ export const RoadmapItem = styled.div`
   .processData {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -20,9 +20,9 @@ export const RoadmapItem = styled.div`
 
     h1 {
       font-family: ${(props) => props.theme.fonts.headingFont};
-      font-size: 45px;
-      width: 60px;
-      height: 60px;
+      font-size: 30px;
+      width: 40px;
+      height: 40px;
       background: black;
       border-radius: 50%;
       color: #ffffff;
@@ -30,7 +30,7 @@ export const RoadmapItem = styled.div`
       margin-right: auto;
       margin-bottom: 20px;
       text-align: center;
-      margin-top: -30px;
+      margin-top: -20px;
       z-index: 2;
       @media (max-width: 465px) {
         margin-left: 0;

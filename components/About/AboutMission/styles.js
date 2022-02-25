@@ -64,7 +64,8 @@ export const AboutMissionData = styled.div`
 export const AboutMissionContainer = styled.div`
   display: block;
   width: 50%;
-  padding-left: 5%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
   margin-top: auto;
   margin-bottom: auto;
   @media (max-width: 465px) {

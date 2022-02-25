@@ -158,7 +158,7 @@ export const HeroButtonsWrapper = styled.div`
       width: 50%;
     }
     a {
-      padding: 2rem 4rem;
+      padding: 1rem 4rem;
     }
     &:last-child {
       margin-left: 2rem;

@@ -82,6 +82,9 @@ const GlobalStyles = createGlobalStyle`
     z-index: -1;
     width: 100vw;
   }
+  .limitless_slider .slick-next:before, .limitless_slider .slick-prev:before {
+    color: #000;
+  }
   @keyframes floating {
     0% { transform: translate(200px,  0px); }
     100%   { transform: translate(0, 0px); }   

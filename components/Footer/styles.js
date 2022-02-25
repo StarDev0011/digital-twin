@@ -60,14 +60,14 @@ export const FooterCol = styled.div`
   .siteInfo {
     font-size: 16px;
     color: #ffffff;
+    font-weight: 600;
     font-family: ${(props) => props.theme.fonts.bodyFont};
   }
   h3 {
     font-family: ${(props) => props.theme.fonts.bodyFont};
-    font-size: 2rem;
+    font-size: 16px;
     color: #ffffff;
-    @media (max-width: 465px) {      
-      font-size: 20px;
+    @media (max-width: 465px) {
       margin-bottom: 30px;
     }
   }

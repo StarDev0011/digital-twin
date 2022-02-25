@@ -19,7 +19,7 @@ export const HowItWorksData = styled.ul`
   display: grid;
   margin-top: 9.2rem;
   grid-template-columns: repeat(12, 1fr);
-  grid-row-gap: 6rem;
+  grid-row-gap: 10rem;
   @media (max-width: 465px) {
     display: block;
     text-align:center;
@@ -39,11 +39,11 @@ export const HowItWorksItem = styled.li`
     grid-row: 1/2;
   }
   &:nth-child(2) {
-    grid-column: 5/-1;
+    grid-column: 4/-1;
     grid-row: 2/3;
   }
   &:nth-child(3) {
-    grid-column: 1/9;
+    grid-column: 1/10;
     grid-row: 3/4;
   }
   &:last-child {
@@ -51,25 +51,16 @@ export const HowItWorksItem = styled.li`
     grid-row: 4/5;
   }
   .iconWrapper {
-    min-width: 10rem;
-    width: 10rem;
-    height: 10rem;
+    width: 50px;
     margin-right: 2.2rem;
+    margin-top: 5px;
     background: ${(props) => props.theme.colors.blackColor};
-    border-radius: 100rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     @media (max-width: 465px) {
       display: block;
       width: 100%;
       height: 100%;
     }
 
-    svg {
-      color: ${(props) => props.theme.colors.whiteColor};
-      font-size: 5rem;
-    }
   }
   .processData {
     display: flex;
@@ -88,7 +79,6 @@ export const HowItWorksItem = styled.li`
       font-size: 16px;
       font-family: ${(props) => props.theme.fonts.bodyFont};
       line-height: 1.8;
-      margin-top: 1rem;
       letter-spacing: 0.5px;
       a {
         color: #ffffff;
