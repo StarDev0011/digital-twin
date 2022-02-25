@@ -5,7 +5,8 @@ export const NewsletterSectionWrapper = styled.section`
   position: relative;
   text-align: center;
   @media (max-width: 465px) {
-    padding: 10em 0;
+    padding-bottom: 10rem;
+    padding-top: 5rem;
   }
   p {
     font-family: ${(props) => props.theme.fonts.bodyFont};
