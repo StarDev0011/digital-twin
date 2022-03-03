@@ -270,7 +270,7 @@ export const RedeemPage = () => {
     if (contract && web3Provider && 4 == chainId) {
       // console.log(contract)
       const ownerAddress = await contract.functions.ownerOf(TOKEN_ID)
-      console.log('Owner of the NFT is', ownerAddress)
+      // console.log('Owner of the NFT is', ownerAddress)
       //  console.log("address is",address)
       if (ownerAddress == ethers.utils.getAddress(address)) {
         setIsNftHolder(true)
@@ -302,7 +302,9 @@ export const RedeemPage = () => {
             '0xc6367B688453b894bE0688E329259C42b1F040e6',
             TOKEN_ID
           )
-        } catch (err) {}
+        } catch (err) {
+          return err
+        }
 
         alert('Token successfully redeemed!')
         // setLoading(false)
@@ -356,7 +358,7 @@ export const RedeemPage = () => {
               <form
                 action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
                 method="POST"
-                enctype="multipart/form-data"
+                encType="multipart/form-data"
               >
                 <input type="text" name="name" />
                 <input type="email" name="email" />

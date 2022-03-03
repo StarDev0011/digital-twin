@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import { FaqContentWrapper } from './styles';
 import Faq from "react-faq-component"

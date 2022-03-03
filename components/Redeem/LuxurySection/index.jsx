@@ -1,8 +1,8 @@
 import React from 'react'
 import { LuxuryHeading, 
   LuxuryContentWrapper, 
-  LuxuryWrapperMain, 
-  PhysicalRedemptionDiv,
+  // LuxuryWrapperMain, 
+  // PhysicalRedemptionDiv,
   LuxurySectionWrapper
  } from './styles'
 import { SiteContainer } from '../../../atoms/SiteContainer'
