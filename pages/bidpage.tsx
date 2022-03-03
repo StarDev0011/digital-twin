@@ -14,6 +14,7 @@ const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
 // const TOKEN_ADDRESS = `0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9`
 // const TOKEN_ID = '1'
 import Layout from '../components/Layout'
+import SitePopup from '../atoms/SitePopup'
 
 import { NETWORK_ID } from '../utils/env-vars'
 import {
@@ -402,6 +403,7 @@ export const BidPage = (): JSX.Element => {
                 Connect Wallet
               </button>
             )}
+            <SitePopup />
           </div>
 
           {auctionData ? (
@@ -475,11 +477,10 @@ export const BidPage = (): JSX.Element => {
           main {
             padding: 50px;
             width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
             border: 1px solid rgba(0, 0, 0, 0.05);
             border-radius: 5px;
+            margin: 150px auto;
           }
 
           .connect_button {
@@ -492,8 +493,8 @@ export const BidPage = (): JSX.Element => {
             font-weight: 700;
             cursor: pointer;
             position: absolute;
-            top: 30px;
-            right: 10%;
+            top: 0;
+            right: 0;
           }
 
           .bid_balance {
@@ -599,6 +600,7 @@ export const BidPage = (): JSX.Element => {
             padding: 2rem;
             margin: 0 auto;
             max-width: 1200px;
+            position: relative;
           }
 
           .grid {
