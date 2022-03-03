@@ -12,7 +12,7 @@ const LuxuryContent = () => {
     <LuxuryContentWrapper>
         <SiteContainer>
           <LuxuryHeading>
-            Luxury Transformed
+            Luxury. Transformed.
           </LuxuryHeading>
           <LuxurySectionWrapper>
             <div className="luxury-row">
