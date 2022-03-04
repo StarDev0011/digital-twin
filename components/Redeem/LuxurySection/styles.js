@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const LuxuryContentWrapper = styled.section`
-    padding: 10rem 0;
+    padding: 5rem 0;
     @media (max-width: 465px) {
-    padding: 5%;
+        padding: 5%;
     }    
 `
 
@@ -20,12 +20,14 @@ export const LuxuryHeading = styled.h2`
 
 export const LuxurySectionWrapper = styled.section`
     .luxury-row {
-        display: grid;
         grid-auto-flow: column;
         grid-gap: 10px;
         grid-template-areas: "A B"
     "C B";
-    }   
+    @media (min-width: 768px) { 
+        display: grid;}
+    } 
+    }  
     .grid-item-1 {
         grid-area: A;
         background-image: url("/images/phy-Redemption.jpg");
@@ -35,7 +37,12 @@ export const LuxurySectionWrapper = styled.section`
         grid-area: B;
         background-image: url("/images/digi-redemption.jpg");
         background-position: center;
+        @media (min-width: 768px) { 
         height: 650px;
+        }
+        @media (max-width: 767px) { 
+        background-size: cover;
+    }
     }
     .grid-item-3 {
         grid-area: C;
@@ -50,10 +57,13 @@ export const LuxurySectionWrapper = styled.section`
     }
     .grid-item-1 h2, .grid-item-2 h2, .grid-item-3 h2 {
         font-family: 'Mirador';
-        font-size: 28px;
+        font-size: 36px;
         text-transform: uppercase;
         margin-bottom: 30px;
-        font-weight: 800;
+        font-weight: bold;
+        @media (max-width: 767px) { 
+            font-size: 26px;    
+        }
     }
     .luxury-row a.commo-btn {
         border: 2px solid #333;
@@ -62,7 +72,8 @@ export const LuxurySectionWrapper = styled.section`
         color: #000;
         text-decoration: none;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: bold;
+        font-family: 'Mirador';
     }
    .grid-item h2 {
         text-transform: uppercase;

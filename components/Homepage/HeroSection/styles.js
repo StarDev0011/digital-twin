@@ -87,7 +87,7 @@ export const HeroContent2 = styled.div`
 `
 
 export const HeroImage = styled.div`
-  width: 500px;
+  width: 480px;
   @media (max-width: 465px) {
     width: 90%;
     margin: auto;
@@ -98,9 +98,12 @@ export const HeroImage = styled.div`
     background: #6b6aa5;
     border-radius: 8px;
     box-shadow: 0px 0px 24px 13px #6b6aa5;
+    transition: all 0.3s ease 0s;
   }
   #video_bg1: hover {
-    transform: scale(1.1);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
   }
 `
 export const HeroData = styled.div`
