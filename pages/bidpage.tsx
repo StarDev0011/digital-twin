@@ -180,37 +180,44 @@ export const BidPage = (): JSX.Element => {
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
     // using web3Modal to connect. Can be MetaMask or WalletConnect.
+    try {
+      const provider = await web3Modal.connect()
 
-    const provider = await web3Modal.connect()
+      // We plug the initial `provider` into ethers.js and get back
+      // a Web3Provider. This will add on methods from ethers.js and
+      // event listeners such as `.on()` will be different.
+      const web3Provider = new providers.Web3Provider(provider)
 
-    // We plug the initial `provider` into ethers.js and get back
-    // a Web3Provider. This will add on methods from ethers.js and
-    // event listeners such as `.on()` will be different.
-    const web3Provider = new providers.Web3Provider(provider)
+      const signer = web3Provider.getSigner()
+      const address = await signer.getAddress()
 
-    const signer = web3Provider.getSigner()
-    const address = await signer.getAddress()
+      const network = await web3Provider.getNetwork()
 
-    const network = await web3Provider.getNetwork()
+      // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
-    // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
+      const instance = new Contract(auctionHouse, AuctionHouseAbi, signer)
 
-    const instance = new Contract(auctionHouse, AuctionHouseAbi, signer)
+      const balance = ethers.utils.formatEther(
+        await web3Provider.getBalance(address)
+      )
+      // console.log(instance)
 
-    const balance = ethers.utils.formatEther(
-      await web3Provider.getBalance(address)
-    )
-    // console.log(instance)
-
-    dispatch({
-      type: 'SET_WEB3_PROVIDER',
-      provider,
-      web3Provider,
-      address,
-      chainId: network.chainId,
-      contract: instance,
-      balance,
-    })
+      dispatch({
+        type: 'SET_WEB3_PROVIDER',
+        provider,
+        web3Provider,
+        address,
+        chainId: network.chainId,
+        contract: instance,
+        balance,
+      })
+    } catch (err) {
+      showPopup(
+        'error',
+        'Error',
+        'Open your desired wallet and login to continue'
+      )
+    }
   }, [])
 
   const fetchAuction = async (
@@ -322,14 +329,24 @@ export const BidPage = (): JSX.Element => {
         }
       )
       setLoading(false)
-      alert(
-        'Successful bid placed. It may take some seconds to reflect depending upon the block time.'
+      // alert(
+      //   'Successful bid placed. It may take some seconds to reflect depending upon the block time.'
+      // )
+      showPopup(
+        'success',
+        'Success',
+        'Bid placed. It may take some seconds to reflect depending upon the block time.'
       )
 
       push(`./token/${TOKEN_ADDRESS}/${TOKEN_ID}`)
     } catch (err) {
       setLoading(false)
-      alert('Encountered some problem while bidding or auction expired.')
+      // alert('Encountered some problem while bidding or auction expired.')
+      showPopup(
+        'error',
+        'Error',
+        'Encountered some problem while bidding or auction expired.'
+      )
     }
   }
 
@@ -359,16 +376,16 @@ export const BidPage = (): JSX.Element => {
   //   }
   // }
   const [popupData, setPopupData] = useState({
-    type: 'success',
-    title: 'Success.',
-    message: 'Connect your wallet to place the bid.',
+    type: '',
+    title: '',
+    message: '',
   })
 
-  const showPopup = (message) => {
+  const showPopup = (type, title, message) => {
     setPopupData({
-      type: 'success',
-      title: 'Success.',
-      message: message,
+      type,
+      title,
+      message,
     })
     setPopupDisplay(true)
   }
@@ -409,7 +426,10 @@ export const BidPage = (): JSX.Element => {
                 <div className="bid_balance">
                   <h1 className="title">Place a bid</h1>
                   <h3>
-                    Your balance : <span className="real_bal">{balance}</span>
+                    Your balance :{' '}
+                    <span className="real_bal">
+                      {Number(balance).toFixed(4)}
+                    </span>
                   </h3>
                 </div>
               </div>
@@ -461,13 +481,22 @@ export const BidPage = (): JSX.Element => {
                       if (validBidCheck().status) {
                         handleBid()
                       } else {
-                        alert(
-                          'You dont have enough balance to bid or your bid is too small.'
+                        // alert(
+                        //   'You dont have enough balance to bid or your bid is too small.'
+                        // )
+                        showPopup(
+                          'error',
+                          'Error',
+                          'Funds insufficient or bid too small.'
                         )
                       }
                     } else {
                       //alert('Connect your wallet to place the bid')
-                      showPopup('Connect your wallet to place the bid')
+                      showPopup(
+                        'error',
+                        'Error',
+                        'Connect your wallet to place the bid'
+                      )
                     }
                   }}
                 >
