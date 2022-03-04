@@ -37,7 +37,7 @@ const LuxuryContent = () => {
                 <div className="grid-content">
                     <h2>Whats Next</h2>
                     <p>Missed Our First Drop? Subscribe<br /> to our newsletter to catch the <br />latest updates.</p>
-                    <a href="" className="commo-btn">Subscribe</a>
+                    <a href="https://digitaltwin.beehiiv.com/subscribe" className="commo-btn">Subscribe</a>
                 </div>
               </div>
           </div>

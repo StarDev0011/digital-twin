@@ -36,7 +36,7 @@ export const LuxurySectionWrapper = styled.section`
     .grid-item-2 {
         grid-area: B;
         background-image: url("/images/digi-redemption.jpg");
-        background-position: center;
+        background-size: cover;
         @media (min-width: 768px) { 
         height: 650px;
         }
@@ -47,7 +47,6 @@ export const LuxurySectionWrapper = styled.section`
     .grid-item-3 {
         grid-area: C;
         background: linear-gradient(to right, #f3f7d5 , #f3dcd2, #F3F7D5 );
-        background-size: cover;
     }
 
     .grid-item-1 p, .grid-item-2 p, .grid-item-3 p {
@@ -74,12 +73,24 @@ export const LuxurySectionWrapper = styled.section`
         font-size: 16px;
         font-weight: bold;
         font-family: 'Mirador';
+        min-width: 200px;
+        float: left;
+        text-align: center;
+        transition: all 0.5s ease 0s;
+    }
+    .luxury-row a.commo-btn:hover {
+        background-color: #000;
+        color: #fff;
     }
    .grid-item h2 {
         text-transform: uppercase;
     }
     .grid-item-1, .grid-item-2, .grid-item-3   {
         padding: 40px 40px;
+        overflow-x: hidden;
+        @media (max-width: 767px) { 
+            margin-bottom: 15px;   
+        }
      }
      .grid-item-1 .grid-content {
         width: 300px;
