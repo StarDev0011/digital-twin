@@ -44,14 +44,13 @@ export const DiscoverTwinSection = styled.section`
     line-height: 2;
     font-family: Assistant;
   }
-  @media (min-width: 768px) {
-    line-height: 72px;
-    font-size: 36px;
-    display: inline-block;
-    padding-right: 20px;
-    border-width: 1px 1px 0px 0px;
-    border-color: white;
-    border-style: solid;
+  .img-bx img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
   }
   .discover-inner {
     @media (max-width: 767px) {

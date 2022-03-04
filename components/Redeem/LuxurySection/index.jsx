@@ -60,7 +60,6 @@ const LuxuryContent = () => {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </LuxurySectionWrapper>
       </SiteContainer>
     </LuxuryContentWrapper>
