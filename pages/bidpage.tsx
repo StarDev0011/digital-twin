@@ -14,7 +14,7 @@ const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
 // const TOKEN_ADDRESS = `0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9`
 // const TOKEN_ID = '1'
 import Layout from '../components/Layout'
-import SitePopup from '../atoms/SitePopup'
+import { SitePopup } from '../atoms/SitePopup'
 
 import { NETWORK_ID } from '../utils/env-vars'
 import {
@@ -151,6 +151,7 @@ export const BidPage = (): JSX.Element => {
   const [leastBidAmount, setLeastBidAmount] = useState('')
   const [bidAmount, setBidAmount] = useState(leastBidAmount)
   const [loading, setLoading] = useState(false)
+  const [popupDisplay, setPopupDisplay] = useState(false)
   const { push } = useRouter()
   useEffect(() => {
     // console.log("from bid effect")
@@ -357,6 +358,24 @@ export const BidPage = (): JSX.Element => {
   //     setLoading(false)
   //   }
   // }
+  const [popupData, setPopupData] = useState({
+    type: 'success',
+    title: 'Success.',
+    message: 'Connect your wallet to place the bid.',
+  })
+
+  const showPopup = (message) => {
+    setPopupData({
+      type: 'success',
+      title: 'Success.',
+      message: message,
+    })
+    setPopupDisplay(true)
+  }
+
+  const hidePopup = () => {
+    setPopupDisplay(false)
+  }
 
   return (
     <Layout title="Bidpage">
@@ -403,7 +422,11 @@ export const BidPage = (): JSX.Element => {
                 Connect Wallet
               </button>
             )}
-            <SitePopup />
+            {popupDisplay ? (
+              <SitePopup hidePopup={hidePopup} data={popupData} />
+            ) : (
+              ''
+            )}
           </div>
 
           {auctionData ? (
@@ -443,7 +466,8 @@ export const BidPage = (): JSX.Element => {
                         )
                       }
                     } else {
-                      alert('Connect your wallet to place the bid')
+                      //alert('Connect your wallet to place the bid')
+                      showPopup('Connect your wallet to place the bid')
                     }
                   }}
                 >

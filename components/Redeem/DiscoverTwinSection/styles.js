@@ -1,25 +1,42 @@
 import styled from 'styled-components'
 
-export const DiscoverTwinSection = styled.section`
-  background-color: #333;
-  margin-bottom: 20px;
-  .discover-row {
-    grid-template-columns: 2fr 1fr;
-    column-gap: 15px;
-    align-items: center;
-    padding: 50px 50px;
-    @media (min-width: 768px) {
-      display: grid;
+export const DiscoverTwinSection = styled.section `
+    background: linear-gradient(to right,#000000 ,#111212,#111212,rgb(0 0 0 / 78%) );   
+    margin-bottom: 20px;
+    .discover-row {
+        grid-template-columns: 2fr 1fr;
+        column-gap: 15px;
+        align-items: center;
+        padding: 50px 50px;
+        @media (min-width: 768px) { 
+            display: grid;
+        }
+        @media (max-width: 767px) {
+            padding: 10% 5%;
+        }
     }
-  }
-  .discover-row h2 {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: 'Mirador';
-    @media (max-width: 767px) {
-      margin-bottom: 20px;
-      font-size: 26px;
+    .discover-row h2 {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Mirador';
+        @media (max-width: 767px) {
+            margin-bottom: 20px; 
+            font-size: 26px;
+            line-height: 32px;
+        }
+        @media (min-width: 768px) {
+            line-height: 72px;
+            font-size: 36px; 
+            display: inline-block;                                                               
+        }
+    }       
+    .discover-row p {
+        font-size: 16px;
+        line-height: 28px;
+        color: #fff;
+        line-height: 2;
+        font-family: Assistant;
     }
     @media (min-width: 768px) {
       line-height: 72px;
@@ -30,25 +47,9 @@ export const DiscoverTwinSection = styled.section`
       border-color: white;
       border-style: solid;
     }
-  }
-  .discover-row p {
-    font-size: 16px;
-    line-height: 28px;
-    color: #fff;
-    line-height: 2;
-    font-family: Assistant;
-  }
-  .img-bx img {
-    max-width: 150px;
-    margin: 0 auto;
-    display: block;
-    @media (max-width: 767px) {
-      margin-top: 30px;
-    }
-  }
-  .discover-inner {
-    @media (min-width: 768px) {
-      width: 605px;
-    }
-  }
+    .discover-inner {
+        @media (max-width: 767px) {        
+         br { display: none; }   
+        }
+    }  
 `
