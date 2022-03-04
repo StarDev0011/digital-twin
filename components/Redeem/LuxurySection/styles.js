@@ -1,21 +1,21 @@
 import styled from 'styled-components'
 
 export const LuxuryContentWrapper = styled.section`
-    padding: 5rem 0;
-    @media (max-width: 465px) {
-        padding: 5%;
-    }    
+  padding: 5rem 0;
+  @media (max-width: 465px) {
+    padding: 5%;
+  }
 `
 
 export const LuxuryHeading = styled.h2`
-    text-align: center;
-    font-size: 80px;
-    margin-bottom: 40px;
-    font-family: ${(props) => props.theme.fonts.headingFont};
-    font-weight: bold;
-    @media (max-width: 465px) {
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 40px;
+  font-family: ${(props) => props.theme.fonts.headingFont};
+  font-weight: bold;
+  @media (max-width: 465px) {
     font-size: 30px;
-    }
+  }
 `
 
 export const LuxurySectionWrapper = styled.section`
@@ -99,17 +99,15 @@ export const LuxurySectionWrapper = styled.section`
 `
 
 export const LuxuryWrapperMain = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    .redeem-item-one {
-        background-color: red;
-    }
-    .redeem-item-two {
-        background-color: blue;
-    }
-    .redeem-item-three {
-        background-color: green;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .redeem-item-one {
+    background-color: red;
+  }
+  .redeem-item-two {
+    background-color: blue;
+  }
+  .redeem-item-three {
+    background-color: green;
+  }
 `
-
-

@@ -164,7 +164,17 @@ export default function Piece({ initialData }: PieceProps) {
             id={query.id as string}
             initialData={initialData}
           >
-            <FullComponents.MediaFull />
+            {/* <FullComponents.MediaFull /> */}
+            <video
+              // controls="true"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{ height: '600px', margin: '40px auto', display: 'block' }}
+            >
+              <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
+            </video>
 
             <div className="auction_body">
               <div className="auction_left">
