@@ -126,7 +126,7 @@ export const LimitlessButtonContainer = styled.div`
     transition: all 0.5s ease 0s;
     border: 2px solid rgb(0 0 0 / 0%);
   }
-  .auction_btn:hover {    
+  .auction_btn:hover {
     box-shadow: 0 2px 6px rgb(0 0 0 / 80%);
     background-color: #fdfdfd;
     border: 2px solid rgb(12 12 12 / 89%);
