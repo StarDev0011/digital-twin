@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const TriangleSectionWrapper = styled.section`
-  div{
+  div {
     width: 40px;
     height: 40px;
     margin-left: auto;

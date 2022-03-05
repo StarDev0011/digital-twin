@@ -1,12 +1,10 @@
-import {
-    TriangleSectionWrapper,
-  } from './styles'
+import { TriangleSectionWrapper } from './styles'
 
 const Triangle = () => {
-    return (
-        <TriangleSectionWrapper>
-        <div></div>
-        </TriangleSectionWrapper>
-    )
+  return (
+    <TriangleSectionWrapper>
+      <div></div>
+    </TriangleSectionWrapper>
+  )
 }
 export default Triangle
