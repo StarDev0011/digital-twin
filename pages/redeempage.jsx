@@ -358,7 +358,7 @@ export const RedeemPage = () => {
               <form
                 action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
                 method="POST"
-                encType="multipart/form-data"
+                enctype="multipart/form-data"
               >
                 <input type="text" name="name" />
                 <input type="email" name="email" />
