@@ -23,6 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "pages/redeem.jsx"
-, "pages/redeem/physical.jsx"  ]
+    "pages/redeem.jsx",
+    "pages/redeem/physical.jsx"
+  ]
 }

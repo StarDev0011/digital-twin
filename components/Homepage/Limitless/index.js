@@ -7,7 +7,7 @@ import {
   LimitlessWrapper,
   SiteImageWrapper,
   LimitlessButtonContainer,
-  FaqWrapper
+  FaqWrapper,
 } from './styles'
 import Faq from 'react-faq-component'
 
@@ -23,7 +23,7 @@ const faqData = {
     },
     {
       title: 'Physical',
-      content:`       
+      content: `       
           <li>Physical version of the ‘Limitless’ Pair of Earrings, redeemable on digitalxtwin.io</li>
           <li>These earrings are one of a kind and exclusive to the Digital Twin auction</li>
           <li>L’Dezen jewelry is made in 18k Gold with conflict-free diamonds</li>                
@@ -39,7 +39,7 @@ const faqData = {
           <li>Minting: This NFT was minted by L’Dezen on Ethereum </li>
           <li>Bonus: Physical redemption includes 10% gift card on a future L’Dezen purchase</li>        
       `,
-    }
+    },
   ],
 }
 
@@ -56,7 +56,6 @@ const faqConfig = {
   // arrowIcon: "V",
   // tabFocus: true
 }
-
 
 const Limitless = () => {
   return (
@@ -124,12 +123,11 @@ const Limitless = () => {
           </LimitlessContainer>
           <SiteImageWrapper>
             <ImageSlider />
-            <div className="limitless_icon_txt">             
+            <div className="limitless_icon_txt">
               <img src="/images/founder.png" />
               <p>{"L'Dezen by Payal Shah"}</p>
-            </div>            
+            </div>
           </SiteImageWrapper>
-          
         </LimitlessWrapper>
         <LimitlessButtonContainer>
           <a
