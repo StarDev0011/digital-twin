@@ -17,13 +17,14 @@ import moment from 'moment'
 import styled from 'styled-components'
 
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-
+import { ethers } from 'ethers'
 // import {writeFileSync} from 'fs';
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import Header from '../../../components/Header/index'
 import { useState } from 'react'
 import { useEffect } from 'react'
-
+const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
+const provider = new ethers.providers.InfuraProvider('rinkeby', INFURA_ID)
 const styles = {
   theme: {
     lineSpacing: 24,
@@ -49,6 +50,7 @@ type PieceProps = {
   image: string
   initialData: any
   marketEth: any
+  difference: any
 }
 const jsx_runtime_1 = require('react/jsx-runtime')
 const react_1 = require('react')
@@ -118,8 +120,23 @@ const CollectionTag = () => {
     void 0
   )
 }
+const getCurrentBlockStamp = () => {
+  return new Promise((resolve, reject) => {
+    try {
+      // const block = await provider.getBlock(await provider.getBlockNumber())
+      provider.getBlockNumber().then((number) => {
+        provider.getBlock(number).then((object) => {
+          resolve(object.timestamp)
+        })
+      })
+      // resolve(block.timestamp)
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
 
-export default function Piece({ initialData }: PieceProps) {
+export default function Piece({ initialData, difference }: PieceProps) {
   const { query, push } = useRouter()
   // const [marketPriceEth, setMarketPriceEth] = useState(2500)
   // console.log('market eth is',marketEth)
@@ -135,7 +152,16 @@ export default function Piece({ initialData }: PieceProps) {
   //   // console.log("from first useeffect")
   //   getMarketPrice()
   // }, [])
+  const [insideDifference, setInsideDifference] = useState(difference)
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setInsideDifference(insideDifference - 1)
+    }, 1000)
+    return () => clearTimeout(timer)
+  })
+
+  // const {}= useTimer({})
   useEffect(() => {
     // console.log("first second use effect")
     const interval = setInterval(() => {
@@ -335,6 +361,11 @@ export default function Piece({ initialData }: PieceProps) {
                     <p className="updated_mins" id="chnage">
                       Updated {timeDifference} ago
                     </p>
+                    <p>
+                      {Math.floor(insideDifference / 3600)},
+                      {Math.floor((insideDifference % 3600) / 60)},
+                      {Math.floor((insideDifference % 3600) % 60)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -410,7 +441,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     collectionAddress: contract,
   })
 
-  // console.log(data)
+  // const timeToEnd = data.nft.auctionData ? data.nft.auctionData.expectedEndTimestamp - data.nft.auctionData.firstBidTime : null
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data)
   // console.log(tokenInfo)
 
@@ -419,6 +450,11 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   // const result = await fetchAgent.fetch
   // console.log(await fetchAgent.loadNFTData(tokenInfo.tokenContract,tokenInfo.tokenId))
   // https://gateway.pinata.cloud/ipfs/QmaT7qvfDF8TsncoQkiv4ZUj3KcXas9CGcQ9AZKjfaJ2zj
+  const currentBlockStamp: any = await getCurrentBlockStamp()
+  const difference =
+    data.nft.auctionData && data.nft.auctionData.expectedEndTimestamp
+      ? Number(data.nft.auctionData.expectedEndTimestamp) - currentBlockStamp
+      : 86400
   return {
     props: {
       id,
@@ -427,6 +463,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       // image: tokenInfo.image || null,
       image: data.nft.tokenData.tokenURI,
       initialData: data,
+      difference,
     },
   }
 }

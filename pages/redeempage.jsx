@@ -13,7 +13,7 @@ const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 // const TOKEN_ID = '1'
 
 // const CONTRACT_ADDRESS_MAINNET = ""
-const TOKEN_ID = 4
+const TOKEN_ID = 6
 const CONTRACT_ADDRESS_TESTNET = '0xd391646321ccf7938821a01d169dea6922aedbba'
 import Layout from '../components/Layout'
 

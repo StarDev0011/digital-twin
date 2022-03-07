@@ -9,7 +9,7 @@ import { abi as AuctionHouseAbi } from '@zoralabs/auction-house/dist/artifacts/A
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 import { auctionHouse } from '@zoralabs/auction-house/dist/addresses/4.json'
 
-const TOKEN_ID = '6'
+const TOKEN_ID = '7'
 const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
 // const TOKEN_ADDRESS = `0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9`
 // const TOKEN_ID = '1'
