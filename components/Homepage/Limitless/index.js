@@ -88,7 +88,7 @@ const Limitless = () => {
                   rel="noreferrer"
                 >
                   <img
-                    src="/images/etherscan-logo.jpeg"
+                    src="/images/etherscan-logo.png"
                     height="60px"
                     width="60px"
                     style={{ padding: '10px' }}

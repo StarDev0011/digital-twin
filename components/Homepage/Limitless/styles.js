@@ -33,7 +33,7 @@ export const SiteImageWrapper = styled.div`
       padding: 5px;
       border-radius: 500px;
       margin-top: 50px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       p {
         font-size: 18px;
         font-weight: 600;
@@ -77,7 +77,7 @@ export const LimitlessData = styled.div`
     display: flex;
     padding: 5px;
     border-radius: 500px;
-    margin-top: 60px;
+    margin-top: 20px;
     @media (max-width: 465px) {
       display: none;
     }
@@ -110,6 +110,56 @@ export const LimitlessContainer = styled.div`
   }
 `
 
+export const FaqWrapper = styled.div`
+  margin: 15px 0 0;
+  max-width: 600px;
+  div#react-faq-rowtitle-1::before {
+    position: absolute;
+    background-image: url(/images/digital.png);
+    background-size: cover;
+    width: 37px;
+    z-index: 99;
+    left: 0;
+    height: 40px;
+    top: -10px;
+    content: '';
+  }
+  div#react-faq-rowtitle-2::before {
+    position: absolute;
+    background-image: url(/images/physical.png);
+    background-size: cover;
+    width: 37px;
+    z-index: 99;
+    left: 0;
+    height: 40px;
+    top: -10px;
+    content: '';
+  }
+  div#react-faq-rowtitle-3::before {
+    position: absolute;
+    background-image: url(/images/details.png);
+    background-size: cover;
+    width: 37px;
+    z-index: 99;
+    left: 0;
+    height: 40px;
+    top: -10px;
+    content: '';
+  }
+  .row-title-text {
+    position: relative;
+    padding-left: 50px;
+  }
+  .row-content-text li {
+    margin-bottom: 10px;
+    line-height: 24px;
+    margin-left: 10px;
+  }
+  .row-content-text {
+    margin-top: 15px;
+  }
+`
+
 export const LimitlessButtonContainer = styled.div`
   width: 100%;
   text-align: center;
@@ -123,9 +173,13 @@ export const LimitlessButtonContainer = styled.div`
     font-size: 18px;
     padding: 20px 100px;
     border-radius: 500px;
+    transition: all 0.5s ease 0s;
+    border: 2px solid rgb(0 0 0 / 0%);
   }
   .auction_btn:hover {
-    box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);
-    transition: box-shadow 0.5s;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 80%);
+    background-color: #fdfdfd;
+    border: 2px solid rgb(12 12 12 / 89%);
+    color: #333;
   }
 `
