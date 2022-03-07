@@ -26,3 +26,26 @@ export const SitePopup = (props) => {
     </SitePopupWrapper>
   )
 }
+
+export const SitePopupSuccess = (props) => {
+  return (
+    <SitePopupWrapper display={props.display}>
+      <div className="modal-content">
+        {props.data.type === 'success' ? (
+          <img src="/images/Icon-check.png" />
+        ) : (
+          ''
+        )}
+        {props.data.type === 'error' ? (
+          <img src="/images/Icon-cross.png" />
+        ) : (
+          ''
+        )}
+        <div className="pop-msg">
+          <h4>{props.data.title}</h4>
+          <p>{props.data.message}</p>
+        </div>
+      </div>
+    </SitePopupWrapper>
+  )
+}

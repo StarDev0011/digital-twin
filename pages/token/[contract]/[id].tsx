@@ -1,8 +1,4 @@
-import {
-  NFTFullPage,
-  MediaConfiguration,
-  FullComponents,
-} from '@zoralabs/nft-components'
+import { NFTFullPage, MediaConfiguration } from '@zoralabs/nft-components'
 import { useRouter } from 'next/router'
 import {
   MediaFetchAgent,
@@ -171,7 +167,7 @@ export default function Piece({ initialData }: PieceProps) {
               loop
               muted
               playsInline
-              style={{ height: '600px', margin: '40px auto', display: 'block' }}
+              style={{ height: '80vh', margin: '40px auto', display: 'block' }}
             >
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
@@ -341,9 +337,18 @@ export default function Piece({ initialData }: PieceProps) {
               <div className="auction_right">
                 <div className="price_date_btn">
                   <div className="reserve_price">
-                    <p>RESERVE PRICE</p>
-                    <h2>3.10 ETH</h2>
-                    {/* <p>$5,200 USD</p> */}
+                    <div>
+                      <p>RESERVE PRICE</p>
+                      <h2>3.10 ETH</h2>
+                      {/* <p>$5,200 USD</p> */}
+                    </div>
+                    <div className="bid-status">
+                      <p className="live">
+                        <b></b>Live
+                      </p>
+                      {/* <p className="complete">Completed</p> */}
+                      {/* <img src='/images/completed.svg' /> */}
+                    </div>
                   </div>
                   <div className="start_date">
                     {/* {
@@ -358,7 +363,30 @@ export default function Piece({ initialData }: PieceProps) {
                         <h2>March 10, 2022</h2>
                       </>
                     } */}
-                    <FullComponents.AuctionInfo />
+                    <div>
+                      {initialData.nft.auctionData &&
+                      initialData.nft.auctionData.expectedEndTimestamp ? (
+                        <>
+                          <p>AUCTION ENDS</p>
+                          <h2>23h 29m 50s</h2>
+                        </>
+                      ) : (
+                        <>
+                          <p>AUCTION STARTS</p>
+                          <h2>March 10, 2022</h2>
+                        </>
+                      )}
+                    </div>
+                    <div>
+                      <p>BIDDER</p>
+                      <div className="auction-bidder">
+                        <img src="/images/red-user-holder.png" />
+                        <a href="" target="_blank">
+                          0gfg987gfsgdfghjghj
+                        </a>
+                      </div>
+                    </div>
+                    {/* <FullComponents.AuctionInfo /> */}
                   </div>
                   <div className="bid_btn">
                     <Button
@@ -371,18 +399,48 @@ export default function Piece({ initialData }: PieceProps) {
                   </div>
                 </div>
                 <div className="history_detail">
-                  {/* <p>HISTORY</p>
-                    <div className="history_detail">
-                      <div className="img_with_txt">
-                        <img src="/images/founder.png" />
-                        <p><b>ldezenbypayalshah.eth</b> minted this NFT</p>
-                      </div>
-                      <div className="eth_usd">
-                        <p className="eth">1.5 eth</p>
-                        <p className="usd">$5,200 usd</p>
-                      </div>
-                    </div> */}
-                  <FullComponents.BidHistory />
+                  <h5>HISTORY</h5>
+                  <div className="history_detail_bx">
+                    <div className="img_with_txt">
+                      <img src="/images/red-user-holder.png" />
+                    </div>
+                    <div className="eth_usd">
+                      <p className="bidder_name">
+                        <b>ldezenbypayalshah.eth</b> minted this NFT
+                      </p>
+                      <p className="date">February 21, 7:39 AM</p>
+                      {/* <p className="eth">1.5 eth</p>
+                      <p className="usd">$5,200 usd</p> */}
+                    </div>
+                  </div>
+                  <div className="history_detail_bx">
+                    <div className="img_with_txt">
+                      <img src="/images/red-user-holder.png" />
+                    </div>
+                    <div className="eth_usd">
+                      <p className="bidder_name">
+                        <b>ldezenbypayalshah.eth</b> minted this NFT
+                      </p>
+                      <p className="date">February 21, 7:39 AM</p>
+                      {/* <p className="eth">1.5 eth</p>
+                      <p className="usd">$5,200 usd</p> */}
+                    </div>
+                  </div>
+                  <div className="history_detail_bx">
+                    <div className="img_with_txt">
+                      <img src="/images/founder.png" />
+                    </div>
+                    <div className="eth_usd">
+                      <p className="bidder_name">
+                        <b>ldezenbypayalshah.eth</b> minted this NFT
+                      </p>
+                      <p className="date">February 21, 7:39 AM</p>
+                      {/* <p className="eth">1.5 eth</p>
+                      <p className="usd">$5,200 usd</p> */}
+                    </div>
+                  </div>
+
+                  {/* <FullComponents.BidHistory /> */}
                 </div>
               </div>
             </div>

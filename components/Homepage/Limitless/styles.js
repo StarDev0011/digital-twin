@@ -33,7 +33,7 @@ export const SiteImageWrapper = styled.div`
       padding: 5px;
       border-radius: 500px;
       margin-top: 50px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       p {
         font-size: 18px;
         font-weight: 600;
@@ -77,7 +77,7 @@ export const LimitlessData = styled.div`
     display: flex;
     padding: 5px;
     border-radius: 500px;
-    margin-top: 60px;
+    margin-top: 20px;
     @media (max-width: 465px) {
       display: none;
     }
@@ -108,6 +108,56 @@ export const LimitlessContainer = styled.div`
     padding-right: 0%;
     order: 2;
   }
+`
+
+export const FaqWrapper = styled.div`
+  margin: 15px 0 0;
+  max-width: 600px;
+  div#react-faq-rowtitle-1::before {
+    position: absolute;
+    background-image: url(/images/digital.png);
+    background-size: cover;
+    width: 37px;
+    z-index: 99;
+    left: 0;
+    height: 40px;
+    top: -10px;
+    content: '';
+}
+div#react-faq-rowtitle-2::before {
+  position: absolute;
+  background-image: url(/images/physical.png);
+  background-size: cover;
+  width: 37px;
+  z-index: 99;
+  left: 0;
+  height: 40px;
+  top: -10px;
+  content: '';
+}
+div#react-faq-rowtitle-3::before {
+  position: absolute;
+  background-image: url(/images/details.png);
+  background-size: cover;
+  width: 37px;
+  z-index: 99;
+  left: 0;
+  height: 40px;
+  top: -10px;
+  content: '';
+}
+.row-title-text {
+  position: relative;
+  padding-left: 50px;
+}
+.row-content-text li {
+  margin-bottom: 10px;
+  line-height: 24px;
+  margin-left: 10px;
+}
+.row-content-text {
+  margin-top: 15px;
+}
 `
 
 export const LimitlessButtonContainer = styled.div`
