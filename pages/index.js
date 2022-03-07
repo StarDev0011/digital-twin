@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <Layout title="Homepage">
       <Splash />
-
       <SimpleSlider />
       <Limitless />
       <AboutSection />

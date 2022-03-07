@@ -24,5 +24,5 @@
     "**/*.tsx",
     "**/*.js",
     "pages/redeem.jsx"
-  ]
+, "pages/redeem/physical.jsx"  ]
 }

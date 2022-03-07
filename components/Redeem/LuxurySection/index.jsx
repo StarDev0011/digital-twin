@@ -23,7 +23,7 @@ const LuxuryContent = () => {
                   Redemption
                 </h2>
                 <p>Wear the ‘Limitless’ Earrings IRL</p>
-                <a href="" className="commo-btn">
+                <a href="/redeem/physical" className="commo-btn">
                   Redeem
                 </a>
               </div>
@@ -37,7 +37,7 @@ const LuxuryContent = () => {
                 </h2>
                 <p>Choose Your Look</p>
 
-                <a href="" className="commo-btn">
+                <a href="/redeem/digital" className="commo-btn">
                   Accessorize my PFP
                 </a>
               </div>
