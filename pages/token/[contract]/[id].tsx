@@ -1,4 +1,8 @@
-import { NFTFullPage, MediaConfiguration } from '@zoralabs/nft-components'
+import {
+  NFTFullPage,
+  MediaConfiguration,
+  FullComponents,
+} from '@zoralabs/nft-components'
 import { useRouter } from 'next/router'
 import {
   MediaFetchAgent,
@@ -399,7 +403,11 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       initialData.nft.auctionData.expectedEndTimestamp ? (
                         <>
                           <p>AUCTION ENDS</p>
-                          <h2>23h 29m 50s</h2>
+                          <h2>
+                            {Math.floor(insideDifference / 3600)}h{' '}
+                            {Math.floor((insideDifference % 3600) / 60)}m{' '}
+                            {Math.floor((insideDifference % 3600) % 60)}s
+                          </h2>
                         </>
                       ) : (
                         <>
@@ -408,15 +416,26 @@ export default function Piece({ initialData, difference }: PieceProps) {
                         </>
                       )}
                     </div>
-                    <div>
-                      <p>BIDDER</p>
-                      <div className="auction-bidder">
-                        <img src="/images/red-user-holder.png" />
-                        <a href="" target="_blank">
-                          0gfg987gfsgdfghjghj
-                        </a>
+                    {initialData.nft.auctionData &&
+                    initialData.nft.auctionData.expectedEndTimestamp ? (
+                      <div>
+                        <p>BIDDER</p>
+                        <div className="auction-bidder">
+                          <img src="/images/red-user-holder.png" />
+                          <a href="" target="_blank">
+                            {initialData.nft.auctionData.currentBid.bidder.id.slice(
+                              0,
+                              5
+                            )}
+                            ...
+                            {initialData.nft.auctionData.currentBid.bidder.id.slice(
+                              29
+                            )}
+                          </a>
+                        </div>
                       </div>
-                    </div>
+                    ) : null}
+
                     {/* <FullComponents.AuctionInfo /> */}
                   </div>
                   <div className="bid_btn">
@@ -430,7 +449,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
                   </div>
                 </div>
                 <div className="history_detail">
-                  <h5>HISTORY</h5>
+                  {/* <h5>HISTORY</h5>
                   <div className="history_detail_bx">
                     <div className="img_with_txt">
                       <img src="/images/red-user-holder.png" />
@@ -439,10 +458,10 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       <p className="bidder_name">
                         <b>ldezenbypayalshah.eth</b> minted this NFT
                       </p>
-                      <p className="date">February 21, 7:39 AM</p>
-                      {/* <p className="eth">1.5 eth</p>
+                      <p className="date">February 21, 7:39 AM</p> */}
+                  {/* <p className="eth">1.5 eth</p>
                       <p className="usd">$5,200 usd</p> */}
-                    </div>
+                  {/* </div>
                   </div>
                   <div className="history_detail_bx">
                     <div className="img_with_txt">
@@ -452,10 +471,10 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       <p className="bidder_name">
                         <b>ldezenbypayalshah.eth</b> minted this NFT
                       </p>
-                      <p className="date">February 21, 7:39 AM</p>
-                      {/* <p className="eth">1.5 eth</p>
+                      <p className="date">February 21, 7:39 AM</p> */}
+                  {/* <p className="eth">1.5 eth</p>
                       <p className="usd">$5,200 usd</p> */}
-                    </div>
+                  {/* </div>
                   </div>
                   <div className="history_detail_bx">
                     <div className="img_with_txt">
@@ -465,13 +484,13 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       <p className="bidder_name">
                         <b>ldezenbypayalshah.eth</b> minted this NFT
                       </p>
-                      <p className="date">February 21, 7:39 AM</p>
-                      {/* <p className="eth">1.5 eth</p>
+                      <p className="date">February 21, 7:39 AM</p> */}
+                  {/* <p className="eth">1.5 eth</p>
                       <p className="usd">$5,200 usd</p> */}
-                    </div>
-                  </div>
+                  {/* </div>
+                  </div> */}
 
-                  {/* <FullComponents.BidHistory /> */}
+                  <FullComponents.BidHistory />
                 </div>
               </div>
             </div>
@@ -498,7 +517,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     tokenId: id,
     collectionAddress: contract,
   })
-
+  // console.log(data.nft.auctionData.currentBid.bidder.id)
   // const timeToEnd = data.nft.auctionData ? data.nft.auctionData.expectedEndTimestamp - data.nft.auctionData.firstBidTime : null
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data)
   // console.log(tokenInfo)
