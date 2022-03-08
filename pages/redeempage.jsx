@@ -60,41 +60,7 @@ if (typeof window !== 'undefined') {
   })
 }
 
-// type StateType = {
-//   provider?: any
-//   web3Provider?: any
-//   address?: string
-//   chainId?: number
-//   contract?: any
-//   balance?: string
-// }
 
-// type ActionType =
-//   | {
-//       type: 'SET_WEB3_PROVIDER'
-//       provider?: StateType['provider']
-//       web3Provider?: StateType['web3Provider']
-//       address?: StateType['address']
-//       chainId?: StateType['chainId']
-//       contract?: StateType['contract']
-//       balance?: StateType['balance']
-//     }
-//   | {
-//       type: 'SET_ADDRESS'
-//       address?: StateType['address']
-//       balance?: StateType['balance']
-//     }
-//   | {
-//       type: 'SET_CHAIN_ID'
-//       chainId?: StateType['chainId']
-//     }
-//   | {
-//       type: 'RESET_WEB3_PROVIDER'
-//     }
-//   | {
-//       type: 'SET_CONTRACT_INSTANCE'
-//       contract?: StateType['contract']
-//     }
 
 const initialState = {
   provider: null,

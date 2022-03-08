@@ -23,6 +23,7 @@ import { SiteContainer } from '../../../atoms/SiteContainer'
 import Header from '../../../components/Header/index'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import AuctionBidBox from '../../../components/Auction/AuctionBidBox'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 const provider = new ethers.providers.InfuraProvider('rinkeby', INFURA_ID)
 const styles = {
@@ -137,21 +138,21 @@ const getCurrentBlockStamp = () => {
 }
 
 export default function Piece({ initialData, difference }: PieceProps) {
-  const { query, push } = useRouter()
-  // const [marketPriceEth, setMarketPriceEth] = useState(2500)
+  const { query } = useRouter()
+  const [marketPriceEth, setMarketPriceEth] = useState(2500)
   // console.log('market eth is',marketEth)
   const [currentTime, setCurrentTime] = useState(moment.now())
   const [timeDifference, setTimeDifference] = useState('a few seconds')
-  // const getMarketPrice = () => {
-  //   fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
-  //     .then((response) => response.json())
-  //     .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
-  // }
+  const getMarketPrice = () => {
+    fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
+      .then((response) => response.json())
+      .then((res) => setMarketPriceEth(res.data.market_data.price_usd))
+  }
 
-  // useEffect(() => {
-  //   // console.log("from first useeffect")
-  //   getMarketPrice()
-  // }, [])
+  useEffect(() => {
+    // console.log("from first useeffect")
+    getMarketPrice()
+  }, [])
   const [insideDifference, setInsideDifference] = useState(difference)
 
   useEffect(() => {
@@ -370,137 +371,81 @@ export default function Piece({ initialData, difference }: PieceProps) {
                 </div>
               </div>
               <div className="auction_right">
-                <div className="price_date_btn">
-                  <div className="reserve_price">
-                    <div>
-                      <p>HIGHEST BID</p>
-                      <h2>3.10 ETH</h2>
-                      {/* <p>$5,200 USD</p> */}
-                    </div>
-                    <div className="bid-status">
-                      <p className="live">
-                        <b></b>Live
-                      </p>
-                      {/* <p className="complete">Completed</p> */}
-                      {/* <img src='/images/completed.svg' /> */}
-                    </div>
-                  </div>
-                  <div className="start_date">
-                    <div>
-                      {initialData.nft.auctionData &&
-                      initialData.nft.auctionData.expectedEndTimestamp &&
-                      initialData.nft.auctionData.currentBid ? (
-                        <>
-                          <p>AUCTION ENDS</p>
-                          <h2>
-                            {Math.floor(insideDifference / 3600)}h{' '}
-                            {Math.floor((insideDifference % 3600) / 60)}m{' '}
-                            {Math.floor((insideDifference % 3600) % 60)}s
-                          </h2>
-                        </>
-                      ) : (
-                        <>
-                          <p>AUCTION STARTS</p>
-                          <h2>March 10, 2022</h2>
-                        </>
-                      )}
-                    </div>
-                    {initialData.nft.auctionData &&
-                    initialData.nft.auctionData.expectedEndTimestamp &&
-                    initialData.nft.auctionData.currentBid ? (
-                      <div>
-                        <p>BIDDER</p>
-                        <div className="auction-bidder">
-                          <img src="/images/red-user-holder.png" />
-                          <a href="" target="_blank">
-                            {initialData.nft.auctionData.currentBid.bidder.id.slice(
-                              0,
-                              5
-                            )}
-                            ...
-                            {initialData.nft.auctionData.currentBid.bidder.id.slice(
-                              29
-                            )}
-                          </a>
-                        </div>
-                      </div>
-                    ) : (
-                      <div>
-                        <p>OWNED BY</p>
-                        <div className="auction-bidder">
-                          <img src="/images/red-user-holder.png" />
-                          <a
-                            href={`https://rinkeby.etherscan.io/tx/${initialData.nft.auctionData.previousBids[0].transactionHash}`}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {initialData.nft.auctionData.previousBids[0].bidder.id.slice(
-                              0,
-                              5
-                            )}
-                            ...
-                            {initialData.nft.auctionData.previousBids[0].bidder.id.slice(
-                              29
-                            )}
-                          </a>
-                        </div>
-                      </div>
+                {initialData.nft.auctionData &&
+                initialData.nft.auctionData.expectedEndTimestamp &&
+                initialData.nft.auctionData.currentBid ? (
+                  <AuctionBidBox
+                    title="HIGHEST BID"
+                    highestBid={ethers.utils.formatEther(
+                      initialData.nft.auctionData.currentBid.amount
                     )}
+                    approxUsd={(
+                      Number(
+                        ethers.utils.formatEther(
+                          initialData.nft.auctionData.currentBid.amount
+                        )
+                      ) * marketPriceEth
+                    ).toFixed(3)}
+                    secondTitle={'AUCTION ENDS'}
+                    timeLeft={
+                      Math.floor(insideDifference / 3600) +
+                      'h ' +
+                      Math.floor((insideDifference % 3600) / 60) +
+                      'm ' +
+                      Math.floor((insideDifference % 3600) % 60) +
+                      's'
+                    }
+                    thirdTitle="BIDDER"
+                    address={initialData.nft.auctionData.currentBid.bidder.id}
+                    linkEtherscan={`https://rinkeby.etherscan.io/tx/${initialData.nft.auctionData.currentBid.transactionHash}`}
+                    auctionStatus="LIVE"
+                    bidButton="PLACE BID"
+                    pathHref="/bidpage"
+                  />
+                ) : initialData.nft.auctionData &&
+                  !initialData.nft.auctionData.currentBid &&
+                  initialData.nft.auctionData.expectedEndTimestamp ? (
+                  <AuctionBidBox
+                    title="WINNING BID"
+                    highestBid={ethers.utils.formatEther(
+                      initialData.nft.auctionData.previousBids[0].amount
+                    )}
+                    approxUsd={(
+                      Number(
+                        ethers.utils.formatEther(
+                          initialData.nft.auctionData.previousBids[0].amount
+                        )
+                      ) * marketPriceEth
+                    ).toFixed(3)}
+                    secondTitle={'AUCTION CONCLUDED'}
+                    timeLeft={'00h 00m 00s'}
+                    thirdTitle="OWNED BY"
+                    address={
+                      initialData.nft.auctionData.previousBids[0].bidder.id
+                    }
+                    linkEtherscan={`https://rinkeby.etherscan.io/tx/${initialData.nft.auctionData.previousBids[0].transactionHash}`}
+                    auctionStatus="COMPLETE"
+                    bidButton="REDEEM"
+                    pathHref="/redeem"
+                  />
+                ) : (
+                  <div className="price_date_btn">
+                    <div className="reserve_price">
+                      <p>RESERVE PRICE</p>
+                      <h2>3.10 ETH</h2>
+                      <p>${(3.1 * marketPriceEth).toFixed(3)} USD</p>
+                    </div>
+                    <div className="start_date">
+                      <p>AUCTION STARTS ON</p>
+                      <h2>March 10, 2022</h2>
+                    </div>
+                    <div className="bid_btn">
+                      <Button>Coming Soon</Button>
+                    </div>
+                  </div>
+                )}
 
-                    {/* <FullComponents.AuctionInfo /> */}
-                  </div>
-                  <div className="bid_btn">
-                    <Button
-                      onClick={() => {
-                        push('./../../bidpage')
-                      }}
-                    >
-                      Place Bid
-                    </Button>
-                  </div>
-                </div>
-                <div className="history_detail">
-                  {/* <h5>HISTORY</h5>
-                  <div className="history_detail_bx">
-                    <div className="img_with_txt">
-                      <img src="/images/red-user-holder.png" />
-                    </div>
-                    <div className="eth_usd">
-                      <p className="bidder_name">
-                        <b>ldezenbypayalshah.eth</b> minted this NFT
-                      </p>
-                      <p className="date">February 21, 7:39 AM</p> */}
-                  {/* <p className="eth">1.5 eth</p>
-                      <p className="usd">$5,200 usd</p> */}
-                  {/* </div>
-                  </div>
-                  <div className="history_detail_bx">
-                    <div className="img_with_txt">
-                      <img src="/images/red-user-holder.png" />
-                    </div>
-                    <div className="eth_usd">
-                      <p className="bidder_name">
-                        <b>ldezenbypayalshah.eth</b> minted this NFT
-                      </p>
-                      <p className="date">February 21, 7:39 AM</p> */}
-                  {/* <p className="eth">1.5 eth</p>
-                      <p className="usd">$5,200 usd</p> */}
-                  {/* </div>
-                  </div>
-                  <div className="history_detail_bx">
-                    <div className="img_with_txt">
-                      <img src="/images/founder.png" />
-                    </div>
-                    <div className="eth_usd">
-                      <p className="bidder_name">
-                        <b>ldezenbypayalshah.eth</b> minted this NFT
-                      </p>
-                      <p className="date">February 21, 7:39 AM</p> */}
-                  {/* <p className="eth">1.5 eth</p>
-                      <p className="usd">$5,200 usd</p> */}
-                  {/* </div>
-                  </div> */}
-
+                <div className="history_detail" style={{ marginTop: '10px' }}>
                   <FullComponents.BidHistory />
                 </div>
               </div>
