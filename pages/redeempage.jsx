@@ -60,8 +60,6 @@ if (typeof window !== 'undefined') {
   })
 }
 
-
-
 const initialState = {
   provider: null,
   web3Provider: null,

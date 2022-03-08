@@ -100,7 +100,7 @@ function reducer(state, action) {
 }
 
 const Physical = () => {
-  const [showDetail,setShowDetail] = useState(false)
+  const [showDetail, setShowDetail] = useState(false)
   const [state, dispatch] = useReducer(reducer, initialState)
   const { provider, web3Provider, balance, contract, address, chainId } = state
 
@@ -226,11 +226,11 @@ const Physical = () => {
     }
   }
 
-  const redeemNFT =  () => {
-    return new Promise( (resolve,reject)=>{
+  const redeemNFT = () => {
+    return new Promise((resolve, reject) => {
       if (isNftHolder) {
         // setLoading(true)
-  
+
         if (
           ethers.utils.getAddress(address) ==
           '0xc6367B688453b894bE0688E329259C42b1F040e6'
@@ -242,28 +242,26 @@ const Physical = () => {
           //Always remember, caused a lot of trouble
           //syntax to call the overloaded function in ethers
           try {
-            const tx = Promise.resolve(contract['safeTransferFrom(address,address,uint256)'](
-              ethers.utils.getAddress(address),
-              '0xc6367B688453b894bE0688E329259C42b1F040e6',
-              TOKEN_ID
+            const tx = Promise.resolve(
+              contract['safeTransferFrom(address,address,uint256)'](
+                ethers.utils.getAddress(address),
+                '0xc6367B688453b894bE0688E329259C42b1F040e6',
+                TOKEN_ID
+              )
+            )
 
-            ))
-            
             resolve(tx)
-
           } catch (err) {
             // return err
             alert('Some error occured while redeeming!')
             reject(false)
-            
           }
           alert('Token successfully redeemed!')
-          
+
           // setLoading(false)
         }
       }
     })
-   
   }
 
   // const uploadUserData = async()=>{
@@ -283,42 +281,56 @@ const Physical = () => {
     <Layout>
       {/* <ConnectButton handleWalletConected={handleWalletConected} />
       {walletConnected ? <DetailBox /> : <ConnectBox />} */}
-      <ConnectButton connect ={connect} isConnected={web3Provider ? true :false} disconnect={disconnect}/>
-      {
-        web3Provider  ? 
-        isNftHolder ?
-        !showDetail ?
-        <ConnectBox 
-          balance={balance} 
-          isWalletConnected={true} 
-          title= {"Successfully applied!"} 
-          subtitle={"Your wallet containts the ‘Limitless’ Earrings. Enter Shipping details to redeem the physical earrings. "}
+      <ConnectButton
+        connect={connect}
+        isConnected={web3Provider ? true : false}
+        disconnect={disconnect}
+      />
+      {web3Provider ? (
+        isNftHolder ? (
+          !showDetail ? (
+            <ConnectBox
+              balance={balance}
+              isWalletConnected={true}
+              title={'Successfully applied!'}
+              subtitle={
+                'Your wallet containts the ‘Limitless’ Earrings. Enter Shipping details to redeem the physical earrings. '
+              }
+              isErrorMessage={false}
+              isNftPresent={true}
+              setDetail={setShowDetail}
+            />
+          ) : (
+            <DetailBox redeemNFT={redeemNFT} setDetail={setShowDetail} />
+          )
+        ) : (
+          <ConnectBox
+            balance={balance}
+            isWalletConnected={true}
+            title={'Error'}
+            subtitle={
+              'Your wallet does not contain the ‘Limitless’ Earring NFT. You cannot redeem the physical item. '
+            }
+            isErrorMessage={true}
+            isNftPresent={false}
+            setDetail={setShowDetail}
+          />
+        )
+      ) : (
+        <ConnectBox
+          balance={null}
+          isWalletConnected={false}
+          title={'Connect your Wallet to Get Started. '}
+          subtitle={
+            'If your wallet containts the ‘Limitless’ Earrings you will be prompted to enter Shipping details to redeem the physical earrings. '
+          }
           isErrorMessage={false}
-          isNftPresent={true}
-          setDetail={setShowDetail}
-        /> :
-        <DetailBox  redeemNFT={redeemNFT} setDetail={setShowDetail}/>:
-        <ConnectBox 
-          balance={balance} 
-          isWalletConnected={true} 
-          title= {"Error"} 
-          subtitle={"Your wallet does not contain the ‘Limitless’ Earring NFT. You cannot redeem the physical item. "}
-          isErrorMessage={true}
           isNftPresent={false}
           setDetail={setShowDetail}
-        /> :
-        <ConnectBox 
-        balance={null} 
-        isWalletConnected={false} 
-        title= {"Connect your Wallet to Get Started. "} 
-        subtitle={"If your wallet containts the ‘Limitless’ Earrings you will be prompted to enter Shipping details to redeem the physical earrings. "}
-        isErrorMessage={false}
-        isNftPresent={false}
-        setDetail={setShowDetail}
         />
-      }
-      
-     {/* {
+      )}
+
+      {/* {
        showDetail ?
        <p>True</p>:
        <p>False</p>

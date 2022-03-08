@@ -1,7 +1,19 @@
 import { BidBoxContainer } from './styles'
 import React from 'react'
 
-const AuctionBidBox = ({title,highestBid,approxUsd,secondTitle,timeLeft,thirdTitle,address,linkEtherscan,auctionStatus,bidButton,pathHref}) => {
+const AuctionBidBox = ({
+  title,
+  highestBid,
+  approxUsd,
+  secondTitle,
+  timeLeft,
+  thirdTitle,
+  address,
+  linkEtherscan,
+  auctionStatus,
+  bidButton,
+  pathHref,
+}) => {
   return (
     <BidBoxContainer>
       <div className="plac-bid-bx" style={{ 'max-width': '515px' }}>
@@ -15,7 +27,8 @@ const AuctionBidBox = ({title,highestBid,approxUsd,secondTitle,timeLeft,thirdTit
           <div className="right-bx">
             <div className="bid-status">
               <p className="live">
-                <b></b>{auctionStatus}
+                <b></b>
+                {auctionStatus}
               </p>
             </div>
           </div>
@@ -30,16 +43,20 @@ const AuctionBidBox = ({title,highestBid,approxUsd,secondTitle,timeLeft,thirdTit
             <p className="gray-text">{thirdTitle}</p>
             <div className="auction-bidder">
               <img src="/images/red-user-holder.png" />
-              <a  target="_blank">
-              {address.slice(0,5)}...{address.slice(35)}
+              <a target="_blank">
+                {address.slice(0, 5)}...{address.slice(35)}
               </a>
-              <a href={linkEtherscan}>  </a>
-              
+              <a href={linkEtherscan}> </a>
             </div>
           </div>
         </div>
 
-        <button className="place-bid" onClick={()=> location.replace(pathHref)}>{bidButton}</button>
+        <button
+          className="place-bid"
+          onClick={() => location.replace(pathHref)}
+        >
+          {bidButton}
+        </button>
       </div>
     </BidBoxContainer>
   )
