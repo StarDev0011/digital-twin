@@ -106,7 +106,6 @@ const Physical = () => {
 
   const [isNftHolder, setIsNftHolder] = useState(false)
 
-
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
     // using web3Modal to connect. Can be MetaMask or WalletConnect.
@@ -266,7 +265,6 @@ const Physical = () => {
     validateOwner()
   }, [address, balance])
 
-
   const handleWalletConected = () => {
     setWalletConnected(true)
   }
@@ -275,8 +273,7 @@ const Physical = () => {
     <Layout>
       {/* <ConnectButton handleWalletConected={handleWalletConected} />
       {walletConnected ? <DetailBox /> : <ConnectBox />} */}
-      <DetailBox/>
-     
+      <DetailBox />
     </Layout>
   )
 }
