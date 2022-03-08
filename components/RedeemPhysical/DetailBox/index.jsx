@@ -1,7 +1,7 @@
 import React from 'react'
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import { DetailBoxSection } from './styles'
-const DetailBox = ({redeemNFT}) => {
+const DetailBox = ({redeemNFT,setDetail}) => {
   return (
     <SiteContainer>
       <DetailBoxSection>
@@ -138,12 +138,13 @@ const DetailBox = ({redeemNFT}) => {
                   await redeemNFT()
                   document.getElementById('submit-botton').click()
                 }}
+                style={{cursor:"pointer"}}
               >
                 Redeem
               </a>
             </div>
 
-            <a href="/redeem" 
+            <a onClick={()=> setDetail(false)} style={{cursor:"pointer"}}  
             className="back-btn"
             >
               Back

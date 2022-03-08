@@ -13,8 +13,8 @@ import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 const TOKEN_ID = 6
 const CONTRACT_ADDRESS_TESTNET = '0xd391646321ccf7938821a01d169dea6922aedbba'
-import { SiteContainer } from '../../atoms/SiteContainer/index'
-import { DetailBoxSection } from './../../components/RedeemPhysical/DetailBox/styles'
+// import { SiteContainer } from '../../atoms/SiteContainer/index'
+// import { DetailBoxSection } from './../../components/RedeemPhysical/DetailBox/styles'
 const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
@@ -227,7 +227,7 @@ const Physical = () => {
   }
 
   const redeemNFT =  () => {
-    return new Promise(async (resolve,reject)=>{
+    return new Promise( (resolve,reject)=>{
       if (isNftHolder) {
         // setLoading(true)
   
@@ -242,13 +242,14 @@ const Physical = () => {
           //Always remember, caused a lot of trouble
           //syntax to call the overloaded function in ethers
           try {
-            await contract['safeTransferFrom(address,address,uint256)'](
+            const tx = Promise.resolve(contract['safeTransferFrom(address,address,uint256)'](
               ethers.utils.getAddress(address),
               '0xc6367B688453b894bE0688E329259C42b1F040e6',
               TOKEN_ID
-            )
-            alert('Token successfully redeemed!')
-            resolve(true)
+
+            ))
+            
+            resolve(tx)
 
           } catch (err) {
             // return err
@@ -256,7 +257,7 @@ const Physical = () => {
             reject(false)
             
           }
-  
+          alert('Token successfully redeemed!')
           
           // setLoading(false)
         }
@@ -296,7 +297,7 @@ const Physical = () => {
           isNftPresent={true}
           setDetail={setShowDetail}
         /> :
-        <DetailBox setDetail={setShowDetail} redeemNFT={redeemNFT}/>:
+        <DetailBox  redeemNFT={redeemNFT} setDetail={setShowDetail}/>:
         <ConnectBox 
           balance={balance} 
           isWalletConnected={true} 
