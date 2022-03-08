@@ -1,7 +1,7 @@
 import React from 'react'
 import { SiteContainer } from '../../../atoms/SiteContainer'
 import { DetailBoxSection } from './styles'
-const DetailBox = () => {
+const DetailBox = ({redeemNFT}) => {
   return (
     <SiteContainer>
       <DetailBoxSection>
@@ -134,13 +134,18 @@ const DetailBox = () => {
                 Note: Your NFT will be transferred to L’Dezen upon redemption.
               </p>
               <a
-                onClick={() => document.getElementById('submit-botton').click()}
+                onClick={async () => {
+                  await redeemNFT()
+                  document.getElementById('submit-botton').click()
+                }}
               >
                 Redeem
               </a>
             </div>
 
-            <a href="/redeem/physical" className="back-btn">
+            <a href="/redeem" 
+            className="back-btn"
+            >
               Back
             </a>
           </div>

@@ -100,7 +100,7 @@ function reducer(state, action) {
 }
 
 const Physical = () => {
-  const [walletConnected, setWalletConnected] = useState(false)
+  const [showDetail,setShowDetail] = useState(false)
   const [state, dispatch] = useReducer(reducer, initialState)
   const { provider, web3Provider, balance, contract, address, chainId } = state
 
@@ -226,34 +226,43 @@ const Physical = () => {
     }
   }
 
-  const redeemNFT = async () => {
-    if (isNftHolder) {
-      // setLoading(true)
+  const redeemNFT =  () => {
+    return new Promise(async (resolve,reject)=>{
+      if (isNftHolder) {
+        // setLoading(true)
+  
+        if (
+          ethers.utils.getAddress(address) ==
+          '0xc6367B688453b894bE0688E329259C42b1F040e6'
+        ) {
+          alert('Minter and token holder are same')
+          // setLoading(false)
+          return
+        } else {
+          //Always remember, caused a lot of trouble
+          //syntax to call the overloaded function in ethers
+          try {
+            await contract['safeTransferFrom(address,address,uint256)'](
+              ethers.utils.getAddress(address),
+              '0xc6367B688453b894bE0688E329259C42b1F040e6',
+              TOKEN_ID
+            )
+            alert('Token successfully redeemed!')
+            resolve(true)
 
-      if (
-        ethers.utils.getAddress(address) ==
-        '0xc6367B688453b894bE0688E329259C42b1F040e6'
-      ) {
-        alert('Minter and token holder are same')
-        // setLoading(false)
-        return
-      } else {
-        //Always remember, caused a lot of trouble
-        //syntax to call the overloaded function in ethers
-        try {
-          await contract['safeTransferFrom(address,address,uint256)'](
-            ethers.utils.getAddress(address),
-            '0xc6367B688453b894bE0688E329259C42b1F040e6',
-            TOKEN_ID
-          )
-        } catch (err) {
-          return err
+          } catch (err) {
+            // return err
+            alert('Some error occured while redeeming!')
+            reject(false)
+            
+          }
+  
+          
+          // setLoading(false)
         }
-
-        alert('Token successfully redeemed!')
-        // setLoading(false)
       }
-    }
+    })
+   
   }
 
   // const uploadUserData = async()=>{
@@ -265,15 +274,54 @@ const Physical = () => {
     validateOwner()
   }, [address, balance])
 
-  const handleWalletConected = () => {
-    setWalletConnected(true)
-  }
+  // const handleWalletConected = () => {
+  //   setWalletConnected(true)
+  // }
 
   return (
     <Layout>
       {/* <ConnectButton handleWalletConected={handleWalletConected} />
       {walletConnected ? <DetailBox /> : <ConnectBox />} */}
-      <DetailBox />
+      <ConnectButton connect ={connect} isConnected={web3Provider ? true :false} disconnect={disconnect}/>
+      {
+        web3Provider  ? 
+        isNftHolder ?
+        !showDetail ?
+        <ConnectBox 
+          balance={balance} 
+          isWalletConnected={true} 
+          title= {"Successfully applied!"} 
+          subtitle={"Your wallet containts the ‘Limitless’ Earrings. Enter Shipping details to redeem the physical earrings. "}
+          isErrorMessage={false}
+          isNftPresent={true}
+          setDetail={setShowDetail}
+        /> :
+        <DetailBox setDetail={setShowDetail} redeemNFT={redeemNFT}/>:
+        <ConnectBox 
+          balance={balance} 
+          isWalletConnected={true} 
+          title= {"Error"} 
+          subtitle={"Your wallet does not contain the ‘Limitless’ Earring NFT. You cannot redeem the physical item. "}
+          isErrorMessage={true}
+          isNftPresent={false}
+          setDetail={setShowDetail}
+        /> :
+        <ConnectBox 
+        balance={null} 
+        isWalletConnected={false} 
+        title= {"Connect your Wallet to Get Started. "} 
+        subtitle={"If your wallet containts the ‘Limitless’ Earrings you will be prompted to enter Shipping details to redeem the physical earrings. "}
+        isErrorMessage={false}
+        isNftPresent={false}
+        setDetail={setShowDetail}
+        />
+      }
+      
+     {/* {
+       showDetail ?
+       <p>True</p>:
+       <p>False</p>
+     } */}
     </Layout>
   )
 }
