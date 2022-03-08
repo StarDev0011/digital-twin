@@ -373,7 +373,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
                 <div className="price_date_btn">
                   <div className="reserve_price">
                     <div>
-                      <p>RESERVE PRICE</p>
+                      <p>HIGHEST BID</p>
                       <h2>3.10 ETH</h2>
                       {/* <p>$5,200 USD</p> */}
                     </div>
@@ -386,21 +386,10 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     </div>
                   </div>
                   <div className="start_date">
-                    {/* {
-                      initialData.nft.auctionData && initialData.nft.auctionData.expectedEndTimestamp ?
-                      <>
-                        <p>AUCTION ENDS ON</p>
-                        <h2>{moment(initialData.nft.auctionData.expectedEndTimestamp).toNow(true)}</h2>
-                      </>
-                      :
-                      <>
-                        <p>AUCTION STARTS ON</p>
-                        <h2>March 10, 2022</h2>
-                      </>
-                    } */}
                     <div>
                       {initialData.nft.auctionData &&
-                      initialData.nft.auctionData.expectedEndTimestamp ? (
+                      initialData.nft.auctionData.expectedEndTimestamp &&
+                      initialData.nft.auctionData.currentBid ? (
                         <>
                           <p>AUCTION ENDS</p>
                           <h2>
@@ -417,7 +406,8 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       )}
                     </div>
                     {initialData.nft.auctionData &&
-                    initialData.nft.auctionData.expectedEndTimestamp ? (
+                    initialData.nft.auctionData.expectedEndTimestamp &&
+                    initialData.nft.auctionData.currentBid ? (
                       <div>
                         <p>BIDDER</p>
                         <div className="auction-bidder">
@@ -434,7 +424,28 @@ export default function Piece({ initialData, difference }: PieceProps) {
                           </a>
                         </div>
                       </div>
-                    ) : null}
+                    ) : (
+                      <div>
+                        <p>OWNED BY</p>
+                        <div className="auction-bidder">
+                          <img src="/images/red-user-holder.png" />
+                          <a
+                            href={`https://rinkeby.etherscan.io/tx/${initialData.nft.auctionData.previousBids[0].transactionHash}`}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {initialData.nft.auctionData.previousBids[0].bidder.id.slice(
+                              0,
+                              5
+                            )}
+                            ...
+                            {initialData.nft.auctionData.previousBids[0].bidder.id.slice(
+                              29
+                            )}
+                          </a>
+                        </div>
+                      </div>
+                    )}
 
                     {/* <FullComponents.AuctionInfo /> */}
                   </div>
@@ -517,7 +528,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
     tokenId: id,
     collectionAddress: contract,
   })
-  // console.log(data.nft.auctionData.currentBid.bidder.id)
+  // console.log(data.nft.auctionData)
   // const timeToEnd = data.nft.auctionData ? data.nft.auctionData.expectedEndTimestamp - data.nft.auctionData.firstBidTime : null
   const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(data)
   // console.log(tokenInfo)

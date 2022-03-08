@@ -15,26 +15,28 @@ const DetailBox = () => {
 
         <div className="shipping-detail-row">
           <div className="left-bx">
-            <form action="" className="shipping-form">
+            <form action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+                method="POST"
+                className="shipping-form">
               <div className="form-group">
                 <label>
                   Email Address<b>*</b>
                 </label>
-                <input type="email" name="email" value="" />
+                <input type="email" name="email"  />
               </div>
 
               <div className="form-group">
                 <label>
                   First Name<b>*</b>
                 </label>
-                <input type="text" name="fname" value="" />
+                <input type="text" name="fname"  />
               </div>
 
               <div className="form-group">
                 <label>
                   Last Name<b>*</b>
                 </label>
-                <input type="text" name="lname" value="" />
+                <input type="text" name="lname"  />
               </div>
               <br />
               <br />
@@ -44,53 +46,56 @@ const DetailBox = () => {
                 <label>
                   Street Address<b>*</b>
                 </label>
-                <input type="text" name="address" value="" />
+                <input type="text" name="address"  />
               </div>
 
               <div className="form-group">
                 <label>
                   Apartment, etc<b>*</b>
                 </label>
-                <input type="text" name="apartment" value="" />
+                <input type="text" name="apartment"  />
               </div>
 
               <div className="form-group">
                 <label>
                   City<b>*</b>
                 </label>
-                <input type="text" name="city" value="" />
+                <input type="text" name="city"  />
               </div>
 
               <div className="form-group">
                 <label>
                   Zip Code<b>*</b>
                 </label>
-                <input type="text" name="z-code" value="" />
+                <input type="text" name="z-code"  />
               </div>
 
               <div className="form-group">
                 <label htmlFor="country">
                   Country <b>*</b>
                 </label>
-                <select className="form-control" id="country">
+                {/* <select className="form-control" id="country">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
-                </select>
+                </select> */}
+                <input type="text" name="country"  />
               </div>
 
               <div className="form-group">
                 <label htmlFor="State">
                   State/Province <b>*</b>
                 </label>
-                <select className="form-control" id="state">
+                {/* <select className="form-control" id="state">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                   <option>4</option>
-                </select>
+                </select> */}
+                <input type="text" name="state"  />
               </div>
+              <button type="submit" id="submit-botton" hidden>Redeem</button>
             </form>
           </div>
 
@@ -99,14 +104,14 @@ const DetailBox = () => {
               <h2 className="title">Shipping Details</h2>
 
               <div className="form-group">
-                <form>
+                {/* <form>
                   <select className="form-control" id="state">
                     <option>1 Item In Cart</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                   </select>
-                </form>
+                </form> */}
 
                 <div className="order-detail-bx">
                   <img src="/images/earrings-1.png" />
@@ -124,7 +129,9 @@ const DetailBox = () => {
               <p>
                 Note: Your NFT will be transferred to L’Dezen upon redemption.
               </p>
-              <a href="">Redeem</a>
+              <a onClick={
+                ()=> document.getElementById("submit-botton").click()
+              }>Redeem</a>
             </div>
 
             <a href="/redeem/physical" className="back-btn">
