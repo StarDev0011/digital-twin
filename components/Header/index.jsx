@@ -76,6 +76,9 @@ const Header = () => {
                   <a href="/marketplace">Marketplace</a>
                 </p>
                 <p>
+                  <a href="/redeem">Redeem</a>
+                </p>
+                <p>
                   <a href="/images/press_release.pdf" target="_blank">
                     Press Release
                   </a>
