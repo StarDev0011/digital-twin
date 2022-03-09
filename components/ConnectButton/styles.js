@@ -17,6 +17,8 @@ export const ButtonContainer = styled.button`
   @media screen and (max-width: 767px) {
     margin: 20px auto;
     display: block;
+    position: relative;
+    left: 8vw;
   }
   @media screen and (max-width: 465px) {
     .connect_button {

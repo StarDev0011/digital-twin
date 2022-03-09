@@ -49,7 +49,7 @@ export const PageWrapper = styled.section`
     }
     .auction_desc h2 {
       font-size: 34px;
-      font-family: ${(props) => props.theme.fonts.headingFont};
+      font-family: ${(props) => props.theme.fonts.bodyFont};
       line-height: 1.25;
       font-weight: 400;
       margin: 30px 0;
@@ -280,6 +280,14 @@ export const PageWrapper = styled.section`
     }
     @media (max-width: 767px) {
       width: 100%;
+    }
+  }
+  .auction_left div {
+    @media (max-width: 767px) {
+      justify-content: flex-start !important;
+    }
+    a {
+      border: none;
     }
   }
 `

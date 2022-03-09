@@ -1,5 +1,6 @@
 import { FileUploadWrapper } from './styles'
 
+
 const DetailBox = ({ setDetail }) => {
   return (
     <FileUploadWrapper>

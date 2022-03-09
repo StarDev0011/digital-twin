@@ -26,9 +26,7 @@ export const FileUploadWrapper = styled.section`
       grid-template-columns: 1fr 3fr;
     }
   }
-  .right-bx.w5 {
-    margin-left: 20px;
-  }
+
   .p-4 {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -54,27 +52,26 @@ export const FileUploadWrapper = styled.section`
     font-size: 14px;
     margin: 15px 0 30px;
     color: #828282;
-    font-family: 'Roboto', sans-serif;
   }
   .ship-top-bar p:last-child {
     font-size: 16px;
     color: #000;
     margin-top: 15px;
-    font-family: 'Roboto', sans-serif;
   }
   h2.title {
     margin-bottom: 30px;
     font-size: 24px;
     margin-top: 0;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
+    font-weight: bold;
   }
   .order-summary {
     padding: 40px 30px;
     border: 2px solid #c4c4c4;
   }
   .right-bx {
-    margin-left: 4vw;
+    @media (min-width: 768px) {
+      margin-left: 4vw;
+    }
   }
   .summary-text p b {
     color: #000;
@@ -142,7 +139,6 @@ export const FileUploadWrapper = styled.section`
     color: #3f3f3f;
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     @media (max-width: 767px) {
       margin-bottom: 15px;
