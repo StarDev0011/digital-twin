@@ -42,8 +42,8 @@ const DetailBox = ({ setDetail }) => {
                 <div>
                   <div className="choose-file-box">
                     <span className="for-border"> */}
-                      <input type="file" name="media" />
-                    {/* </span>
+              <input type="file" name="media" />
+              {/* </span>
                   </div>
                 </div>
               </div> */}
