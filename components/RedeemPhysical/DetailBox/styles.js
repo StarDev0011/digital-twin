@@ -1,17 +1,24 @@
 import styled from 'styled-components'
 
-export const DetailBoxSection = styled.section`
+export const DetailBoxSection = styled.section `
   .shipping-detail-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     margin-bottom: 50px;
+    @media (max-width: 767px) {
+      padding: 5%;
+    }    
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }    
   }
   .ship-top-bar {
     text-align: center;
   }
   .left-bx .form-group {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }  
   }
   .right-bx.w5 {
     margin-left: 20px;
@@ -31,20 +38,41 @@ export const DetailBoxSection = styled.section`
     height: 42px;
     padding: 0 15px;
     border: 1px solid #c4c4c4;
+    font-size: 15px;
+    color: #333;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .ship-top-bar p:first-child {
+    font-size: 14px;
+    margin: 15px 0 30px;
+    color: #828282;
+    font-family: 'Roboto', sans-serif;
+  }
+  .ship-top-bar p:last-child {
+    font-size: 16px;
+    color: #000;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
   }
   h2.title {
     margin-bottom: 30px;
     font-size: 24px;
     margin-top: 0;
-    font-family: Mirador;
-    font-weight: bold;
+    font-weight: 600;
+    @media (max-width: 767px) {
+      padding: 5%;
+    }
   }
   .order-summary {
     padding: 40px 30px;
     border: 2px solid #c4c4c4;
   }
   .right-bx {
-    margin-left: 4vw;
+      @media (min-width: 768px) {
+        margin-left: 4vw;
+      }
   }
   .order-summary select#state {
     border: 1px solid #fff !important;
@@ -54,8 +82,15 @@ export const DetailBoxSection = styled.section`
     width: 100%;
   }
   .order-detail-bx {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 767px) {
+      .summary-text {
+        margin-top: 20px;
+      }
+    }
   }
   .order-detail-bottom {
     display: grid;
@@ -85,18 +120,23 @@ export const DetailBoxSection = styled.section`
     text-align: right;
     display: block;
     font-weight: bold;
-    font-family: Mirador;
     margin-top: 15px;
   }
-  label {
-    color: #000;
+  .shipping-form label {
+    color: #3f3f3f;
     font-size: 16px;
     line-height: 20px;
+    font-weight: 500;
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+      float: left;
+    }  
   }
   .summary-text h4 {
     font-size: 18px;
     line-height: 24px;
     color: #000000;
+    margin-bottom: 15px;
   }
   .order-detail-bottom p {
     text-shadow: #78787878 0px 4px 7px;
@@ -105,4 +145,12 @@ export const DetailBoxSection = styled.section`
     padding-right: 15px;
     line-height: 24px;
   }
+  .summary-text p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #bfbfbf;
+  }
+  .summary-text p b {
+    color: #000;
+  }  
 `

@@ -16,6 +16,9 @@ export const SectionWrapper = styled.section`
   box-sizing: border-box;
   box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
+  @media (max-width: 767px) { 
+    padding: 20px 20px;    
+  }  
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -23,6 +26,12 @@ export const SectionWrapper = styled.section`
     font-size: 24px;
     line-height: 33px;
     text-transform: capitalize;
+    @media (min-width:768px) {
+      line-height: 33px;
+    }
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }     
   }
   .box-head {
     display: flex;
@@ -43,6 +52,10 @@ export const SectionWrapper = styled.section`
     border: 1px solid #dee2e6;
     box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 20px 20px rgb(0 0 0 / 8%);
     border-radius: 8px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: center;
+    }  
   }
   .content-wrapper h3 {
     font-style: normal;

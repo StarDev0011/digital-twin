@@ -42,14 +42,12 @@ const ConnectBox = ({
           <a style={{ cursor: 'pointer' }} onClick={() => setDetail(true)}>
             Upload PFP
           </a>
-          
         </div>
       ) : (
         <div className="shipping_button">
           <a style={{ cursor: 'pointer' }} hidden>
             NFT Not Present
           </a>
-          
         </div>
       )}
     </SectionWrapper>
