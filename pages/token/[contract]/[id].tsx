@@ -172,7 +172,7 @@ export default function Piece({ initialData }: PieceProps) {
               loop
               muted
               playsInline
-              style={{ height: '600px', margin: '40px auto', display: 'block' }}
+              className="auction-hero"
             >
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
