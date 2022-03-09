@@ -38,15 +38,15 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <div>
                   <div className="choose-file-box">
-                    <span className="for-border">
+                    <span className="for-border"> */}
                       <input type="file" name="media" />
-                    </span>
+                    {/* </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <button type="submit" id="submit-button" hidden>
                 Submit
               </button>
