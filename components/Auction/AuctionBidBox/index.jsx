@@ -51,7 +51,7 @@ const AuctionBidBox = ({
                 {address.slice(0, 5)}...{address.slice(35)}
               </a>
               
-              <a href={linkEtherscan} target="_blank" >
+              <a href={linkEtherscan} target="_blank" rel="noreferrer">
               <img src="/images/arrow.png" />{' '}
               </a>
               {/* <img className="links-icon" src="/images/gradient.png" /> */}
