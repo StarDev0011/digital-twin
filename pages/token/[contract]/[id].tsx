@@ -143,6 +143,8 @@ export default function Piece({ initialData, difference }: PieceProps) {
   // console.log('market eth is',marketEth)
   const [currentTime, setCurrentTime] = useState(moment.now())
   const [timeDifference, setTimeDifference] = useState('a few seconds')
+  const [isAddressCopied, setIsAddressCopied] = useState(false)
+  const [isIdCopied, setIsIdCopied] = useState(false)
   const getMarketPrice = () => {
     fetch('https://data.messari.io/api/v1/assets/eth/metrics/market-data')
       .then((response) => response.json())
@@ -270,10 +272,27 @@ export default function Piece({ initialData, difference }: PieceProps) {
                         {initialData.nft.tokenData.address.slice(0, 5)}...
                         {initialData.nft.tokenData.address.slice(29)}
                       </p>
-                      {/* <img src="/images/arrow.png" /> */}
-                      <CopyToClipboard text={initialData.nft.tokenData.address}>
+                      <img
+                        src="/images/arrow.png"
+                        onClick={() => {
+                          window.open(
+                            'https://etherscan.io/token/0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9',
+                            '_blank'
+                          )
+                        }}
+                      />
+                      <CopyToClipboard
+                        text={initialData.nft.tokenData.address}
+                        onCopy={() => {
+                          setIsAddressCopied(true)
+                          setTimeout(() => setIsAddressCopied(false), 5000)
+                        }}
+                      >
                         <img src="/images/gradient.png" />
                       </CopyToClipboard>
+                      {isAddressCopied ? (
+                        <p style={{ color: 'black' }}>Copied</p>
+                      ) : null}
                     </div>
                   </div>
                   <div className="detail_item">
@@ -282,9 +301,18 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     </div>
                     <div className="net_right">
                       <p>{initialData.nft.tokenData.tokenId}</p>
-                      <CopyToClipboard text={initialData.nft.tokenData.tokenId}>
+                      <CopyToClipboard
+                        text={initialData.nft.tokenData.tokenId}
+                        onCopy={() => {
+                          setIsIdCopied(true)
+                          setTimeout(() => setIsIdCopied(false), 5000)
+                        }}
+                      >
                         <img src="/images/gradient.png" />
                       </CopyToClipboard>
+                      {isIdCopied ? (
+                        <p style={{ color: 'black' }}>Copied</p>
+                      ) : null}
                     </div>
                   </div>
                   <div className="detail_item">
