@@ -226,20 +226,13 @@ const Digital = () => {
     }
   }
 
-  
-
- 
-
   useEffect(() => {
     //   console.log("I am called from validate")
     validateOwner()
   }, [address, balance])
 
-  
-
   return (
     <Layout>
-      
       <ConnectButton
         connect={connect}
         isConnected={web3Provider ? true : false}
@@ -293,4 +286,3 @@ const Digital = () => {
 }
 
 export default Digital
-

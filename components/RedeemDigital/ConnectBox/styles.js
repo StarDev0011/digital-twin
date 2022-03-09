@@ -46,7 +46,7 @@ export const SectionWrapper = styled.section`
     @media (max-width: 767px) {
       flex-direction: column;
       text-align: center;
-    }  
+    }
   }
   .content-wrapper h3 {
     font-style: normal;

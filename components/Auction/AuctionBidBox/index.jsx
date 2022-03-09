@@ -26,16 +26,14 @@ const AuctionBidBox = ({
 
           <div className="right-bx">
             <div className="bid-status">
-              {(auctionStatus === 'LIVE') ? 
-              <p className="live">
-                <b></b>
-                {auctionStatus}
-              </p>
-              : 
-              <p className="complete">
-                {auctionStatus}
-              </p>
-              }              
+              {auctionStatus === 'LIVE' ? (
+                <p className="live">
+                  <b></b>
+                  {auctionStatus}
+                </p>
+              ) : (
+                <p className="complete">{auctionStatus}</p>
+              )}
             </div>
           </div>
         </div>
@@ -52,7 +50,6 @@ const AuctionBidBox = ({
               <a target="_blank">
                 {address.slice(0, 5)}...{address.slice(35)}
               </a>
-              
               <a href={linkEtherscan}> </a>
               <img src="/images/arrow.png" />{' '}
               <img className="links-icon" src="/images/gradient.png" />

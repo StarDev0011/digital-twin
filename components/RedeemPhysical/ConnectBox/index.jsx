@@ -48,7 +48,7 @@ const ConnectBox = ({
         </div>
       ) : (
         <div className="shipping_button">
-          <a  hidden style={{ cursor: 'pointer' }}>
+          <a hidden style={{ cursor: 'pointer' }}>
             NFT Not Present
           </a>
           <p>

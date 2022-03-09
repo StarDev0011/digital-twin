@@ -1,14 +1,8 @@
 import { FileUploadWrapper } from './styles'
 
-
-const DetailBox = ({setDetail}) => {
-  
-
-  
-
+const DetailBox = ({ setDetail }) => {
   return (
     <FileUploadWrapper>
-      
       <div className="container">
         <div className="ship-top-bar p-4">
           <p>Create Order</p>
@@ -18,11 +12,11 @@ const DetailBox = ({setDetail}) => {
         <div className="shipping-detail-row">
           <div className="left-bx">
             <h2 className="title">Contact Information:</h2>
-            <form 
-            action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
-            method="POST"
-            className="shipping-form"
-            enctype="multipart/form-data"
+            <form
+              action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+              method="POST"
+              className="shipping-form"
+              enctype="multipart/form-data"
             >
               <div className="form-group">
                 <label>
@@ -45,19 +39,15 @@ const DetailBox = ({setDetail}) => {
                 <input type="text" name="lname" />
               </div>
               <div className="form-group">
-                
-                <div >
-                  
+                <div>
                   <div className="choose-file-box">
                     <span className="for-border">
-                      
-                      <input type="file" name="media"/>
+                      <input type="file" name="media" />
                     </span>
                   </div>
-                  
                 </div>
               </div>
-              <button type="submit" id="submit-button" hidden >
+              <button type="submit" id="submit-button" hidden>
                 Submit
               </button>
             </form>
@@ -68,8 +58,6 @@ const DetailBox = ({setDetail}) => {
               <h2 className="title">Order Summary</h2>
 
               <div className="form-group">
-                
-
                 <div className="order-detail-bx">
                   <img src="/images/earrings-1.png" />
                   <div className="summary-text">
@@ -86,25 +74,25 @@ const DetailBox = ({setDetail}) => {
             </div>
 
             <div className="order-detail-bottom">
-              <a  onClick={async()=>{
-               
-                document.getElementById('submit-button').click()
-              }}
-              style={{ cursor: 'pointer' }}
+              <a
+                onClick={async () => {
+                  document.getElementById('submit-button').click()
+                }}
+                style={{ cursor: 'pointer' }}
               >
                 Submit
               </a>
             </div>
-            <a onClick={()=>setDetail(false)}
+            <a
+              onClick={() => setDetail(false)}
               style={{ cursor: 'pointer' }}
               className="back-btn"
-             >
+            >
               Back
             </a>
           </div>
         </div>
       </div>
-     
     </FileUploadWrapper>
   )
 }

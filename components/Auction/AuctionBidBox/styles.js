@@ -20,9 +20,9 @@ export const BidBoxContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     @media (max-width: 767px) {
-    .auction-bidder a {
-      word-break: break-all;
-    }  
+      .auction-bidder a {
+        word-break: break-all;
+      }
     }
   }
   p.live {
@@ -49,7 +49,7 @@ export const BidBoxContainer = styled.div`
     border-radius: 10px;
     margin-right: 5px;
   }
-   p.complete {
+  p.complete {
     background-color: #c5c3c3;
     text-align: center;
     font-size: 14px !important;
@@ -60,7 +60,7 @@ export const BidBoxContainer = styled.div`
     font-weight: bold;
     max-width: 120px;
     float: right;
-}
+  }
   p.gray-text {
     font-size: 12px;
     color: #969696;
@@ -74,8 +74,8 @@ export const BidBoxContainer = styled.div`
     font-weight: 700;
     margin: 15px 0;
     @media (max-width: 767px) {
-      font-size: 16px; 
-    }   
+      font-size: 16px;
+    }
   }
   .auction-bidder {
     display: flex;
