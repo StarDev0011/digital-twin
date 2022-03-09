@@ -132,7 +132,7 @@ const Limitless = () => {
         <LimitlessButtonContainer>
           <a
             className="auction_btn"
-            href="token/0xD391646321ccf7938821a01d169DeA6922AEDBba/7"
+            href="token/0xD391646321ccf7938821a01d169DeA6922AEDBba/8"
           >
             Enter Auction
           </a>

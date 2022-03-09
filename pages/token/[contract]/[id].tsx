@@ -362,11 +362,6 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     <p className="updated_mins" id="chnage">
                       Updated {timeDifference} ago
                     </p>
-                    <p>
-                      {Math.floor(insideDifference / 3600)},
-                      {Math.floor((insideDifference % 3600) / 60)},
-                      {Math.floor((insideDifference % 3600) % 60)}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -428,6 +423,23 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     bidButton="REDEEM"
                     pathHref="/redeem"
                   />
+                ) : initialData.nft.auctionData ? (
+                  <div className="price_date_btn">
+                    <div className="reserve_price">
+                      <p>RESERVE PRICE</p>
+                      <h2>3.10 ETH</h2>
+                      <p>${(3.1 * marketPriceEth).toFixed(3)} USD</p>
+                    </div>
+                    <div className="start_date">
+                      <p>AUCTION STARTED</p>
+                      <h2>Place first bid</h2>
+                    </div>
+                    <div className="bid_btn">
+                      <Button onClick={() => location.replace('/bidpage')}>
+                        PLACE BID
+                      </Button>
+                    </div>
+                  </div>
                 ) : (
                   <div className="price_date_btn">
                     <div className="reserve_price">
@@ -437,10 +449,10 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     </div>
                     <div className="start_date">
                       <p>AUCTION STARTS ON</p>
-                      <h2>March 10, 2022</h2>
+                      <h2>March 10,2022</h2>
                     </div>
                     <div className="bid_btn">
-                      <Button>Coming Soon</Button>
+                      <Button>COMING SOON</Button>
                     </div>
                   </div>
                 )}
