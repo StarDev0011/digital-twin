@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const BidBoxContainer = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Oswald:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap');
   .plac-bid-bx {
-    margin: 0 auto;
+    margin: 0 auto 80px;
     background-color: #fff;
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -14,13 +13,16 @@ export const BidBoxContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+    margin-bottom: 30px;
   }
   .bottom-bx {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15px;
+    grid-gap: 10px;
     @media (max-width: 767px) {
-      display: block !important;
+    .auction-bidder a {
+      word-break: break-all;
+    }  
     }
   }
   p.live {
@@ -47,6 +49,18 @@ export const BidBoxContainer = styled.div`
     border-radius: 10px;
     margin-right: 5px;
   }
+   p.complete {
+    background-color: #c5c3c3;
+    text-align: center;
+    font-size: 14px !important;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-weight: bold;
+    max-width: 120px;
+    float: right;
+}
   p.gray-text {
     font-size: 12px;
     color: #969696;
@@ -54,14 +68,14 @@ export const BidBoxContainer = styled.div`
     text-transform: uppercase;
     font-weight: 500;
   }
-  .top-bx {
-    margin-bottom: 30px;
-  }
   .plac-bid-bx h2 {
     font-size: 22px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     margin: 15px 0;
+    @media (max-width: 767px) {
+      font-size: 16px; 
+    }   
   }
   .auction-bidder {
     display: flex;
@@ -76,7 +90,6 @@ export const BidBoxContainer = styled.div`
   .auction-bidder a {
     position: relative;
     display: block;
-    margin-right: 15px;
     margin-left: 12px;
     font-size: 15px;
     color: #333;

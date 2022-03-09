@@ -43,6 +43,10 @@ export const SectionWrapper = styled.section`
     border: 1px solid #dee2e6;
     box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 20px 20px rgb(0 0 0 / 8%);
     border-radius: 8px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: center;
+    }  
   }
   .content-wrapper h3 {
     font-style: normal;

@@ -245,75 +245,7 @@ export const PageWrapper = styled.section`
       }
     }
   }
-  p.live {
-    background-color: #e3f4ee;
-    text-align: center;
-    font-size: 18px !important;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #408f68 !important;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    @media (max-width: 767px) {
-      max-width: 100px;
-      margin: 0 auto;
-      text-align: center;
-      justify-content: center;
-    }
-  }
-  p.live b {
-    width: 10px;
-    height: 10px;
-    background-color: green;
-    float: left;
-    border-radius: 10px;
-    margin-right: 5px;
-  }
-  p.complete {
-    background-color: #c5c3c3;
-    text-align: center;
-    font-size: 15px !important;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #ffffff !important;
-    font-weight: bold;
-  }
-  .auction-bidder a {
-    position: relative;
-    display: block;
-  }
-  .auction-bidder a {
-    position: relative;
-    display: block;
-    margin-right: 15px;
-  }
-  .auction-bidder {
-    display: flex;
-    flex-direction: row;
-    @media (max-width: 767px) {
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  .auction-bidder a:after {
-    border-radius: 4px;
-    padding: 4px;
-    opacity: 0.8;
-    background-repeat: no-repeat;
-    background-position: center center;
-    top: 2px;
-    z-index: 10;
-    right: -25px;
-    transition: opacity 0.4s ease-in 0s;
-    content: ' ';
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%2024%2024%22%3E%3Ctitle%3Earrow-top-right%3C%2Ftitle%3E%3Cg%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%20stroke-width%3D%222%22%20fill%3D%22currentColor%22%20stroke%3D%22currentColor%22%3E%3Cline%20fill%3D%22none%22%20stroke-miterlimit%3D%2210%22%20x1%3D%222%22%20y1%3D%2222%22%20x2%3D%2222%22%20y2%3D%222%22%20stroke-linecap%3D%22butt%22%3E%3C%2Fline%3E%20%3Cpolyline%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-miterlimit%3D%2210%22%20points%3D%2212%2C2%2022%2C2%2022%2C12%20%22%3E%3C%2Fpolyline%3E%3C%2Fg%3E%3C%2Fsvg%3E);
-  }
+
   .history_detail h5 {
     font-size: 14px;
     color: #969696;
@@ -339,5 +271,15 @@ export const PageWrapper = styled.section`
     height: 40px;
     object-fit: cover;
     border-radius: 50px;
+  }
+  .auction-hero {
+    margin: 40px auto;
+    display: block;
+    @media (min-width: 768px) {
+      height: 80vh;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 `
