@@ -22,6 +22,9 @@ export const process = [
         <a href="/images/women.gif" target="_blank">
           here.
         </a>
+      {
+        " If you redeem your Limitless Earrings NFT for the physical pair, Digital Twin will transfer a digital only version of the NFT to the redeemers wallet. This will act as your certificate of physical redemption."
+      }
       </p>
     ),
     icon: <img src="/images/how_it_work2.png" />,
@@ -40,11 +43,11 @@ export const process = [
   },
   {
     id: 4,
-    title: 'Digi-Physical Ownership',
+    title: 'Physical Ownership',
     paragraph: (
       <p>
         {
-          "The owner of the L'Dezen Limitless NFT has the right to redeem the physical earrings. You can show off your unique, authenticated earrings IRL. If you redeem your Limitless Earrings NFT for the physical pair, Digital Twin will transfer a digital only version of the NFT to the redeemers wallet. This will act as your certificate of physical redemption."
+          "The owner of the L'Dezen Limitless NFT has the right to redeem the physical earrings. You can show off your unique, authenticated earrings IRL."
         }
       </p>
     ),
