@@ -16,20 +16,26 @@ const AuctionBidBox = ({
 }) => {
   return (
     <BidBoxContainer>
-      <div className="plac-bid-bx" style={{ 'max-width': '515px' }}>
+      <div className="plac-bid-bx">
         <div className="top-bx">
           <div className="left-bx">
             <p className="gray-text">{title}</p>
             <h2>{highestBid} eth</h2>
-            <p className="gray-text">${approxUsd} USD</p>
+            <p className="gray-text">${approxUsd} USD </p>
           </div>
 
           <div className="right-bx">
             <div className="bid-status">
+              {(auctionStatus === 'LIVE') ? 
               <p className="live">
                 <b></b>
                 {auctionStatus}
               </p>
+              : 
+              <p className="complete">
+                {auctionStatus}
+              </p>
+              }              
             </div>
           </div>
         </div>
@@ -46,7 +52,10 @@ const AuctionBidBox = ({
               <a target="_blank">
                 {address.slice(0, 5)}...{address.slice(35)}
               </a>
+              
               <a href={linkEtherscan}> </a>
+              <img src="/images/arrow.png" />{' '}
+              <img className="links-icon" src="/images/gradient.png" />
             </div>
           </div>
         </div>

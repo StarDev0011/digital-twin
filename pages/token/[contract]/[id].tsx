@@ -111,10 +111,10 @@ const CollectionTag = () => {
     Object.assign(
       {
         className: css_1.css`
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  `,
+        position: relative;
+        display: flex;
+        flex-direction: row;
+      `,
       },
       { children: getContent() }
     ),
@@ -198,7 +198,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
               loop
               muted
               playsInline
-              style={{ height: '80vh', margin: '40px auto', display: 'block' }}
+              className="auction-hero"
             >
               <source src="/images/Limitless Earrings.mp4" type="video/mp4" />
             </video>
