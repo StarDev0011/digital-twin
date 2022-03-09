@@ -175,11 +175,8 @@ export const PageWrapper = styled.section`
         text-align: center;
       }
       .reserve_price {
+        display: block;
         margin-bottom: 40px;
-        @media (min-width: 768px) {
-          display: flex;
-          justify-content: space-between;
-        }
       }
       .reserve_price p {
         font-family: ${(props) => props.theme.fonts.bodyFont};
@@ -196,10 +193,7 @@ export const PageWrapper = styled.section`
         }
       }
       .start_date {
-        @media (min-width: 768px) {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
+        display: block;
       }
       .start_date img {
         vertical-align: middle;
