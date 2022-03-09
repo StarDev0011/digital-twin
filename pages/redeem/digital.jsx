@@ -280,8 +280,7 @@ const Digital = () => {
           isNftPresent={false}
           setDetail={setShowDetail}
         />
-      )} 
-
+      )}
     </Layout>
   )
 }

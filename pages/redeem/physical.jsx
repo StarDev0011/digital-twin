@@ -335,7 +335,6 @@ const Physical = () => {
        <p>True</p>:
        <p>False</p>
      } */}
-
     </Layout>
   )
 }

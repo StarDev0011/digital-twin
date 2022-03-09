@@ -87,7 +87,7 @@ const DetailBox = ({ setDetail }) => {
             </div>
 
             <div className="order-detail-bottom">
-            <a
+              <a
                 onClick={async () => {
                   document.getElementById('submit-button').click()
                 }}
@@ -110,4 +110,4 @@ const DetailBox = ({ setDetail }) => {
   )
 }
 
-export default DetailBox;
+export default DetailBox

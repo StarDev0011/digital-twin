@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
-export const DetailBoxSection = styled.section `
+export const DetailBoxSection = styled.section`
   .shipping-detail-row {
     margin-bottom: 50px;
     @media (max-width: 767px) {
       padding: 5%;
-    }    
+    }
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
-    }    
+    }
   }
   .ship-top-bar {
     text-align: center;
@@ -18,7 +18,7 @@ export const DetailBoxSection = styled.section `
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 3fr;
-    }  
+    }
   }
   .right-bx.w5 {
     margin-left: 20px;
@@ -70,9 +70,9 @@ export const DetailBoxSection = styled.section `
     border: 2px solid #c4c4c4;
   }
   .right-bx {
-      @media (min-width: 768px) {
-        margin-left: 4vw;
-      }
+    @media (min-width: 768px) {
+      margin-left: 4vw;
+    }
   }
   .order-summary select#state {
     border: 1px solid #fff !important;
@@ -130,7 +130,7 @@ export const DetailBoxSection = styled.section `
     @media (max-width: 767px) {
       margin-bottom: 15px;
       float: left;
-    }  
+    }
   }
   .summary-text h4 {
     font-size: 18px;
@@ -152,5 +152,5 @@ export const DetailBoxSection = styled.section `
   }
   .summary-text p b {
     color: #000;
-  }  
+  }
 `

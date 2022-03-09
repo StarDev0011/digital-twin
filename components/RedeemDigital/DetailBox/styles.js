@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const FileUploadWrapper = styled.section`
   .container {
-    
     width: 100%;
     max-width: 1200px;
     margin: 0px auto;
@@ -71,7 +70,7 @@ export const FileUploadWrapper = styled.section`
   }
   .right-bx {
     @media (min-width: 768px) {
-    margin-left: 4vw;
+      margin-left: 4vw;
     }
   }
   .summary-text p b {
