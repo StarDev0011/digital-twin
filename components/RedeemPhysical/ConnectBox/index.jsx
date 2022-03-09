@@ -19,7 +19,7 @@ const ConnectBox = ({
         {isWalletConnected ? (
           <div>
             <p>
-              Your Balance: <b>{balance} ETH</b>
+              Your Balance: <b>{Number(balance).toFixed(3)} ETH</b>
             </p>
           </div>
         ) : null}
@@ -39,7 +39,7 @@ const ConnectBox = ({
       </div>
       {isNftPresent ? (
         <div className="shipping_button">
-          <a href="javascript:void(0);" onClick={() => setDetail(true)}>
+          <a style={{ cursor: 'pointer' }} onClick={() => setDetail(true)}>
             Shipping Details
           </a>
           <p>
@@ -48,7 +48,7 @@ const ConnectBox = ({
         </div>
       ) : (
         <div className="shipping_button">
-          <a href="javascript:void(0);" hidden>
+          <a  hidden style={{ cursor: 'pointer' }}>
             NFT Not Present
           </a>
           <p>

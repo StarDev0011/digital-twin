@@ -1,23 +1,57 @@
 import React from 'react'
 import { SectionWrapper } from './styles'
 
-const ConnectBox = () => {
+const ConnectBox = ({
+  balance,
+  isWalletConnected,
+  title,
+  subtitle,
+  isErrorMessage,
+  isNftPresent,
+  setDetail,
+}) => {
   return (
     <SectionWrapper>
-      <h2>Redeem NFT</h2>
+      <div className="box-head">
+        <div>
+          <h2>Accesorize NFT</h2>
+        </div>
+        {isWalletConnected ? (
+          <div>
+            <p>
+              Your Balance: <b>{Number(balance).toFixed(3)} ETH</b>
+            </p>
+          </div>
+        ) : null}
+      </div>
+
       <div className="shadow-box">
-        <img src="/images/Icon-check.png" alt="tick" />
+        {isErrorMessage ? (
+          <img src="/images/Icon-cross.png" alt="cross" />
+        ) : (
+          <img src="/images/Icon-check.png" alt="tick" />
+        )}
+
         <div className="content-wrapper">
-          <h3>Connect your Wallet to Get Started. </h3>
-          <p>
-            If your wallet containts the ‘Limitless’ Earrings you will be
-            prompted to enter Shipping details to redeem the physical earrings.
-          </p>
+          <h3>{title} </h3>
+          <p>{subtitle}</p>
         </div>
       </div>
-      <div className="shipping_button">
-        <a href="javascript:void(0);">Upload PFP</a>
-      </div>
+      {isNftPresent ? (
+        <div className="shipping_button">
+          <a style={{ cursor: 'pointer' }} onClick={() => setDetail(true)}>
+            Upload PFP
+          </a>
+          
+        </div>
+      ) : (
+        <div className="shipping_button">
+          <a style={{ cursor: 'pointer' }} hidden>
+            NFT Not Present
+          </a>
+          
+        </div>
+      )}
     </SectionWrapper>
   )
 }

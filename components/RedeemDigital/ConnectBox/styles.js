@@ -24,6 +24,14 @@ export const SectionWrapper = styled.section`
     line-height: 33px;
     text-transform: capitalize;
   }
+  .box-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .box-head p {
+    font-size: 18px;
+    line-height: 24px;
+  }
   .shadow-box {
     display: flex;
     justify-content: center;
