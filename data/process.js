@@ -40,11 +40,11 @@ export const process = [
   },
   {
     id: 4,
-    title: 'Physical Ownership',
+    title: 'Digi-Physical Ownership',
     paragraph: (
       <p>
         {
-          "The owner of the L'Dezen Limitless NFT has the right to redeem the physical earrings. You can show off your unique, authenticated earrings IRL. "
+          "The owner of the L'Dezen Limitless NFT has the right to redeem the physical earrings. You can show off your unique, authenticated earrings IRL. If you redeem your Limitless Earrings NFT for the physical pair, Digital Twin will transfer a digital only version of the NFT to the redeemers wallet. This will act as your certificate of physical redemption."
         }
       </p>
     ),
