@@ -155,6 +155,16 @@ export const PageWrapper = styled.section`
       }
     }
   }
+  .auction-hero {
+    margin: 40px auto;
+    display: block;
+    @media (min-width: 768px) {
+      height: 80vh;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .auction_right {
     width: 43%;
     margin-left: 2%;
