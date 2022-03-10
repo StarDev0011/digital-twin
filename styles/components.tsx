@@ -229,7 +229,7 @@ export const PageWrapper = styled.section`
       }
       .zora-fullPageHistoryItemDescription {
         font-size: 16px;
-        color: #000000;
+        color: black;
         font-family: ${(props) => props.theme.fonts.bodyFont};
       }
       .zora-fullPageHistoryItem {
