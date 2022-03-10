@@ -5,7 +5,7 @@ import React from 'react'
 
 const DetailBox = ({ setDetail }) => {
   // Create a reference to the hidden file input element
-  const hiddenFileInput = React.useRef(null);
+  const hiddenFileInput = React.useRef(null)
 
   // Programatically click the hidden file input element
   // when the Button component is clicked
@@ -96,8 +96,7 @@ const DetailBox = ({ setDetail }) => {
 
             <div className="order-detail-bottom">
               <a
-                
-                href='javascript:void(0)'
+                href="javascript:void(0)"
                 onClick={async () => {
                   document.getElementById('submit-button').click()
                 }}
