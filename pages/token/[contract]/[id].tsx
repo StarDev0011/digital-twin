@@ -1,8 +1,4 @@
-import {
-  NFTFullPage,
-  MediaConfiguration,
-  FullComponents,
-} from '@zoralabs/nft-components'
+import { NFTFullPage, MediaConfiguration } from '@zoralabs/nft-components'
 import { useRouter } from 'next/router'
 import {
   MediaFetchAgent,
@@ -15,7 +11,7 @@ import { NETWORK_ID } from './../../../utils/env-vars'
 import { PageWrapper } from '../../../styles/components'
 import moment from 'moment'
 import styled from 'styled-components'
-
+import { BidHistory } from '../../../lib/BidHistory'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { ethers } from 'ethers'
 // import {writeFileSync} from 'fs';
@@ -502,7 +498,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
                 )}
 
                 <div className="history_detail" style={{ marginTop: '10px' }}>
-                  <FullComponents.BidHistory />
+                  <BidHistory className={'bidhistory'} />
                 </div>
               </div>
             </div>

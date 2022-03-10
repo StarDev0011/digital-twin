@@ -1,10 +1,8 @@
 import { FileUploadWrapper } from './styles'
 import React from 'react'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 // Style the Button component
-const Button = styled.button`
-  /* Insert your favorite CSS code to style a button */
-`;
+
 
 const DetailBox = ({ setDetail }) => {
 
@@ -13,13 +11,13 @@ const DetailBox = ({ setDetail }) => {
   
   // Programatically click the hidden file input element
   // when the Button component is clicked
-  const handleClick = event => {
+  const handleClick = () => {
     hiddenFileInput.current.click();
   };
   // Call a function (passed as a prop from the parent component)
   // to handle the user-selected file 
-  const handleChange = event => {
-    const fileUploaded = event.target.files[0];
+  const handleChange = () => {
+    // const fileUploaded = event.target.files[0];
     // props.handleFile(fileUploaded);
   };
  
@@ -61,15 +59,7 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-             
-                
-
-                
-              
-              
-                    
-             
-                    
+   
               <a onClick={handleClick}>
                 Upload a file
               </a>
