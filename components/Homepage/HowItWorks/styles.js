@@ -79,6 +79,9 @@ export const HowItWorksItem = styled.li`
       font-family: ${(props) => props.theme.fonts.bodyFont};
       line-height: 1.8;
       letter-spacing: 0.5px;
+      @media (max-width: 465px) {
+        font-size: 14px;
+      }
       a {
         color: #ffffff;
         text-decoration: underline;

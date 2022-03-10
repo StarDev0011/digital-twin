@@ -9,7 +9,7 @@ export const AboutMissionWrapper = styled.div`
   @media (max-width: 465px) {
     padding: 5%;
     display: block;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 `
 export const SiteImageWrapper = styled.div`
@@ -43,7 +43,7 @@ export const AboutMissionData = styled.div`
     color: #000000;
     font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
-      font-size: 16px;
+      text-transform: uppercase;
     }
   }
   h3 {
@@ -53,7 +53,7 @@ export const AboutMissionData = styled.div`
     text-transform: uppercase;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
-      font-size: 32px;
+      font-size: 26px;
     }
   }
   .true_discover {

@@ -6,7 +6,7 @@ export const VisionWrapper = styled.div`
   position: relative;
   overflow: hidden;
   @media (max-width: 465px) {
-    padding: 0%;
+    padding: 5% 5%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;

@@ -5,6 +5,7 @@ export const AboutSectionWrapper = styled.div`
   margin-top: 50px;
   @media (max-width: 465px) {
     margin-top: 0px;
+    padding-bottom: 4rem;
   }
 `
 export const AboutSectionRow = styled.div`
@@ -49,6 +50,7 @@ export const AboutSectionColLeft = styled.div`
     @media (max-width: 465px) {
       font-size: 16px;
       margin-top: 40px;
+      text-align: center;
     }
     line-height: 1.8;
     margin-top: 2.4rem;

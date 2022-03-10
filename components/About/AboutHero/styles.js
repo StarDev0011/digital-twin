@@ -14,7 +14,7 @@ export const AboutImageWrapper = styled.div`
   margin-bottom: 100px;
   @media (max-width: 465px) {
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   }
   img {
     width: 100%;

@@ -27,7 +27,6 @@ export const SiteImageWrapper = styled.div`
   .limitless_icon_txt {
     display: none;
     @media (max-width: 465px) {
-      border: solid 1px rgba(0, 0, 0, 0.25);
       width: fit-content;
       display: flex;
       padding: 5px;
@@ -175,6 +174,10 @@ export const LimitlessButtonContainer = styled.div`
     border-radius: 500px;
     transition: all 0.5s ease 0s;
     border: 2px solid rgb(0 0 0 / 0%);
+    @media (max-width: 767px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   .auction_btn:hover {
     box-shadow: 0 2px 6px rgb(0 0 0 / 80%);
