@@ -48,6 +48,9 @@ const ConnectBox = ({
           <a style={{ cursor: 'pointer' }} hidden>
             NFT Not Present
           </a>
+          <p>
+            Note: Your ‘Limitless’ NFT will be exchanged for the physical earrings.
+          </p>
         </div>
       )}
     </SectionWrapper>

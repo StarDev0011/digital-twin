@@ -14,10 +14,13 @@ export const SectionWrapper = styled.section`
   padding: 45px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
-  box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: rgb(0 0 0 / 30%) 0px 5px 10px;
   border-radius: 5px;
   @media (max-width: 767px) {
     padding: 20px 20px;
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 50px 15px;  
   }
   h2 {
     font-style: normal;
@@ -49,9 +52,11 @@ export const SectionWrapper = styled.section`
     gap: 20px;
     max-width: 630px;
     background: #ffffff;
-    border: 1px solid #dee2e6;
-    box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 20px 20px rgb(0 0 0 / 8%);
     border-radius: 8px;
+    @media (min-width: 768px) { 
+      border: 1px solid #dee2e6;
+      box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 20px 20px rgb(0 0 0 / 8%);
+    }
     @media (max-width: 767px) {
       flex-direction: column;
       text-align: center;
@@ -96,13 +101,5 @@ export const SectionWrapper = styled.section`
     line-height: 25px;
     text-transform: capitalize;
     color: #000000;
-  }
-  @media screen and (max-width: 767px) {
-    max-width: 100%;
-    border: none;
-    border-radius: 5px;
-    .shadow-box {
-      max-width: auto;
-    }
   }
 `

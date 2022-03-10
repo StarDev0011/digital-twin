@@ -52,7 +52,7 @@ const ConnectBox = ({
             NFT Not Present
           </a>
           <p>
-            Your ‘Limitless’ NFT will be exchanged for the physical earrings.
+            Note: Your ‘Limitless’ NFT will be exchanged for the physical earrings.
           </p>
         </div>
       )}
