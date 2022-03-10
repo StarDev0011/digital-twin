@@ -2,7 +2,7 @@ import { FileUploadWrapper } from './styles'
 import { useDropzone } from 'react-dropzone'
 const DetailBox = ({ setDetail }) => {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
-  const currentFile = acceptedFiles.length > 0 ? acceptedFiles[0].path : null
+  
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>{file.path}</li>
   ))
@@ -61,11 +61,15 @@ const DetailBox = ({ setDetail }) => {
               </button> */}
 
               <div className="form-group">
+
+                
+
                 <label></label>
                 <div {...getRootProps({ className: 'dropzone' })}>
                   <input {...getInputProps()} />
                   <div className="choose-file-box">
                     <span className="for-border">
+
                       {/* <input type="file" name="media"/> */}
                       <h2>Choose File</h2>
                     </span>
@@ -107,7 +111,7 @@ const DetailBox = ({ setDetail }) => {
               <a
                 onClick={async () => {
                   document.getElementById('submit-button').click()
-                  location.reload('/redeem')
+                  
                 }}
                 style={{ cursor: 'pointer' }}
               >
