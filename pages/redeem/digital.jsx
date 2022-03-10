@@ -238,7 +238,7 @@ const Digital = () => {
         isConnected={web3Provider ? true : false}
         disconnect={disconnect}
       />
-      {/* {web3Provider ? (
+      {web3Provider ? (
         isNftHolder ? (
           !showDetail ? (
             <ConnectBox
@@ -280,9 +280,9 @@ const Digital = () => {
           isNftPresent={false}
           setDetail={setShowDetail}
         />
-      )} */}
+      )}
 
-      <DetailBox setDetail={setShowDetail} />
+     
     </Layout>
   )
 }
