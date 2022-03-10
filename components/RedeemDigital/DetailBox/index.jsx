@@ -7,7 +7,7 @@ const Button = styled.button`
 `
 
 const DetailBox = ({ setDetail }) => {
-  const [filename, setFilename] = useState('');
+  const [filename, setFilename] = useState('')
   // Create a reference to the hidden file input element
   const hiddenFileInput = React.useRef(null)
 
@@ -68,7 +68,7 @@ const DetailBox = ({ setDetail }) => {
                     CHOOSE FILE
                   </a>
                   <span>{filename}</span>
-                </div>               
+                </div>
                 <input
                   type="file"
                   ref={hiddenFileInput}
@@ -76,7 +76,7 @@ const DetailBox = ({ setDetail }) => {
                   style={{ display: 'none' }}
                   name="media"
                 />
-              </div>             
+              </div>
 
               <button type="submit" id="submit-button" hidden>
                 Submit
