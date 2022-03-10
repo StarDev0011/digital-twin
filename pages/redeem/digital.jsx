@@ -246,7 +246,7 @@ const Digital = () => {
               isWalletConnected={true}
               title={'Successfully applied!'}
               subtitle={
-                'Your wallet containts the ‘Limitless’ Earrings. Enter Shipping details to redeem the physical earrings. '
+                'Your wallet containts the ‘Limitless’ Earrings. Upload PFP media to redeem your accessorized PFP with ‘Limitless Earrings’. '
               }
               isErrorMessage={false}
               isNftPresent={true}
@@ -261,7 +261,7 @@ const Digital = () => {
             isWalletConnected={true}
             title={'Error'}
             subtitle={
-              'Your wallet does not contain the ‘Limitless’ Earring NFT. You cannot redeem the physical item. '
+              'Your wallet does not contain the ‘Limitless’ Earring NFT. You cannot render the digital earrings.  '
             }
             isErrorMessage={true}
             isNftPresent={false}
@@ -274,7 +274,7 @@ const Digital = () => {
           isWalletConnected={false}
           title={'Connect your Wallet to Get Started. '}
           subtitle={
-            'If your wallet containts the ‘Limitless’ Earrings you will be prompted to enter Shipping details to redeem the physical earrings. '
+            'If your wallet containts the ‘Limitless’ Earrings you will be prompted to upload your PFP for digital rendering. '
           }
           isErrorMessage={false}
           isNftPresent={false}

@@ -25,6 +25,7 @@ const faqData = {
       title: 'Physical',
       content: `       
           <li>Physical version of the ‘Limitless’ Pair of Earrings, redeemable on digitalxtwin.io</li>
+          <li>Physical ‘Limitless Earrings’ available for shipment starting April 1st, 2022</li>
           <li>These earrings are one of a kind and exclusive to the Digital Twin auction</li>
           <li>L’Dezen jewelry is made in 18k Gold with conflict-free diamonds</li>                
         `,

@@ -403,14 +403,14 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       initialData.nft.auctionData.currentBid.amount
                     )}
                     approxUsd={Number(
-                      Number(
+                      Math.round(
                         Number(
                           ethers.utils.formatEther(
                             initialData.nft.auctionData.currentBid.amount
                           )
                         ) * marketPriceEth
-                      ).toFixed(2)
-                    ).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      )
+                    ).toLocaleString('en-US')}
                     secondTitle={'AUCTION ENDS'}
                     timeLeft={
                       Math.floor(insideDifference / 3600) +
@@ -436,14 +436,14 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       initialData.nft.auctionData.previousBids[0].amount
                     )}
                     approxUsd={Number(
-                      Number(
+                      Math.round(
                         Number(
                           ethers.utils.formatEther(
                             initialData.nft.auctionData.previousBids[0].amount
                           )
                         ) * marketPriceEth
-                      ).toFixed(2)
-                    ).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+                      )
+                    ).toLocaleString('en-US')}
                     secondTitle={'AUCTION CONCLUDED'}
                     timeLeft={'00h 00m 00s'}
                     thirdTitle="OWNED BY"
@@ -463,10 +463,8 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       <p>
                         $
                         {Number(
-                          (3.1 * marketPriceEth).toFixed(2)
-                        ).toLocaleString('en-US', {
-                          minimumFractionDigits: 2,
-                        })}{' '}
+                          Math.round(3.1 * marketPriceEth)
+                        ).toLocaleString('en-US')}{' '}
                         USD
                       </p>
                     </div>
@@ -488,10 +486,8 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       <p>
                         $
                         {Number(
-                          (3.1 * marketPriceEth).toFixed(2)
-                        ).toLocaleString('en-US', {
-                          minimumFractionDigits: 2,
-                        })}{' '}
+                          Math.round(3.1 * marketPriceEth)
+                        ).toLocaleString('en-US')}{' '}
                         USD
                       </p>
                     </div>
