@@ -7,13 +7,6 @@ const Button = styled.button`
 `;
 
 const DetailBox = ({ setDetail }) => {
-<<<<<<< HEAD
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
-
-  const files = acceptedFiles.map((file) => (
-    <li key={file.path}>{file.path}</li>
-  ))
-=======
 
   // Create a reference to the hidden file input element
   const hiddenFileInput = React.useRef(null);
@@ -30,7 +23,6 @@ const DetailBox = ({ setDetail }) => {
     // props.handleFile(fileUploaded);
   };
  
->>>>>>> e047bae045fa0a2eec3e442728e84fa2c3f1d327
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -69,34 +61,6 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-<<<<<<< HEAD
-              {/* <div className="form-group">
-                <div>
-                  <div className="choose-file-box">
-                    <span className="for-border"> 
-                    <h2>Choose File</h2>
-                    </span>
-                  </div>
-                </div>
-              </div> */}
-              {/* <input type="file" name="media" id="ids"/>
-              <button onClick={()=>{
-                  console.log(document.getElementById('ids').value)
-              }}>
-                see
-              </button> */}
-
-              <div className="form-group">
-                <label></label>
-                <div {...getRootProps({ className: 'dropzone' })}>
-                  <input {...getInputProps()} />
-                  <div className="choose-file-box">
-                    <span className="for-border">
-                      {/* <input type="file" name="media"/> */}
-                      <h2>Choose File</h2>
-                    </span>
-                  </div>
-=======
              
                 
 
@@ -116,7 +80,6 @@ const DetailBox = ({ setDetail }) => {
         style={{display: 'none'}} 
         name="media"
       />     
->>>>>>> e047bae045fa0a2eec3e442728e84fa2c3f1d327
 
              
 
