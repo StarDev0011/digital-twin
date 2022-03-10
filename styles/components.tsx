@@ -174,7 +174,7 @@ export const PageWrapper = styled.section`
       margin-right: 1%;
     }
     .price_date_btn {
-      padding: 20px 30px;
+      padding: 20px 20px;
       border: 1px solid rgba(0, 0, 0, 0.05);
       box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.05);
       border-radius: 5px;

@@ -42,7 +42,7 @@ export const VisionData = styled.div`
     color: #000000;
     font-family: ${(props) => props.theme.fonts.bodyFont};
     @media (max-width: 465px) {
-      font-size: 16px;
+      text-transform: uppercase;
     }
   }
   h3 {
@@ -52,7 +52,7 @@ export const VisionData = styled.div`
     text-transform: uppercase;
     font-family: ${(props) => props.theme.fonts.headingFont};
     @media (max-width: 465px) {
-      font-size: 32px;
+      font-size: 26px;
     }
   }
   .true_luxury {

@@ -6,7 +6,7 @@ export const LDezenWrapper = styled.div`
   overflow: hidden;
   display: flex;
   @media (max-width: 465px) {
-    padding: 0%;
+    padding: 5% 5%;
     display: block;
   }
 `

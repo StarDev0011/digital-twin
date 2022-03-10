@@ -49,11 +49,16 @@ export const NewsletterButton = styled(SiteButton)`
   width: 100%;
   text-align: center;
   a {
-    font-weight: bold;
     font-size: 18px;
     text-align: center;
     margin: 0 auto;
     padding: 1.4rem 8rem;
+    font-family: Assistant;
+    @media (max-width: 465px) {
+      max-width: 80%;
+      display: block;
+      width: 100%;
+    }    
   }
   a:hover {
     box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);

@@ -4,10 +4,25 @@ export const AboutInfoWrapper = styled.section`
   padding: 10rem 0;
   margin-top: 50px;
   background: #000000;
+  position: relative;
   @media (max-width: 465px) {
-    padding: 5%;
+    padding: 5% 5% 10%;
     text-align: center;
   }
+  :after {
+    content: " ";
+    position: absolute;
+    bottom: -45px;
+    border-top: 30px solid black;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: none;
+    left: auto;
+    right: auto;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+  
 `
 
 export const AboutInfoTitle = styled.h2`
@@ -20,7 +35,7 @@ export const AboutInfoTitle = styled.h2`
   margin-bottom: 100px;
   .problem_sub {
     font-family: ${(props) => props.theme.fonts.bodyFont};
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
   }
   @media (max-width: 465px) {
@@ -96,6 +111,9 @@ export const AboutInfoItems = styled.div`
       margin-top: 10px;
       line-height: 2;
       letter-spacing: 0.03em;
+      @media (max-width: 465px) {
+        font-size: 16px; 
+      }
     }
   }
 

@@ -2,16 +2,16 @@
 import Layout from '../components/Layout'
 import SiteModal from '../atoms/SiteModal'
 const Test = () => {
-
   const modalData = {
     type: 'success',
     title: 'Success',
-    message: 'Congrats, we received your shipping details. You will receive a confirmation email once your item has shipped.'
+    message:
+      'Congrats, we received your shipping details. You will receive a confirmation email once your item has shipped.',
   }
   return (
     <Layout>
       {/* <DetailBox /> */}
-      <SiteModal data={modalData}/>
+      <SiteModal data={modalData} />
     </Layout>
   )
 }

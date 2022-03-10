@@ -20,17 +20,17 @@ export const SectionWrapper = styled.section`
     padding: 20px 20px;
     max-width: 100%;
     border-radius: 5px;
-    margin: 50px 15px;  
+    margin: 50px 15px;
   }
   h2 {
     font-style: normal;
     font-weight: bold;
-    margin-bottom: 40px;
     font-size: 24px;
     line-height: 33px;
     text-transform: capitalize;
     @media (min-width: 768px) {
       line-height: 33px;
+      margin-bottom: 40px;
     }
     @media (max-width: 767px) {
       font-size: 20px;
@@ -53,13 +53,14 @@ export const SectionWrapper = styled.section`
     max-width: 630px;
     background: #ffffff;
     border-radius: 8px;
-    @media (min-width: 768px) { 
+    @media (min-width: 768px) {
       border: 1px solid #dee2e6;
       box-shadow: 0px 0px 2px rgb(0 0 0 / 12%), 0px 20px 20px rgb(0 0 0 / 8%);
     }
     @media (max-width: 767px) {
       flex-direction: column;
       text-align: center;
+      padding: 36px 0px;
     }
   }
   .content-wrapper h3 {
@@ -86,13 +87,18 @@ export const SectionWrapper = styled.section`
     text-align: center;
     padding: 16px;
     margin: 65px auto;
-
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
     text-decoration: none;
     color: #fff;
+    @media (max-width: 767px) {
+      margin: 0px auto 30px;
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   .shipping_button p {
     font-weight: 600;
@@ -101,5 +107,8 @@ export const SectionWrapper = styled.section`
     line-height: 25px;
     text-transform: capitalize;
     color: #000000;
+    @media (max-width: 767px) {
+      font-size: 14px; 
+    }    
   }
 `

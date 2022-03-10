@@ -131,9 +131,10 @@ export const HeroTitle = styled.h2`
   letter-spacing: 0px;
   font-weight: bold;
   @media (max-width: 465px) {
-    font-size: 36px;
-    margin-bottom: 50px;
+    font-size: 25px;
+    margin-bottom: 20px;
     margin-top: 10px;
+    line-height: 40px;
   }
 `
 
@@ -146,7 +147,10 @@ export const HeroTitle2 = styled.h2`
   color: #ffffff;
   margin-bottom: 50px;
   @media (max-width: 465px) {
-    font-size: 36px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    line-height: 40px;
   }
 `
 
@@ -186,7 +190,7 @@ export const HeroSubtitle = styled.p`
   font-weight: 600;
   @media (max-width: 465px) {
     font-size: 18px;
-    width: 60%;
+    font-weight: 500;
     margin-left: auto;
     margin-right: auto;
   }
@@ -201,7 +205,7 @@ export const HeroSubtitle2 = styled.p`
   color: #ffffff;
   @media (max-width: 465px) {
     font-size: 18px;
-    width: 60%;
+    font-weight: 500;
     margin-left: auto;
     margin-right: auto;
   }
