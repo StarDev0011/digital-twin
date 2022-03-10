@@ -1,11 +1,28 @@
 import { FileUploadWrapper } from './styles'
-// import { useDropzone } from 'react-dropzone'
+import React from 'react'
+import styled from 'styled-components';
+// Style the Button component
+const Button = styled.button`
+  /* Insert your favorite CSS code to style a button */
+`;
+
 const DetailBox = ({ setDetail }) => {
-  // const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
+
+  // Create a reference to the hidden file input element
+  const hiddenFileInput = React.useRef(null);
   
-  // const files = acceptedFiles.map((file) => (
-  //   <li key={file.path}>{file.path}</li>
-  // ))
+  // Programatically click the hidden file input element
+  // when the Button component is clicked
+  const handleClick = event => {
+    hiddenFileInput.current.click();
+  };
+  // Call a function (passed as a prop from the parent component)
+  // to handle the user-selected file 
+  const handleChange = event => {
+    const fileUploaded = event.target.files[0];
+    // props.handleFile(fileUploaded);
+  };
+ 
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -44,53 +61,27 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-              {/* <div className="form-group">
-                <div>
-                  <div className="choose-file-box">
-                    <span className="for-border"> 
-                    <h2>Choose File</h2>
-                    </span>
-                  </div>
-                </div>
-              </div> */}
-              {/* <input type="file" name="media" id="ids"/>
-              <button onClick={()=>{
-                  console.log(document.getElementById('ids').value)
-              }}>
-                see
-              </button> */}
-
-              {/* <div className="form-group">
-
+             
                 
 
-                <label></label>
-                <div {...getRootProps({ className: 'dropzone' })}>
-                  <input {...getInputProps()} />
-                  <div className="choose-file-box">
-                    <span className="for-border"> 
+                
+              
+              
                     
-                      <input type="file" name="media" />
+             
                     
-                      <h2>Choose File</h2>
-                    </span>
-                  </div>
+              <a onClick={handleClick}>
+                Upload a file
+              </a>
+      <input
+        type="file"
+        ref={hiddenFileInput}
+        onChange={handleChange}
+        style={{display: 'none'}} 
+        name="media"
+      />     
 
-                  <aside>
-                    <ul>{files}</ul>
-                  </aside>
-                </div>
-              </div> */}
-              {/* <div className="choose-file-box">
-                    <span className="for-border"> 
-                    
-                      <input type="file" name="media" />
-                    
-                      <h2>Choose File</h2>
-                    </span>
-              </div> */}
-
-              <input type="file" name="media" />
+             
 
               <button type="submit" id="submit-button" hidden>
                 Submit
