@@ -197,5 +197,23 @@ export const FileUploadWrapper = styled.section`
       bottom: 30px;
       left: 30px;
     }
+  }  
+  .upload-btn a {
+    font-size: 16px;
+    background: #020202;
+    color: white;
+    padding: 15px 25px;
+    width: max-content;
+    display: block;
+    font-family: 'Oswald',sans-serif;
   }
+  .upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-btn span {
+    font-size: 16px;
+}
 `
