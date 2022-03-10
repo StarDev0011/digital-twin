@@ -11,8 +11,9 @@ import Web3Modal from 'web3modal'
 import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-const TOKEN_ID = 7
-const CONTRACT_ADDRESS_TESTNET = '0xd391646321ccf7938821a01d169dea6922aedbba'
+const TOKEN_ID = 1
+// const CONTRACT_ADDRESS = '0xd391646321ccf7938821a01d169dea6922aedbba'
+const CONTRACT_ADDRESS = "0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9"
 // import { SiteContainer } from '../../atoms/SiteContainer/index'
 // import { DetailBoxSection } from './../../components/RedeemPhysical/DetailBox/styles'
 const providerOptions = {
@@ -125,7 +126,7 @@ const Digital = () => {
     // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
     const instance = new Contract(
-      CONTRACT_ADDRESS_TESTNET,
+      CONTRACT_ADDRESS,
       DigitalTwinAbi,
       signer
     )
