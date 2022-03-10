@@ -10,7 +10,7 @@ const DetailBox = ({ setDetail }) => {
 
   // Create a reference to the hidden file input element
   const hiddenFileInput = React.useRef(null);
-  
+
   // Programatically click the hidden file input element
   // when the Button component is clicked
   const handleClick = event => {
@@ -20,9 +20,10 @@ const DetailBox = ({ setDetail }) => {
   // to handle the user-selected file 
   const handleChange = event => {
     const fileUploaded = event.target.files[0];
+    console.log(fileUploaded.name);
     // props.handleFile(fileUploaded);
   };
- 
+
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -39,7 +40,7 @@ const DetailBox = ({ setDetail }) => {
               method="POST"
               className="shipping-form"
               enctype="multipart/form-data"
-              
+
             >
               <div className="form-group">
                 <label>
@@ -61,27 +62,17 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-             
-                
 
-                
-              
-              
-                    
-             
-                    
-              <a onClick={handleClick}>
+              <a href="javascript:void(0)" onClick={handleClick}>
                 Upload a file
               </a>
-      <input
-        type="file"
-        ref={hiddenFileInput}
-        onChange={handleChange}
-        style={{display: 'none'}} 
-        name="media"
-      />     
-
-             
+              <input
+                type="file"
+                ref={hiddenFileInput}
+                onChange={handleChange}
+                style={{ display: 'none' }}
+                name="media"
+              />
 
               <button type="submit" id="submit-button" hidden>
                 Submit
@@ -111,6 +102,8 @@ const DetailBox = ({ setDetail }) => {
 
             <div className="order-detail-bottom">
               <a
+                
+                href='javascript:void(0)'
                 onClick={async () => {
                   document.getElementById('submit-button').click()
                 }}

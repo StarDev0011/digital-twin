@@ -232,6 +232,24 @@ export const PageWrapper = styled.section`
         color: #000000;
         font-family: ${(props) => props.theme.fonts.bodyFont};
       }
+      .zora-fullPageHistoryItem {
+        margin-left: 25px;
+      }
+      .zora-fullPageHistoryItem:before {
+        border-radius: 14px;
+        padding: 4px;
+        opacity: 0.8;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: auto;
+        z-index: 10;
+        left: 15px;
+        content: ' ';
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        background-image: url('/images/red-user-holder.png');
+      }
       time {
         font-size: 16px;
         color: #969696;
