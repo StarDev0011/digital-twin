@@ -248,7 +248,7 @@ const Physical = () => {
                 '0xc6367B688453b894bE0688E329259C42b1F040e6',
                 TOKEN_ID
               )
-            ).then(()=>{
+            ).then(() => {
               alert('Token successfully redeemed!')
             })
 
@@ -258,7 +258,6 @@ const Physical = () => {
             alert('Some error occured while redeeming!')
             reject(false)
           }
-          
 
           // setLoading(false)
         }

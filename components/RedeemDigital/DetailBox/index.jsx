@@ -61,15 +61,11 @@ const DetailBox = ({ setDetail }) => {
               </button> */}
 
               <div className="form-group">
-
-                
-
                 <label></label>
                 <div {...getRootProps({ className: 'dropzone' })}>
                   <input {...getInputProps()} />
                   <div className="choose-file-box">
                     <span className="for-border">
-
                       {/* <input type="file" name="media"/> */}
                       <h2>Choose File</h2>
                     </span>
