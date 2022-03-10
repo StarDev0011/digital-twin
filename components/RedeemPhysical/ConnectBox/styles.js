@@ -108,7 +108,7 @@ export const SectionWrapper = styled.section`
     text-transform: capitalize;
     color: #000000;
     @media (max-width: 767px) {
-      font-size: 14px; 
-    }    
+      font-size: 14px;
+    }
   }
 `

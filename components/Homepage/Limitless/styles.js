@@ -174,7 +174,7 @@ export const LimitlessButtonContainer = styled.div`
     border-radius: 500px;
     transition: all 0.5s ease 0s;
     border: 2px solid rgb(0 0 0 / 0%);
-    @media (max-width: 767px) { 
+    @media (max-width: 767px) {
       padding-top: 10px;
       padding-bottom: 10px;
     }

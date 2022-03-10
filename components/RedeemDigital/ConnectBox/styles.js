@@ -21,7 +21,7 @@ export const SectionWrapper = styled.section`
     max-width: 100%;
     border-radius: 5px;
     margin: 50px 15px;
-  } 
+  }
   h2 {
     font-style: normal;
     font-weight: bold;
@@ -108,7 +108,7 @@ export const SectionWrapper = styled.section`
     text-transform: capitalize;
     color: #000000;
     @media (max-width: 767px) {
-      font-size: 14px; 
-    }    
+      font-size: 14px;
+    }
   }
 `

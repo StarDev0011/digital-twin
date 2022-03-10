@@ -10,7 +10,7 @@ export const AboutInfoWrapper = styled.section`
     text-align: center;
   }
   :after {
-    content: " ";
+    content: ' ';
     position: absolute;
     bottom: -45px;
     border-top: 30px solid black;
@@ -21,8 +21,7 @@ export const AboutInfoWrapper = styled.section`
     right: auto;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
-  
+  }
 `
 
 export const AboutInfoTitle = styled.h2`
@@ -112,7 +111,7 @@ export const AboutInfoItems = styled.div`
       line-height: 2;
       letter-spacing: 0.03em;
       @media (max-width: 465px) {
-        font-size: 16px; 
+        font-size: 16px;
       }
     }
   }

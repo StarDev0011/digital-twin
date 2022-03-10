@@ -58,7 +58,7 @@ export const NewsletterButton = styled(SiteButton)`
       max-width: 80%;
       display: block;
       width: 100%;
-    }    
+    }
   }
   a:hover {
     box-shadow: 0 1rem 1rem -2px rgb(0 0 0 / 50%);

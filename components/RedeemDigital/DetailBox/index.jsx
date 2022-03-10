@@ -1,11 +1,36 @@
 import { FileUploadWrapper } from './styles'
-import { useDropzone } from 'react-dropzone'
+import React from 'react'
+import styled from 'styled-components';
+// Style the Button component
+const Button = styled.button`
+  /* Insert your favorite CSS code to style a button */
+`;
+
 const DetailBox = ({ setDetail }) => {
+<<<<<<< HEAD
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
 
   const files = acceptedFiles.map((file) => (
     <li key={file.path}>{file.path}</li>
   ))
+=======
+
+  // Create a reference to the hidden file input element
+  const hiddenFileInput = React.useRef(null);
+  
+  // Programatically click the hidden file input element
+  // when the Button component is clicked
+  const handleClick = event => {
+    hiddenFileInput.current.click();
+  };
+  // Call a function (passed as a prop from the parent component)
+  // to handle the user-selected file 
+  const handleChange = event => {
+    const fileUploaded = event.target.files[0];
+    // props.handleFile(fileUploaded);
+  };
+ 
+>>>>>>> e047bae045fa0a2eec3e442728e84fa2c3f1d327
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -18,11 +43,11 @@ const DetailBox = ({ setDetail }) => {
           <div className="left-bx">
             <h2 className="title">Contact Information:</h2>
             <form
-              action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+              action="https://getform.io/f/2625eb5b-28d6-424e-b73a-555740beaa4e"
               method="POST"
               className="shipping-form"
               enctype="multipart/form-data"
-              target="_blank"
+              
             >
               <div className="form-group">
                 <label>
@@ -44,6 +69,7 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
+<<<<<<< HEAD
               {/* <div className="form-group">
                 <div>
                   <div className="choose-file-box">
@@ -70,12 +96,29 @@ const DetailBox = ({ setDetail }) => {
                       <h2>Choose File</h2>
                     </span>
                   </div>
+=======
+             
+                
 
-                  <aside>
-                    <ul>{files}</ul>
-                  </aside>
-                </div>
-              </div>
+                
+              
+              
+                    
+             
+                    
+              <a onClick={handleClick}>
+                Upload a file
+              </a>
+      <input
+        type="file"
+        ref={hiddenFileInput}
+        onChange={handleChange}
+        style={{display: 'none'}} 
+        name="media"
+      />     
+>>>>>>> e047bae045fa0a2eec3e442728e84fa2c3f1d327
+
+             
 
               <button type="submit" id="submit-button" hidden>
                 Submit

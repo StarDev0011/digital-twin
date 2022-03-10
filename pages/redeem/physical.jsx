@@ -9,6 +9,7 @@ import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
 import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
+
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 const TOKEN_ID = 7
@@ -121,6 +122,7 @@ const Physical = () => {
     const address = await signer.getAddress()
 
     const network = await web3Provider.getNetwork()
+    
 
     // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
@@ -236,6 +238,7 @@ const Physical = () => {
           '0xc6367B688453b894bE0688E329259C42b1F040e6'
         ) {
           alert('Minter and token holder are same')
+          
           // setLoading(false)
           return
         } else {
@@ -248,9 +251,7 @@ const Physical = () => {
                 '0xc6367B688453b894bE0688E329259C42b1F040e6',
                 TOKEN_ID
               )
-            ).then(() => {
-              alert('Token successfully redeemed!')
-            })
+            )
 
             resolve(tx)
           } catch (err) {
@@ -282,6 +283,7 @@ const Physical = () => {
     <Layout>
       {/* <ConnectButton handleWalletConected={handleWalletConected} />
       {walletConnected ? <DetailBox /> : <ConnectBox />} */}
+      
       <ConnectButton
         connect={connect}
         isConnected={web3Provider ? true : false}

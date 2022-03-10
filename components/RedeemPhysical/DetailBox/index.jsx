@@ -16,7 +16,7 @@ const DetailBox = ({ redeemNFT, setDetail }) => {
         <div className="shipping-detail-row">
           <div className="left-bx">
             <form
-              action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+              action="https://getform.io/f/3453ba43-09e2-4466-9414-94243fb53063"
               method="POST"
               className="shipping-form"
             >
