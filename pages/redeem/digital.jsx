@@ -208,7 +208,7 @@ const Digital = () => {
   }, [provider, disconnect])
 
   const validateOwner = async () => {
-    if (contract && web3Provider && 4 == chainId) {
+    if (contract && web3Provider && 1 == chainId) {
       // console.log(contract)
       const ownerAddress = await contract.functions.ownerOf(TOKEN_ID)
       // console.log('Owner of the NFT is', ownerAddress)
