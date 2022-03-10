@@ -1,13 +1,6 @@
 import { FileUploadWrapper } from './styles'
-import { useDropzone } from 'react-dropzone'
 
 const DetailBox = ({ setDetail }) => {
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
-
-  const files = acceptedFiles.map((file) => (
-    <li key={file.path}>{file.path}</li>
-  ))
-
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -19,7 +12,12 @@ const DetailBox = ({ setDetail }) => {
         <div className="shipping-detail-row">
           <div className="left-bx">
             <h2 className="title">Contact Information:</h2>
-            <form action="" className="shipping-form">
+            <form
+              action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+              method="POST"
+              className="shipping-form"
+              enctype="multipart/form-data"
+            >
               <div className="form-group">
                 <label>
                   Email Address<b>*</b>
@@ -40,20 +38,18 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-              <div className="form-group">
-                <label></label>
-                <div {...getRootProps({ className: 'dropzone' })}>
-                  <input {...getInputProps()} />
+              {/* <div className="form-group">
+                <div>
                   <div className="choose-file-box">
-                    <span className="for-border">
-                      <h2>Choose File</h2>
-                    </span>
+                    <span className="for-border"> */}
+              <input type="file" name="media" />
+              {/* </span>
                   </div>
-                  <aside>
-                    <ul>{files}</ul>
-                  </aside>
                 </div>
-              </div>
+              </div> */}
+              <button type="submit" id="submit-button" hidden>
+                Submit
+              </button>
             </form>
           </div>
 
@@ -62,15 +58,6 @@ const DetailBox = ({ setDetail }) => {
               <h2 className="title">Order Summary</h2>
 
               <div className="form-group">
-                <form>
-                  <select className="form-control" id="state">
-                    <option>1 Item In Cart</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
-                </form>
-
                 <div className="order-detail-bx">
                   <img src="/images/earrings-1.png" />
                   <div className="summary-text">

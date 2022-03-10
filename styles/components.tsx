@@ -34,8 +34,8 @@ export const PageWrapper = styled.section`
       margin-bottom: 16px;
     }
     div {
-      @media (max-width: 465px) {
-        justify-content: center;
+      a {
+        border: none;
       }
       span {
         font-size: 16px;
@@ -43,13 +43,13 @@ export const PageWrapper = styled.section`
         font-family: ${(props) => props.theme.fonts.headingFont};
         font-weight: 700;
         @media (max-width: 465px) {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
     }
     .auction_desc h2 {
       font-size: 34px;
-      font-family: ${(props) => props.theme.fonts.bodyFont};
+      font-family: ${(props) => props.theme.fonts.headingFont};
       line-height: 1.25;
       font-weight: 400;
       margin: 30px 0;
@@ -155,6 +155,16 @@ export const PageWrapper = styled.section`
       }
     }
   }
+  .auction-hero {
+    margin: 40px auto;
+    display: block;
+    @media (min-width: 768px) {
+      height: 80vh;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .auction_right {
     width: 43%;
     margin-left: 2%;
@@ -175,7 +185,6 @@ export const PageWrapper = styled.section`
         text-align: center;
       }
       .reserve_price {
-        display: block;
         margin-bottom: 40px;
       }
       .reserve_price p {
@@ -191,13 +200,6 @@ export const PageWrapper = styled.section`
         @media (max-width: 465px) {
           font-size: 28px;
         }
-      }
-      .start_date {
-        display: block;
-      }
-      .start_date img {
-        vertical-align: middle;
-        margin-right: 10px;
       }
       .start_date p {
         font-size: 12px;
@@ -219,12 +221,9 @@ export const PageWrapper = styled.section`
       }
     }
     .history_detail {
-      margin: 0 auto;
-      background-color: #fff;
-      box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
       border: 1px solid rgba(0, 0, 0, 0.05);
-      padding: 20px 20px;
-      z-index: 99;
+      box-shadow: rgb(0 0 0 / 5%) -2px 2px 6px;
+      border-radius: 5px;
       div {
         border: none !important;
       }
@@ -237,51 +236,6 @@ export const PageWrapper = styled.section`
         font-size: 16px;
         color: #969696;
       }
-    }
-  }
-
-  .history_detail h5 {
-    font-size: 14px;
-    color: #969696;
-    margin: 5px 0 20px;
-  }
-  .history_detail_bx {
-    grid-gap: 15px;
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    margin-bottom: 15px;
-  }
-  p.bidder_name {
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #000;
-  }
-  .history_detail_bx .date {
-    color: #969696;
-    font-size: 14px;
-  }
-  .history_detail_bx img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50px;
-  }
-  .auction-hero {
-    margin: 40px auto;
-    display: block;
-    @media (min-width: 768px) {
-      height: 80vh;
-    }
-    @media (max-width: 767px) {
-      width: 100%;
-    }
-  }
-  .auction_left div {
-    @media (max-width: 767px) {
-      justify-content: flex-start !important;
-    }
-    a {
-      border: none;
     }
   }
 `
