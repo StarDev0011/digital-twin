@@ -392,7 +392,8 @@ export default function Piece({ initialData, difference }: PieceProps) {
               <div className="auction_right">
                 {initialData.nft.auctionData &&
                 initialData.nft.auctionData.expectedEndTimestamp &&
-                initialData.nft.auctionData.currentBid ? (
+                initialData.nft.auctionData.currentBid &&
+                insideDifference > 0 ? (
                   <AuctionBidBox
                     title="HIGHEST BID"
                     highestBid={ethers.utils.formatEther(
@@ -451,7 +452,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     bidButton="REDEEM"
                     pathHref="/redeem"
                   />
-                ) : initialData.nft.auctionData ? (
+                ) : initialData.nft.auctionData && insideDifference > 0 ? (
                   <div className="price_date_btn">
                     <div className="reserve_price">
                       <p>RESERVE PRICE</p>
@@ -472,6 +473,36 @@ export default function Piece({ initialData, difference }: PieceProps) {
                       <Button onClick={() => location.replace('/bidpage')}>
                         PLACE BID
                       </Button>
+                    </div>
+                  </div>
+                ) : initialData.nft.auctionData && insideDifference < 0 ? (
+                  <div className="price_date_btn">
+                    <div className="reserve_price">
+                      <p>HIGHEST BID</p>
+                      <h2>
+                        {ethers.utils.formatEther(
+                          initialData.nft.auctionData.currentBid.amount
+                        )}
+                      </h2>
+                      <p>
+                        $
+                        {Number(
+                          Math.round(
+                            Number(
+                              ethers.utils.formatEther(
+                                initialData.nft.auctionData.currentBid.amount
+                              )
+                            ) * marketPriceEth
+                          )
+                        ).toLocaleString('en-US')}{' '}
+                        USD
+                      </p>
+                    </div>
+                    <div className="start_date">
+                      <p>AUCTION ENDED</p>
+                    </div>
+                    <div className="bid_btn">
+                      <Button>REDEEM COMING SOON</Button>
                     </div>
                   </div>
                 ) : (
