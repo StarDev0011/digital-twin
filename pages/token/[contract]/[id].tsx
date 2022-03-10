@@ -402,13 +402,15 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     highestBid={ethers.utils.formatEther(
                       initialData.nft.auctionData.currentBid.amount
                     )}
-                    approxUsd={(
-                      Number(
-                        ethers.utils.formatEther(
-                          initialData.nft.auctionData.currentBid.amount
-                        )
-                      ) * marketPriceEth
-                    ).toFixed(3)}
+                    approxUsd={Number(
+                      Math.round(
+                        Number(
+                          ethers.utils.formatEther(
+                            initialData.nft.auctionData.currentBid.amount
+                          )
+                        ) * marketPriceEth
+                      )
+                    ).toLocaleString('en-US')}
                     secondTitle={'AUCTION ENDS'}
                     timeLeft={
                       Math.floor(insideDifference / 3600) +
@@ -433,13 +435,15 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     highestBid={ethers.utils.formatEther(
                       initialData.nft.auctionData.previousBids[0].amount
                     )}
-                    approxUsd={(
-                      Number(
-                        ethers.utils.formatEther(
-                          initialData.nft.auctionData.previousBids[0].amount
-                        )
-                      ) * marketPriceEth
-                    ).toFixed(3)}
+                    approxUsd={Number(
+                      Math.round(
+                        Number(
+                          ethers.utils.formatEther(
+                            initialData.nft.auctionData.previousBids[0].amount
+                          )
+                        ) * marketPriceEth
+                      )
+                    ).toLocaleString('en-US')}
                     secondTitle={'AUCTION CONCLUDED'}
                     timeLeft={'00h 00m 00s'}
                     thirdTitle="OWNED BY"
@@ -456,7 +460,13 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     <div className="reserve_price">
                       <p>RESERVE PRICE</p>
                       <h2>3.10 ETH</h2>
-                      <p>${(3.1 * marketPriceEth).toFixed(3)} USD</p>
+                      <p>
+                        $
+                        {Number(
+                          Math.round(3.1 * marketPriceEth)
+                        ).toLocaleString('en-US')}{' '}
+                        USD
+                      </p>
                     </div>
                     <div className="start_date">
                       <p>AUCTION STARTED</p>
@@ -473,7 +483,13 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     <div className="reserve_price">
                       <p>RESERVE PRICE</p>
                       <h2>3.10 ETH</h2>
-                      <p>${(3.1 * marketPriceEth).toFixed(3)} USD</p>
+                      <p>
+                        $
+                        {Number(
+                          Math.round(3.1 * marketPriceEth)
+                        ).toLocaleString('en-US')}{' '}
+                        USD
+                      </p>
                     </div>
                     <div className="start_date">
                       <p>AUCTION STARTS ON</p>

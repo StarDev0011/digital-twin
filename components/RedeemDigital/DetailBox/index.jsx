@@ -1,6 +1,11 @@
 import { FileUploadWrapper } from './styles'
-
+import { useDropzone } from 'react-dropzone'
 const DetailBox = ({ setDetail }) => {
+  const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
+  
+  const files = acceptedFiles.map((file) => (
+    <li key={file.path}>{file.path}</li>
+  ))
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -17,6 +22,7 @@ const DetailBox = ({ setDetail }) => {
               method="POST"
               className="shipping-form"
               enctype="multipart/form-data"
+              target="_blank"
             >
               <div className="form-group">
                 <label>
@@ -41,12 +47,40 @@ const DetailBox = ({ setDetail }) => {
               {/* <div className="form-group">
                 <div>
                   <div className="choose-file-box">
-                    <span className="for-border"> */}
-              <input type="file" name="media" />
-              {/* </span>
+                    <span className="for-border"> 
+                    <h2>Choose File</h2>
+                    </span>
                   </div>
                 </div>
               </div> */}
+              {/* <input type="file" name="media" id="ids"/>
+              <button onClick={()=>{
+                  console.log(document.getElementById('ids').value)
+              }}>
+                see
+              </button> */}
+
+              <div className="form-group">
+
+                
+
+                <label></label>
+                <div {...getRootProps({ className: 'dropzone' })}>
+                  <input {...getInputProps()} />
+                  <div className="choose-file-box">
+                    <span className="for-border">
+
+                      {/* <input type="file" name="media"/> */}
+                      <h2>Choose File</h2>
+                    </span>
+                  </div>
+
+                  <aside>
+                    <ul>{files}</ul>
+                  </aside>
+                </div>
+              </div>
+
               <button type="submit" id="submit-button" hidden>
                 Submit
               </button>
@@ -77,6 +111,7 @@ const DetailBox = ({ setDetail }) => {
               <a
                 onClick={async () => {
                   document.getElementById('submit-button').click()
+                  
                 }}
                 style={{ cursor: 'pointer' }}
               >

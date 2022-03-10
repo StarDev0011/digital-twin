@@ -16,7 +16,7 @@ export const roadmap_data = [
     paragraph: (
       <p>
         {
-          "The winner of our Genesis L'Dezen x Digital Twin Drop will receive a 10% gift card redeemable on a future purchase of L’Dezen fine jewelry."
+          "Physical redemption of our Genesis L'Dezen x Digital Twin Drop includes a 10% gift card on a future purchase of L’Dezen fine jewelry."
         }
       </p>
     ),

@@ -13,11 +13,11 @@ const data = {
     {
       title: 'How do I Redeem the physical ‘Limitless’ Earrings?',
       content:
-        'You can redeem your physical earrings on our website by connecting your wallet to prove ownership of the ‘Limitless’ NFT. The NFT will then be redeemed for the physical asset and shipped to your home address.',
+        'You can redeem your physical earrings on our website by connecting your wallet to prove ownership of the ‘Limitless’ NFT. The NFT will then be redeemed for the physical asset and shipped to your home address. Upon physical redemption, Digital Twin will transfer a digital only version of the NFT to the redeemers wallet. This will act as your certificate of physical redemption.',
     },
     {
       title: 'How can I accessorize a PFP?',
-      content: `You can accessorize any PFP NFT you own if you are a holder of the ‘Limitless’ earring NFT. Simply connect your wallet to prove ownership and provide a standard media file of your PFP.  Check out what your new avatar could look like here.`,
+      content: `You can accessorize any PFP NFT you own if you are a holder of the ‘Limitless’ earring NFT. Simply connect your wallet to prove ownership and provide a standard media file of your PFP.  Check out what your new avatar could look like <a href="https://www.digitalxtwin.io/images/women.gif" target="_blank"> here </a>.`,
     },
     {
       title: 'What fees will I pay?',

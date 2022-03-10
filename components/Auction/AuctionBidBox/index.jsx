@@ -48,11 +48,11 @@ const AuctionBidBox = ({
             <div className="auction-bidder">
               <img src="/images/red-user-holder.png" />
               <a target="_blank">
-                {address.slice(0, 5)}...{address.slice(35)}
+                {address.slice(0, 4)}...{address.slice(39)}
               </a>
-              
+
               <a href={linkEtherscan} target="_blank" rel="noreferrer">
-              <img src="/images/arrow.png" />{' '}
+                <img src="/images/arrow.png" />{' '}
               </a>
               {/* <img className="links-icon" src="/images/gradient.png" /> */}
             </div>

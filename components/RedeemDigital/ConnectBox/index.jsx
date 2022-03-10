@@ -14,7 +14,7 @@ const ConnectBox = ({
     <SectionWrapper>
       <div className="box-head">
         <div>
-          <h2>Accesorize NFT</h2>
+          <h2>Accessorize NFT</h2>
         </div>
         {isWalletConnected ? (
           <div>
