@@ -13,7 +13,7 @@ import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 const TOKEN_ID = 1
 // const CONTRACT_ADDRESS = '0xd391646321ccf7938821a01d169dea6922aedbba'
-const CONTRACT_ADDRESS = "0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9"
+const CONTRACT_ADDRESS = '0x8aDd76A5c38da958dfFF9A58DdE51798d03C5ef9'
 // import { SiteContainer } from '../../atoms/SiteContainer/index'
 // import { DetailBoxSection } from './../../components/RedeemPhysical/DetailBox/styles'
 const providerOptions = {
@@ -125,11 +125,7 @@ const Digital = () => {
 
     // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
-    const instance = new Contract(
-      CONTRACT_ADDRESS,
-      DigitalTwinAbi,
-      signer
-    )
+    const instance = new Contract(CONTRACT_ADDRESS, DigitalTwinAbi, signer)
 
     const balance = ethers.utils.formatEther(
       await web3Provider.getBalance(address)

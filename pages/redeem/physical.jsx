@@ -126,11 +126,7 @@ const Physical = () => {
 
     // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
-    const instance = new Contract(
-      CONTRACT_ADDRESS,
-      DigitalTwinAbi,
-      signer
-    )
+    const instance = new Contract(CONTRACT_ADDRESS, DigitalTwinAbi, signer)
 
     const balance = ethers.utils.formatEther(
       await web3Provider.getBalance(address)
