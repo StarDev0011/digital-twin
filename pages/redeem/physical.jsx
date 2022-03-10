@@ -122,7 +122,6 @@ const Physical = () => {
     const address = await signer.getAddress()
 
     const network = await web3Provider.getNetwork()
-    
 
     // const interfaceAbi = new ethers.utils.Interface(AuctionHouseAbi)
 
@@ -238,7 +237,7 @@ const Physical = () => {
           '0xc6367B688453b894bE0688E329259C42b1F040e6'
         ) {
           alert('Minter and token holder are same')
-          
+
           // setLoading(false)
           return
         } else {
@@ -283,7 +282,7 @@ const Physical = () => {
     <Layout>
       {/* <ConnectButton handleWalletConected={handleWalletConected} />
       {walletConnected ? <DetailBox /> : <ConnectBox />} */}
-      
+
       <ConnectButton
         connect={connect}
         isConnected={web3Provider ? true : false}

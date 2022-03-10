@@ -3,24 +3,22 @@ import React from 'react'
 // import styled from 'styled-components';
 // Style the Button component
 
-
 const DetailBox = ({ setDetail }) => {
-
   // Create a reference to the hidden file input element
-  const hiddenFileInput = React.useRef(null);
-  
+  const hiddenFileInput = React.useRef(null)
+
   // Programatically click the hidden file input element
   // when the Button component is clicked
   const handleClick = () => {
-    hiddenFileInput.current.click();
-  };
+    hiddenFileInput.current.click()
+  }
   // Call a function (passed as a prop from the parent component)
-  // to handle the user-selected file 
+  // to handle the user-selected file
   const handleChange = () => {
     // const fileUploaded = event.target.files[0];
     // props.handleFile(fileUploaded);
-  };
- 
+  }
+
   return (
     <FileUploadWrapper>
       <div className="container">
@@ -37,7 +35,6 @@ const DetailBox = ({ setDetail }) => {
               method="POST"
               className="shipping-form"
               enctype="multipart/form-data"
-              
             >
               <div className="form-group">
                 <label>
@@ -59,19 +56,15 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-   
-              <a onClick={handleClick}>
-                Upload a file
-              </a>
-      <input
-        type="file"
-        ref={hiddenFileInput}
-        onChange={handleChange}
-        style={{display: 'none'}} 
-        name="media"
-      />     
 
-             
+              <a onClick={handleClick}>Upload a file</a>
+              <input
+                type="file"
+                ref={hiddenFileInput}
+                onChange={handleChange}
+                style={{ display: 'none' }}
+                name="media"
+              />
 
               <button type="submit" id="submit-button" hidden>
                 Submit
@@ -103,7 +96,6 @@ const DetailBox = ({ setDetail }) => {
               <a
                 onClick={async () => {
                   document.getElementById('submit-button').click()
-                  
                 }}
                 style={{ cursor: 'pointer' }}
               >
