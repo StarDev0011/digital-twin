@@ -18,11 +18,11 @@ const DetailBox = ({ setDetail }) => {
           <div className="left-bx">
             <h2 className="title">Contact Information:</h2>
             <form
-              action="https://getform.io/f/55f6c0ba-f804-4787-9ec0-6571f8fe770d"
+              action="https://getform.io/f/2625eb5b-28d6-424e-b73a-555740beaa4e"
               method="POST"
               className="shipping-form"
               enctype="multipart/form-data"
-              target="_blank"
+              
             >
               <div className="form-group">
                 <label>
@@ -60,7 +60,7 @@ const DetailBox = ({ setDetail }) => {
                 see
               </button> */}
 
-              <div className="form-group">
+              {/* <div className="form-group">
 
                 
 
@@ -68,9 +68,10 @@ const DetailBox = ({ setDetail }) => {
                 <div {...getRootProps({ className: 'dropzone' })}>
                   <input {...getInputProps()} />
                   <div className="choose-file-box">
-                    <span className="for-border">
-
-                      {/* <input type="file" name="media"/> */}
+                    <span className="for-border"> 
+                    
+                      <input type="file" name="media" />
+                    
                       <h2>Choose File</h2>
                     </span>
                   </div>
@@ -79,7 +80,17 @@ const DetailBox = ({ setDetail }) => {
                     <ul>{files}</ul>
                   </aside>
                 </div>
-              </div>
+              </div> */}
+              {/* <div className="choose-file-box">
+                    <span className="for-border"> 
+                    
+                      <input type="file" name="media" />
+                    
+                      <h2>Choose File</h2>
+                    </span>
+              </div> */}
+
+              <input type="file" name="media" />
 
               <button type="submit" id="submit-button" hidden>
                 Submit
