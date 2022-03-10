@@ -1,11 +1,11 @@
 import { FileUploadWrapper } from './styles'
-import { useDropzone } from 'react-dropzone'
+// import { useDropzone } from 'react-dropzone'
 const DetailBox = ({ setDetail }) => {
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
+  // const { acceptedFiles, getRootProps, getInputProps } = useDropzone()
   
-  const files = acceptedFiles.map((file) => (
-    <li key={file.path}>{file.path}</li>
-  ))
+  // const files = acceptedFiles.map((file) => (
+  //   <li key={file.path}>{file.path}</li>
+  // ))
   return (
     <FileUploadWrapper>
       <div className="container">

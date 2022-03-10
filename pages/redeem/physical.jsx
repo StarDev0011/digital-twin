@@ -9,7 +9,7 @@ import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
 import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
-import SiteModal from '../../atoms/SiteModal'
+
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
 const TOKEN_ID = 7
