@@ -131,7 +131,7 @@ const DetailBox = ({ redeemNFT, setDetail }) => {
 
             <div className="order-detail-bottom">
               <p>
-                Note: Your NFT will be transferred to L’Dezen upon redemption.
+                Note: Your NFT will be transferred to L’Dezen upon redemption. Upon physical redemption, Digital Twin will transfer a digital only version of the NFT to the redeemers wallet. This will act as your certificate of physical redemption.
               </p>
               <a
                 onClick={async () => {

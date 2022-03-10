@@ -11,7 +11,7 @@ import Web3Modal from 'web3modal'
 import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-const TOKEN_ID = 6
+const TOKEN_ID = 7
 const CONTRACT_ADDRESS_TESTNET = '0xd391646321ccf7938821a01d169dea6922aedbba'
 // import { SiteContainer } from '../../atoms/SiteContainer/index'
 // import { DetailBoxSection } from './../../components/RedeemPhysical/DetailBox/styles'
