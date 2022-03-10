@@ -281,8 +281,6 @@ const Digital = () => {
           setDetail={setShowDetail}
         />
       )}
-
-     
     </Layout>
   )
 }

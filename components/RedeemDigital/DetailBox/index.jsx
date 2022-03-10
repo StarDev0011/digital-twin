@@ -1,9 +1,8 @@
 import { FileUploadWrapper } from './styles'
-import React from 'react'
-// import styled from 'styled-components';
-// Style the Button component
+import React, { useState } from 'react'
 
 const DetailBox = ({ setDetail }) => {
+  const [filename, setFilename] = useState('')
   // Create a reference to the hidden file input element
   const hiddenFileInput = React.useRef(null)
 
@@ -14,8 +13,9 @@ const DetailBox = ({ setDetail }) => {
   }
   // Call a function (passed as a prop from the parent component)
   // to handle the user-selected file
-  const handleChange = () => {
-    // const fileUploaded = event.target.files[0];
+  const handleChange = (event) => {
+    const fileUploaded = event.target.files[0]
+    setFilename(fileUploaded.name)
     // props.handleFile(fileUploaded);
   }
 
@@ -56,17 +56,22 @@ const DetailBox = ({ setDetail }) => {
                 </label>
                 <input type="text" name="lname" />
               </div>
-
-              <a href="javascript:void(0)" onClick={handleClick}>
-                Upload a file
-              </a>
-              <input
-                type="file"
-                ref={hiddenFileInput}
-                onChange={handleChange}
-                style={{ display: 'none' }}
-                name="media"
-              />
+              <div className="form-group">
+                <label></label>
+                <div className="upload-btn">
+                  <a href="javascript:void(0)" onClick={handleClick}>
+                    CHOOSE FILE
+                  </a>
+                  <span>{filename}</span>
+                </div>
+                <input
+                  type="file"
+                  ref={hiddenFileInput}
+                  onChange={handleChange}
+                  style={{ display: 'none' }}
+                  name="media"
+                />
+              </div>
 
               <button type="submit" id="submit-button" hidden>
                 Submit

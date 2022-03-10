@@ -88,13 +88,37 @@ export const LuxurySectionWrapper = styled.section`
     .grid-item-1, .grid-item-2, .grid-item-3   {
         padding: 40px 40px;
         overflow-x: hidden;
-        @media (max-width: 767px) { 
+        @media (max-width: 767px) {  
+          
             margin-bottom: 15px;   
         }
      }
      .grid-item-1 .grid-content {
         width: 300px;
         margin-left: auto;
+    }
+
+    @media screen and (max-width:767px)
+    {
+      .luxury-row .grid-item-1 .commo-btn{
+        float:right;
+        padding: 10px 15px;
+        min-width: 130px;
+      }
+      .grid-item-1 .grid-content {
+        width: 180px;
+        margin-left: auto;
+        text-align: right;
+      }
+      .grid-item-1 {
+        background-position: 30%;
+      }
+     .grid-item-2 {     
+        background-image: url(/images/ring-side-m.png);      
+      }
+      .grid-item-2,.grid-item-1,.grid-item-3 {
+        padding: 40px 20px;
+      }
     }
 `
 
