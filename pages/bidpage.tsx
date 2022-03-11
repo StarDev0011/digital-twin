@@ -7,7 +7,7 @@ import { abi as AuctionHouseAbi } from '@zoralabs/auction-house/dist/artifacts/A
 
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
 const INFURA_ID = '82acffcf5a3c4987a0766b846d793dcb'
-import { auctionHouse } from '@zoralabs/auction-house/dist/addresses/4.json'
+import { auctionHouse } from '@zoralabs/auction-house/dist/addresses/1.json'
 
 // const TOKEN_ID = '8'
 // const TOKEN_ADDRESS = '0xD391646321ccf7938821a01d169DeA6922AEDBba'
