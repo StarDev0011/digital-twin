@@ -201,6 +201,15 @@ export const BidPage = (): JSX.Element => {
         await web3Provider.getBalance(address)
       )
       // console.log(instance)
+      if(network.chainId != 1){
+        
+        showPopup(
+          'error',
+          'Error',
+          'You are not connected to Ethereum mainnet'
+        )
+        return
+      }
 
       dispatch({
         type: 'SET_WEB3_PROVIDER',
