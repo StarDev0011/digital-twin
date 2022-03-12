@@ -419,7 +419,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     }
                     thirdTitle="BIDDER"
                     address={initialData.nft.auctionData.currentBid.bidder.id}
-                    linkEtherscan={`https://rinkeby.etherscan.io/tx/${initialData.nft.auctionData.currentBid.transactionHash}`}
+                    linkEtherscan={`https://etherscan.io/tx/${initialData.nft.auctionData.currentBid.transactionHash}`}
                     auctionStatus="LIVE"
                     bidButton="PLACE BID"
                     pathHref="/bidpage"
@@ -447,7 +447,7 @@ export default function Piece({ initialData, difference }: PieceProps) {
                     address={
                       initialData.nft.auctionData.previousBids[0].bidder.id
                     }
-                    linkEtherscan={`https://rinkeby.etherscan.io/tx/${initialData.nft.auctionData.previousBids[0].transactionHash}`}
+                    linkEtherscan={`https://etherscan.io/tx/${initialData.nft.auctionData.previousBids[0].transactionHash}`}
                     auctionStatus="COMPLETE"
                     bidButton="REDEEM"
                     pathHref="/redeem"
