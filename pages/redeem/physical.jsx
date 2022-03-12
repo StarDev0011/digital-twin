@@ -8,6 +8,8 @@ import { providers, Contract, ethers } from 'ethers'
 import { useCallback, useEffect, useReducer, useState } from 'react'
 import WalletLink from 'walletlink'
 import Web3Modal from 'web3modal'
+import { SitePopup } from '../../atoms/SitePopup'
+
 import { abi as DigitalTwinAbi } from '../../DigitalTwin.json'
 
 // import {a} from '@zoralabs/auction-house/dist/artifacts/interfaces/IAuctionHouse.sol/IAuctionHouse.json'
@@ -107,6 +109,24 @@ const Physical = () => {
   const { provider, web3Provider, balance, contract, address, chainId } = state
 
   const [isNftHolder, setIsNftHolder] = useState(false)
+  const [popupDisplay, setPopupDisplay] = useState(false)
+  const [popupData, setPopupData] = useState({
+    type: '',
+    title: '',
+    message: '',
+  })
+  const showPopup = (type, title, message) => {
+    setPopupData({
+      type,
+      title,
+      message,
+    })
+    setPopupDisplay(true)
+  }
+
+  const hidePopup = () => {
+    setPopupDisplay(false)
+  }
 
   const connect = useCallback(async function () {
     // This is the initial `provider` that is returned when
@@ -132,16 +152,11 @@ const Physical = () => {
       await web3Provider.getBalance(address)
     )
     // console.log(instance)
-    
-    if(network.chainId != 1){
-        
-        showPopup(
-          'error',
-          'Error',
-          'You are not connected to Ethereum mainnet'
-        )
-        return
-      }
+
+    if (network.chainId != 1) {
+      showPopup('error', 'Error', 'You are not connected to Ethereum mainnet')
+      return
+    }
 
     dispatch({
       type: 'SET_WEB3_PROVIDER',
@@ -295,6 +310,11 @@ const Physical = () => {
         isConnected={web3Provider ? true : false}
         disconnect={disconnect}
       />
+      {popupDisplay ? (
+              <SitePopup hidePopup={hidePopup} data={popupData} />
+            ) : (
+              ''
+            )}
       {web3Provider ? (
         isNftHolder ? (
           !showDetail ? (
