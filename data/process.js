@@ -21,9 +21,10 @@ export const process = [
         }
         <a href="/images/women.gif" target="_blank">
           here.
-        </a>
-        {' '}
-        If you redeem your Limitless Earrings NFT for the physical pair, Digital Twin will transfer a digital only version of the NFT to the redeemers wallet. This will act as your certificate of physical redemption.
+        </a>{' '}
+        If you redeem your Limitless Earrings NFT for the physical pair, Digital
+        Twin will transfer a digital only version of the NFT to the redeemers
+        wallet. This will act as your certificate of physical redemption.
       </p>
     ),
     icon: <img src="/images/how_it_work2.png" />,
