@@ -310,11 +310,7 @@ const Physical = () => {
         isConnected={web3Provider ? true : false}
         disconnect={disconnect}
       />
-      {popupDisplay ? (
-              <SitePopup hidePopup={hidePopup} data={popupData} />
-            ) : (
-              ''
-            )}
+      {popupDisplay ? <SitePopup hidePopup={hidePopup} data={popupData} /> : ''}
       {web3Provider ? (
         isNftHolder ? (
           !showDetail ? (
