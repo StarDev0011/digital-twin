@@ -16,6 +16,14 @@ export const SiteContainer = styled.div.attrs((props) => ({
     }
   }
 `
+export const MainMenuContainer = styled.div`
+   background-color: transparent;
+   position: fixed;
+   z-index: 99;
+   left: 0;
+   right: 0;
+   border-bottom: 1px solid #fff;
+`
 
 export const MenuContainer = styled.div.attrs((props) => ({
   size: props.size || 'normal',

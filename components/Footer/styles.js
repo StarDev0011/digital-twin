@@ -137,12 +137,23 @@ export const SocialItems = styled.div`
 
 export const CopyrightWrapper = styled.div`
   padding: 3.2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.blackColor};
+  border-top: 1px solid ${(props) => props.theme.colors.whiteColor};
   background: #000000;
-  p {
-    font-size: 16px;
-    text-align: center;
-    font-family: ${(props) => props.theme.fonts.bodyFont};
+  color: #ffffff;
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  li a {
     color: #ffffff;
+  }
+  li {
+    font-size: 16px;
+    text-align: left;
+    margin-right: 3rem;
+  }
+  li:not(:first-child) {
+    border-left: 2px solid white;
+    padding-left: 3rem;
   }
 `

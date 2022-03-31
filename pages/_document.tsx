@@ -78,6 +78,12 @@ class CreateAuctionHouseDocument extends Document {
               href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"
               type="text/css"
             />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap"
+              rel="stylesheet"
+            />
           </Head>
           <body>
             <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>

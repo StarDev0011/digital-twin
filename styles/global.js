@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${theme.colors.whiteColor};
     box-sizing: border-box;
     overscroll-behavior: none;
-    font-family: 'Assistant';
+    font-family: ${theme.fonts.bodyFont};
     
   }
   .slick-next:before, .slick-prev:before {
